@@ -1,0 +1,11 @@
+{
+  "analyzeCommits": {
+    "releaseRules": [
+      {
+        "type": "build",
+        "scope": "deps",
+        "release": "patch"
+      }
+    ]
+  }
+}
