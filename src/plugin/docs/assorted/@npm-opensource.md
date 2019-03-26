@@ -44,7 +44,7 @@ project
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 - `repoKey`
 - `authorName`
 - `owner`
@@ -85,7 +85,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 - `repoKey`
 
 <!---1--></details>
@@ -165,7 +165,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 
 <!---2--></details>
 
@@ -195,7 +195,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 
 <!---2--></details>
 
