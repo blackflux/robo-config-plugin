@@ -86,6 +86,6 @@
     "lib"
   ],
   "dependencies": {
-    "robo-config": "1.9.0"
+    "robo-config": "1.9.1"
   }
 }
