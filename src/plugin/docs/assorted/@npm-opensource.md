@@ -44,7 +44,7 @@ project
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 - `repoKey`
 - `authorName`
 - `owner`
@@ -85,7 +85,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 - `repoKey`
 
 <!---1--></details>
@@ -165,7 +165,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 
 <!---2--></details>
 
@@ -195,7 +195,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 
 <!---2--></details>
 
@@ -404,7 +404,7 @@ project
 
 ### git/gitignore
 
-_Updating `.gitignore` using `merge-top`._
+_Updating `.gitignore` using `unique-top`._
 
 - Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
 - Default ignores for JetBrains IDE.
@@ -547,7 +547,7 @@ project
 
 ### npm/npmignore
 
-_Updating `.npmignore` using `merge-top`._
+_Updating `.npmignore` using `unique-top`._
 
 - Inject comment into .npmignore explaining when to use it.
 

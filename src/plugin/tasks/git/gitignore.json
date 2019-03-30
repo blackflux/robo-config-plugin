@@ -1,6 +1,6 @@
 {
   "target": ".gitignore",
-  "strategy": "merge-top",
+  "strategy": "unique-top",
   "snippets": [
     "jetbrains",
     "spacer-small",

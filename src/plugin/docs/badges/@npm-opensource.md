@@ -28,7 +28,7 @@ project
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 - `repoKey`
 
 <!---0--></details>
@@ -108,7 +108,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 
 <!---1--></details>
 
@@ -138,7 +138,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `repoName`
+- `packageName`
 
 <!---1--></details>
 
