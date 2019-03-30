@@ -39,6 +39,7 @@
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
+    "eslint": "5.16.0",
     "js-gardener": "1.38.6",
     "nyc": "13.3.0",
     "robo-config": "1.10.1",
