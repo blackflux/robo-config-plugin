@@ -24,7 +24,7 @@ project
 
 ## npm/npmignore
 
-_Updating `.npmignore` using `merge-top`._
+_Updating `.npmignore` using `unique-top`._
 
 - Inject comment into .npmignore explaining when to use it.
 

@@ -24,7 +24,7 @@ project
 
 ## git/gitignore
 
-_Updating `.gitignore` using `merge-top`._
+_Updating `.gitignore` using `unique-top`._
 
 - Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
 - Default ignores for JetBrains IDE.
