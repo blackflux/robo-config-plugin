@@ -5943,10 +5943,10 @@ rimraf@2, rimraf@2.6.3, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6
   dependencies:
     glob "^7.1.3"
 
-robo-config@1.10.1:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-1.10.1.tgz#496e8ae2a160b8dde80b218ba1bdeb160568c90e"
-  integrity sha512-pGhcjLu53Lp8i7SjCrkakgOIvPiNMh10M/WXpVQfpwaLw5T/B17ORNGBhA8akx/Km9+eNnva4zKvpyJxc/xTwQ==
+robo-config@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-1.11.0.tgz#a139e71745aa692712ac1617a939abfa96138d12"
+  integrity sha512-h6RpSR/tzAGxVlHrVHkjvf69KIoExrTJHZEKa2SgMVuaHLdA5XQTrRGynhQ2WRRy41Hpwi/HWiVvQl4t6q+vDA==
   dependencies:
     app-root-path "2.2.1"
     deepmerge "3.2.0"
