@@ -1,0 +1,8 @@
+{
+  "description": "Javascript package repository.",
+  "details": [
+    "Requires the project to be conform with the npm standard, i.e. contain a package.json file.",
+    "Does not require the project to be published to npm."
+  ],
+  "website": "https://docs.npmjs.com/about-npm/"
+}

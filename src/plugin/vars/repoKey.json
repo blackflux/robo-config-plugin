@@ -1,0 +1,7 @@
+{
+  "description": "Repository key.",
+  "details": [
+    "The repository key contains the owner or organization of the project and the repository name itself, separated by a slash."
+  ],
+  "type": "string"
+}

@@ -1,0 +1,9 @@
+{
+  "description": "NodeJs Project Management.",
+  "details": [
+    "Enforces and helps setting up best practices around NodeJs projects.",
+    "Enforces highest code quality and minimizes package setup and maintenance complexity - so you can focus on writing code.",
+    "Highly recommended if you are getting started with a new package and extremely useful if you are maintaining multiple packages."
+  ],
+  "website": "https://github.com/blackflux/js-gardener#readme"
+}

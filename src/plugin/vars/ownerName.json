@@ -1,0 +1,7 @@
+{
+  "description": "Name of the owner of this project.",
+  "details": [
+    "The owner name of the project is the name of the person or organization publishing the project under their license."
+  ],
+  "type": "string"
+}

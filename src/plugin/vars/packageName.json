@@ -1,0 +1,8 @@
+{
+  "description": "Name of the package on npm.",
+  "details": [
+    "The name of the project as published to npm.",
+    "Note that for scoped packages the name can differ significantly from the repo name."
+  ],
+  "type": "string"
+}

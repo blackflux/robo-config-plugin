@@ -5,7 +5,7 @@
     {
       "name": "MIT-LICENSE",
       "variables": {
-        "authorName": "${authorName}"
+        "ownerName": "${ownerName}"
       }
     }
   ],
