@@ -1,0 +1,7 @@
+{
+  "description": "Dependency badge for javascript github repositories.",
+  "details": [
+    "Enables displaying of a status badge indicated whether the dependencies are outdated."
+  ],
+  "website": "https://david-dm.org/"
+}

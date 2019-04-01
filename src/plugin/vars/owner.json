@@ -1,0 +1,7 @@
+{
+  "description": "The owner of the code on github.",
+  "details": [
+    "The code owner is the gatekeeper of the project, ultimately responsible for all changes."
+  ],
+  "type": "string"
+}

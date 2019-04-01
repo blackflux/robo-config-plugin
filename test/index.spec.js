@@ -8,13 +8,5 @@ it('Documenting Plugin Tasks', () => {
 });
 
 it('Testing Plugin Tasks', () => {
-  expect(load(plugin).test(path.join(__dirname, 'project'), {
-    repoKey: 'blackflux/robo-config',
-    packageName: 'robo-config',
-    repoName: 'robo-config',
-    projectName: 'robo-config',
-    owner: 'simlu',
-    authorName: 'Lukas Siemon',
-    mergeBot: 'MrsFlux'
-  })).to.deep.equal([]);
+  expect(load(plugin).test(path.join(__dirname, 'project'))).to.deep.equal([]);
 });

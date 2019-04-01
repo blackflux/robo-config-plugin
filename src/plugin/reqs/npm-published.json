@@ -1,0 +1,7 @@
+{
+  "description": "Javascript package repository published.",
+  "details": [
+    "Requires the project to be published to npm either as a private or public package."
+  ],
+  "website": "https://docs.npmjs.com/about-npm/"
+}

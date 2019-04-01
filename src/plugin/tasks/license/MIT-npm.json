@@ -6,7 +6,7 @@
       "name": "MIT-package",
       "variables": {
         "repoKey": "${repoKey}",
-        "authorName": "${authorName}"
+        "ownerName": "${ownerName}"
       }
     }
   ],

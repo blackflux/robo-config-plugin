@@ -1,0 +1,5 @@
+{
+  "description": "The github name of the bot used for automatic merging.",
+  "details": [],
+  "type": "string"
+}

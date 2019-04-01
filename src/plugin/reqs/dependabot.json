@@ -1,0 +1,8 @@
+{
+  "description": "Automatic dependency updates.",
+  "details": [
+    "Makes dependency updates very easy by automatically creating pull requests in your repo.",
+    "All major programming languages are supported or work is done towards supporting them."
+  ],
+  "website": "https://dependabot.com/"
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Automation around github.com Repository Management",
+  "details": [
+    "Allows management of github.com repositories through configuration.",
+    "Very powerful when you need to synchronize settings across multiple repositories."
+  ],
+  "website": "https://github.com/loopmediagroup/gally"
+}

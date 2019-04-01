@@ -1,0 +1,8 @@
+{
+  "description": "Run automated jobs using docker containers.",
+  "details": [
+    "Allows set up for ci/cd using docker containers.",
+    "Automates development process quickly, safely, and at scale."
+  ],
+  "website": "https://circleci.com/"
+}
