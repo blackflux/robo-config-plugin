@@ -1,0 +1,7 @@
+{
+  "description": "Name of the project.",
+  "details": [
+    "The project name is in most cases identical to the repository name."
+  ],
+  "type": "string"
+}

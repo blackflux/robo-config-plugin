@@ -1,0 +1,10 @@
+{
+  "description": "Automates npm package release workflow.",
+  "details": [
+    "Automates the package release workflow including:",
+    "- determining the next version number",
+    "- generating the release notes",
+    "- publishing the package"
+  ],
+  "website": "https://github.com/semantic-release/semantic-release"
+}

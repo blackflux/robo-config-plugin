@@ -1,0 +1,7 @@
+{
+  "description": "Version control system.",
+  "details": [
+    "The most used version control system. Not to be confused with github (which uses git)."
+  ],
+  "website": "https://git-scm.com/"
+}
