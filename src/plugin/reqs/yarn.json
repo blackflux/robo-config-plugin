@@ -1,7 +1,7 @@
 {
   "description": "Dependency management similar to npm.",
   "details": [
-    "Very similar functionality to npm cli. However there are some significant differences."
+    "Very similar functionality to npm cli."
   ],
   "website": "https://yarnpkg.com/"
 }
