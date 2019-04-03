@@ -1,53 +1,60 @@
-#  `semantic-release/@default.json`
+- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasedefaultjson">`semantic-release/@default.json`</a>
+  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
+
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasedefaultjson">semantic-release/@default.json</a>
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .releaserc.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .releaserc.json
-```
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">semantic-release/commit-conventions</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > semantic-release/commit-conventions
-
-_Updating `.releaserc.json` using `overwrite`._
+_Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .releaserc.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .releaserc.json
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Requires
@@ -58,13 +65,19 @@ project
 
 Automates npm package release workflow.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Automates the package release workflow including:
 - determining the next version number
 - generating the release notes
 - publishing the package
 
-<!---0--></details>
+------
+
+## Strategies
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>
+
+Valid for: `any`
+
+Simply replace the old with the new content.
 
