@@ -1,56 +1,63 @@
-#  `git/@default.json`
+- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-gitdefaultjson">`git/@default.json`</a>
+  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
+
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitdefaultjson">git/@default.json</a>
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .gitignore</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .gitignore
-```
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [git](#blackfluxrobo-config-plugin-req-ref-git)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > git/gitignore
-
-_Updating `.gitignore` using `unique-top`._
+_Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
 - Default ignores for JetBrains IDE.
 - Default ignores for OSX
 - Default ignores for NodeJs
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .gitignore</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .gitignore
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [git](#blackfluxrobo-config-plugin-req-ref-git)
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Requires
@@ -61,10 +68,19 @@ project
 
 Version control system.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 The most used version control system. Not to be confused with github (which uses git).
 
-<!---0--></details>
+------
+
+## Strategies
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>
+
+Valid for: `list`
+
+Merges content at the top of the file and removes existing, duplicate lines.
+
+*Details:*
+Useful for managing e.g. `.gitignore` when the original content should be kept.
 

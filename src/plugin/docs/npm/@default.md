@@ -1,53 +1,60 @@
-#  `npm/@default.json`
+- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-npmdefaultjson">`npm/@default.json`</a>
+  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
+
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-npmdefaultjson">npm/@default.json</a>
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .npmignore</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .npmignore
-```
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-npmnpmignore">npm/npmignore</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > npm/npmignore
-
-_Updating `.npmignore` using `unique-top`._
+_Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Inject comment into .npmignore explaining when to use it.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .npmignore</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .npmignore
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Requires
@@ -58,11 +65,20 @@ project
 
 Javascript package repository.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Requires the project to be conform with the npm standard, i.e. contain a package.json file.
 Does not require the project to be published to npm.
 
-<!---0--></details>
+------
+
+## Strategies
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>
+
+Valid for: `list`
+
+Merges content at the top of the file and removes existing, duplicate lines.
+
+*Details:*
+Useful for managing e.g. `.gitignore` when the original content should be kept.
 

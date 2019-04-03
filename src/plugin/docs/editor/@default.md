@@ -1,38 +1,58 @@
-#  `editor/@default.json`
+- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-editordefaultjson">`editor/@default.json`</a>
+  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
+
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefaultjson">editor/@default.json</a>
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .editorconfig</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .editorconfig
-```
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-editortwo-space">editor/two-space</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > editor/two-space
-
-_Updating `.editorconfig` using `overwrite`._
+_Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Two space line indentation.
 - Set `lf` line endings.
 - Set `utf8` encoding.
 - Remove unnecessary whitespaces.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .editorconfig</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .editorconfig
-```
+------
 
-<!---1--></details>
+## Strategies
 
-</details>
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>
+
+Valid for: `any`
+
+Simply replace the old with the new content.
 
