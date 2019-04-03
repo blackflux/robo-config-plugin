@@ -30,9 +30,9 @@
   },
   "homepage": "https://github.com/blackflux/robo-config-plugin#readme",
   "devDependencies": {
-    "@babel/cli": "7.2.3",
-    "@babel/core": "7.4.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.4.0",
+    "@babel/cli": "7.4.3",
+    "@babel/core": "7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.3",
     "@babel/plugin-transform-flow-comments": "7.4.0",
     "@babel/preset-flow": "7.0.0",
     "@babel/register": "7.4.0",
@@ -42,7 +42,7 @@
     "eslint": "5.16.0",
     "js-gardener": "1.38.6",
     "nyc": "13.3.0",
-    "robo-config": "1.12.1",
+    "robo-config": "1.12.4",
     "semantic-release": "15.13.3"
   },
   "nyc": {
