@@ -1,59 +1,66 @@
-#  `dependabot/@default-js.json`
+- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-dependabotdefault-jsjson">`dependabot/@default-js.json`</a>
+  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">`dependabot/js-instant`</a>
+
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dependabotdefault-jsjson">dependabot/@default-js.json</a>
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .dependabot</code><br/>
+<code>   └─ config.yml</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .dependabot
-   └─ config.yml
-```
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">dependabot/js-instant</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
-- [github](#blackfluxrobo-config-plugin-req-ref-github)
-- [javascript](#blackfluxrobo-config-plugin-req-ref-javascript)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > dependabot/js-instant
-
-_Updating `.dependabot/config.yml` using `overwrite`._
+_Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Configure dependabot to instantly merge javascript dependency updates into the `dev` branch.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ .dependabot</code><br/>
+<code>   └─ config.yml</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ .dependabot
-   └─ config.yml
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
-- [github](#blackfluxrobo-config-plugin-req-ref-github)
-- [javascript](#blackfluxrobo-config-plugin-req-ref-javascript)
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Requires
@@ -64,13 +71,9 @@ project
 
 Automatic dependency updates.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Makes dependency updates very easy by automatically creating pull requests in your repo.
 All major programming languages are supported or work is done towards supporting them.
-
-<!---0--></details>
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a>
 
@@ -78,13 +81,9 @@ All major programming languages are supported or work is done towards supporting
 
 Major development platform powered by git.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 GitHub is a code hosting platform for collaboration and version control.
 Lets you and others work together on projects.
-
-<!---0--></details>
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
 
@@ -92,11 +91,17 @@ Lets you and others work together on projects.
 
 Programming Language.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
 It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
 
-<!---0--></details>
+------
+
+## Strategies
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>
+
+Valid for: `any`
+
+Simply replace the old with the new content.
 
