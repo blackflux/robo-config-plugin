@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-gitdefaultjson">`git/@default.json`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-gitdefaultjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitdefaultjson">`git/@default.json`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
 
-# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitdefaultjson">git/@default.json</a>
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitdefaultjson">git/@default.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitdefaultjson">`index`</a>)
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
@@ -27,7 +27,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
   </tbody>
 </table>
 
-## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a>
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">`index`</a>)
 
 _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 
@@ -62,25 +62,21 @@ _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a> ([`link`](https://git-scm.com/)) 
 
-[Website](https://git-scm.com/)
+*Version control system.*
 
-Version control system.
-
-*Details:*
 The most used version control system. Not to be confused with github (which uses git).
 
 ------
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>  
 
-Valid for: `list`
+:small_blue_diamond: `list`
 
-Merges content at the top of the file and removes existing, duplicate lines.
+*Merges content at the top of the file and removes existing, duplicate lines.*
 
-*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
 

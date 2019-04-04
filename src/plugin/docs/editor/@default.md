@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-editordefaultjson">`editor/@default.json`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefaultjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefaultjson">`editor/@default.json`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
 
-# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefaultjson">editor/@default.json</a>
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefaultjson">editor/@default.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editordefaultjson">`index`</a>)
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
@@ -21,7 +21,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
   </tbody>
 </table>
 
-## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-editortwo-space">editor/two-space</a>
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-editortwo-space">editor/two-space</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">`index`</a>)
 
 _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -50,9 +50,9 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
 
-Valid for: `any`
+:small_blue_diamond: `any`
 
-Simply replace the old with the new content.
+*Simply replace the old with the new content.*
 
