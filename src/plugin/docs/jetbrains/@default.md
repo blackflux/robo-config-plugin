@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefaultjson">`jetbrains/@default.json`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefaultjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefaultjson">`jetbrains/@default.json`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
 
-# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefaultjson">jetbrains/@default.json</a>
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefaultjson">jetbrains/@default.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefaultjson">`index`</a>)
 
 Recommended base configuration when using Jetbrains.
 
@@ -35,7 +35,7 @@ Recommended base configuration when using Jetbrains.
   </tbody>
 </table>
 
-## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a>
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">`index`</a>)
 
 _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>._
 
@@ -75,23 +75,17 @@ _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a> ([`link`](https://www.jetbrains.com)) 
 
-[Website](https://www.jetbrains.com)
+*Collection of various IDEs.*
 
-Collection of various IDEs.
-
-*Details:*
 Collection of various IDEs. There exists one for every major programming language and 
 they are all very similar (i.e. shortcuts, layout), which makes them great when switching languages.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a> ([`link`](https://github.com/istanbuljs/nyc#readme)) 
 
-[Website](https://github.com/istanbuljs/nyc#readme)
+*Coverage testing for javascript projects.*
 
-Coverage testing for javascript projects.
-
-*Details:*
 A major coverage testing framework for javascript.
 Comes with all the bells and whistles.
 
@@ -99,25 +93,21 @@ Comes with all the bells and whistles.
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
 
-Type: `string`
+*Name of the project.*
 
-Name of the project.
-
-*Details:*
 The project name is in most cases identical to the repository name.
 
 ------
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>  
 
-Valid for: `xml`
+:small_blue_diamond: `xml`
 
-Does a "smart" deep merge.
+*Does a "smart" deep merge.*
 
-*Details:*
 This will not work as desired for all xml merging, but should for many cases.
 

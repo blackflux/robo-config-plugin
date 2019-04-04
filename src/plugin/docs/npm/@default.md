@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-npmdefaultjson">`npm/@default.json`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-npmdefaultjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmdefaultjson">`npm/@default.json`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
 
-# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-npmdefaultjson">npm/@default.json</a>
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-npmdefaultjson">npm/@default.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-npmdefaultjson">`index`</a>)
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
@@ -27,7 +27,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
   </tbody>
 </table>
 
-## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-npmnpmignore">npm/npmignore</a>
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-npmnpmignore">npm/npmignore</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">`index`</a>)
 
 _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 
@@ -59,13 +59,10 @@ _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([`link`](https://docs.npmjs.com/about-npm/)) 
 
-[Website](https://docs.npmjs.com/about-npm/)
+*Javascript package repository.*
 
-Javascript package repository.
-
-*Details:*
 Requires the project to be conform with the npm standard, i.e. contain a package.json file.
 Does not require the project to be published to npm.
 
@@ -73,12 +70,11 @@ Does not require the project to be published to npm.
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>  
 
-Valid for: `list`
+:small_blue_diamond: `list`
 
-Merges content at the top of the file and removes existing, duplicate lines.
+*Merges content at the top of the file and removes existing, duplicate lines.*
 
-*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
 

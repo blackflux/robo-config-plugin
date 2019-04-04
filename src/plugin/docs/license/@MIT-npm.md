@@ -1,8 +1,8 @@
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npmjson">`license/@MIT-npm.json`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-license">`license/MIT-LICENSE`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npm">`license/MIT-npm`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-npmjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npmjson">`license/@MIT-npm.json`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-license">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-license">`license/MIT-LICENSE`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-npm">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npm">`license/MIT-npm`</a>
 
-# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npmjson">license/@MIT-npm.json</a>
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npmjson">license/@MIT-npm.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensemit-npmjson">`index`</a>)
 
 Recommended base configuration when using MIT License with npm.
 
@@ -36,7 +36,7 @@ Recommended base configuration when using MIT License with npm.
   </tbody>
 </table>
 
-## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-license">license/MIT-LICENSE</a>
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-license">license/MIT-LICENSE</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensemit-license">`index`</a>)
 
 _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -64,7 +64,7 @@ _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwr
   </tbody>
 </table>
 
-## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/MIT-npm</a>
+## :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/MIT-npm</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensemit-npm">`index`</a>)
 
 _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
@@ -103,13 +103,10 @@ _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-m
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([`link`](https://docs.npmjs.com/about-npm/)) 
 
-[Website](https://docs.npmjs.com/about-npm/)
+*Javascript package repository.*
 
-Javascript package repository.
-
-*Details:*
 Requires the project to be conform with the npm standard, i.e. contain a package.json file.
 Does not require the project to be published to npm.
 
@@ -117,40 +114,33 @@ Does not require the project to be published to npm.
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  : `string`
 
-Type: `string`
+*Name of the owner of this project.*
 
-Name of the owner of this project.
-
-*Details:*
 The owner name of the project is the name of the person or organization publishing the project under their license.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
 
-Type: `string`
+*Repository key.*
 
-Repository key.
-
-*Details:*
 The repository key contains the owner or organization of the project and the repository name itself, separated by a slash.
 
 ------
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
 
-Valid for: `any`
+:small_blue_diamond: `any`
 
-Simply replace the old with the new content.
+*Simply replace the old with the new content.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
-Valid for: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
-Does a shallow merge aka `Object.assign()`.
+*Does a shallow merge aka `Object.assign()`.*
 
-*Details:*
 Useful when specific keys of the target need to be overwritten.
 
