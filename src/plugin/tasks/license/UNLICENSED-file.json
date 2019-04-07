@@ -1,0 +1,16 @@
+{
+  "target": "LICENSE",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "UNLICENSED-file",
+      "variables": {
+        "ownerName": "${ownerName}"
+      }
+    }
+  ],
+  "requires": [],
+  "purpose": [
+    "Generate UNLICENSED license file."
+  ]
+}
