@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "commit-conventions"
+  ],
+  "description": "Manage semantic-release configuration for npm open source package on github."
+}

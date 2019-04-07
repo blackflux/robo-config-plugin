@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "gitignore"
+  ],
+  "description": "Manage gitignore configuration for npm open source package on github."
+}
