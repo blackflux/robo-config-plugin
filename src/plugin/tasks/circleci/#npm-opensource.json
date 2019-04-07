@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "two-branch"
+  ],
+  "description": "Manage circleci configuration for npm open source package on github."
+}

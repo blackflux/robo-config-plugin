@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "MIT-LICENSE",
+    "MIT-npm"
+  ],
+  "description": "Manage license configuration for npm open source package on github."
+}
