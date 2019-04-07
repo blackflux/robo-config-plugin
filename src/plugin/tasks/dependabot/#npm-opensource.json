@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "js-instant"
+  ],
+  "description": "Manage dependabot configuration for npm open source package on github."
+}
