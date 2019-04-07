@@ -3,7 +3,7 @@
   "strategy": "overwrite",
   "snippets": [
     {
-      "name": "MIT-LICENSE",
+      "name": "MIT-file",
       "variables": {
         "ownerName": "${ownerName}"
       }

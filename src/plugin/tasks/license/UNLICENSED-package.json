@@ -1,0 +1,19 @@
+{
+  "target": "package.json",
+  "strategy": "merge-shallow",
+  "snippets": [
+    {
+      "name": "UNLICENSED-package",
+      "variables": {
+        "repoKey": "${repoKey}",
+        "ownerName": "${ownerName}"
+      }
+    }
+  ],
+  "requires": [
+    "npm"
+  ],
+  "purpose": [
+    "Link UNLICENSED license file into [npm](https://www.npmjs.com/) configuration."
+  ]
+}
