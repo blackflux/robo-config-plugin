@@ -1,0 +1,37 @@
+{
+  "name": "${packageName}",
+  "homepage": "https://github.com/${repoKey}#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/${repoKey}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/${repoKey}/issues"
+  },
+  "main": "lib/index.js",
+  "version": "0.0.0-development",
+  "nyc": {
+    "tempDir": "./coverage/.nyc_output",
+    "report-dir": "./coverage",
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": [
+      "**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "extension": [],
+    "cache": true,
+    "all": true,
+    "babel": true
+  }
+}

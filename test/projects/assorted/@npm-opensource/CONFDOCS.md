@@ -28,6 +28,10 @@
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-package">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-package">`license/MIT-package`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpm-opensource">`npm/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-opensource">`package/#npm-opensource`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-deep">`package/default-deep`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagemerge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagemerge-deep">`package/merge-deep`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagemerge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagemerge-shallow">`package/merge-shallow`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-opensource">`semantic-release/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structnpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structnpm-opensource">`struct/#npm-opensource`</a>
@@ -966,6 +970,130 @@ _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
   </tbody>
 </table>
 
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-packagenpm-opensource">package/#npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagenpm-opensource">`index`</a>)
+
+Manage package.json for npm open source package on github.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;package.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagedefault-deep">package/default-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">`index`</a>)
+
+_Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-default-deep">default-deep</a>._
+
+- Set defaults for various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;package.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagemerge-deep">package/merge-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagemerge-deep">`index`</a>)
+
+_Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+
+- Set various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;package.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagemerge-shallow">package/merge-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagemerge-shallow">`index`</a>)
+
+_Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>._
+
+- Set various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;package.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-opensource">semantic-release/#npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-opensource">`index`</a>)
 
 Manage semantic-release configuration for npm open source package on github.
@@ -1339,6 +1467,22 @@ This will not work as desired for all xml merging, but should for many cases.
 *Does a shallow merge aka `Object.assign()`.*
 
 Useful when specific keys of the target need to be overwritten.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-default-deep">default-deep</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Similar to `merge-deep`, but keeps existing values instead of overwriting.*
+
+Useful to ensure specific keys of the target are present without overwriting existing content.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Does a "smart" deep merge.*
+
+This will not work as desired for all object deep merging, but should for many cases.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>  
 

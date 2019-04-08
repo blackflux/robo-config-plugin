@@ -9,6 +9,7 @@
     "jetbrains/#npm-opensource",
     "license/#npm-opensource",
     "npm/#npm-opensource",
+    "package/#npm-opensource",
     "semantic-release/#npm-opensource",
     "struct/#npm-opensource"
   ],
