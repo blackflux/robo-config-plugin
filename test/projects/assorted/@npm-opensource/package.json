@@ -6,5 +6,8 @@
       "url": "https://github.com/repoKey/blob/master/LICENSE"
     }
   ],
-  "author": "ownerName"
+  "author": "ownerName",
+  "devDependencies": {
+    "chai": "4.2.0"
+  }
 }

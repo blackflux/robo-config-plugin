@@ -1249,9 +1249,9 @@ Comes with all the bells and whistles.
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-chai">chai</a> ([`link`](https://www.chaijs.com/)) 
 
-*Chai is a BDD / TDD assertion library.*
+*JavaScript assertion library.*
 
-Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
+Chai is a BDD / TDD assertion library for node and the browser that can be paired with any javascript testing framework.
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-mocha">mocha</a> ([`link`](https://mochajs.org/)) 
 
