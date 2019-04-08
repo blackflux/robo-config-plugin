@@ -1,5 +1,6 @@
 {
   "tasks": [
+    "template-readme",
     "template-index",
     "template-index-test",
     "template-mocha-opts"

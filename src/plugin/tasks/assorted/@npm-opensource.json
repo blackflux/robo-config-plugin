@@ -1,5 +1,6 @@
 {
   "tasks": [
+    "struct/#npm-opensource",
     "badges/#npm-opensource",
     "circleci/#npm-opensource",
     "dependabot/#npm-opensource",
@@ -10,8 +11,7 @@
     "license/#npm-opensource",
     "npm/#npm-opensource",
     "package/#npm-opensource",
-    "semantic-release/#npm-opensource",
-    "struct/#npm-opensource"
+    "semantic-release/#npm-opensource"
   ],
   "description": "Manage various configuration files for an open source npm package on github."
 }
