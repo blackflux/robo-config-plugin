@@ -1,0 +1,14 @@
+{
+  "target": "test/index.spec.js",
+  "strategy": "create-only",
+  "snippets": [
+    "test/index.spec.js"
+  ],
+  "requires": [
+    "javascript",
+    "chai"
+  ],
+  "purpose": [
+    "Create package template index.spec.js test file."
+  ]
+}

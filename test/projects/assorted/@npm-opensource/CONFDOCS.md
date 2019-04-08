@@ -30,6 +30,10 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-opensource">`semantic-release/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-structnpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structnpm-opensource">`struct/#npm-opensource`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index">`struct/template-index`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index-test">`struct/template-index-test`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">assorted/@npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortednpm-opensource">`index`</a>)
 
@@ -59,7 +63,12 @@ Manage various configuration files for an open source npm package on github.
 <code>├─&nbsp;.releaserc.json</code><br/>
 <code>├─&nbsp;LICENSE</code><br/>
 <code>├─&nbsp;package.json</code><br/>
-<code>└─&nbsp;README.md</code><br/>
+<code>├─&nbsp;README.md</code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;index.js</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;index.spec.js</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;mocha.opts</code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -79,6 +88,8 @@ Manage various configuration files for an open source npm package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1009,6 +1020,127 @@ _Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-re
   </tbody>
 </table>
 
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-structnpm-opensource">struct/#npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structnpm-opensource">`index`</a>)
+
+Manage basic project structure for npm open source package on github.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;index.js</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;index.spec.js</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;mocha.opts</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-index">struct/template-index</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index">`index`</a>)
+
+_Updating `src/index.js` using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create package template index.js file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;index.js</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-index-test">struct/template-index-test</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index-test">`index`</a>)
+
+_Updating `test/index.spec.js` using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create package template index.spec.js test file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;index.spec.js</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">struct/template-mocha-opts</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">`index`</a>)
+
+_Updating `test/mocha.opts` using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create options file for mocha tests.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;mocha.opts</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ------
 
 ## Requires
@@ -1117,6 +1249,18 @@ they are all very similar (i.e. shortcuts, layout), which makes them great when 
 A major coverage testing framework for javascript.
 Comes with all the bells and whistles.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-chai">chai</a> ([`link`](https://www.chaijs.com/)) 
+
+*Chai is a BDD / TDD assertion library.*
+
+Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-mocha">mocha</a> ([`link`](https://mochajs.org/)) 
+
+*JavaScript test framework.*
+
+Mocha is a JavaScript test framework for Node.js programs, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.
+
 ------
 
 ## Variables
@@ -1195,4 +1339,10 @@ This will not work as desired for all xml merging, but should for many cases.
 *Does a shallow merge aka `Object.assign()`.*
 
 Useful when specific keys of the target need to be overwritten.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>  
+
+:small_blue_diamond: `any`
+
+*Does nothing when the file is already present, otherwise creates it.*
 

@@ -9,7 +9,8 @@
     "jetbrains/#npm-opensource",
     "license/#npm-opensource",
     "npm/#npm-opensource",
-    "semantic-release/#npm-opensource"
+    "semantic-release/#npm-opensource",
+    "struct/#npm-opensource"
   ],
   "description": "Manage various configuration files for an open source npm package on github."
 }

@@ -1,0 +1,7 @@
+{
+  "description": "JavaScript test framework.",
+  "details": [
+    "Mocha is a JavaScript test framework for Node.js programs, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library."
+  ],
+  "website": "https://mochajs.org/"
+}

@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    "template-index",
+    "template-index-test",
+    "template-mocha-opts"
+  ],
+  "description": "Manage basic project structure for npm open source package on github."
+}
