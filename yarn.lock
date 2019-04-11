@@ -199,6 +199,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@blackflux/eslint-plugin-rules@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.0.tgz#93bf60f3b01acb8dddcac0be788cc20ed6edec89"
+  integrity sha512-k5Xi0zt0MLlgXtCba/k0jhR02IrDzSmmoCzyosiwAi3nL6TrC8M0AO3yZyyR4zDiLTazIVcVPb6mXyih6Q1CyA==
+  dependencies:
+    smart-fs "1.5.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
