@@ -1,0 +1,13 @@
+{
+  "target": "src/index.js",
+  "strategy": "create-only",
+  "snippets": [
+    "src/index.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create package template index.js file."
+  ]
+}
