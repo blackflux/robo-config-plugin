@@ -1,0 +1,16 @@
+{
+  "target": "README.md",
+  "strategy": "create-only",
+  "snippets": [
+    {
+      "name": "README.md",
+      "variables": {
+        "packageName": "${packageName}"
+      }
+    }
+  ],
+  "requires": [],
+  "purpose": [
+    "Create README.md template file."
+  ]
+}

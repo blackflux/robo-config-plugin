@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    "template-readme",
+    "template-index",
+    "template-index-test",
+    "template-mocha-opts",
+    "template-eslintrc"
+  ],
+  "description": "Manage basic project structure for npm open source package on github."
+}

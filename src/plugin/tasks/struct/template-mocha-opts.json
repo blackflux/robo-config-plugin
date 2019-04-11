@@ -1,0 +1,14 @@
+{
+  "target": "test/mocha.opts",
+  "strategy": "create-only",
+  "snippets": [
+    "test/mocha.opts"
+  ],
+  "requires": [
+    "javascript",
+    "mocha"
+  ],
+  "purpose": [
+    "Create options file for mocha tests."
+  ]
+}

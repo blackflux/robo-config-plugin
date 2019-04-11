@@ -1,0 +1,13 @@
+{
+  "target": "package.json",
+  "strategy": "merge-shallow",
+  "snippets": [
+    "merge-shallow"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set various entries."
+  ]
+}

@@ -36,13 +36,14 @@
     "@babel/plugin-transform-flow-comments": "7.4.0",
     "@babel/preset-flow": "7.0.0",
     "@babel/register": "7.4.0",
+    "@blackflux/eslint-plugin-rules": "1.0.0",
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
     "js-gardener": "1.38.6",
     "nyc": "13.3.0",
-    "robo-config": "1.18.0",
+    "robo-config": "1.21.1",
     "semantic-release": "15.13.3"
   },
   "nyc": {
@@ -73,7 +74,8 @@
       "node_modules/*",
       "coverage/*",
       "flow-typed/*",
-      "lib/*"
+      "lib/*",
+      "src/plugin/tasks/*"
     ]
   },
   "licenses": [

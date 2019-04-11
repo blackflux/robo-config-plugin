@@ -1,0 +1,19 @@
+{
+  "target": "package.json",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "merge-deep",
+      "variables": {
+        "packageName": "${packageName}",
+        "repoKey": "${repoKey}"
+      }
+    }
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set various entries."
+  ]
+}
