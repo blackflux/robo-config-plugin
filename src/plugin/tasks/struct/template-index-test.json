@@ -1,5 +1,6 @@
 {
   "target": "test/index.spec.js",
+  "format": "txt",
   "strategy": "create-only",
   "snippets": [
     "test/index.spec.js"

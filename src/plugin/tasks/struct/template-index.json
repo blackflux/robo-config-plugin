@@ -1,5 +1,6 @@
 {
   "target": "src/index.js",
+  "format": "txt",
   "strategy": "create-only",
   "snippets": [
     "src/index.js"
