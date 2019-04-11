@@ -4,6 +4,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index">`struct/template-index`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index-test">`struct/template-index-test`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">`badges/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">`badges/js-gardener`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgessemantic-release">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgessemantic-release">`badges/semantic-release`</a>
@@ -58,6 +59,7 @@ Manage various configuration files for an open source npm package on github.
 <code>├─&nbsp;.dependabot</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
 <code>├─&nbsp;.editorconfig</code><br/>
+<code>├─&nbsp;.eslintrc.json</code><br/>
 <code>├─&nbsp;.gally.json</code><br/>
 <code>├─&nbsp;.gitignore</code><br/>
 <code>├─&nbsp;.idea</code><br/>
@@ -79,6 +81,7 @@ Manage various configuration files for an open source npm package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a></li>
@@ -124,6 +127,7 @@ Manage basic project structure for npm open source package on github.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;.eslintrc.json</code><br/>
 <code>├─&nbsp;README.md</code><br/>
 <code>├─&nbsp;src</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;index.js</code><br/>
@@ -137,6 +141,7 @@ Manage basic project structure for npm open source package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -259,6 +264,35 @@ _Updating `test/mocha.opts` using <a href="#blackfluxrobo-config-plugin-strat-re
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">struct/template-eslintrc</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">`index`</a>)
+
+_Updating `.eslintrc.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create configuration file for eslint enforcing opinionated, best practices.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;.eslintrc.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
         </ul>
       </td>
     </tr>
@@ -1326,6 +1360,13 @@ Chai is a BDD / TDD assertion library for node and the browser that can be paire
 
 Mocha is a JavaScript test framework for Node.js programs, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-eslint">eslint</a> ([`link`](https://eslint.org/)) 
+
+*Linting for JavaScript.*
+
+JSLint is a static code analysis tool used in software development for 
+checking if JavaScript source code complies with coding rules.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a> ([`link`](https://github.com/blackflux/js-gardener#readme)) 
 
 *NodeJs Project Management.*
@@ -1472,17 +1513,17 @@ The owner name of the project is the name of the person or organization publishi
 
 *Does nothing when the file is already present, otherwise creates it.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>  
-
-:small_blue_diamond: `list`, `nostruct`
-
-*Merges content below title.*
-
 ### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
 
 :small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>  
+
+:small_blue_diamond: `list`, `nostruct`
+
+*Merges content below title.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>  
 
