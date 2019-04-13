@@ -10,6 +10,7 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-opensource">`package/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagemerge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagemerge-shallow">`package/merge-shallow`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagemerge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagemerge-deep">`package/merge-deep`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-shallow">`package/default-shallow`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-deep">`package/default-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpm-opensource">`npm/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
@@ -443,6 +444,34 @@ _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-m
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagedefault-shallow">package/default-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagedefault-shallow">`index`</a>)
+
+_Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>._
+
+- Set defaults for various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;package.json</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
     </tr>
@@ -1534,6 +1563,14 @@ Useful when specific keys of the target need to be overwritten.
 *Does a "smart" deep merge.*
 
 This will not work as desired for all object deep merging, but should for many cases.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Similar to `merge-shallow`, but keeps existing values instead of overwriting.*
+
+Useful to ensure specific keys of the target are present without overwriting existing content.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-default-deep">default-deep</a>  
 
