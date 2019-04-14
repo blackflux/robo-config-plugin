@@ -5943,10 +5943,10 @@ rimraf@2, rimraf@2.6.3, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6
   dependencies:
     glob "^7.1.3"
 
-robo-config@1.21.2:
-  version "1.21.2"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-1.21.2.tgz#c9f62261298553eb720762caa673f767bccc84cb"
-  integrity sha512-rpIhkRevEv68JOWGqg5Qzdj/MEN8IPPQoDr12n+SqhYytA5SrKrcK9rObnmb3uy4Ix8PTviIkRRZ6gzjDiZWlw==
+robo-config@1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-1.22.0.tgz#b7d7cc90f341159e1382b1dad4a6de3aa7d8762f"
+  integrity sha512-wGcmM9/s5Zurb2M5Ievxm692M3nRxHIqmr4iFlaaAKw3Q1poVAlT/bRgb2L5NKgWMfDLOOzmuUwxPCvWOIdSvg==
   dependencies:
     app-root-path "2.2.1"
     deepmerge "3.2.0"
@@ -5957,7 +5957,7 @@ robo-config@1.21.2:
     object-deep-contain "1.0.4"
     object-scan "5.0.3"
     object-treeify "1.1.5"
-    smart-fs "1.5.4"
+    smart-fs "1.6.0"
 
 run-async@^0.1.0:
   version "0.1.0"
@@ -6172,10 +6172,10 @@ smart-fs@1.5.2:
     xml-js "1.6.11"
     yaml-boost "1.9.0"
 
-smart-fs@1.5.4:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.5.4.tgz#8c893e6eeb5516d369161d069abebd8fbf4f1fbf"
-  integrity sha512-t1S9vIY1Q3JhsqNAKLocMlIVZLFc+GNX8R7PVeFwJYN69mgHi+Fwm97N+I35NDE9WMCKnHpTTE5tQskdXWuC4g==
+smart-fs@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.6.0.tgz#5426905042b7efed6f3aa2b8110b2e401760df87"
+  integrity sha512-0lCETMA4Ifux+megsUx2Qjz4/43mamnSd409BgEumi0QxqHXtqkRgqhPfVqMz+qKq4YOrbAaFgHixhdDkQTu4A==
   dependencies:
     fs-extra "7.0.1"
     lodash.clonedeep "4.5.0"
