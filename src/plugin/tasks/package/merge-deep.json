@@ -1,6 +1,7 @@
 {
   "target": "package.json",
   "strategy": "merge-deep",
+  "create": true,
   "snippets": [
     {
       "name": "merge-deep",

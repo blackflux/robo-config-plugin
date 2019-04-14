@@ -2,6 +2,7 @@
   "target": "test/index.spec.js",
   "format": "txt",
   "strategy": "create-only",
+  "create": true,
   "snippets": [
     "test/index.spec.js"
   ],

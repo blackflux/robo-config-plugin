@@ -1,6 +1,7 @@
 {
   "target": ".editorconfig",
   "strategy": "overwrite",
+  "create": true,
   "snippets": [
     {
       "name": "base",

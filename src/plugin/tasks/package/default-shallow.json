@@ -1,14 +1,14 @@
 {
   "target": "package.json",
-  "strategy": "merge-shallow",
+  "strategy": "default-shallow",
   "create": true,
   "snippets": [
-    "merge-shallow"
+    "default-shallow"
   ],
   "requires": [
     "javascript"
   ],
   "purpose": [
-    "Set various entries."
+    "Set defaults for various entries."
   ]
 }
