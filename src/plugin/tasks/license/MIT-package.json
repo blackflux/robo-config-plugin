@@ -1,6 +1,7 @@
 {
   "target": "package.json",
   "strategy": "merge-shallow",
+  "create": true,
   "snippets": [
     {
       "name": "MIT-package",

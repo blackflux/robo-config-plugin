@@ -763,7 +763,7 @@ Manage WebStorm configuration for npm open source package on github.
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">`index`</a>)
 
-_Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>._
+_Updating `.idea/${projectName}.iml` (if exists) using <a href="#blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>._
 
 - Mark `coverage` Folder as excluded in Jetbrains.
 

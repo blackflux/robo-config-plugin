@@ -1,6 +1,7 @@
 {
   "target": ".eslintrc.json",
   "strategy": "overwrite",
+  "create": true,
   "snippets": [
     ".eslintrc.json"
   ],

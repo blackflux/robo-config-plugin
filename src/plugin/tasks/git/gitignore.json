@@ -1,6 +1,7 @@
 {
   "target": ".gitignore",
   "strategy": "unique-top",
+  "create": true,
   "snippets": [
     "jetbrains",
     "spacer-small",

@@ -2,6 +2,7 @@
   "target": ".idea/${projectName}.iml",
   "format": "xml",
   "strategy": "xml-merge",
+  "create": false,
   "snippets": [
     {
       "name": "exclude-folder-from-module",

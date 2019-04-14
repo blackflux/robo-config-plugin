@@ -1,6 +1,7 @@
 {
   "target": ".babelrc",
   "strategy": "merge-deep",
+  "create": true,
   "snippets": [
     ".babelrc"
   ],

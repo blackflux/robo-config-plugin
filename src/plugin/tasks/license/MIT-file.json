@@ -1,6 +1,7 @@
 {
   "target": "LICENSE",
   "strategy": "overwrite",
+  "create": true,
   "snippets": [
     {
       "name": "MIT-file",
