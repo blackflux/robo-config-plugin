@@ -1,12 +1,15 @@
 {
   "target": ".gitignore",
   "strategy": "unique-top",
+  "create": true,
   "snippets": [
     "jetbrains",
     "spacer-small",
     "osx",
     "spacer-small",
     "nodejs",
+    "spacer-small",
+    "js-gardener",
     "spacer-big"
   ],
   "requires": [

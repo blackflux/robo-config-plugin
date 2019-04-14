@@ -1,0 +1,4 @@
+# JS-Gardener Specific
+coverage/
+.coveralls.yml
+lib/

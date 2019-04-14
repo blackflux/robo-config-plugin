@@ -1,6 +1,7 @@
 {
   "target": "README.md",
   "strategy": "create-only",
+  "create": true,
   "snippets": [
     {
       "name": "README.md",
