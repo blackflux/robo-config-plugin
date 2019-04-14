@@ -1,5 +1,5 @@
 {
-  "name": "robo-config-plugin",
+  "name": "@blackflux/robo-config-plugin",
   "version": "0.0.0-development",
   "description": "Blackflux robo-config plugin.",
   "main": "lib/index.js",
