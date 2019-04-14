@@ -1,0 +1,14 @@
+{
+  "target": ".babelrc",
+  "strategy": "merge-deep",
+  "snippets": [
+    ".babelrc"
+  ],
+  "requires": [
+    "javascript",
+    "babel"
+  ],
+  "purpose": [
+    "Create configuration file for babel."
+  ]
+}

@@ -7,6 +7,8 @@
     "osx",
     "spacer-small",
     "nodejs",
+    "spacer-small",
+    "js-gardener",
     "spacer-big"
   ],
   "requires": [

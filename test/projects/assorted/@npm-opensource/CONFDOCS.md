@@ -7,6 +7,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index-test">`struct/template-index-test`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index">`struct/template-index`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-opensource">`semantic-release/#npm-opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-opensource">`package/#npm-opensource`</a>
@@ -57,6 +58,7 @@ Manage various configuration files for an open source npm package on github.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;.babelrc</code><br/>
 <code>├─&nbsp;.circleci</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
 <code>├─&nbsp;.dependabot</code><br/>
@@ -85,6 +87,7 @@ Manage various configuration files for an open source npm package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
@@ -130,6 +133,7 @@ Manage basic project structure for npm open source package on github.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;.babelrc</code><br/>
 <code>├─&nbsp;.eslintrc.json</code><br/>
 <code>├─&nbsp;README.md</code><br/>
 <code>├─&nbsp;src</code><br/>
@@ -145,6 +149,7 @@ Manage basic project structure for npm open source package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -296,6 +301,35 @@ _Updating `.eslintrc.json` using <a href="#blackfluxrobo-config-plugin-strat-ref
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">struct/template-babelrc</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">`index`</a>)
+
+_Updating `.babelrc` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+
+- Create configuration file for babel.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;.babelrc</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
         </ul>
       </td>
     </tr>
@@ -1398,6 +1432,13 @@ Chai is a BDD / TDD assertion library for node and the browser that can be paire
 JSLint is a static code analysis tool used in software development for 
 checking if JavaScript source code complies with coding rules.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-babel">babel</a> ([`link`](https://babeljs.io/)) 
+
+*JavaScript Compiler.*
+
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
+compatible version of JavaScript in current and older browsers or environments.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a> ([`link`](https://github.com/semantic-release/semantic-release)) 
 
 *Automates npm package release workflow.*
@@ -1550,14 +1591,6 @@ The code owner is the gatekeeper of the project, ultimately responsible for all 
 
 *Simply replace the old with the new content.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
-
-:small_blue_diamond: `json`, `yml`
-
-*Does a shallow merge aka `Object.assign()`.*
-
-Useful when specific keys of the target need to be overwritten.
-
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
 
 :small_blue_diamond: `json`, `yml`
@@ -1565,6 +1598,14 @@ Useful when specific keys of the target need to be overwritten.
 *Does a "smart" deep merge.*
 
 This will not work as desired for all object deep merging, but should for many cases.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Does a shallow merge aka `Object.assign()`.*
+
+Useful when specific keys of the target need to be overwritten.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>  
 
