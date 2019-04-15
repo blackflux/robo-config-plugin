@@ -1,15 +1,1 @@
-{
-  "@blackflux/robo-config-plugin": {
-    "tasks": [
-      "assorted/@npm-opensource"
-    ],
-    "variables": {
-      "repoKey": "blackflux/robo-config-plugin",
-      "packageName": "@blackflux/robo-config-plugin",
-      "projectName": "robo-config-plugin",
-      "owner": "simlu",
-      "ownerName": "Lukas Siemon",
-      "mergeBot": "MrsFlux"
-    }
-  }
-}
+{}
