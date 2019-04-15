@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "es-docker",
+    "es-manage"
+  ],
+  "description": "Manage docker configuration for npm open source package on github using elasticsearch."
+}
