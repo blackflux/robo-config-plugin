@@ -175,10 +175,10 @@
   dependencies:
     smart-fs "1.6.1"
 
-"@blackflux/robo-config-plugin@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.4.0.tgz#ec4cb2966236d8e197a8f0acbae7b79983007b76"
-  integrity sha512-igAsa2tuPgcwPY7Ttrv3b9BKJgZzj6C9TRhD6/BYWjgW2QiBGwO2ESvFU3eCWp9XbyM1l5K9YvTlYcB9b0mm/A==
+"@blackflux/robo-config-plugin@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.4.1.tgz#ffd1649b7b095be59e4829cd0a9bc44fbec0e92f"
+  integrity sha512-oDXp/ltwaoiuZwzZCe0rdnMVX3MCMblr8J5sls2k62di728hG+wwgp/idbXIshs70b5dXuvAv+sjP7XrcuNPZA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
