@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    "template-readme",
+    "template-index",
+    "template-index-test",
+    "template-mocha-opts",
+    "template-eslintrc",
+    "template-babelrc",
+    "force-gardener-dockerized"
+  ],
+  "description": "Manage basic project structure for npm open source package on github."
+}

@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "struct/#npm-opensource",
+    "struct/#npm-opensource-es",
     "badges/#npm-opensource",
     "circleci/#npm-opensource-es",
     "docker/#npm-opensource-es",
