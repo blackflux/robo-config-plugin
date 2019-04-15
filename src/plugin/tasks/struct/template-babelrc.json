@@ -3,7 +3,7 @@
   "strategy": "merge-deep",
   "create": true,
   "snippets": [
-    ".babelrc"
+    "default/.babelrc"
   ],
   "requires": [
     "javascript",

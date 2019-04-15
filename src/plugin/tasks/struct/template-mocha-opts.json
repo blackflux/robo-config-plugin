@@ -3,7 +3,7 @@
   "strategy": "create-only",
   "create": true,
   "snippets": [
-    "test/mocha.opts"
+    "default/test/mocha.opts"
   ],
   "requires": [
     "javascript",
