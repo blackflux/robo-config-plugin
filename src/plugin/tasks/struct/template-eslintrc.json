@@ -3,7 +3,7 @@
   "strategy": "overwrite",
   "create": true,
   "snippets": [
-    ".eslintrc.json"
+    "default/.eslintrc.json"
   ],
   "requires": [
     "javascript",

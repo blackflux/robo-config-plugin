@@ -1,0 +1,29 @@
+workflows:
+  node-multi-build:
+    jobs:
+      - ${jobName}: ${jobOptions}
+
+jobs:
+  ${jobName}:
+    docker:
+      - image: '${dockerImage}'
+        environment:
+          elasticsearchEndpoint: 'localhost:9200'
+      - image: 'docker.elastic.co/elasticsearch/elasticsearch:6.3.0'
+        environment:
+          - discovery.type=single-node
+          - http.host=0.0.0.0
+          - transport.host=127.0.0.1
+          - xpack.security.enabled=false
+          - ES_JAVA_OPTS=-Xms750m -Xmx750m
+    steps:
+      - run:
+          command: >
+            until $(curl --output /dev/null --silent --head --fail
+            http://localhost:9200); do
+                sleep 5
+            done
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);
