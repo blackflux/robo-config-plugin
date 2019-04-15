@@ -5,7 +5,8 @@
     "template-index-test",
     "template-mocha-opts",
     "template-eslintrc",
-    "template-babelrc"
+    "template-babelrc",
+    "force-gardener"
   ],
   "description": "Manage basic project structure for npm open source package on github."
 }
