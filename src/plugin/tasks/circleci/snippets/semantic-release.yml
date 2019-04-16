@@ -7,7 +7,7 @@ jobs:
   release:
     docker:
       - image: ${dockerImage}
-    steps:
-      - checkout
-      - run: yarn install --frozen-lockfile
-      - run: yarn run semantic-release
+    <<<:
+      - ${file(^/meta/yarn-setup.yml)}
+      - steps:
+          - run: yarn run semantic-release
