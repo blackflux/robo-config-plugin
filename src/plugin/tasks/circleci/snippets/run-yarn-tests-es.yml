@@ -16,14 +16,15 @@ jobs:
           - transport.host=127.0.0.1
           - xpack.security.enabled=false
           - ES_JAVA_OPTS=-Xms750m -Xmx750m
-    steps:
-      - run:
-          command: >
-            until $(curl --output /dev/null --silent --head --fail
-            http://localhost:9200); do
-                sleep 5
-            done
-      - checkout
-      - run: yarn install --frozen-lockfile
-      - run: yarn test
-      - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);
+    <<<:
+      - steps:
+          - run:
+              command: >
+                until $(curl --output /dev/null --silent --head --fail
+                http://localhost:9200); do
+                    sleep 5
+                done
+      - ${file(^/meta/yarn-setup.yml)}
+      - steps:
+          - run: yarn test
+          - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);
