@@ -37,7 +37,7 @@
 
 # :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortednpm-closedsourcejson">assorted/@npm-closedsource.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortednpm-closedsourcejson">`index`</a>)
 
-Manage various configuration files for an closed source npm package on github.
+Manage various configuration files for closed source npm package on github.
 
 <table>
   <tbody>
