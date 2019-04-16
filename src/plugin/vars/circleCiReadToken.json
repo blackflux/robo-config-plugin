@@ -1,0 +1,7 @@
+{
+  "description": "CircleCi Read Api Token.",
+  "details": [
+    "CircleCi read only api token used to access build status."
+  ],
+  "type": "string"
+}

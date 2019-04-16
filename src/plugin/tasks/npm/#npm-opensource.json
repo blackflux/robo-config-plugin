@@ -1,6 +1,0 @@
-{
-  "tasks": [
-    "npmignore"
-  ],
-  "description": "Manage npm configuration for npm open source package on github."
-}
