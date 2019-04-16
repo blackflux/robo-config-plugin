@@ -9,9 +9,8 @@ it('Documenting Plugin Tasks', () => {
 
 it('Testing Plugin Tasks', () => {
   expect(load(plugin).test(path.join(__dirname, 'projects'))).to.deep.equal({
+    'assorted/@npm-closedsource': [],
     'assorted/@npm-opensource': [],
-    'assorted/@npm-opensource-es': [],
-    'license/@MIT-npm': [],
-    'license/@UNLICENSED-npm': []
+    'assorted/@npm-opensource-es': []
   });
 });

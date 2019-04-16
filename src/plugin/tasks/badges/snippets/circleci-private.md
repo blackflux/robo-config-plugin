@@ -1,0 +1,1 @@
+[![Build Status](https://circleci.com/gh/${repoKey}.png?style=shield&circle-token=${circleCiReadToken})](https://circleci.com/gh/${repoKey})

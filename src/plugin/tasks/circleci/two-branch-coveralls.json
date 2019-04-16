@@ -25,6 +25,13 @@
       }
     },
     {
+      "name": "inject-coveralls-step",
+      "variables": {
+        "jobName": "test-node-v10",
+        "ciEnvBranchName": "CIRCLE_BRANCH"
+      }
+    },
+    {
       "name": "run-yarn-tests",
       "variables": {
         "jobName": "test-node-v8.10",
@@ -81,6 +88,7 @@
     "gally",
     "github",
     "circleci",
+    "coveralls",
     "dependabot",
     "semantic-release"
   ],

@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "#npm-base",
+    "force-gardener-dockerized"
+  ],
+  "description": "Manage basic project structure for npm package on github enforcing docker."
+}
