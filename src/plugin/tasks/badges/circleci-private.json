@@ -1,0 +1,20 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "create": true,
+  "snippets": [
+    {
+      "name": "circleci-private",
+      "variables": {
+        "repoKey": "${repoKey}",
+        "circleCiReadToken": "${circleCiReadToken}"
+      }
+    }
+  ],
+  "requires": [
+    "circleci"
+  ],
+  "purpose": [
+    "Display [circleci](https://circleci.com/) badge for private repo in README."
+  ]
+}

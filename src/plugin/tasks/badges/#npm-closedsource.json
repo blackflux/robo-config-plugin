@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    "js-gardener",
+    "semantic-release",
+    "circleci-private"
+  ],
+  "description": "Add badged for npm closed source package on github."
+}

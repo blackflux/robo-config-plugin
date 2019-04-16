@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    "default-shallow",
+    "default-deep",
+    "merge-shallow",
+    "merge-deep"
+  ],
+  "description": "Manage package.json for npm package on github."
+}
