@@ -56,7 +56,7 @@ jobs:
       - checkout
       - run:
           command: |
-            if [[ -z "${NPM_TOKEN}" ]]; then
+            if [[ -n "${NPM_TOKEN}" ]]; then
               echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             fi
       - run: yarn install --frozen-lockfile
@@ -91,7 +91,7 @@ jobs:
       - checkout
       - run:
           command: |
-            if [[ -z "${NPM_TOKEN}" ]]; then
+            if [[ -n "${NPM_TOKEN}" ]]; then
               echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             fi
       - run: yarn install --frozen-lockfile
@@ -128,7 +128,7 @@ jobs:
       - checkout
       - run:
           command: |
-            if [[ -z "${NPM_TOKEN}" ]]; then
+            if [[ -n "${NPM_TOKEN}" ]]; then
               echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             fi
       - run: yarn install --frozen-lockfile
