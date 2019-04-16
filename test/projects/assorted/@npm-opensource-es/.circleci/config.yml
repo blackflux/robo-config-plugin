@@ -54,6 +54,11 @@ jobs:
                 sleep 5
             done
       - checkout
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
       - run: yarn install --frozen-lockfile
       - run: yarn test
       - run: >-
@@ -84,6 +89,11 @@ jobs:
                 sleep 5
             done
       - checkout
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
       - run: yarn install --frozen-lockfile
       - run: yarn test
       - run: >-
@@ -116,5 +126,10 @@ jobs:
       - image: 'circleci/node:10'
     steps:
       - checkout
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
       - run: yarn install --frozen-lockfile
       - run: yarn run semantic-release
