@@ -45,8 +45,7 @@ jobs:
 
             if [[ $(git config --file .gitmodules --name-only --get-regexp path)
             ]]; then
-              git submodule sync
-              git submodule update --init
+              git submodule sync && git submodule update --init
             fi
       - run:
           command: |
@@ -74,8 +73,7 @@ jobs:
 
             if [[ $(git config --file .gitmodules --name-only --get-regexp path)
             ]]; then
-              git submodule sync
-              git submodule update --init
+              git submodule sync && git submodule update --init
             fi
       - run:
           command: |
@@ -120,8 +118,7 @@ jobs:
 
             if [[ $(git config --file .gitmodules --name-only --get-regexp path)
             ]]; then
-              git submodule sync
-              git submodule update --init
+              git submodule sync && git submodule update --init
             fi
       - run:
           command: |
