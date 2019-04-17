@@ -1,7 +1,6 @@
 {
   "target": "docker/Dockerfile",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     "es/docker/Dockerfile"
   ],

@@ -1,7 +1,6 @@
 {
   "target": ".npmignore",
   "strategy": "unique-top",
-  "create": true,
   "snippets": [
     "message",
     "spacer-big"

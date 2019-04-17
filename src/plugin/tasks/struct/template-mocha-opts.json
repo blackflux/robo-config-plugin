@@ -1,7 +1,6 @@
 {
   "target": "test/mocha.opts",
   "strategy": "create-only",
-  "create": true,
   "snippets": [
     "default/test/mocha.opts"
   ],

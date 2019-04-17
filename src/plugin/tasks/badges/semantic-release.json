@@ -1,7 +1,6 @@
 {
   "target": "README.md",
   "strategy": "merge-below-title",
-  "create": true,
   "snippets": [
     "semantic-release"
   ],

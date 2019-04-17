@@ -1,7 +1,6 @@
 {
   "target": "manage.sh",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     "es/manage.sh"
   ],

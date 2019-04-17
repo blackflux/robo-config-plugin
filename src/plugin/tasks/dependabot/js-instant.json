@@ -1,7 +1,6 @@
 {
   "target": ".dependabot/config.yml",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     {
       "name": "base",

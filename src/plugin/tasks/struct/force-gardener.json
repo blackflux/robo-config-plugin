@@ -2,7 +2,6 @@
   "target": "gardener.js",
   "format": "txt",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     "default/gardener.js"
   ],
