@@ -40,6 +40,15 @@ jobs:
     steps:
       - checkout
       - run:
+          command: >
+            # sync submodules as checkout doesn't do this automatically
+
+            if [[ $(git config --file .gitmodules --name-only --get-regexp path)
+            ]]; then
+              git submodule sync
+              git submodule update --init
+            fi
+      - run:
           command: |
             if [[ -n "${NPM_TOKEN}" ]]; then
               echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
@@ -59,6 +68,15 @@ jobs:
       - image: 'circleci/node:8.10'
     steps:
       - checkout
+      - run:
+          command: >
+            # sync submodules as checkout doesn't do this automatically
+
+            if [[ $(git config --file .gitmodules --name-only --get-regexp path)
+            ]]; then
+              git submodule sync
+              git submodule update --init
+            fi
       - run:
           command: |
             if [[ -n "${NPM_TOKEN}" ]]; then
@@ -96,6 +114,15 @@ jobs:
       - image: 'circleci/node:10'
     steps:
       - checkout
+      - run:
+          command: >
+            # sync submodules as checkout doesn't do this automatically
+
+            if [[ $(git config --file .gitmodules --name-only --get-regexp path)
+            ]]; then
+              git submodule sync
+              git submodule update --init
+            fi
       - run:
           command: |
             if [[ -n "${NPM_TOKEN}" ]]; then
