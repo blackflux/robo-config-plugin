@@ -2,7 +2,6 @@
   "target": "src/index.js",
   "format": "txt",
   "strategy": "create-only",
-  "create": true,
   "snippets": [
     "default/src/index.js"
   ],

@@ -2,7 +2,6 @@
   "target": ".babelrc",
   "format": "json",
   "strategy": "merge-deep",
-  "create": true,
   "snippets": [
     "default/.babelrc"
   ],

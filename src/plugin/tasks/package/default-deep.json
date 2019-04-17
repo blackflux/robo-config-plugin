@@ -1,7 +1,6 @@
 {
   "target": "package.json",
   "strategy": "default-deep",
-  "create": true,
   "snippets": [
     "default-deep"
   ],
