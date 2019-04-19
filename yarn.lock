@@ -4785,6 +4785,11 @@ object-deep-contain@1.0.5:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.5.tgz#972d0bdd46090bca7c5f6934408bc8b8146cb82b"
   integrity sha512-x+66tJOP8CxfDoC42P1XIxFr/pFXWeUtTTdc2lVHEqHCJ9P+Fqjwu24hVCr0IwBIhxk/DlY6af50+8jXofAYag==
 
+object-deep-contain@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.6.tgz#092e7b788e1e73711417cad9cb2c8f5fe9ca1ca3"
+  integrity sha512-2DymYgUzS+pfmrLOeJmNAocueJIrHZ/hTlDA+E4r0ipNKJcxCqJFVsGX8UdnbYt/vUoPAGl37HyAIqA6JNX/Wg==
+
 object-keys@^1.0.11, object-keys@^1.0.12:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
@@ -4804,6 +4809,11 @@ object-treeify@1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.6.tgz#42c643e1154bc1cb17c9517ff9b972fd56a58fe2"
   integrity sha512-zOSm9z2sVS+90/IeyRY8BbSefps7ZP99+eCKRM73xAzVxIcaMFU0vIXWT9q9QZhWMMWh3aHmqVaQbXpodqug0g==
+
+object-treeify@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.7.tgz#eb8ed757432c29db6c617633be5c0637e15ccddf"
+  integrity sha512-njl9Rzx9PoW2p2g/2lY4vz+MJ2AW+QefJ2/zU1qdWk++FkVvHbTdq9EmFCIn6+ov7yGkWSAtOk9saXRlk8cd2Q==
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -5863,10 +5873,10 @@ robo-config@2.1.1:
     object-treeify "1.1.6"
     smart-fs "1.6.1"
 
-robo-config@2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-2.1.3.tgz#4fbb0f4426148ba45bb4703533c57f06d5276939"
-  integrity sha512-IuY7WfmUccEukTPc6DX8/XwemO4iMIhr1ZKDBZDfxZTn8bBN6uJe7KNyUDW4u8k0/lmR1PR7fYe/1I/Yo1GpGA==
+robo-config@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-2.1.4.tgz#bc73a02a3a2380b271e86fde733463ee3aa49114"
+  integrity sha512-w5ZdEMefoAPdQJh05ysl6Ec+Moufs3e71Oq+PxXg52z4z2vwKi7SL7gTXZymCce3caCm0zaTM1qiUvmL2TgLGA==
   dependencies:
     app-root-path "2.2.1"
     deepmerge "3.2.0"
@@ -5874,10 +5884,10 @@ robo-config@2.1.3:
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
-    object-deep-contain "1.0.5"
+    object-deep-contain "1.0.6"
     object-scan "5.0.8"
-    object-treeify "1.1.6"
-    smart-fs "1.6.1"
+    object-treeify "1.1.7"
+    smart-fs "1.6.2"
 
 run-async@^0.1.0:
   version "0.1.0"
