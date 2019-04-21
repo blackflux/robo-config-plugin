@@ -1,0 +1,11 @@
+{
+  "target": "docker/Dockerfile",
+  "strategy": "overwrite",
+  "snippets": [
+    "es/docker/Dockerfile"
+  ],
+  "requires": [],
+  "purpose": [
+    "Docker environment definition for running tests."
+  ]
+}

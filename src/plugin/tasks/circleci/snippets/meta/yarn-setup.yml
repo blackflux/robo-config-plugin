@@ -1,0 +1,14 @@
+steps:
+  - checkout
+  - run:
+      command: |
+        # sync submodules as checkout doesn't do this automatically
+        if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+          git submodule sync && git submodule update --init
+        fi
+  - run:
+      command: |
+        if [[ -n "$\{NPM_TOKEN}" ]]; then
+          echo "//registry.npmjs.org/:_authToken=$\{NPM_TOKEN}" > ~/.npmrc
+        fi
+  - run: yarn install --frozen-lockfile

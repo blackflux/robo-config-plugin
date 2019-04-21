@@ -1,17 +1,17 @@
 {
   "tasks": [
-    "struct/#npm-opensource",
+    "struct/#npm-default",
     "badges/#npm-opensource",
-    "circleci/#npm-opensource",
-    "dependabot/#npm-opensource",
-    "gally/#npm-opensource",
-    "editor/#npm-opensource",
-    "git/#npm-opensource",
-    "jetbrains/#npm-opensource",
+    "circleci/#npm-default-coveralls",
+    "dependabot/#npm-default",
+    "gally/#npm-default",
+    "editor/#npm-default",
+    "git/#npm-default",
+    "jetbrains/#npm-default",
     "license/#npm-opensource",
-    "npm/#npm-opensource",
-    "package/#npm-opensource",
-    "semantic-release/#npm-opensource"
+    "npm/#npm-default",
+    "package/#npm-default",
+    "semantic-release/#npm-default"
   ],
   "description": "Manage various configuration files for an open source npm package on github."
 }

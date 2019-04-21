@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    "struct/#npm-dockerized",
+    "badges/#npm-opensource",
+    "circleci/#npm-default-coveralls-es",
+    "docker/#npm-elasticsearch",
+    "dependabot/#npm-default",
+    "gally/#npm-default",
+    "editor/#npm-default",
+    "git/#npm-default",
+    "jetbrains/#npm-default",
+    "license/#npm-opensource",
+    "npm/#npm-default",
+    "package/#npm-default",
+    "semantic-release/#npm-default"
+  ],
+  "description": "Manage various configuration files for an elasticsearch open source npm package on github."
+}

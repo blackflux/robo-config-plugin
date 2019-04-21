@@ -1,10 +1,9 @@
 {
   "target": "README.md",
   "strategy": "create-only",
-  "create": true,
   "snippets": [
     {
-      "name": "README.md",
+      "name": "default/README.md",
       "variables": {
         "packageName": "${packageName}"
       }

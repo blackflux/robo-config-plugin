@@ -1,0 +1,11 @@
+{
+  "target": "manage.sh",
+  "strategy": "overwrite",
+  "snippets": [
+    "es/manage.sh"
+  ],
+  "requires": [],
+  "purpose": [
+    "Spawn docker container with joined elasticsearch container."
+  ]
+}

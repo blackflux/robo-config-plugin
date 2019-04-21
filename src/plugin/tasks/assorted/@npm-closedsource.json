@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    "struct/#npm-default",
+    "badges/#npm-closedsource",
+    "circleci/#npm-default",
+    "gally/#npm-default",
+    "editor/#npm-default",
+    "git/#npm-default",
+    "jetbrains/#npm-default",
+    "license/#npm-closedsource",
+    "npm/#npm-default",
+    "package/#npm-default",
+    "semantic-release/#npm-default"
+  ],
+  "description": "Manage various configuration files for closed source npm package on github."
+}

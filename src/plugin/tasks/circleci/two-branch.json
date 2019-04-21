@@ -1,7 +1,6 @@
 {
   "target": ".circleci/config.yml",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     "base",
     {
@@ -22,13 +21,6 @@
             "gally-create-pr"
           ]
         }
-      }
-    },
-    {
-      "name": "inject-coveralls-step",
-      "variables": {
-        "jobName": "test-node-v10",
-        "ciEnvBranchName": "CIRCLE_BRANCH"
       }
     },
     {
@@ -88,7 +80,6 @@
     "gally",
     "github",
     "circleci",
-    "coveralls",
     "dependabot",
     "semantic-release"
   ],

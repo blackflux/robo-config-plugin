@@ -1,0 +1,15 @@
+{
+  "target": "gardener.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "default/gardener.js"
+  ],
+  "requires": [
+    "javascript",
+    "js-gardener"
+  ],
+  "purpose": [
+    "Manage gardener.js file for js-gardener."
+  ]
+}

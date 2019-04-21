@@ -1,7 +1,6 @@
 {
   "target": "LICENSE",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     {
       "name": "UNLICENSED-file",

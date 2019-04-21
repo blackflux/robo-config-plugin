@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "exclude-coverage-folder"
+  ],
+  "description": "Manage WebStorm configuration for npm package on github."
+}
