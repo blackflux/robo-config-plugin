@@ -5,6 +5,11 @@
         "type": "build",
         "scope": "deps",
         "release": "patch"
+      },
+      {
+        "type": "chore",
+        "scope": "deps",
+        "release": "patch"
       }
     ]
   }
