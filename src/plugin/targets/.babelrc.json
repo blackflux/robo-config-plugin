@@ -1,0 +1,7 @@
+{
+  "description": "Configuration for babel.",
+  "details": [],
+  "formats": ["json"],
+  "requires": ["babel"],
+  "website": "https://babeljs.io/docs/en/configuration#babelrc"
+}

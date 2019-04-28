@@ -6,7 +6,8 @@
     "spacer-big"
   ],
   "requires": [
-    "npm"
+    "npm",
+    "npm-published"
   ],
   "purpose": [
     "Inject comment into .npmignore explaining when to use it."

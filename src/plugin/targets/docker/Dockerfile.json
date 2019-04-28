@@ -1,0 +1,13 @@
+{
+  "description": "Main docker container configuration file.",
+  "details": [
+    "Contains instructions for the main docker container this repository uses for testing."
+  ],
+  "formats": [
+    "other"
+  ],
+  "requires": [
+    "docker"
+  ],
+  "website": "https://docs.docker.com/engine/reference/builder/"
+}

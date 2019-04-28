@@ -1,0 +1,7 @@
+{
+  "description": "Project readme file.",
+  "details": ["Contains lots of information about the project itself."],
+  "formats": ["nostruct"],
+  "requires": [],
+  "website": "https://help.github.com/en/articles/about-readmes"
+}

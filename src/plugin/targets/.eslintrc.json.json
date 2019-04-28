@@ -1,0 +1,7 @@
+{
+  "description": "Configuration file for eslint.",
+  "details": [],
+  "formats": ["json"],
+  "requires": ["eslint"],
+  "website": "https://eslint.org/docs/user-guide/configuring"
+}

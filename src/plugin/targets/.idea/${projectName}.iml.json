@@ -1,0 +1,11 @@
+{
+  "description": "Module Library configuration file for JetBrains IDE.",
+  "details": [],
+  "formats": [
+    "xml"
+  ],
+  "requires": [
+    "jetbrains"
+  ],
+  "website": "https://www.jetbrains.org/intellij/sdk/docs/basics/project_structure.html#library"
+}

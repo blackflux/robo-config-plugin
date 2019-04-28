@@ -1,0 +1,7 @@
+{
+  "description": "Configuration for npm package.",
+  "details": [],
+  "formats": ["json"],
+  "requires": ["npm"],
+  "website": "https://docs.npmjs.com/files/package.json"
+}

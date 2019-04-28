@@ -1,0 +1,13 @@
+{
+  "description": "Prepare project to run tests.",
+  "details": [
+    "File starts docker container(s) with necessary setup to execute the project tests."
+  ],
+  "formats": [
+    "other"
+  ],
+  "requires": [
+    "docker"
+  ],
+  "website": null
+}

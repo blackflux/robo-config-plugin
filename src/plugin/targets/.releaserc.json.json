@@ -1,0 +1,7 @@
+{
+  "description": "Configuration for semantic-release.",
+  "details": ["Configuration file for semantic-release and plugins"],
+  "formats": ["json"],
+  "requires": ["semantic-release"],
+  "website": "https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file"
+}
