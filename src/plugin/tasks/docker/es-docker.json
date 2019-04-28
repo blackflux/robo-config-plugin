@@ -4,7 +4,9 @@
   "snippets": [
     "es/docker/Dockerfile"
   ],
-  "requires": [],
+  "requires": [
+    "docker"
+  ],
   "purpose": [
     "Docker environment definition for running tests."
   ]

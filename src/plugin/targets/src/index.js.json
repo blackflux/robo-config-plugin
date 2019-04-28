@@ -1,0 +1,7 @@
+{
+  "description": "Main project file.",
+  "details": ["Main file for the project. Exposes functionality for libraries."],
+  "formats": ["other"],
+  "requires": ["javascript"],
+  "website": null
+}

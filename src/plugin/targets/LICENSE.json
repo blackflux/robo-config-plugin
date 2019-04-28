@@ -1,0 +1,12 @@
+{
+  "description": "Project License file.",
+  "details": [
+    "Specify the license the project is published under.",
+    "Can be set to unlicensed as well."
+  ],
+  "formats": [
+    "nostruct"
+  ],
+  "requires": [],
+  "website": "https://help.github.com/en/articles/adding-a-license-to-a-repository"
+}

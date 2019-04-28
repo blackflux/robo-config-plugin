@@ -1,0 +1,7 @@
+{
+  "description": "Main project test file.",
+  "details": ["Main test file for the project. At the very least tests signature of what is exposed."],
+  "formats": ["other"],
+  "requires": ["javascript"],
+  "website": null
+}

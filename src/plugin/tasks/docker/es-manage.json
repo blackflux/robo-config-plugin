@@ -4,7 +4,9 @@
   "snippets": [
     "es/manage.sh"
   ],
-  "requires": [],
+  "requires": [
+    "docker"
+  ],
   "purpose": [
     "Spawn docker container with joined elasticsearch container."
   ]

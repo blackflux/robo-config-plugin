@@ -1,0 +1,8 @@
+{
+  "description": "Container Platform.",
+  "details": [
+    "Docker is a computer program that performs operating-system-level virtualization.",
+    "Makes it for example possible to easily create and tear down complex test setups."
+  ],
+  "website": "https://www.docker.com/"
+}

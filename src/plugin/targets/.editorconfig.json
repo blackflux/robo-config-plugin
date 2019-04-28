@@ -1,0 +1,9 @@
+{
+  "description": "Defines file formatting.",
+  "details": [
+    "Defines file formatting that an IDE can pick up and use to format project files."
+  ],
+  "formats": ["other"],
+  "requires": [],
+  "website": "https://editorconfig.org/"
+}
