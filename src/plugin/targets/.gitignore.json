@@ -1,0 +1,13 @@
+{
+  "description": "Exclude files from being versioned.",
+  "details": [
+    "Specifies intentionally untracked files to ignore and not committed to git."
+  ],
+  "formats": [
+    "list"
+  ],
+  "requires": [
+    "git"
+  ],
+  "website": "https://git-scm.com/docs/gitignore"
+}

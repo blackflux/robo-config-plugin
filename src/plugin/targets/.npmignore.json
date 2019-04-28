@@ -1,0 +1,15 @@
+{
+  "description": "Config to exclude files from npm package.",
+  "details": [
+    "Note that this file is mostly not required. Use whitelisting instead.",
+    "See [here](https://medium.com/@jdxcode/for-the-love-of-god-dont-use-npmignore-f93c08909d8d) for more information."
+  ],
+  "formats": [
+    "list"
+  ],
+  "requires": [
+    "npm",
+    "npm-published"
+  ],
+  "website": "https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package"
+}

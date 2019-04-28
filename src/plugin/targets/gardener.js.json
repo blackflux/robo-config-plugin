@@ -1,0 +1,7 @@
+{
+  "description": "Runner for js-gardener.",
+  "details": ["Execute all configured js-gardener tasks."],
+  "formats": ["other"],
+  "requires": ["js-gardener", "javascript"],
+  "website": "https://github.com/blackflux/js-gardener#run-basic-setup"
+}

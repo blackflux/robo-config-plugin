@@ -1,0 +1,7 @@
+{
+  "description": "Mocha test configuration file.",
+  "details": [],
+  "formats": ["list"],
+  "requires": ["mocha", "javascript"],
+  "website": "https://mochajs.org/#mochaopts"
+}

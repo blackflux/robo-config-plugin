@@ -1,0 +1,14 @@
+{
+  "description": "Configuration file for gally.",
+  "details": [
+    "Includes detailed configuration for github project structure."
+  ],
+  "formats": [
+    "json"
+  ],
+  "requires": [
+    "gally",
+    "github"
+  ],
+  "website": "https://github.com/loopmediagroup/gally#contents-of-gallyjson"
+}

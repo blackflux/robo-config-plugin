@@ -1,0 +1,11 @@
+{
+  "description": "Configuration file for dependabot.",
+  "details": [],
+  "formats": [
+    "yml"
+  ],
+  "requires": [
+    "dependabot"
+  ],
+  "website": "https://dependabot.com/docs/config-file/"
+}
