@@ -1843,9 +1843,9 @@ Can be set to unlicensed as well.
 
 :small_blue_diamond: `list`
 
-*Exclude files from being versioned.*
+*Exclude files from being tracked.*
 
-Specifies intentionally untracked files to ignore and not committed to git.
+Specifies files intentionally untracked by git.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a> ([`link`](https://github.com/loopmediagroup/gally#contents-of-gallyjson)) 
 

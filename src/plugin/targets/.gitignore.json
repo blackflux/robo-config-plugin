@@ -1,7 +1,7 @@
 {
-  "description": "Exclude files from being versioned.",
+  "description": "Exclude files from being tracked.",
   "details": [
-    "Specifies intentionally untracked files to ignore and not committed to git."
+    "Specifies files intentionally untracked by git."
   ],
   "formats": [
     "list"
