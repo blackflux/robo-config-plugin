@@ -1625,9 +1625,9 @@ The code owner is the gatekeeper of the project, ultimately responsible for all 
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a> ([`link`](https://github.com/blackflux/js-gardener#run-basic-setup)) 
 
-:small_blue_diamond: `other`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `other`
 
 *Runner for js-gardener.*
 
@@ -1643,17 +1643,17 @@ Contains lots of information about the project itself.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testmochaopts">test/mocha.opts</a> ([`link`](https://mochajs.org/#mochaopts)) 
 
-:small_blue_diamond: `list`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `list`
 
 *Mocha test configuration file.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testindexspecjs">test/index.spec.js</a>  
 
-:small_blue_diamond: `other`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `other`
 
 *Main project test file.*
 
@@ -1661,9 +1661,9 @@ Main test file for the project. At the very least tests signature of what is exp
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-srcindexjs">src/index.js</a>  
 
-:small_blue_diamond: `other`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `other`
 
 *Main project file.*
 
@@ -1671,25 +1671,25 @@ Main file for the project. Exposes functionality for libraries.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a> ([`link`](https://eslint.org/docs/user-guide/configuring)) 
 
-:small_blue_diamond: `json`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a>
+
+:small_blue_diamond: `json`
 
 *Configuration file for eslint.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a> ([`link`](https://babeljs.io/docs/en/configuration#babelrc)) 
 
-:small_blue_diamond: `json`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a>
+
+:small_blue_diamond: `json`
 
 *Configuration for babel.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-releasercjson">.releaserc.json</a> ([`link`](https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file)) 
 
-:small_blue_diamond: `json`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a>
+
+:small_blue_diamond: `json`
 
 *Configuration for semantic-release.*
 
@@ -1697,17 +1697,17 @@ Configuration file for semantic-release and plugins
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> ([`link`](https://docs.npmjs.com/files/package.json)) 
 
-:small_blue_diamond: `json`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a>
+
+:small_blue_diamond: `json`
 
 *Configuration for npm package.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-npmignore">.npmignore</a> ([`link`](https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package)) 
 
-:small_blue_diamond: `list`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a>, <a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a>
+
+:small_blue_diamond: `list`
 
 *Config to exclude files from npm package.*
 
@@ -1725,17 +1725,17 @@ Can be set to unlicensed as well.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">.idea/${projectName}.iml</a> ([`link`](https://www.jetbrains.org/intellij/sdk/docs/basics/project_structure.html#library)) 
 
-:small_blue_diamond: `xml`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a>
+
+:small_blue_diamond: `xml`
 
 *Module Library configuration file for JetBrains IDE.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a> ([`link`](https://git-scm.com/docs/gitignore)) 
 
-:small_blue_diamond: `list`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-git">git</a>
+
+:small_blue_diamond: `list`
 
 *Exclude files from being versioned.*
 
@@ -1743,9 +1743,9 @@ Specifies intentionally untracked files to ignore and not committed to git.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a> ([`link`](https://github.com/loopmediagroup/gally#contents-of-gallyjson)) 
 
-:small_blue_diamond: `json`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a>, <a href="#blackfluxrobo-config-plugin-req-ref-github">github</a>
+
+:small_blue_diamond: `json`
 
 *Configuration file for gally.*
 
@@ -1761,17 +1761,17 @@ Defines file formatting that an IDE can pick up and use to format project files.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-dependabotconfigyml">.dependabot/config.yml</a> ([`link`](https://dependabot.com/docs/config-file/)) 
 
-:small_blue_diamond: `yml`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a>
+
+:small_blue_diamond: `yml`
 
 *Configuration file for dependabot.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.circleci/config.yml</a> ([`link`](https://circleci.com/docs/2.0/configuration-reference/)) 
 
-:small_blue_diamond: `yml`
-
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a>
+
+:small_blue_diamond: `yml`
 
 *Configuration file for circleci.*
 
