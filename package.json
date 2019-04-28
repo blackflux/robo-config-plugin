@@ -39,7 +39,7 @@
     "chai": "4.2.0",
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
-    "js-gardener": "2.0.20",
+    "js-gardener": "2.0.21",
     "nyc": "14.0.0",
     "robo-config": "3.0.6",
     "semantic-release": "15.13.3"
