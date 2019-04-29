@@ -3428,10 +3428,10 @@ joi@14.3.1:
     isemail "3.x.x"
     topo "3.x.x"
 
-js-gardener@2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.22.tgz#f95f461760f45cb91d9fb983a5235984bcb810d8"
-  integrity sha512-Zt4gelpkCz2LfZRckd+q/BpAcE9m3DSARGmfOemeXU9/qQL7HSSxXgtuR08BBH/7uTNGheAy79xmoBYeh7DyVA==
+js-gardener@2.0.23:
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.23.tgz#c13cd0928502bf0c44ae893f95b447ef8b8259c6"
+  integrity sha512-nMPl8sWz60kblKffmSpKi2TF8bGDslN0nfb1QuE8PAZiFs6oe2yKWgqeJG10uN9nuZoGdMgTvx+BwZF8IATBUg==
   dependencies:
     chalk "2.4.2"
     eslint "5.16.0"
@@ -5843,6 +5843,22 @@ robo-config@3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.7.tgz#251b75105875a7d8fa049969d3f7e2da8f08123b"
   integrity sha512-jGaD0nucLyNRpMkESSGwpyGcaK5/3QeBjQK4zuxCKXBZRXN6nWFAGNip/ou2YsG3aLDiipOfaLWl6OsjnV5FDw==
+  dependencies:
+    app-root-path "2.2.1"
+    deepmerge "3.2.0"
+    joi "14.3.1"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.8"
+    object-scan "9.0.2"
+    object-treeify "1.1.9"
+    smart-fs "1.7.4"
+
+robo-config@3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.8.tgz#a1505cde95a10abc0333739742d061a04e9d901e"
+  integrity sha512-U4psbxRYResPPHbKaTj4NUtgsoDWCW+HSD821RpEqpJnw7lNKT9dcJvRjm4IRgg+Kix15wB4SW/aRiOsc4w0WA==
   dependencies:
     app-root-path "2.2.1"
     deepmerge "3.2.0"
