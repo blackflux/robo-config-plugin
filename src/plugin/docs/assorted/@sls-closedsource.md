@@ -197,7 +197,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-packageserverless">package/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packageserverless">`index`</a>)
 
-Manage package.json for npm package on github.
+Manage package.json for serverless project.
 
 <table>
   <tbody>
