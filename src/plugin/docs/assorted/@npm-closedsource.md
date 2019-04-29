@@ -26,7 +26,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallynpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallynpm-default">`gally/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallytwo-branch">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallytwo-branch">`gally/two-branch`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-editornpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editornpm-default">`editor/#npm-default`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-circlecinpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circlecinpm-default">`circleci/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-circlecitwo-branch">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circlecitwo-branch">`circleci/two-branch`</a>
@@ -960,9 +960,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.jso
   </tbody>
 </table>
 
-## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editornpm-default">editor/#npm-default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editornpm-default">`index`</a>)
+## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editordefault">`index`</a>)
 
-Manage editor configuration for npm package on github.
+Manage editor configuration for project.
 
 <table>
   <tbody>

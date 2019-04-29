@@ -1,6 +1,0 @@
-{
-  "tasks": [
-    "two-space"
-  ],
-  "description": "Manage editor configuration for npm package on github."
-}

@@ -5,7 +5,7 @@
     "circleci/#npm-default-coveralls",
     "dependabot/#npm-default",
     "gally/#npm-default",
-    "editor/#npm-default",
+    "editor/#default",
     "git/#npm-default",
     "jetbrains/#npm-default",
     "license/#npm-opensource",
