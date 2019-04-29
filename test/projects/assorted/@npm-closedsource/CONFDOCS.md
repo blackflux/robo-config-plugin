@@ -24,8 +24,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-file">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-file">`license/UNLICENSED-file`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsnpm-default">`jetbrains/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitnpm-default">`git/#npm-default`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignorenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignorenpm-default">`gitignore/#npm-default`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignorenpm-default">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignorenpm-default">`gitignore/npm-default`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallynpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallynpm-default">`gally/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallytwo-branch">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallytwo-branch">`gally/two-branch`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/#default`</a>
@@ -831,7 +831,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">.
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitnpm-default">git/#npm-default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitnpm-default">`index`</a>)
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitignorenpm-default">gitignore/#npm-default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitignorenpm-default">`index`</a>)
 
 Manage gitignore configuration for npm package on github.
 
@@ -857,7 +857,7 @@ Manage gitignore configuration for npm package on github.
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">`index`</a>)
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitignorenpm-default">gitignore/npm-default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitignorenpm-default">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 

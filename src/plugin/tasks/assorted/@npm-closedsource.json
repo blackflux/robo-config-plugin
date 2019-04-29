@@ -5,7 +5,7 @@
     "circleci/#npm-default",
     "gally/#npm-default",
     "editor/#default",
-    "git/#npm-default",
+    "gitignore/#npm-default",
     "jetbrains/#npm-default",
     "license/#npm-closedsource",
     "npm/#npm-default",
