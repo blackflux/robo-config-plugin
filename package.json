@@ -41,7 +41,7 @@
     "eslint": "5.16.0",
     "js-gardener": "2.0.22",
     "nyc": "14.0.0",
-    "robo-config": "3.0.7",
+    "robo-config": "3.0.8",
     "semantic-release": "15.13.3"
   },
   "nyc": {
