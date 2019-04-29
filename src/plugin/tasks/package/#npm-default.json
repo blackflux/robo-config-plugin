@@ -1,9 +1,9 @@
 {
   "tasks": [
-    "default-shallow",
-    "default-deep",
-    "merge-shallow",
-    "merge-deep"
+    "npm-default_default-shallow",
+    "npm-default_default-deep",
+    "npm-default_merge-shallow",
+    "npm-default_merge-deep"
   ],
   "description": "Manage package.json for npm package on github."
 }

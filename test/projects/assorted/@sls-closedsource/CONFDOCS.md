@@ -5,6 +5,11 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless">`package/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless_merge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless_merge-shallow">`package/serverless_merge-shallow`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless_merge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless_merge-deep">`package/serverless_merge-deep`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless_default-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless_default-shallow">`package/serverless_default-shallow`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless_default-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless_default-deep">`package/serverless_default-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseclosedsource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseclosedsource">`license/#closedsource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-package">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-package">`license/UNLICENSED-package`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-file">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-file">`license/UNLICENSED-file`</a>
@@ -62,9 +67,9 @@ Manage various configuration files for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
         </ul>
       </td>
@@ -186,6 +191,158 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-packageserverless">package/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packageserverless">`index`</a>)
+
+Manage package.json for serverless project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packageserverless_merge-shallow">package/serverless_merge-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packageserverless_merge-shallow">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>._
+
+- Set various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packageserverless_merge-deep">package/serverless_merge-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packageserverless_merge-deep">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+
+- Set various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packageserverless_default-shallow">package/serverless_default-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packageserverless_default-shallow">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>._
+
+- Set defaults for various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packageserverless_default-deep">package/serverless_default-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packageserverless_default-deep">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-default-deep">default-deep</a>._
+
+- Set defaults for various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
     </tr>
@@ -636,12 +793,6 @@ Automates development process quickly, safely, and at scale.
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  : `string`
-
-*Name of the owner of this project.*
-
-The owner name of the project is the name of the person or organization publishing the project under their license.
-
 ### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
 
 *Repository key.*
@@ -653,6 +804,12 @@ The repository key contains the owner or organization of the project and the rep
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  : `string`
+
+*Name of the owner of this project.*
+
+The owner name of the project is the name of the person or organization publishing the project under their license.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a>  : `string`
 
@@ -770,6 +927,22 @@ This will not work as desired for all object deep merging, but should for many c
 *Does a shallow merge aka `Object.assign()`.*
 
 Useful when specific keys of the target need to be overwritten.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Similar to `merge-shallow`, but keeps existing values instead of overwriting.*
+
+Useful to ensure specific keys of the target are present without overwriting existing content.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-default-deep">default-deep</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Similar to `merge-deep`, but keeps existing values instead of overwriting.*
+
+Useful to ensure specific keys of the target are present without overwriting existing content.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>  
 

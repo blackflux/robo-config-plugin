@@ -1,0 +1,14 @@
+{
+  "target": "package.json",
+  "strategy": "default-shallow",
+  "snippets": [
+    "default/default-shallow",
+    "serverless/default-shallow"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set defaults for various entries."
+  ]
+}

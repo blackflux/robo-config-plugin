@@ -5,7 +5,8 @@
     "editor/#default",
     "gitignore/#serverless",
     "jetbrains/#default",
-    "license/#closedsource"
+    "license/#closedsource",
+    "package/#serverless"
   ],
   "description": "Manage various configuration files for serverless project."
 }
