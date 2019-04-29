@@ -1,8 +1,11 @@
-- <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedserverlessjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedserverlessjson">`assorted/@serverless.json`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsourcejson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-closedsourcejson">`assorted/@sls-closedsource.json`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless">`struct/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseclosedsource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseclosedsource">`license/#closedsource`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-package">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-package">`license/UNLICENSED-package`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-file">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-file">`license/UNLICENSED-file`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless">`gitignore/#serverless`</a>
@@ -13,7 +16,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">`badges/js-gardener`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescircleci-private">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescircleci-private">`badges/circleci-private`</a>
 
-# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedserverlessjson">assorted/@serverless.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedserverlessjson">`index`</a>)
+# :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-closedsourcejson">assorted/@sls-closedsource.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsourcejson">`index`</a>)
 
 Manage various configuration files for serverless project.
 
@@ -34,6 +37,8 @@ Manage various configuration files for serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
@@ -45,6 +50,7 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
@@ -54,9 +60,10 @@ Manage various configuration files for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
       </td>
     </tr>
@@ -177,6 +184,103 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licenseclosedsource">license/#closedsource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licenseclosedsource">`index`</a>)
+
+Manage license configuration for closed source project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a></code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licenseunlicensed-package">license/UNLICENSED-package</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-package">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>._
+
+- Link UNLICENSED license file into [npm](https://www.npmjs.com/) configuration.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licenseunlicensed-file">license/UNLICENSED-file</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-file">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Generate UNLICENSED license file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
         </ul>
       </td>
     </tr>
@@ -484,6 +588,13 @@ checking if JavaScript source code complies with coding rules.
 Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
 compatible version of JavaScript in current and older browsers or environments.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([`link`](https://docs.npmjs.com/about-npm/)) 
+
+*Javascript package repository.*
+
+Requires the project to be conform with the npm standard, i.e. contain a package.json file.
+Does not require the project to be published to npm.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a> ([`link`](https://www.jetbrains.com)) 
 
 *Collection of various IDEs.*
@@ -523,6 +634,18 @@ Automates development process quickly, safely, and at scale.
 
 ## Variables
 
+### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  : `string`
+
+*Name of the owner of this project.*
+
+The owner name of the project is the name of the person or organization publishing the project under their license.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
+
+*Repository key.*
+
+The repository key contains the owner or organization of the project and the repository name itself, separated by a slash.
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
 
 *Name of the project.*
@@ -534,12 +657,6 @@ The project name is in most cases identical to the repository name.
 *CircleCi Read Api Token.*
 
 CircleCi read only api token used to access build status.
-
-### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
-
-*Repository key.*
-
-The repository key contains the owner or organization of the project and the repository name itself, separated by a slash.
 
 ------
 
@@ -568,6 +685,23 @@ The repository key contains the owner or organization of the project and the rep
 :small_blue_diamond: `json`
 
 *Configuration for babel.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> ([`link`](https://docs.npmjs.com/files/package.json)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a>
+
+:small_blue_diamond: `json`
+
+*Configuration for npm package.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-license">LICENSE</a> ([`link`](https://help.github.com/en/articles/adding-a-license-to-a-repository)) 
+
+:small_blue_diamond: `nostruct`
+
+*Project License file.*
+
+Specify the license the project is published under.
+Can be set to unlicensed as well.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">.idea/${projectName}.iml</a> ([`link`](https://www.jetbrains.org/intellij/sdk/docs/basics/project_structure.html#library)) 
 
@@ -626,6 +760,14 @@ Contains lots of information about the project itself.
 *Does a "smart" deep merge.*
 
 This will not work as desired for all object deep merging, but should for many cases.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Does a shallow merge aka `Object.assign()`.*
+
+Useful when specific keys of the target need to be overwritten.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>  
 

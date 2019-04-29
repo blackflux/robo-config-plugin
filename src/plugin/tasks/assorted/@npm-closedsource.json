@@ -7,7 +7,7 @@
     "editor/#default",
     "gitignore/#npm-default",
     "jetbrains/#default",
-    "license/#npm-closedsource",
+    "license/#closedsource",
     "npm/#npm-default",
     "package/#npm-default",
     "semantic-release/#npm-default"

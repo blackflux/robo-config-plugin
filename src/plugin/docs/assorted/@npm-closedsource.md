@@ -17,7 +17,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-deep">`package/default-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpm-default">`npm/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensenpm-closedsource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensenpm-closedsource">`license/#npm-closedsource`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseclosedsource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseclosedsource">`license/#closedsource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-package">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-package">`license/UNLICENSED-package`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-file">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-file">`license/UNLICENSED-file`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/#default`</a>
@@ -662,9 +662,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-npmignore">.npmignore
   </tbody>
 </table>
 
-## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licensenpm-closedsource">license/#npm-closedsource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensenpm-closedsource">`index`</a>)
+## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licenseclosedsource">license/#closedsource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licenseclosedsource">`index`</a>)
 
-Manage license configuration for npm closed source package on github.
+Manage license configuration for closed source project.
 
 <table>
   <tbody>
