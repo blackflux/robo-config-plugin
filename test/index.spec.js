@@ -12,6 +12,6 @@ it('Testing Plugin Tasks', () => {
     'assorted/@npm-closedsource': [],
     'assorted/@npm-opensource': [],
     'assorted/@npm-opensource-es': [],
-    'assorted/@serverless': []
+    'assorted/@sls-closedsource': []
   });
 });

@@ -19,7 +19,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-deep">`package/default-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpm-default">`npm/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensenpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensenpm-opensource">`license/#npm-opensource`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseopensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseopensource">`license/#opensource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-package">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-package">`license/MIT-package`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-file">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-file">`license/MIT-file`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/#default`</a>
@@ -682,9 +682,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-npmignore">.npmignore
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licensenpm-opensource">license/#npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensenpm-opensource">`index`</a>)
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licenseopensource">license/#opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licenseopensource">`index`</a>)
 
-Manage license configuration for npm open source package on github.
+Manage license configuration for open source project.
 
 <table>
   <tbody>

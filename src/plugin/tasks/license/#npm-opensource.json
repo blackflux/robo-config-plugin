@@ -1,7 +1,0 @@
-{
-  "tasks": [
-    "MIT-file",
-    "MIT-package"
-  ],
-  "description": "Manage license configuration for npm open source package on github."
-}
