@@ -1025,7 +1025,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editor
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dockernpm-elasticsearch">docker/#npm-elasticsearch</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockernpm-elasticsearch">`index`</a>)
 
-Manage docker configuration for npm package on github using elasticsearch.
+Manage docker test configuration for npm package on github using elasticsearch.
 
 <table>
   <tbody>

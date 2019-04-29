@@ -659,7 +659,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editor
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dockerserverless">docker/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockerserverless">`index`</a>)
 
-Manage docker configuration for serverless project.
+Manage docker test configuration for serverless project.
 
 <table>
   <tbody>
@@ -689,7 +689,7 @@ Manage docker configuration for serverless project.
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Spawn docker container for serverless deploys.
+- Spawn docker container for serverless testing and deploying.
 
 <table>
   <tbody>
