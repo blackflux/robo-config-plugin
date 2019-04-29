@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    "serverless_default-shallow",
+    "serverless_default-deep",
+    "serverless_merge-shallow",
+    "serverless_merge-deep"
+  ],
+  "description": "Manage package.json for npm package on github."
+}

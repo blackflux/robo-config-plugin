@@ -11,10 +11,10 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-default">`semantic-release/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default">`package/#npm-default`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagemerge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagemerge-shallow">`package/merge-shallow`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagemerge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagemerge-deep">`package/merge-deep`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-shallow">`package/default-shallow`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagedefault-deep">`package/default-deep`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_merge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default_merge-shallow">`package/npm-default_merge-shallow`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_merge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default_merge-deep">`package/npm-default_merge-deep`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_default-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default_default-shallow">`package/npm-default_default-shallow`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_default-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default_default-deep">`package/npm-default_default-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpm-default">`npm/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseopensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseopensource">`license/#opensource`</a>
@@ -505,7 +505,7 @@ Manage package.json for npm package on github.
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagemerge-shallow">package/merge-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagemerge-shallow">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagenpm-default_merge-shallow">package/npm-default_merge-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_merge-shallow">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
@@ -533,7 +533,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagemerge-deep">package/merge-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagemerge-deep">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagenpm-default_merge-deep">package/npm-default_merge-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_merge-deep">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
@@ -568,7 +568,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagedefault-shallow">package/default-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagedefault-shallow">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagenpm-default_default-shallow">package/npm-default_default-shallow</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_default-shallow">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>._
 
@@ -596,7 +596,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagedefault-deep">package/default-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagedefault-deep">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-packagenpm-default_default-deep">package/npm-default_default-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default_default-deep">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-default-deep">default-deep</a>._
 
