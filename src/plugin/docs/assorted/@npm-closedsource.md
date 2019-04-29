@@ -761,7 +761,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a> 
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">`index`</a>)
 
-Manage WebStorm configuration for npm package on github.
+Manage WebStorm configuration.
 
 <table>
   <tbody>
