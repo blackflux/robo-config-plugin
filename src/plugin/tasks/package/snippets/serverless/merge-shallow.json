@@ -6,5 +6,6 @@
     "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
     "test": "npm run clean && npm run gardener && npm run test-simple",
     "gardener": "node gardener"
-  }
+  },
+  "files": []
 }

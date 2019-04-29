@@ -20,7 +20,7 @@
     "chai": "4.2.0"
   },
   "engines": {"node": ">= 8.10"},
-  "files": ["lib"],
+  "files": [],
   "keywords": [],
   "nyc": {
     "exclude": ["gardener.js", "node_modules/*", "coverage/*", "lib/*"],
