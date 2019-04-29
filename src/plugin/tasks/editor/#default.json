@@ -2,5 +2,5 @@
   "tasks": [
     "two-space"
   ],
-  "description": "Manage editor configuration for npm package on github."
+  "description": "Manage editor configuration for project."
 }
