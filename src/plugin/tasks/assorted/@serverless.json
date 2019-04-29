@@ -1,7 +1,8 @@
 {
   "tasks": [
     "struct/#serverless",
-    "badges/#serverless"
+    "badges/#serverless",
+    "editor/#default"
   ],
   "description": "Manage various configuration files for serverless project."
 }
