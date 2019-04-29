@@ -174,7 +174,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editordefault">`index`</a>)
 
-Manage editor configuration for npm package on github.
+Manage editor configuration for project.
 
 <table>
   <tbody>
