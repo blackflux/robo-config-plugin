@@ -15,9 +15,6 @@
   "engines": {
     "node": ">= 8.10"
   },
-  "files": [
-    "lib"
-  ],
   "nyc": {
     "exclude": [
       "gardener.js",
