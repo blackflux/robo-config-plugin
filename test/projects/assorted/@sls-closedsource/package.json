@@ -16,10 +16,8 @@
     "@babel/plugin-proposal-object-rest-spread": "7.0.0",
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
-    "coveralls": "3.0.0",
     "nyc": "12.0.2",
-    "chai": "4.2.0",
-    "semantic-release": "15.7.1"
+    "chai": "4.2.0"
   },
   "engines": {"node": ">= 8.10"},
   "files": ["lib"],
@@ -42,11 +40,6 @@
     "statements": 100,
     "tempDir": "./coverage/.nyc_output"
   },
-  "bugs": {"url": "https://github.com/repoKey/issues"},
-  "homepage": "https://github.com/repoKey#readme",
-  "name": "projectName",
-  "repository": {"type": "git", "url": "https://github.com/repoKey.git"},
-  "version": "0.0.0-development",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc",
@@ -54,5 +47,10 @@
     "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
     "test": "npm run clean && npm run gardener && npm run test-simple",
     "gardener": "node gardener"
-  }
+  },
+  "bugs": {"url": "https://github.com/repoKey/issues"},
+  "homepage": "https://github.com/repoKey#readme",
+  "name": "projectName",
+  "repository": {"type": "git", "url": "https://github.com/repoKey.git"},
+  "version": "0.0.0-development"
 }
