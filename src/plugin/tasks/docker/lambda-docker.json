@@ -2,12 +2,12 @@
   "target": "docker/Dockerfile",
   "strategy": "overwrite",
   "snippets": [
-    "es/docker/Dockerfile"
+    "lambda/Dockerfile"
   ],
   "requires": [
     "docker"
   ],
   "purpose": [
-    "Docker environment definition for running tests."
+    "Docker environment definition for running tests in AWS Lambda container."
   ]
 }

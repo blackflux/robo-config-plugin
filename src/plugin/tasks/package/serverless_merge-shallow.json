@@ -2,7 +2,7 @@
   "target": "package.json",
   "strategy": "merge-shallow",
   "snippets": [
-    "merge-shallow"
+    "serverless/merge-shallow"
   ],
   "requires": [
     "javascript"

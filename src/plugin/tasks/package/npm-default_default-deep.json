@@ -1,8 +1,9 @@
 {
   "target": "package.json",
-  "strategy": "default-shallow",
+  "strategy": "default-deep",
   "snippets": [
-    "default-shallow"
+    "default/default-deep",
+    "npm-default/default-deep"
   ],
   "requires": [
     "javascript"

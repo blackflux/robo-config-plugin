@@ -3,7 +3,7 @@
   "strategy": "overwrite",
   "snippets": [
     {
-      "name": "two-branch",
+      "name": "serverless",
       "variables": {
         "repoKey": "${repoKey}",
         "mergeDevUsers": [
@@ -16,11 +16,6 @@
         "releaseUsers": [
           "${owner}"
         ],
-        "requiredStatusChecks": [
-          "ci/circleci: gally-create-pr",
-          "ci/circleci: test-node-v10",
-          "ci/circleci: test-node-v8.10"
-        ],
         "requiredReviewCount": 1
       }
     }
@@ -31,6 +26,6 @@
     "github"
   ],
   "purpose": [
-    "Restrictive two-branch config."
+    "Restrictive serverless four-environment config."
   ]
 }

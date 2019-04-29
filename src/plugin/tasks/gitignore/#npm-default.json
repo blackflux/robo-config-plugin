@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "gitignore"
+    "npm-default"
   ],
   "description": "Manage gitignore configuration for npm package on github."
 }

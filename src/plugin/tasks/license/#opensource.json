@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "MIT-file",
+    "MIT-package"
+  ],
+  "description": "Manage license configuration for open source project."
+}

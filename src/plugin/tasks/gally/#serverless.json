@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless"
+  ],
+  "description": "Manage gally configuration for serverless project."
+}

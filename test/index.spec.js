@@ -11,6 +11,7 @@ it('Testing Plugin Tasks', () => {
   expect(load(plugin).test(path.join(__dirname, 'projects'))).to.deep.equal({
     'assorted/@npm-closedsource': [],
     'assorted/@npm-opensource': [],
-    'assorted/@npm-opensource-es': []
+    'assorted/@npm-opensource-es': [],
+    'assorted/@sls-closedsource': []
   });
 });

@@ -3,10 +3,15 @@
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "merge-deep",
+      "name": "default/merge-deep",
       "variables": {
-        "packageName": "${packageName}",
         "repoKey": "${repoKey}"
+      }
+    },
+    {
+      "name": "serverless/merge-deep",
+      "variables": {
+        "projectName": "${projectName}"
       }
     }
   ],
