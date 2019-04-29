@@ -944,7 +944,7 @@ Manage gally configuration for npm package on github.
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config.
+- Restrictive two-branch config.
 
 <table>
   <tbody>

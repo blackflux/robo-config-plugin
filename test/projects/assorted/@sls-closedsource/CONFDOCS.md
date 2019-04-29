@@ -18,6 +18,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless">`gitignore/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless">`gitignore/serverless`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallyserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallyserverless">`gally/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallyserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallyserverless">`gally/serverless`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerserverless">`docker/#serverless`</a>
@@ -47,6 +49,7 @@ Manage various configuration files for serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a></code><br/>
@@ -70,8 +73,10 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -79,6 +84,8 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
         </ul>
       </td>
@@ -614,6 +621,80 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore
   </tbody>
 </table>
 
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gallyserverless">gally/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gallyserverless">`index`</a>)
+
+Manage gally configuration for serverless project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gallyserverless">gally/serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gallyserverless">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Restrictive serverless four-environment config.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editordefault">`index`</a>)
 
 Manage editor configuration for project.
@@ -907,19 +988,33 @@ Comes with all the bells and whistles.
 
 The most used version control system. Not to be confused with github (which uses git).
 
-### <a name="blackfluxrobo-config-plugin-req-ref-docker">docker</a> ([`link`](https://www.docker.com/)) 
-
-*Container Platform.*
-
-Docker is a computer program that performs operating-system-level virtualization.
-Makes it for example possible to easily create and tear down complex test setups.
-
 ### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a> ([`link`](https://circleci.com/)) 
 
 *Run automated jobs using docker containers.*
 
 Allows set up for ci/cd using docker containers.
 Automates development process quickly, safely, and at scale.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a> ([`link`](https://github.com/loopmediagroup/gally)) 
+
+*Automation around github.com Repository Management*
+
+Allows management of github.com repositories through configuration.
+Very powerful when you need to synchronize settings across multiple repositories.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a> ([`link`](https://github.com/)) 
+
+*Major development platform powered by git.*
+
+GitHub is a code hosting platform for collaboration and version control.
+Lets you and others work together on projects.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-docker">docker</a> ([`link`](https://www.docker.com/)) 
+
+*Container Platform.*
+
+Docker is a computer program that performs operating-system-level virtualization.
+Makes it for example possible to easily create and tear down complex test setups.
 
 ------
 
@@ -942,6 +1037,16 @@ The project name is in most cases identical to the repository name.
 *Name of the owner of this project.*
 
 The owner name of the project is the name of the person or organization publishing the project under their license.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-owner">owner</a>  : `string`
+
+*The owner of the code on github.*
+
+The code owner is the gatekeeper of the project, ultimately responsible for all changes.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>  : `string`
+
+*The github name of the bot used for automatic merging.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a>  : `string`
 
@@ -1021,6 +1126,16 @@ Can be set to unlicensed as well.
 *Exclude files from being tracked.*
 
 Specifies files intentionally untracked by git.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a> ([`link`](https://github.com/loopmediagroup/gally#contents-of-gallyjson)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a>, <a href="#blackfluxrobo-config-plugin-req-ref-github">github</a>
+
+:small_blue_diamond: `json`
+
+*Configuration file for gally.*
+
+Includes detailed configuration for github project structure.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a> ([`link`](https://editorconfig.org/)) 
 

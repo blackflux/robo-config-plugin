@@ -3,6 +3,7 @@
     "struct/#serverless",
     "badges/#serverless",
     "docker/#serverless",
+    "gally/#serverless",
     "editor/#default",
     "gitignore/#serverless",
     "jetbrains/#default",
