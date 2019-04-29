@@ -8,7 +8,7 @@
     "master": {"protection": "$master", "create": true},
     "fix/*": {"upstream": "dev"},
     "feat/*": {"upstream": "dev"},
-    "greenkeeper/*": {"upstream": "dev"}
+    "dependabot/*": {"upstream": "dev"}
   },
   "protection": {
     "$dev": {
