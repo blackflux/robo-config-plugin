@@ -5,5 +5,5 @@
     "serverless_merge-shallow",
     "serverless_merge-deep"
   ],
-  "description": "Manage package.json for npm package on github."
+  "description": "Manage package.json for serverless project."
 }
