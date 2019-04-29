@@ -5,6 +5,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">`struct/force-gardener-dockerized`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless">`package/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless_merge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless_merge-shallow">`package/serverless_merge-shallow`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless_merge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless_merge-deep">`package/serverless_merge-deep`</a>
@@ -43,6 +44,7 @@ Manage various configuration files for serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
@@ -57,11 +59,11 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
         </ul>
       </td>
@@ -93,6 +95,7 @@ Manage basic project structure for serverless project.
 <code>project</code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
         </ul>
@@ -103,6 +106,7 @@ Manage basic project structure for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
         </ul>
       </td>
     </tr>
@@ -191,6 +195,35 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">struct/force-gardener-dockerized</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Manage gardener.js file for js-gardener.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
         </ul>
       </td>
     </tr>
@@ -747,6 +780,14 @@ checking if JavaScript source code complies with coding rules.
 Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
 compatible version of JavaScript in current and older browsers or environments.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a> ([`link`](https://github.com/blackflux/js-gardener#readme)) 
+
+*NodeJs Project Management.*
+
+Enforces and helps setting up best practices around NodeJs projects.
+Enforces highest code quality and minimizes package setup and maintenance complexity - so you can focus on writing code.
+Highly recommended if you are getting started with a new package and extremely useful if you are maintaining multiple packages.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([`link`](https://docs.npmjs.com/about-npm/)) 
 
 *Javascript package repository.*
@@ -773,14 +814,6 @@ Comes with all the bells and whistles.
 *Version control system.*
 
 The most used version control system. Not to be confused with github (which uses git).
-
-### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a> ([`link`](https://github.com/blackflux/js-gardener#readme)) 
-
-*NodeJs Project Management.*
-
-Enforces and helps setting up best practices around NodeJs projects.
-Enforces highest code quality and minimizes package setup and maintenance complexity - so you can focus on writing code.
-Highly recommended if you are getting started with a new package and extremely useful if you are maintaining multiple packages.
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a> ([`link`](https://circleci.com/)) 
 
@@ -844,6 +877,16 @@ CircleCi read only api token used to access build status.
 :small_blue_diamond: `json`
 
 *Configuration for babel.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a> ([`link`](https://github.com/blackflux/js-gardener#run-basic-setup)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `other`
+
+*Runner for js-gardener.*
+
+Execute all configured js-gardener tasks.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> ([`link`](https://docs.npmjs.com/files/package.json)) 
 

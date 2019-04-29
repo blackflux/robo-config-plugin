@@ -2,7 +2,8 @@
   "tasks": [
     "template-mocha-opts",
     "template-eslintrc",
-    "template-babelrc"
+    "template-babelrc",
+    "force-gardener-dockerized"
   ],
   "description": "Manage basic project structure for serverless project."
 }
