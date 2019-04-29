@@ -2,7 +2,8 @@
   "tasks": [
     "struct/#serverless",
     "badges/#serverless",
-    "editor/#default"
+    "editor/#default",
+    "gitignore/#serverless"
   ],
   "description": "Manage various configuration files for serverless project."
 }
