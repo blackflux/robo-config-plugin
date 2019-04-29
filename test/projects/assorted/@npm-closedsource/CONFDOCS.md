@@ -22,7 +22,7 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensenpm-closedsource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensenpm-closedsource">`license/#npm-closedsource`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-package">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-package">`license/UNLICENSED-package`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-licenseunlicensed-file">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licenseunlicensed-file">`license/UNLICENSED-file`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsnpm-default">`jetbrains/#npm-default`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignorenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignorenpm-default">`gitignore/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignorenpm-default">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignorenpm-default">`gitignore/npm-default`</a>
@@ -761,9 +761,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a> 
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsnpm-default">jetbrains/#npm-default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsnpm-default">`index`</a>)
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">`index`</a>)
 
-Manage WebStorm configuration for npm package on github.
+Manage WebStorm configuration.
 
 <table>
   <tbody>

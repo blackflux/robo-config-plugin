@@ -5,6 +5,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/#default`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless">`gitignore/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless">`gitignore/serverless`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/#default`</a>
@@ -28,6 +30,8 @@ Manage various configuration files for serverless project.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;.idea</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
@@ -43,6 +47,8 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
@@ -50,6 +56,7 @@ Manage various configuration files for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -172,6 +179,76 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">`index`</a>)
+
+Manage WebStorm configuration.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;.idea</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">.idea/${projectName}.iml</a> (if exists) using <a href="#blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>._
+
+- Mark `coverage` Folder as excluded in Jetbrains.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;.idea</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
       </td>
     </tr>
@@ -409,6 +486,20 @@ checking if JavaScript source code complies with coding rules.
 Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
 compatible version of JavaScript in current and older browsers or environments.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a> ([`link`](https://www.jetbrains.com)) 
+
+*Collection of various IDEs.*
+
+Collection of various IDEs. There exists one for every major programming language and 
+they are all very similar (i.e. shortcuts, layout), which makes them great when switching languages.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a> ([`link`](https://github.com/istanbuljs/nyc#readme)) 
+
+*Coverage testing for javascript projects.*
+
+A major coverage testing framework for javascript.
+Comes with all the bells and whistles.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a> ([`link`](https://git-scm.com/)) 
 
 *Version control system.*
@@ -433,6 +524,12 @@ Automates development process quickly, safely, and at scale.
 ------
 
 ## Variables
+
+### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
+
+*Name of the project.*
+
+The project name is in most cases identical to the repository name.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a>  : `string`
 
@@ -473,6 +570,14 @@ The repository key contains the owner or organization of the project and the rep
 :small_blue_diamond: `json`
 
 *Configuration for babel.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">.idea/${projectName}.iml</a> ([`link`](https://www.jetbrains.org/intellij/sdk/docs/basics/project_structure.html#library)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a>
+
+:small_blue_diamond: `xml`
+
+*Module Library configuration file for JetBrains IDE.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a> ([`link`](https://git-scm.com/docs/gitignore)) 
 
@@ -523,6 +628,14 @@ Contains lots of information about the project itself.
 *Does a "smart" deep merge.*
 
 This will not work as desired for all object deep merging, but should for many cases.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>  
+
+:small_blue_diamond: `xml`
+
+*Does a "smart" deep merge.*
+
+This will not work as desired for all xml merging, but should for many cases.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>  
 
