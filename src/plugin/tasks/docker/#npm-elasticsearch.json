@@ -1,7 +1,7 @@
 {
   "tasks": [
-    "es-docker",
+    "lambda-docker",
     "es-manage"
   ],
-  "description": "Manage docker configuration for npm package on github using elasticsearch."
+  "description": "Manage docker test configuration for npm package on github using elasticsearch."
 }

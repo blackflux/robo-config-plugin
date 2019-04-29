@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "lambda-docker",
+    "sls-manage"
+  ],
+  "description": "Manage docker test configuration for serverless project."
+}
