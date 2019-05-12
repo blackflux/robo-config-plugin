@@ -92,6 +92,6 @@
     "semantic-release"
   ],
   "purpose": [
-    "Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config."
+    "Restrictive two-branch circleci config."
   ]
 }

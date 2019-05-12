@@ -1207,7 +1207,7 @@ Manage circleci configuration for npm package on github with coveralls and elast
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.circleci/config.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config.
+- Restrictive two-branch circleci config.
 
 <table>
   <tbody>

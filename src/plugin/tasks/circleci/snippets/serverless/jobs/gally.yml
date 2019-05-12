@@ -1,0 +1,7 @@
+docker:
+  - image: 'circleci/node:10'
+<<<:
+  - steps:
+    - checkout
+    - run: sudo yarn global add gally
+    - run: gally promote $CIRCLE_BRANCH
