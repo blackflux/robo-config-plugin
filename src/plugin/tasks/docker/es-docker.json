@@ -2,7 +2,7 @@
   "target": "docker/Dockerfile",
   "strategy": "overwrite",
   "snippets": [
-    "lambda/Dockerfile"
+    "es/Dockerfile"
   ],
   "requires": [
     "docker"

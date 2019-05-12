@@ -24,7 +24,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerserverless">`docker/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockersls-manage">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockersls-manage">`docker/sls-manage`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerlambda-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerlambda-docker">`docker/lambda-docker`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockersls-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockersls-docker">`docker/sls-docker`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circleciserverless">`circleci/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circleciserverless">`circleci/serverless`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesserverless">`badges/#serverless`</a>
@@ -808,7 +808,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockerlambda-docker">docker/lambda-docker</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockerlambda-docker">`index`</a>)
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockersls-docker">docker/sls-docker</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockersls-docker">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -831,6 +831,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">doc
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
     </tr>
