@@ -4,4 +4,4 @@ steps:
   - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
   - checkout
   - run: rm -rf node_modules
-  - run: yarn install --offline --frozen-lockfile
+  - run: yarn install --frozen-lockfile

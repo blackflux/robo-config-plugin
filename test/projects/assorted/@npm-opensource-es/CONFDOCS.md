@@ -31,8 +31,8 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockernpm-elasticsearch">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockernpm-elasticsearch">`docker/#npm-elasticsearch`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerlambda-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerlambda-docker">`docker/lambda-docker`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockeres-manage">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockeres-manage">`docker/es-manage`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockeres-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockeres-docker">`docker/es-docker`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-dependabotnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dependabotnpm-default">`dependabot/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-dependabotjs-instant">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">`dependabot/js-instant`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-circlecinpm-default-coveralls-es">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circlecinpm-default-coveralls-es">`circleci/#npm-default-coveralls-es`</a>
@@ -1053,35 +1053,6 @@ Manage docker test configuration for npm package on github using elasticsearch.
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockerlambda-docker">docker/lambda-docker</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockerlambda-docker">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
-
-- Docker environment definition for running tests in AWS Lambda container.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;docker</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">Dockerfile</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockeres-manage">docker/es-manage</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockeres-manage">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
@@ -1099,6 +1070,35 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockeres-docker">docker/es-docker</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockeres-docker">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Docker environment definition for running tests in AWS Lambda container.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;docker</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">Dockerfile</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1867,16 +1867,6 @@ Includes detailed configuration for github project structure.
 
 Defines file formatting that an IDE can pick up and use to format project files.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> ([`link`](https://docs.docker.com/engine/reference/builder/)) 
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a>
-
-:small_blue_diamond: `other`
-
-*Main docker container configuration file.*
-
-Contains instructions for the main docker container this repository uses for testing.
-
 ### <a name="blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a>
@@ -1886,6 +1876,16 @@ Contains instructions for the main docker container this repository uses for tes
 *Prepare project to run tests.*
 
 File starts docker container(s) with necessary setup to execute the project tests.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> ([`link`](https://docs.docker.com/engine/reference/builder/)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a>
+
+:small_blue_diamond: `other`
+
+*Main docker container configuration file.*
+
+Contains instructions for the main docker container this repository uses for testing.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-dependabotconfigyml">.dependabot/config.yml</a> ([`link`](https://dependabot.com/docs/config-file/)) 
 
