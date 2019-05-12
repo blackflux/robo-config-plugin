@@ -2,6 +2,7 @@
   "tasks": [
     "struct/#serverless",
     "badges/#serverless",
+    "circleci/#serverless",
     "docker/#serverless",
     "gally/#serverless",
     "editor/#default",
