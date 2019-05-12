@@ -23,6 +23,8 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerserverless">`docker/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockersls-manage">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockersls-manage">`docker/sls-manage`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerlambda-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerlambda-docker">`docker/lambda-docker`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circleciserverless">`circleci/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circleciserverless">`circleci/serverless`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesserverless">`badges/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">`badges/js-gardener`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescircleci-private">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescircleci-private">`badges/circleci-private`</a>
@@ -42,6 +44,8 @@ Manage various configuration files for serverless project.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;.circleci</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">config.yml</a></code><br/>
 <code>├─&nbsp;.idea</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
@@ -75,6 +79,11 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-yarn">yarn</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -84,6 +93,7 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
         </ul>
       </td>
@@ -760,6 +770,7 @@ Manage docker test configuration for serverless project.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
     </tr>
@@ -788,6 +799,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
     </tr>
@@ -817,6 +829,92 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">doc
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-circleciserverless">circleci/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">`index`</a>)
+
+Manage circleci configuration for serverless project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;.circleci</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">config.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-yarn">yarn</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-circleciserverless">circleci/serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.circleci/config.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Restrictive serverless project circleci config.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;.circleci</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">config.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-yarn">yarn</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
       </td>
     </tr>
@@ -1014,6 +1112,42 @@ Lets you and others work together on projects.
 Docker is a computer program that performs operating-system-level virtualization.
 Makes it for example possible to easily create and tear down complex test setups.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
+
+*Serverless Framework.*
+
+The Serverless Framework is a free and open-source web framework that was 
+developed for building serverless applications.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a> ([`link`](https://yarnpkg.com/)) 
+
+*Dependency management similar to npm.*
+
+Very similar functionality to npm cli.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a> ([`link`](https://dependabot.com/)) 
+
+*Automatic dependency updates.*
+
+Makes dependency updates very easy by automatically creating pull requests in your repo.
+All major programming languages are supported or work is done towards supporting them.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a> ([`link`](https://github.com/semantic-release/semantic-release)) 
+
+*Automates npm package release workflow.*
+
+Automates the package release workflow including:
+- determining the next version number
+- generating the release notes
+- publishing the package
+
+### <a name="blackfluxrobo-config-plugin-req-ref-aws">aws</a> ([`link`](https://aws.amazon.com/)) 
+
+*Amazon Web Services.*
+
+Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud 
+computing platforms to individuals, companies and governments, on a metered pay-as-you-go basis.
+
 ------
 
 ## Variables
@@ -1045,6 +1179,12 @@ The code owner is the gatekeeper of the project, ultimately responsible for all 
 ### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>  : `string`
 
 *The github name of the bot used for automatic merging.*
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a>  : `string`
 
@@ -1162,6 +1302,14 @@ File starts docker container(s) with necessary setup to execute the project test
 *Main docker container configuration file.*
 
 Contains instructions for the main docker container this repository uses for testing.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.circleci/config.yml</a> ([`link`](https://circleci.com/docs/2.0/configuration-reference/)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a>
+
+:small_blue_diamond: `yml`
+
+*Configuration file for circleci.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a> ([`link`](https://help.github.com/en/articles/about-readmes)) 
 

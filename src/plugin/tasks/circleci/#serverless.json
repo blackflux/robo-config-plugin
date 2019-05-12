@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless"
+  ],
+  "description": "Manage circleci configuration for serverless project."
+}

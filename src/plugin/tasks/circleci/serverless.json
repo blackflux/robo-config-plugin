@@ -1,0 +1,27 @@
+{
+  "target": ".circleci/config.yml",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/config.yml",
+      "variables": {
+        "projectName": "${projectName}",
+        "awsRegion": "${awsRegion}"
+      }
+    }
+  ],
+  "requires": [
+    "npm",
+    "yarn",
+    "gally",
+    "github",
+    "circleci",
+    "dependabot",
+    "semantic-release",
+    "aws",
+    "serverless"
+  ],
+  "purpose": [
+    "Restrictive serverless project circleci config."
+  ]
+}

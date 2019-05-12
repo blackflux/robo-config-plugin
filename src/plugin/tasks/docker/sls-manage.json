@@ -5,7 +5,8 @@
     "sls/manage.sh"
   ],
   "requires": [
-    "docker"
+    "docker",
+    "serverless"
   ],
   "purpose": [
     "Spawn docker container for serverless testing and deploying."
