@@ -81,6 +81,7 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-yarn">yarn</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
@@ -771,6 +772,7 @@ Manage docker test configuration for serverless project.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
     </tr>
@@ -799,6 +801,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
     </tr>
@@ -863,6 +866,7 @@ Manage circleci configuration for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -906,6 +910,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.c
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1108,6 +1113,13 @@ Lets you and others work together on projects.
 
 Docker is a computer program that performs operating-system-level virtualization.
 Makes it for example possible to easily create and tear down complex test setups.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
+
+*Serverless Framework.*
+
+The Serverless Framework is a free and open-source web framework that was 
+developed for building serverless applications.
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a> ([`link`](https://yarnpkg.com/)) 
 

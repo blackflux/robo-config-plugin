@@ -18,7 +18,8 @@
     "circleci",
     "dependabot",
     "semantic-release",
-    "aws"
+    "aws",
+    "serverless"
   ],
   "purpose": [
     "Restrictive serverless project circleci config."
