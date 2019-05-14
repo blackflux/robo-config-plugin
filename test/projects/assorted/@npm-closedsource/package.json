@@ -19,22 +19,14 @@
     "coveralls": "3.0.0",
     "nyc": "12.0.2",
     "chai": "4.2.0",
-    "semantic-release": "15.7.1"
+    "semantic-release": "15.7.1",
+    "eslint": "5.16.0"
   },
-  "engines": {
-    "node": ">= 8.10"
-  },
-  "files": [
-    "lib"
-  ],
+  "engines": {"node": ">= 8.10"},
+  "files": ["lib"],
   "keywords": [],
   "nyc": {
-    "exclude": [
-      "gardener.js",
-      "node_modules/*",
-      "coverage/*",
-      "lib/*"
-    ],
+    "exclude": ["gardener.js", "node_modules/*", "coverage/*", "lib/*"],
     "all": true,
     "babel": true,
     "branches": 100,
@@ -42,19 +34,12 @@
     "check-coverage": true,
     "extension": [],
     "functions": 100,
-    "include": [
-      "**/*.js"
-    ],
+    "include": ["**/*.js"],
     "lines": 100,
     "per-file": false,
     "report-dir": "./coverage",
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "require": [
-      "@babel/register"
-    ],
+    "reporter": ["lcov", "text-summary"],
+    "require": ["@babel/register"],
     "statements": 100,
     "tempDir": "./coverage/.nyc_output"
   },
@@ -68,15 +53,10 @@
     "semantic-release": "npm run build-clean && npx semantic-release",
     "gardener": "node gardener"
   },
-  "bugs": {
-    "url": "https://github.com/repoKey/issues"
-  },
+  "bugs": {"url": "https://github.com/repoKey/issues"},
   "homepage": "https://github.com/repoKey#readme",
   "main": "lib/index.js",
   "name": "packageName",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/repoKey.git"
-  },
+  "repository": {"type": "git", "url": "https://github.com/repoKey.git"},
   "version": "0.0.0-development"
 }
