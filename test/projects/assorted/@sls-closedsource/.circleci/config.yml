@@ -107,7 +107,7 @@ jobs:
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
       - run: yarn global add serverless@1.42.2
-      - run: yarn run clean-build
+      - run: yarn run build-clean
       - run:
           command: sls deploy --stack api --region awsRegion --env local --force
           no_output_timeout: 10m
@@ -125,7 +125,7 @@ jobs:
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
       - run: yarn global add serverless@1.42.2
-      - run: yarn run clean-build
+      - run: yarn run build-clean
       - run:
           command: sls deploy --stack api --region awsRegion --env dev --force
           no_output_timeout: 10m
@@ -143,7 +143,7 @@ jobs:
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
       - run: yarn global add serverless@1.42.2
-      - run: yarn run clean-build
+      - run: yarn run build-clean
       - run:
           command: sls deploy --stack api --region awsRegion --env stage --force
           no_output_timeout: 10m
@@ -161,7 +161,7 @@ jobs:
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
       - run: yarn global add serverless@1.42.2
-      - run: yarn run clean-build
+      - run: yarn run build-clean
       - run:
           command: sls deploy --stack api --region awsRegion --env prod --force
           no_output_timeout: 10m
