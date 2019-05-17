@@ -4,7 +4,7 @@ docker:
   - ${file(^/steps/base.yml)}
   - steps:
       - run: yarn global add serverless@1.42.2
-      - run: yarn run clean-build
+      - run: yarn run build-clean
       - run:
           command: sls deploy --stack api --region ${awsRegion} --env ${opt:env} --force
           no_output_timeout: 10m
