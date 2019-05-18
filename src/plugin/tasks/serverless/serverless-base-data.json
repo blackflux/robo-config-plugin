@@ -1,0 +1,15 @@
+{
+  "target": "serverless/.base/data.yml",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/.base/data.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Manage serverless data stack base configuration file."
+  ]
+}

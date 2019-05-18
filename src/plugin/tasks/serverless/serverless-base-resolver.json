@@ -1,0 +1,20 @@
+{
+  "target": "serverless/.base/resolver.yml",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/.base/resolver.yml",
+      "variables": {
+        "projectName": "${projectName}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Create serverless stack resolver configuration file."
+  ]
+}

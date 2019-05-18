@@ -1,0 +1,7 @@
+{
+  "description": "Configuration file for serverless.",
+  "details": ["Load serverless configuration dynamically."],
+  "formats": ["other"],
+  "requires": ["serverless", "javascript"],
+  "website": "https://serverless.com/framework/docs/providers/aws/guide/intro#services"
+}
