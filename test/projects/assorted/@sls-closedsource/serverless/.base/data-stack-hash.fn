@@ -1,0 +1,16 @@
+const crypto = require('crypto');
+const path = require('path');
+const objectHash = require('object-hash');
+const yaml = require('yaml-boost');
+
+const identifier = crypto.randomBytes(8).toString('hex');
+
+module.exports = (args) => {
+  if (args[identifier] !== undefined) {
+    return '--hash--';
+  }
+  return objectHash(yaml.load(
+    path.join(__dirname, 'data.yml'),
+    { [identifier]: true, ...args }
+  ));
+};

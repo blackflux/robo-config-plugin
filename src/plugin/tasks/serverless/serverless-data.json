@@ -1,0 +1,15 @@
+{
+  "target": "serverless/data.yml",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/data.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize data stack resource definition file."
+  ]
+}

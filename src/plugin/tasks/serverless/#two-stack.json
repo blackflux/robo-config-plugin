@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    "serverless",
+    "serverless-base-resolver",
+    "serverless-base-api",
+    "serverless-base-data",
+    "serverless-base-data-stack-hash",
+    "serverless-api",
+    "serverless-data"
+  ],
+  "description": "Manage semantic-release configuration for npm package on github."
+}

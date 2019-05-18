@@ -1,0 +1,15 @@
+{
+  "target": "serverless.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Manage flexible serverless configuration file."
+  ]
+}

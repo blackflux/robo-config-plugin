@@ -9,7 +9,8 @@
     "gitignore/#serverless",
     "jetbrains/#default",
     "license/#closedsource",
-    "package/#serverless"
+    "package/#serverless",
+    "serverless/#two-stack"
   ],
   "description": "Manage various configuration files for serverless project."
 }

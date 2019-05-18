@@ -1,0 +1,7 @@
+{
+  "description": "Data Stack base configuration.",
+  "details": ["Defines data stack base configuration."],
+  "formats": ["yml"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}

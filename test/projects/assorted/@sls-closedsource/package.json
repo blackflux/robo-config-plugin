@@ -24,7 +24,13 @@
   "files": [],
   "keywords": [],
   "nyc": {
-    "exclude": ["gardener.js", "node_modules/*", "coverage/*", "lib/*"],
+    "exclude": [
+      "gardener.js",
+      "node_modules/*",
+      "coverage/*",
+      "lib/*",
+      "serverless.js"
+    ],
     "all": true,
     "babel": true,
     "branches": 100,
