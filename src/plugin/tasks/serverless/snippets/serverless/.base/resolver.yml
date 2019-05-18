@@ -1,4 +1,4 @@
-service: "${opt:service}-${opt:stack}"
+service: "${projectName}-${opt:stack}"
 
 provider:
   name: aws
