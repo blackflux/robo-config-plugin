@@ -1,0 +1,15 @@
+{
+  "target": "serverless/api.yml",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/api.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api stack resource definition file."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Data Stack hash resolver.",
+  "details": ["Compute hash for data stack."],
+  "formats": ["other"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}

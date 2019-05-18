@@ -1,0 +1,7 @@
+{
+  "description": "Api Stack base configuration.",
+  "details": ["Defines api stack base configuration."],
+  "formats": ["yml"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}
