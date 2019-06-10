@@ -4877,6 +4877,11 @@ oauth-sign@~0.9.0:
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
 
+object-align@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.0.tgz#b3a32e8ca6e0fc4bf827e88eadaa64268c050a39"
+  integrity sha512-bb2pxv0UCIZ+g7sMarmX7xKE9hmGE2lUOadwVswbIvEI51dRSmLsq7TmJwbd7FMH9PL+HMGbGcaEL35+yu0IDA==
+
 object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
@@ -6001,10 +6006,10 @@ robo-config@3.0.18:
     object-treeify "1.1.12"
     smart-fs "1.7.9"
 
-robo-config@3.0.21:
-  version "3.0.21"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.21.tgz#e3f2805153b3d0c6c32729ec1c449ae1ae8324fe"
-  integrity sha512-Ioui5XUG7iCKJl5LLTkz2Xp0OmKUtLtgaQhI0cwnTaRRSwRg27PtbDy15S6uAx57I/rXzcKrxXyAj6u04IRMIA==
+robo-config@3.0.22:
+  version "3.0.22"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.22.tgz#15c7380c77f3618778c57d9193ea5b8eeda5726c"
+  integrity sha512-SmRv0RPGh0qqTIp0OPP+UAs5iXiHK2HUJippVIlaVSQETTAqTbG010dkvKCtkxbFiti4hK9nfnhQY3ep+aYmBw==
   dependencies:
     "@hapi/joi" "15.0.3"
     app-root-path "2.2.1"
@@ -6016,7 +6021,7 @@ robo-config@3.0.21:
     object-deep-contain "1.0.11"
     object-scan "10.0.3"
     object-treeify "1.1.12"
-    smart-fs "1.7.9"
+    smart-fs "1.8.0"
 
 run-async@^0.1.0:
   version "0.1.0"
@@ -6229,6 +6234,19 @@ smart-fs@1.7.9:
     json-stringify-pretty-compact "2.0.0"
     lodash.clonedeep "4.5.0"
     lodash.isequal "4.5.0"
+    xml-js "1.6.11"
+    yaml-boost "1.9.7"
+
+smart-fs@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.8.0.tgz#2ba54a11ce82b0c32b09b4b9ce0d3d6afda4287d"
+  integrity sha512-E8JPp2LacrCCuLTsADyEL0ZmB4ZjhLVPOvAJi0snKMHqNr33mKgH/DRcgV0aGKbnyc7YACBdMmmRT5v6uLy/2Q==
+  dependencies:
+    fs-extra "8.0.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.0"
     xml-js "1.6.11"
     yaml-boost "1.9.7"
 
