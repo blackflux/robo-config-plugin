@@ -42,7 +42,7 @@
     "js-gardener": "2.0.40",
     "nyc": "14.1.1",
     "robo-config": "3.0.22",
-    "semantic-release": "15.13.16"
+    "semantic-release": "15.13.17"
   },
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
