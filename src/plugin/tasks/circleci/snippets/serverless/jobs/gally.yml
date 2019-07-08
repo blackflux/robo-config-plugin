@@ -1,5 +1,5 @@
 docker:
-  - image: 'circleci/node:10'
+  - image: 'circleci/node:12'
 <<<:
   - steps:
     - checkout

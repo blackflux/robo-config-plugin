@@ -7,8 +7,20 @@
       "name": "gally-create-staging-pr",
       "variables": {
         "jobName": "gally-create-pr",
-        "dockerImage": "circleci/node:10",
+        "dockerImage": "circleci/node:12",
         "ciEnvBranchName": "$CIRCLE_BRANCH"
+      }
+    },
+    {
+      "name": "run-yarn-tests",
+      "variables": {
+        "jobName": "test-node-v12",
+        "dockerImage": "circleci/node:12",
+        "jobOptions": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
       }
     },
     {
@@ -24,27 +36,15 @@
       }
     },
     {
-      "name": "run-yarn-tests",
-      "variables": {
-        "jobName": "test-node-v8.10",
-        "dockerImage": "circleci/node:8.10",
-        "jobOptions": {
-          "requires": [
-            "gally-create-pr"
-          ]
-        }
-      }
-    },
-    {
       "name": "dependabot-auto-merge",
       "variables": {
         "jobName": "gally-auto-merge",
-        "dockerImage": "circleci/node:10",
+        "dockerImage": "circleci/node:12",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
-            "test-node-v10",
-            "test-node-v8.10"
+            "test-node-v12",
+            "test-node-v10"
           ],
           "filters": {
             "branches": {
@@ -58,12 +58,12 @@
       "name": "semantic-release",
       "variables": {
         "jobName": "release",
-        "dockerImage": "circleci/node:10",
+        "dockerImage": "circleci/node:12",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
-            "test-node-v10",
-            "test-node-v8.10"
+            "test-node-v12",
+            "test-node-v10"
           ],
           "filters": {
             "branches": {

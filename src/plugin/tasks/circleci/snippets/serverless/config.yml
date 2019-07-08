@@ -3,10 +3,10 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v10.x:
+      - test-node-v12:
           requires:
             - gally
-      - test-node-v8.10:
+      - test-node-v10.x:
           requires:
             - gally
       - deploy-local:
@@ -33,10 +33,10 @@ version: 2
 jobs:
   gally:
     ${file(^/jobs/gally.yml)}
+  test-node-v12:
+    ${file(^/jobs/test.yml), image=circleci/node:12}
   test-node-v10.x:
     ${file(^/jobs/test.yml), image=lambci/lambda:build-nodejs10.x}
-  test-node-v8.10:
-    ${file(^/jobs/test.yml), image=lambci/lambda:build-nodejs8.10}
   deploy-local:
     ${file(^/jobs/deploy.yml), env=local}
   deploy-dev:
