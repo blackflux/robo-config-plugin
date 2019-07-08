@@ -1,5 +1,5 @@
 docker:
-  - image: 'lambci/lambda:build-nodejs8.10'
+  - image: 'lambci/lambda:build-nodejs10.x'
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:
