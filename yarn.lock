@@ -6118,10 +6118,10 @@ robo-config@3.0.25:
     object-treeify "1.1.12"
     smart-fs "1.8.2"
 
-robo-config@3.0.26:
-  version "3.0.26"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.26.tgz#4de4f76d17d996519dbacb4f9288f55964ee6239"
-  integrity sha512-xe3VPKPEOI9upgMh5GOmrNOUY46OdfsHms0hIVXgMVy6S8emkuiKTMOcUTWgXvkSgn9gbXX+XhcypiVZIOBcug==
+robo-config@3.0.27:
+  version "3.0.27"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.27.tgz#01996b6d65f6f72bcd30acfa32e43c5010a8e7b7"
+  integrity sha512-ay1beH3W0fbbuCPIdqgGECZ2EF3hE9EuZ29REg6Jeubhe5oMAW8Gebh/CjwJP3mijcDVTHyY5EXoZBN3qxkr3A==
   dependencies:
     "@hapi/joi" "15.1.0"
     app-root-path "2.2.1"
@@ -6133,7 +6133,7 @@ robo-config@3.0.26:
     object-deep-contain "1.0.12"
     object-scan "10.0.4"
     object-treeify "1.1.13"
-    smart-fs "1.8.2"
+    smart-fs "1.8.3"
 
 run-async@^0.1.0:
   version "0.1.0"
