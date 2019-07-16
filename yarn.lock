@@ -1671,6 +1671,11 @@ deepmerge@3.3.0:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.3.0.tgz#d3c47fd6f3a93d517b14426b0628a17b0125f5f7"
   integrity sha512-GRQOafGHwMHpjPx9iCvTgpu9NojZ49q794EEL94JVEw6VaeA8XTUyBKvAkOOjBX9oJNiV6G3P+T+tihFjo2TqA==
 
+deepmerge@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.0.0.tgz#3e3110ca29205f120d7cb064960a39c3d2087c09"
+  integrity sha512-YZ1rOP5+kHor4hMAH+HRQnBQHg+wvS1un1hAOuIcxcBy0hzcUf6Jg2a1w65kpoOUnurOfZbERwjI1TfZxNjcww==
+
 default-require-extensions@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/default-require-extensions/-/default-require-extensions-2.0.0.tgz#f5f8fbb18a7d6d50b21f641f649ebb522cfe24f7"
@@ -4978,6 +4983,11 @@ object-deep-contain@1.0.11:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.11.tgz#c03715c468e4956c3cf8ede5e50aeb96acf67670"
   integrity sha512-zZVzjzKrEF/ItssaAjpwLo+oQdzOHOLRqzFXJAdh8T3lDHjSqFcQfn1/bzMITR1Cx3Ojbceyi1QFARwGtbvZQw==
 
+object-deep-contain@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.12.tgz#5bc86a9b84952ef7c3790f20955bcd69bb005a45"
+  integrity sha512-Ec77vo98lDXd+6IKvrZD93HnJc0+kpZ1lkLmqXsPkpgMzTutgVlDSX2K3QENL02SEnDMom/a8uiAJPkUE+dzWw==
+
 object-keys@^1.0.11, object-keys@^1.0.12:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
@@ -6111,6 +6121,23 @@ robo-config@3.0.24:
     object-scan "10.0.4"
     object-treeify "1.1.12"
     smart-fs "1.8.0"
+
+robo-config@3.0.25:
+  version "3.0.25"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.25.tgz#4f9ad37c24700e14fee9ebc9027d40e6cd2abb74"
+  integrity sha512-zw9y9Tko7ppaN2M2iO19suHpG5VHiwAzmulXOq5GJKNo37m2xJ39wb1O4aYKZyy17FFTJnUblgn+LatZXUBc+A==
+  dependencies:
+    "@hapi/joi" "15.1.0"
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.0.3"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.12"
+    object-scan "10.0.4"
+    object-treeify "1.1.12"
+    smart-fs "1.8.2"
 
 run-async@^0.1.0:
   version "0.1.0"
