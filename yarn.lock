@@ -6103,6 +6103,23 @@ robo-config@3.0.27:
     object-treeify "1.1.13"
     smart-fs "1.8.3"
 
+robo-config@3.0.28:
+  version "3.0.28"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.28.tgz#acd380db148383a33d52ef2a557890ad8c944e7c"
+  integrity sha512-r/2hL35GLvv3BkwtJSTiGfUMH7D9UJUDcPL28zqt0KN5OXeqLnim/BytQrPowmNPmA+nqrOaibh/X1DgB1LbAw==
+  dependencies:
+    "@hapi/joi" "15.1.0"
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.0.3"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.12"
+    object-scan "10.0.4"
+    object-treeify "1.1.13"
+    smart-fs "1.9.0"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
@@ -6313,6 +6330,19 @@ smart-fs@1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.8.3.tgz#b747bcffaff96594a8a0bb3d1d247354bbd3e2eb"
   integrity sha512-mug/XC2FxJ/c0N5zmlIwKeEQf4oIrSfNVBYNah8x4uxIOuE0Jz563LD6NstVCoiDCVFuArOFHFVPzAyc3LnxrA==
+  dependencies:
+    fs-extra "8.1.0"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.1"
+    xml-js "1.6.11"
+    yaml-boost "1.9.9"
+
+smart-fs@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.9.0.tgz#0a3326f0c459ab34cad23ff8958e9dbefba2f65b"
+  integrity sha512-cp5jeLH+c709jRp74G1pjrS0ywLTZ/X0SQAmz2Vf2vTd9s2MwTmQ//vdr8k9/Cj7uce5zxqtuTqZc7gzpy3PgA==
   dependencies:
     fs-extra "8.1.0"
     json-stringify-pretty-compact "2.0.0"
