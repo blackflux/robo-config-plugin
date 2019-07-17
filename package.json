@@ -33,7 +33,7 @@
     "@babel/core": "7.5.4",
     "@babel/plugin-proposal-object-rest-spread": "7.5.4",
     "@babel/register": "7.4.4",
-    "@blackflux/eslint-plugin-rules": "1.0.22",
+    "@blackflux/eslint-plugin-rules": "1.0.23",
     "@blackflux/robo-config-plugin": "2.0.0",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
@@ -41,7 +41,7 @@
     "eslint": "6.0.1",
     "js-gardener": "2.0.48",
     "nyc": "14.1.1",
-    "robo-config": "3.0.27",
+    "robo-config": "3.0.28",
     "semantic-release": "15.13.18"
   },
   "nyc": {
