@@ -29,7 +29,7 @@
       "node_modules/*",
       "coverage/*",
       "lib/*",
-      "serverless.js"
+      "serverless/config.js"
     ],
     "all": true,
     "babel": true,
