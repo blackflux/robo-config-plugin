@@ -4,6 +4,11 @@ update_configs:
     directory: "/"
     update_schedule: "${updateSchedule}"
 
+    commit_message:
+      prefix: "fix"
+      prefix_development: "chore"
+      include_scope: true
+
     target_branch: ${targetBranch}
 
     automerged_updates:
