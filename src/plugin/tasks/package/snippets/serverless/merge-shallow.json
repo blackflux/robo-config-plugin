@@ -5,6 +5,7 @@
     "build-clean": "npm run clean && npm run build",
     "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
     "test": "npm run clean && npm run gardener && npm run test-simple",
+    "docker": "docker run -u=$UID:$(id -g $USER) -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "gardener": "node gardener"
   },
   "files": []
