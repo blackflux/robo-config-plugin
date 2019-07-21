@@ -3,7 +3,7 @@
   "strategy": "overwrite",
   "snippets": [
     "angular",
-    "build-deps-as-patch"
+    "release-rules"
   ],
   "requires": [
     "semantic-release"

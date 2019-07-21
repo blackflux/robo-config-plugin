@@ -1,6 +1,10 @@
 version: 1
 update_configs:
-  - package_manager: javascript
+  - commit_message:
+      prefix: fix
+      prefix_development: chore
+      include_scope: true
+    package_manager: javascript
     directory: /
     update_schedule: live
     target_branch: dev
