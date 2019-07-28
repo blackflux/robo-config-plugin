@@ -1,0 +1,25 @@
+service: "projectName-${opt:stack}"
+
+provider:
+  name: aws
+  endpointType: REGIONAL
+  runtime: nodejs10.x
+  memorySize: 256
+  timeout: 8
+  stage: '${opt:env}'
+  region: '${opt:region}'
+  deploymentBucket:
+    name: 'com.sls.wf.${opt:region}.${self:provider.stage}.deploys'
+  environment:
+    ENVIRONMENT: '${self:provider.stage}'
+  versionFunctions: false
+
+package:
+  exclude:
+    - test/**
+    - coverage/**
+    - config/**
+    - src/**
+
+<<<:
+  - ${file(^/${opt:stack}.yml), service=projectName}

@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    "struct/#serverless",
+    "badges/#serverless",
+    "circleci/#serverless",
+    "docker/#serverless-react",
+    "gally/#serverless",
+    "editor/#default",
+    "gitignore/#serverless",
+    "jetbrains/#default",
+    "license/#closedsource",
+    "package/#serverless-react",
+    "serverless/#two-stack"
+  ],
+  "description": "Manage various configuration files for serverless project."
+}
