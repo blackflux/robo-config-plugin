@@ -3,5 +3,5 @@
     "sls-react-docker",
     "sls-react-manage"
   ],
-  "description": "Manage react docker test configuration for serverless project."
+  "description": "Manage react docker test configuration for react serverless project."
 }
