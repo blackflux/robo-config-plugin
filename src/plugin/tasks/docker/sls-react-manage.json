@@ -9,6 +9,6 @@
     "serverless"
   ],
   "purpose": [
-    "Spawn docker container for serverless testing and deploying."
+    "Spawn docker container for react serverless testing and deploying."
   ]
 }

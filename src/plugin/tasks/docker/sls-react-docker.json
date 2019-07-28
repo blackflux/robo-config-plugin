@@ -9,6 +9,6 @@
     "serverless"
   ],
   "purpose": [
-    "Docker environment definition for running tests in AWS Lambda container."
+    "Docker environment definition for running tests in react AWS Lambda container."
   ]
 }
