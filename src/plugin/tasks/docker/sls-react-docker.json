@@ -1,0 +1,14 @@
+{
+  "target": "docker/Dockerfile",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls/Dockerfile"
+  ],
+  "requires": [
+    "docker",
+    "serverless"
+  ],
+  "purpose": [
+    "Docker environment definition for running tests in react AWS Lambda container."
+  ]
+}

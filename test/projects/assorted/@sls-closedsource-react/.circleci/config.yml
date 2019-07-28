@@ -1,0 +1,175 @@
+workflows:
+  version: 2
+  node-multi-build:
+    jobs:
+      - gally
+      - test-node-v12:
+          requires:
+            - gally
+      - test-node-v10.x:
+          requires:
+            - gally
+      - deploy-local:
+          context: projectName-local
+          requires:
+            - gally
+            - test-node-v12
+            - test-node-v10.x
+          filters:
+            branches:
+              only:
+                - dev
+      - deploy-dev:
+          context: projectName-dev
+          requires:
+            - gally
+            - test-node-v12
+            - test-node-v10.x
+            - deploy-local
+          filters:
+            branches:
+              only:
+                - dev
+      - deploy-stage:
+          context: projectName-stage
+          requires:
+            - gally
+            - test-node-v12
+            - test-node-v10.x
+          filters:
+            branches:
+              only:
+                - stage
+      - deploy-prod:
+          context: projectName-prod
+          requires:
+            - gally
+            - test-node-v12
+            - test-node-v10.x
+          filters:
+            branches:
+              only:
+                - master
+version: 2
+jobs:
+  gally:
+    docker:
+      - image: 'circleci/node:12'
+    steps:
+      - checkout
+      - run: sudo yarn global add gally
+      - run: gally promote $CIRCLE_BRANCH
+  test-node-v12:
+    docker:
+      - image: 'circleci/node:12'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run: rm -rf node_modules
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: >-
+          (git add . && git diff-index --quiet HEAD --) || (git status && exit
+          1);
+  test-node-v10.x:
+    docker:
+      - image: 'lambci/lambda:build-nodejs10.x'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run: rm -rf node_modules
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: >-
+          (git add . && git diff-index --quiet HEAD --) || (git status && exit
+          1);
+  deploy-local:
+    docker:
+      - image: 'lambci/lambda:build-nodejs10.x'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run: rm -rf node_modules
+      - run: yarn install --frozen-lockfile
+      - run: yarn global add serverless@1.46.1
+      - run: yarn run build-clean
+      - run:
+          command: >-
+            sls deploy --config serverless/config.js --stack api --region
+            awsRegion --env local --force
+          no_output_timeout: 10m
+  deploy-dev:
+    docker:
+      - image: 'lambci/lambda:build-nodejs10.x'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run: rm -rf node_modules
+      - run: yarn install --frozen-lockfile
+      - run: yarn global add serverless@1.46.1
+      - run: yarn run build-clean
+      - run:
+          command: >-
+            sls deploy --config serverless/config.js --stack api --region
+            awsRegion --env dev --force
+          no_output_timeout: 10m
+  deploy-stage:
+    docker:
+      - image: 'lambci/lambda:build-nodejs10.x'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run: rm -rf node_modules
+      - run: yarn install --frozen-lockfile
+      - run: yarn global add serverless@1.46.1
+      - run: yarn run build-clean
+      - run:
+          command: >-
+            sls deploy --config serverless/config.js --stack api --region
+            awsRegion --env stage --force
+          no_output_timeout: 10m
+  deploy-prod:
+    docker:
+      - image: 'lambci/lambda:build-nodejs10.x'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run: rm -rf node_modules
+      - run: yarn install --frozen-lockfile
+      - run: yarn global add serverless@1.46.1
+      - run: yarn run build-clean
+      - run:
+          command: >-
+            sls deploy --config serverless/config.js --stack api --region
+            awsRegion --env prod --force
+          no_output_timeout: 10m
