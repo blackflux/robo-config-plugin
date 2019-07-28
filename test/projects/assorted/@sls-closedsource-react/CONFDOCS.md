@@ -41,7 +41,7 @@
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-closedsource-react">assorted/@sls-closedsource-react</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsource-react">`index`</a>)
 
-Manage various configuration files for serverless project.
+Manage various configuration files for react serverless project.
 
 <table>
   <tbody>
@@ -1030,7 +1030,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editor
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dockerserverless-react">docker/#serverless-react</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockerserverless-react">`index`</a>)
 
-Manage react docker test configuration for serverless project.
+Manage react docker test configuration for react serverless project.
 
 <table>
   <tbody>
@@ -1061,7 +1061,7 @@ Manage react docker test configuration for serverless project.
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Spawn docker container for serverless testing and deploying.
+- Spawn docker container for react serverless testing and deploying.
 
 <table>
   <tbody>
@@ -1090,7 +1090,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Docker environment definition for running tests in AWS Lambda container.
+- Docker environment definition for running tests in react AWS Lambda container.
 
 <table>
   <tbody>
