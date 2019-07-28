@@ -12,5 +12,5 @@
     "package/#serverless-react",
     "serverless/#two-stack"
   ],
-  "description": "Manage various configuration files for serverless project."
+  "description": "Manage various configuration files for react serverless project."
 }
