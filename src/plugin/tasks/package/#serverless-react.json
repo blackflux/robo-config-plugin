@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    "serverless-react_default-shallow",
+    "serverless-react_default-deep",
+    "serverless-react_merge-shallow",
+    "serverless-react_merge-deep"
+  ],
+  "description": "Manage package.json for react serverless project."
+}

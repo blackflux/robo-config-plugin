@@ -1,0 +1,72 @@
+{
+  "license": "UNLICENSED",
+  "licenses": [
+    {
+      "type": "UNLICENSED",
+      "url": "https://github.com/repoKey/blob/master/LICENSE"
+    }
+  ],
+  "author": "ownerName",
+  "description": "???",
+  "keywords": [],
+  "devDependencies": {
+    "@babel/register": "7.0.0",
+    "babel-eslint": "8.2.3",
+    "@babel/core": "7.1.2",
+    "@babel/cli": "7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
+    "@blackflux/eslint-plugin-rules": "1.0.0",
+    "@blackflux/robo-config-plugin": "1.2.1",
+    "nyc": "12.0.2",
+    "chai": "4.2.0",
+    "eslint": "5.16.0"
+  },
+  "engines": {"node": ">= 10"},
+  "nyc": {
+    "exclude": [
+      "gardener.js",
+      "node_modules/*",
+      "coverage/*",
+      "lib/*",
+      "serverless/config.js"
+    ],
+    "tempDir": "./coverage/.nyc_output",
+    "report-dir": "./coverage",
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": ["**/*.js"],
+    "reporter": ["lcov", "text-summary"],
+    "require": ["@babel/register"],
+    "extension": [],
+    "cache": true,
+    "all": true,
+    "babel": true
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc",
+    "build-clean": "npm run clean && npm run build",
+    "test-simple": "npm run build-react && nyc mocha \"./test/**/*.spec.js\"",
+    "test": "npm run clean && npm run gardener && npm run test-simple",
+    "docker": "docker run -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
+    "yu": "yarn upgrade --latest --force",
+    "yi": "yarn install --frozen-lockfile",
+    "t": "yarn test",
+    "ts": "yarn run test-simple",
+    "tsv": "yarn run test-simple --verbose",
+    "gardener": "node gardener",
+    "build-react": "react-scripts build",
+    "start-offline": "rm -rf build && npm run build-react && sls offline start"
+  },
+  "files": [],
+  "homepage": "https://github.com/repoKey#readme",
+  "repository": {"type": "git", "url": "https://github.com/repoKey.git"},
+  "bugs": {"url": "https://github.com/repoKey/issues"},
+  "version": "0.0.0-development",
+  "private": true,
+  "name": "projectName"
+}
