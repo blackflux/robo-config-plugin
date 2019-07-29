@@ -2,7 +2,7 @@
   "target": "manage.sh",
   "strategy": "overwrite",
   "snippets": [
-    "sls/manage.sh"
+    "sls-react/manage.sh"
   ],
   "requires": [
     "docker",
