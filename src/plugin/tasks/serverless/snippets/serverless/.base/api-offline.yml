@@ -1,0 +1,9 @@
+plugins:
+  - serverless-offline
+
+custom:
+  error:
+    - 'Fn::ImportValue': Offline.Stack.Can.Not.Be.Deployed
+
+<<<:
+  - ${file(^/../api.yml)}

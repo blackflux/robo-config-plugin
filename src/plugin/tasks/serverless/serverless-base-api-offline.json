@@ -1,0 +1,15 @@
+{
+  "target": "serverless/.base/api-offline.yml",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/.base/api-offline.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Manage serverless api offline stack base configuration file."
+  ]
+}
