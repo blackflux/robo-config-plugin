@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "clean": "rm -rf lib",
-    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc",
+    "clean": "rm -rf lib build .webpack",
+    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc && react-scripts build",
     "build-clean": "npm run clean && npm run build",
-    "test-simple": "npm run build-react && nyc mocha \"./test/**/*.spec.js\"",
+    "test-simple": "npm run build-clean && nyc mocha \"./test/**/*.spec.js\"",
     "test": "npm run clean && npm run gardener && npm run test-simple",
     "docker": "docker run -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "yu": "yarn upgrade --latest --force",
@@ -12,8 +12,7 @@
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
     "gardener": "node gardener",
-    "build-react": "react-scripts build",
-    "start-offline": "rm -rf build && npm run build-react && sls offline start --config serverless/config.js --stack=api-offline --region=${awsRegion} --env=offline"
+    "start-offline": "npm run build-clean && sls offline start --config serverless/config.js --stack=api-offline --region=${awsRegion} --env=offline"
   },
   "files": []
 }
