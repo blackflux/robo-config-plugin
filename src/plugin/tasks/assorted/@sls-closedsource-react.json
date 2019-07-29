@@ -10,7 +10,7 @@
     "jetbrains/#default",
     "license/#closedsource",
     "package/#serverless-react",
-    "serverless/#two-stack"
+    "serverless/#two-stack-react"
   ],
   "description": "Manage various configuration files for react serverless project."
 }
