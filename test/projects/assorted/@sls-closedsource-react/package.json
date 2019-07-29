@@ -60,7 +60,7 @@
     "tsv": "yarn run test-simple --verbose",
     "gardener": "node gardener",
     "build-react": "react-scripts build",
-    "start-offline": "rm -rf build && npm run build-react && sls offline start"
+    "start-offline": "rm -rf build && npm run build-react && sls offline start --config serverless/config.js --stack=api-offline --region=awsRegion --env=offline"
   },
   "files": [],
   "homepage": "https://github.com/repoKey#readme",

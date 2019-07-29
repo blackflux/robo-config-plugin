@@ -1,0 +1,7 @@
+{
+  "description": "Serverless Framework Offline Runner.",
+  "details": [
+    "Offline runner test harness for the Serverless Framework."
+  ],
+  "website": "https://github.com/dherault/serverless-offline"
+}

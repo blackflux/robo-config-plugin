@@ -1,0 +1,7 @@
+{
+  "description": "Api Offline Stack base configuration.",
+  "details": ["Defines api offline stack base configuration. This stack can not be deployed and only be run locally."],
+  "formats": ["yml"],
+  "requires": ["serverless", "serverless-offline", "javascript"],
+  "website": null
+}

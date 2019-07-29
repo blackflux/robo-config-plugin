@@ -273,7 +273,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstwo-stack">serverless/#two-stack</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstwo-stack">`index`</a>)
 
-Manage semantic-release configuration for npm package on github.
+Manage serverless configuration for deployment to AWS.
 
 <table>
   <tbody>
