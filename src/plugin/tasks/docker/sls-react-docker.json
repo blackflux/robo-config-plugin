@@ -2,7 +2,7 @@
   "target": "docker/Dockerfile",
   "strategy": "overwrite",
   "snippets": [
-    "sls/Dockerfile"
+    "sls-react/Dockerfile"
   ],
   "requires": [
     "docker",
