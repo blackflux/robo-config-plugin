@@ -10,6 +10,7 @@
     "jasmine/new-line-before-expect": 0,
     "@blackflux/rules/istanbul-prevent-ignore": 1,
     "@blackflux/rules/kebab-case-enforce": 1,
+    "@blackflux/rules/prevent-typeof-object": 1,
     "max-len": [
       "error",
       {
