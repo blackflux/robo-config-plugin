@@ -1,0 +1,14 @@
+{
+  "target": "src/errors.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-api/src/errors.js"
+  ],
+  "requires": [
+    "lambda-serverless-api"
+  ],
+  "purpose": [
+    "Initialize managed error definition file."
+  ]
+}

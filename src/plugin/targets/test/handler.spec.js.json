@@ -1,0 +1,7 @@
+{
+  "description": "Test Utility to run lambda-tdd tests and sync swagger docs.",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["lambda-serverless-api", "lambda-tdd"],
+  "website": null
+}

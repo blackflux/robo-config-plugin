@@ -1,0 +1,14 @@
+{
+  "target": "test/modifiers.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-api/test/modifiers.js"
+  ],
+  "requires": [
+    "lambda-tdd"
+  ],
+  "purpose": [
+    "Create modifiers template for lambda-tdd test setup."
+  ]
+}

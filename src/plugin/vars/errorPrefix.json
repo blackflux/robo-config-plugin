@@ -1,0 +1,7 @@
+{
+  "description": "Error Identifier Prefix.",
+  "details": [
+    "Prefix that each error message in this project should start with."
+  ],
+  "type": "number"
+}

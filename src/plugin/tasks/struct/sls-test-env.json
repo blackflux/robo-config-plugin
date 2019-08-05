@@ -1,0 +1,19 @@
+{
+  "target": "test/env.yml",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    {
+      "name": "sls-api/test/env.yml",
+      "variables": {
+        "awsRegion": "${awsRegion}"
+      }
+    }
+  ],
+  "requires": [
+    "lambda-tdd"
+  ],
+  "purpose": [
+    "Create configuration template for lambda-tdd test setup."
+  ]
+}

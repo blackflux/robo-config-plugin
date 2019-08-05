@@ -1,0 +1,7 @@
+{
+  "description": "Swagger RESTful API definition.",
+  "details": ["Swagger documentation for project."],
+  "formats": ["yml"],
+  "requires": ["swagger"],
+  "website": null
+}

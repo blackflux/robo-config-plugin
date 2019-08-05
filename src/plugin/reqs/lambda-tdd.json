@@ -1,0 +1,7 @@
+{
+  "description": "Testing Framework for AWS Lambda.",
+  "details": [
+    "Testing Framework for AWS Lambda that uses recordings to work offline without requiring Cloud environment."
+  ],
+  "website": "https://github.com/blackflux/lambda-tdd"
+}

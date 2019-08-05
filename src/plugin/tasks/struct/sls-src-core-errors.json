@@ -1,0 +1,14 @@
+{
+  "target": "src/core/errors.json",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-api/src/core/errors.json"
+  ],
+  "requires": [
+    "lambda-serverless-api"
+  ],
+  "purpose": [
+    "Template for error definitions."
+  ]
+}

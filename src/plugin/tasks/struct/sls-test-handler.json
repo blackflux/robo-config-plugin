@@ -1,0 +1,15 @@
+{
+  "target": "test/handler.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls-api/test/handler.spec.js"
+  ],
+  "requires": [
+    "lambda-serverless-api",
+    "lambda-tdd"
+  ],
+  "purpose": [
+    "Managed file to run lambda-tdd tests and sync swagger docs."
+  ]
+}

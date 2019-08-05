@@ -1,0 +1,14 @@
+{
+  "target": ".gitignore",
+  "strategy": "append-new",
+  "snippets": [
+    "lambda-tdd"
+  ],
+  "requires": [
+    "git",
+    "lambda-tdd"
+  ],
+  "purpose": [
+    "Inject recommended entries for lambda-tdd setup."
+  ]
+}
