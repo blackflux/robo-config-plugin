@@ -1,0 +1,7 @@
+{
+  "description": "Handler definitions.",
+  "details": ["Managed handler definition file."],
+  "formats": ["other"],
+  "requires": ["lambda-serverless-api", "aws"],
+  "website": null
+}

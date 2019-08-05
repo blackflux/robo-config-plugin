@@ -12,6 +12,7 @@ it('Testing Plugin Tasks', () => {
     'assorted/@npm-closedsource': [],
     'assorted/@npm-opensource': [],
     'assorted/@npm-opensource-es': [],
+    'assorted/@sls-api': [],
     'assorted/@sls-closedsource': [],
     'assorted/@sls-closedsource-react': []
   });

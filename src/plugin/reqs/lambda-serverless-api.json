@@ -1,0 +1,7 @@
+{
+  "description": "AWS Lambda Serverless API Gateway Framework.",
+  "details": [
+    "Abstracts the creation of a basic API and the most commonly desired features."
+  ],
+  "website": "https://github.com/blackflux/lambda-serverless-api"
+}

@@ -1,0 +1,14 @@
+{
+  "target": "src/core/api.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-api/src/core/api.js"
+  ],
+  "requires": [
+    "lambda-serverless-api"
+  ],
+  "purpose": [
+    "Template for api instantiation."
+  ]
+}

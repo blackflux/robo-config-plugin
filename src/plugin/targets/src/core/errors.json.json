@@ -1,0 +1,7 @@
+{
+  "description": "Template for Error definitions.",
+  "details": ["API Gateway Error response definitions."],
+  "formats": ["other"],
+  "requires": ["lambda-serverless-api", "aws"],
+  "website": null
+}

@@ -1,0 +1,14 @@
+{
+  "target": "src/handler.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls-api/src/handler.js"
+  ],
+  "requires": [
+    "lambda-serverless-api"
+  ],
+  "purpose": [
+    "Manage handler definition file."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "struct/#serverless-api"
+  ],
+  "description": "Manage serverless project using lambda-serverless-api and lambda-tdd."
+}

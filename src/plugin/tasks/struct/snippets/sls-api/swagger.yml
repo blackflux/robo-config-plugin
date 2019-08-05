@@ -1,0 +1,6 @@
+swagger: '2.0'
+produces:
+  - application/json
+info:
+  title: Api Name
+  version: 0.0.1
