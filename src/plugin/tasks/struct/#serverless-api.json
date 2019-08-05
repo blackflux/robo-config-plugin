@@ -6,6 +6,7 @@
     "sls-src-routes",
     "sls-src-core-api",
     "sls-src-core-errors",
+    "sls-test-handler",
     "sls-test-errors",
     "sls-test-routes"
   ],

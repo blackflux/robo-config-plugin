@@ -1,6 +1,7 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-apijson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-apijson">`assorted/@sls-api.json`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless-api">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless-api">`struct/#serverless-api`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-routes">`struct/sls-test-routes`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler">`struct/sls-test-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-errors">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-errors">`struct/sls-test-errors`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-swagger">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-swagger">`struct/sls-swagger`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-routes">`struct/sls-src-routes`</a>
@@ -34,12 +35,14 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreerrorsjson">errors.json</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-swagger">swagger</a></li>
         </ul>
       </td>
@@ -77,12 +80,14 @@ Manage project structure for serverless project using lambda-serverless-api and 
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreerrorsjson">errors.json</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-swagger">swagger</a></li>
         </ul>
       </td>
@@ -118,6 +123,36 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">tes
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-handler">struct/sls-test-handler</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">test/handler.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Managed file to run lambda-tdd tests and sync swagger docs.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
         </ul>
       </td>
     </tr>
@@ -344,6 +379,12 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">src/cor
 
 Abstracts the creation of a basic API and the most commonly desired features.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a> ([`link`](https://github.com/blackflux/lambda-tdd)) 
+
+*Testing Framework for AWS Lambda.*
+
+Testing Framework for AWS Lambda. Very useful for integration testing as you can examine how your lambda function executes for certain input and specific environment variables.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-swagger">swagger</a> ([`link`](https://swagger.io/resources/open-api/)) 
 
 *Swagger RESTful API Specification.*
@@ -371,6 +412,14 @@ Prefix that each error message in this project should start with.
 :small_blue_diamond: `other`
 
 *Utility test to sync routes file.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">test/handler.spec.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a>, <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
+
+:small_blue_diamond: `other`
+
+*Test Utility to run lambda-tdd tests and sync swagger docs.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">test/errors.spec.js</a>  
 
