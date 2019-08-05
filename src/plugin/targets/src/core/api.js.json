@@ -1,0 +1,7 @@
+{
+  "description": "Template for Api initialization.",
+  "details": ["API initialization file."],
+  "formats": ["other"],
+  "requires": ["lambda-serverless-api", "aws"],
+  "website": null
+}

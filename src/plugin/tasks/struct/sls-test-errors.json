@@ -1,0 +1,19 @@
+{
+  "target": "test/errors.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "sls-api/test/errors.spec.js",
+      "variables": {
+        "errorPrefix": "${errorPrefix}"
+      }
+    }
+  ],
+  "requires": [
+    "lambda-serverless-api"
+  ],
+  "purpose": [
+    "Utility test to sync errors file."
+  ]
+}

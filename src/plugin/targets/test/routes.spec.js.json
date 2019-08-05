@@ -1,0 +1,7 @@
+{
+  "description": "Utility test to sync routes file.",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["lambda-serverless-api"],
+  "website": null
+}

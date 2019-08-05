@@ -1,0 +1,13 @@
+{
+  "target": "swagger.yml",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-api/swagger.yml"
+  ],
+  "requires": [
+    "swagger"
+  ],
+  "purpose": [
+    "Create empty swagger definition file."
+  ]
+}

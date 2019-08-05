@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "lambda-tdd"
+  ],
+  "description": "Manage gitignore content for serverless project using lambda-serverless-api and lambda-tdd."
+}
