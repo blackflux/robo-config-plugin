@@ -1,0 +1,14 @@
+{
+  "target": "test/routes.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls-api/test/routes.spec.js"
+  ],
+  "requires": [
+    "lambda-serverless-api"
+  ],
+  "purpose": [
+    "Utility test to sync routes file."
+  ]
+}

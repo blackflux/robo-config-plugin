@@ -5,7 +5,9 @@
     "sls-src-errors",
     "sls-src-routes",
     "sls-src-core-api",
-    "sls-src-core-errors"
+    "sls-src-core-errors",
+    "sls-test-errors",
+    "sls-test-routes"
   ],
   "description": "Manage project structure for serverless project using lambda-serverless-api and lambda-tdd."
 }
