@@ -4,7 +4,6 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-modifiers">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-modifiers">`struct/sls-test-modifiers`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler">`struct/sls-test-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-errors">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-errors">`struct/sls-test-errors`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env-recording">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-env-recording">`struct/sls-test-env-recording`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-env">`struct/sls-test-env`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-swagger">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-swagger">`struct/sls-swagger`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-routes">`struct/sls-src-routes`</a>
@@ -40,7 +39,6 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreerrorsjson">errors.json</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">env.recording.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
@@ -90,7 +88,6 @@ Manage project structure for serverless project using lambda-serverless-api and 
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreerrorsjson">errors.json</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">env.recording.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
@@ -232,41 +229,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">tes
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-errorprefix">errorPrefix</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-env-recording">struct/sls-test-env-recording</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env-recording">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">test/env.recording.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
-
-- Create recording configuration template for lambda-tdd test setup.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-      <th>Variables</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">env.recording.yml</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -618,14 +580,6 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 :small_blue_diamond: `other`
 
 *Utility test to sync errors file.*
-
-### <a name="blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">test/env.recording.yml</a>  
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
-
-:small_blue_diamond: `other`
-
-*Recording configuration definitions for lambda-tdd test setup.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a>  
 
