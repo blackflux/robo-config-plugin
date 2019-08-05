@@ -4,12 +4,16 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-modifiers">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-modifiers">`struct/sls-test-modifiers`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler">`struct/sls-test-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-errors">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-errors">`struct/sls-test-errors`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env-recording">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-env-recording">`struct/sls-test-env-recording`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-env">`struct/sls-test-env`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-swagger">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-swagger">`struct/sls-swagger`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-routes">`struct/sls-src-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-handler">`struct/sls-src-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-errors">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-errors">`struct/sls-src-errors`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-core-errors">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-core-errors">`struct/sls-src-core-errors`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-core-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-core-api">`struct/sls-src-core-api`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless-api">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless-api">`gitignore/#serverless-api`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignorelambda-tdd">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignorelambda-tdd">`gitignore/lambda-tdd`</a>
 
 # :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-apijson">assorted/@sls-api.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-apijson">`index`</a>)
 
@@ -26,6 +30,7 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-swaggeryml">swagger.yml</a></code><br/>
 <code>├─&nbsp;src</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcerrorsjs">errors.js</a></code><br/>
@@ -35,6 +40,8 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreerrorsjson">errors.json</a></code><br/>
 <code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">env.recording.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">modifiers.js</a></code><br/>
@@ -46,11 +53,13 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-swagger">swagger</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-errorprefix">errorPrefix</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -81,6 +90,8 @@ Manage project structure for serverless project using lambda-serverless-api and 
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreerrorsjson">errors.json</a></code><br/>
 <code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">env.recording.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">modifiers.js</a></code><br/>
@@ -97,6 +108,7 @@ Manage project structure for serverless project using lambda-serverless-api and 
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-errorprefix">errorPrefix</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -220,6 +232,76 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">tes
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-errorprefix">errorPrefix</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-env-recording">struct/sls-test-env-recording</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env-recording">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">test/env.recording.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create recording configuration template for lambda-tdd test setup.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">env.recording.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-env">struct/sls-test-env</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create configuration template for lambda-tdd test setup.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -401,6 +483,62 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">src/cor
   </tbody>
 </table>
 
+## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitignoreserverless-api">gitignore/#serverless-api</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless-api">`index`</a>)
+
+Manage gitignore content for serverless project using lambda-serverless-api and lambda-tdd.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitignorelambda-tdd">gitignore/lambda-tdd</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitignorelambda-tdd">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-append-new">append-new</a>._
+
+- Inject recommended entries for lambda-tdd setup.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ------
 
 ## Requires
@@ -423,6 +561,12 @@ Testing Framework for AWS Lambda that uses recordings to work offline without re
 
 Swagger™ is a format used to describe and document RESTful APIs.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a> ([`link`](https://git-scm.com/)) 
+
+*Version control system.*
+
+The most used version control system. Not to be confused with github (which uses git).
+
 ------
 
 ## Variables
@@ -432,6 +576,12 @@ Swagger™ is a format used to describe and document RESTful APIs.
 *Error Identifier Prefix.*
 
 Prefix that each error message in this project should start with.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
 ------
 
@@ -468,6 +618,22 @@ Prefix that each error message in this project should start with.
 :small_blue_diamond: `other`
 
 *Utility test to sync errors file.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-testenvrecordingyml">test/env.recording.yml</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
+
+:small_blue_diamond: `other`
+
+*Recording configuration definitions for lambda-tdd test setup.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
+
+:small_blue_diamond: `other`
+
+*Configuration definitions for lambda-tdd test setup.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-swaggeryml">swagger.yml</a>  
 
@@ -529,6 +695,16 @@ API Gateway Error response definitions.
 
 API initialization file.
 
+### <a name="blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a> ([`link`](https://git-scm.com/docs/gitignore)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-git">git</a>
+
+:small_blue_diamond: `list`
+
+*Exclude files from being tracked.*
+
+Specifies files intentionally untracked by git.
+
 ------
 
 ## Strategies
@@ -544,4 +720,12 @@ API initialization file.
 :small_blue_diamond: `any`
 
 *Does nothing when the file is already present, otherwise creates it.*
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-append-new">append-new</a>  
+
+:small_blue_diamond: `list`
+
+*Appends content to end of the file if lines do not exists in file.*
+
+Useful for managing e.g. `.gitignore` when the original content should be kept.
 

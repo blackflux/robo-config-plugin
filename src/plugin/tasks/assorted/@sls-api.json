@@ -1,6 +1,7 @@
 {
   "tasks": [
-    "struct/#serverless-api"
+    "struct/#serverless-api",
+    "gitignore/#serverless-api"
   ],
   "description": "Manage serverless project using lambda-serverless-api and lambda-tdd."
 }
