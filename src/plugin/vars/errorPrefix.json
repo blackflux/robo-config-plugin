@@ -3,5 +3,5 @@
   "details": [
     "Prefix that each error message in this project should start with."
   ],
-  "type": "number"
+  "type": "string"
 }
