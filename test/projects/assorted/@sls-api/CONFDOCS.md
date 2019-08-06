@@ -535,7 +535,7 @@ The most used version control system. Not to be confused with github (which uses
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-errorprefix">errorPrefix</a>  : `number`
+### <a name="blackfluxrobo-config-plugin-var-ref-errorprefix">errorPrefix</a>  : `string`
 
 *Error Identifier Prefix.*
 
