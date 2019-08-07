@@ -3,7 +3,7 @@ const fs = require('smart-fs');
 const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
 const api = require('./../src/handler').internalApi;
-const modifiers = require('./modifiers.js');
+const { stripHeaders, flush, modifiers } = require('./handler.conf');
 
 LambdaTdd({
   cwd: path.join(__dirname, '..'),
@@ -15,8 +15,8 @@ LambdaTdd({
   envVarYml: path.join(__dirname, 'env.yml'),
   envVarYmlRecording: path.join(__dirname, 'env.recording.yml'),
   testFolder: path.join(__dirname, 'handler'),
-  flush: ['aws-sdk', 'aws-sdk-wrap', 's3-cached', 'dy-alchemy'],
-  stripHeaders: true,
+  stripHeaders,
+  flush,
   modifiers
 }).execute();
 

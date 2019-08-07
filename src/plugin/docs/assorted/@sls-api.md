@@ -1,7 +1,7 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-apijson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-apijson">`assorted/@sls-api.json`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless-api">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless-api">`struct/#serverless-api`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-routes">`struct/sls-test-routes`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-modifiers">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-modifiers">`struct/sls-test-modifiers`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler-conf">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler-conf">`struct/sls-test-handler-conf`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler">`struct/sls-test-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-errors">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-errors">`struct/sls-test-errors`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-env">`struct/sls-test-env`</a>
@@ -41,8 +41,8 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">modifiers.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
       </td>
@@ -90,8 +90,8 @@ Manage project structure for serverless project using lambda-serverless-api and 
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testerrorsspecjs">errors.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">modifiers.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
       </td>
@@ -141,11 +141,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">tes
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-modifiers">struct/sls-test-modifiers</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-modifiers">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-handler-conf">struct/sls-test-handler-conf</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler-conf">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">test/modifiers.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">test/handler.conf.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
 
-- Create modifiers template for lambda-tdd test setup.
+- Create confiuration template for lambda-tdd test setup.
 
 <table>
   <tbody>
@@ -158,7 +158,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">test
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmodifiersjs">modifiers.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -557,13 +557,13 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 
 *Utility test to sync routes file.*
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testmodifiersjs">test/modifiers.js</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">test/handler.conf.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
 
 :small_blue_diamond: `other`
 
-*Modifier definitions for lambda-tdd test setup.*
+*Configuration for lambda-tdd test setup.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">test/handler.spec.js</a>  
 

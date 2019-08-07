@@ -9,7 +9,7 @@
     "sls-test-handler",
     "sls-test-errors",
     "sls-test-routes",
-    "sls-test-modifiers",
+    "sls-test-handler-conf",
     "sls-test-env"
   ],
   "description": "Manage project structure for serverless project using lambda-serverless-api and lambda-tdd."
