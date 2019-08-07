@@ -1,0 +1,14 @@
+{
+  "target": "test/handler.conf.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-api/test/handler.conf.js"
+  ],
+  "requires": [
+    "lambda-tdd"
+  ],
+  "purpose": [
+    "Create confiuration template for lambda-tdd test setup."
+  ]
+}
