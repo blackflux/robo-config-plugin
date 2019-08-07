@@ -1,5 +1,5 @@
 {
-  "description": "Modifier definitions for lambda-tdd test setup.",
+  "description": "Configuration for lambda-tdd test setup.",
   "details": [],
   "formats": ["other"],
   "requires": ["lambda-tdd"],
