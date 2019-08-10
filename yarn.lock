@@ -6123,6 +6123,23 @@ robo-config@3.1.1:
     object-treeify "1.1.14"
     smart-fs "1.9.2"
 
+robo-config@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.1.2.tgz#ef69bc53ef4416801778b30aa105417eef33d13f"
+  integrity sha512-kCVzK+6juQNkPCOPyUvHD/tEtcUw8tVYTVkUK0hN5BRFLTN2RYmJHxTGVC+6lsSbFO/rzPwfvwOXoYkLfSB+Rw==
+  dependencies:
+    "@hapi/joi" "15.1.0"
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.0.4"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.13"
+    object-scan "10.0.6"
+    object-treeify "1.1.14"
+    smart-fs "1.9.2"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
