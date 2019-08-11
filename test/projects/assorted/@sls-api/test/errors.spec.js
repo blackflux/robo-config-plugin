@@ -11,7 +11,7 @@ it('Synchronizing errors file...', () => {
   const errors = errorGroups.reduce((p, [groupId, group]) => {
     Object.entries(group).forEach(([errorId, err]) => {
       const identifier = `${serviceId}-${groupId}-${errorId}`;
-      p.push(`module.exports.${err[0]} = ctx => ApiError('${err[1]}', ${err[2]}, '${identifier}', ctx);`);
+      p.push(`module.exports.${err[0]} = (ctx) => ApiError('${err[1]}', ${err[2]}, '${identifier}', ctx);`);
     });
     return p;
   }, []);
