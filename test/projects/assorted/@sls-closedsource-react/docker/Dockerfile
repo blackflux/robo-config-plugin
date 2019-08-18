@@ -19,7 +19,8 @@ RUN touch ~/.bash_aliases && \
   echo "alias i='yarn install --frozen-lockfile'" >> ~/.bashrc && \
   echo '# run tests' >> ~/.bashrc && \
   echo "alias t='yarn test'" >> ~/.bashrc && \
-  echo "alias ts='yarn run test-simple --verbose'" >> ~/.bashrc && \
+  echo "alias ts='yarn run test-simple'" >> ~/.bashrc && \
+  echo "alias tsv='yarn run test-simple --verbose'" >> ~/.bashrc && \
   echo "alias s='yarn start-offline'" >> ~/.bashrc && \
   source ~/.bash_aliases
 

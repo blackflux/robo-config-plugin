@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
-const api = require('./../src/handler').internalApi;
+const api = require('../src/handler').internalApi;
 const { stripHeaders, flush, modifiers } = require('./handler.conf');
 
 LambdaTdd({

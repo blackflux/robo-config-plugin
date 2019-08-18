@@ -56,7 +56,8 @@
     "u": "yarn upgrade --latest --force",
     "i": "yarn install --frozen-lockfile",
     "t": "yarn test",
-    "ts": "yarn run test-simple --verbose",
+    "ts": "yarn run test-simple",
+    "tsv": "yarn run test-simple --verbose",
     "gardener": "node gardener",
     "start-offline": "npm run build-clean && sls offline start --config serverless/config.js --stack=api-offline --region=awsRegion --env=offline"
   },
