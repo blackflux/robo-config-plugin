@@ -56,7 +56,8 @@
     "u": "yarn upgrade --latest --force",
     "i": "yarn install --frozen-lockfile",
     "t": "yarn test",
-    "ts": "yarn run test-simple --verbose"
+    "ts": "yarn run test-simple",
+    "tsv": "yarn run test-simple --verbose"
   },
   "bugs": {"url": "https://github.com/repoKey/issues"},
   "homepage": "https://github.com/repoKey#readme",
