@@ -19,7 +19,10 @@
     "@blackflux/robo-config-plugin": "1.2.1",
     "nyc": "12.0.2",
     "chai": "4.2.0",
-    "eslint": "5.16.0"
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-mocha": "6.0.0"
   },
   "engines": {"node": ">= 10"},
   "nyc": {
