@@ -11,6 +11,7 @@
     "@blackflux/rules/istanbul-prevent-ignore": 1,
     "@blackflux/rules/kebab-case-enforce": 1,
     "@blackflux/rules/prevent-typeof-object": 1,
+    "@blackflux/rules/enforce-optimal-require": 1,
     "max-len": [
       "error",
       {
