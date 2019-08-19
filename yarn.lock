@@ -175,10 +175,10 @@
   dependencies:
     smart-fs "1.9.5"
 
-"@blackflux/robo-config-plugin@2.5.3":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.5.3.tgz#9c2440b6b4fe697636a4203122d9483c8828cc70"
-  integrity sha512-/K1OABMhoXrvJ5rmQaZk/Mndd1edfy32IeaE37OGgZllgIQuJDkZiCj7QpVZfQlaEbCkK456YwR4vAGQalG7ag==
+"@blackflux/robo-config-plugin@2.5.4":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.5.4.tgz#f4072c7262f3e424721266e5182ed2bdc2b312da"
+  integrity sha512-/V9DIdWzEuoTQk2i11gdm0MNknkEVjOy9amNQhERv6pKJi0R0JXb/7BCHvMDbzSL/mwL3Er9kl9Hov8psoBigQ==
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -4994,6 +4994,11 @@ object-scan@10.0.7:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.7.tgz#6e9754b6b6bf1ebd0d64e82d4e83d4c6c669f224"
   integrity sha512-psXbwbPtXbHeW5xd/tW9j7WAvYPuedVwwnbhMUjqRf0LKqxK5lTr9xDJwYtcAng96zu0+HQEpaiJ/mlUW+KZsg==
 
+object-scan@10.0.8:
+  version "10.0.8"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.8.tgz#1f06e45cbd296d368e2816ced906af17ed2fbcc9"
+  integrity sha512-UiKAzuSfqMS7v7P/mDdIg9tM49tLYsC7g4ypNZExpTgxFcBRG76oWpGombpP/D/V827UbSWy5QAVHFyohQxHUg==
+
 object-treeify@1.1.15:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.15.tgz#69214f8e83a87020065601765d312348bd3d7c42"
@@ -6144,6 +6149,23 @@ robo-config@3.1.8:
     lodash.get "4.4.2"
     object-deep-contain "1.0.14"
     object-scan "10.0.7"
+    object-treeify "1.1.15"
+    smart-fs "1.9.5"
+
+robo-config@3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.1.9.tgz#7b80c34a825a2911c6bfdf98c0d8cefa69c354da"
+  integrity sha512-eTU3wtwo43oG9REuj/5RXD3sS2p7RMByuvNekrJ5DHW8+P69AjsVvBhknCquj7iXnwBRrSo865IMCWD+AdiV2g==
+  dependencies:
+    "@hapi/joi" "15.1.1"
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.0.5"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.14"
+    object-scan "10.0.8"
     object-treeify "1.1.15"
     smart-fs "1.9.5"
 
