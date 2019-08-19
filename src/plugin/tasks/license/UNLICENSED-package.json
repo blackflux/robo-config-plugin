@@ -1,5 +1,6 @@
 {
   "target": "package.json",
+  "pretty": false,
   "strategy": "merge-shallow",
   "snippets": [
     {
