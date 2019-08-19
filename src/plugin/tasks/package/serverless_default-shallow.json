@@ -1,5 +1,6 @@
 {
   "target": "package.json",
+  "pretty": false,
   "strategy": "default-shallow",
   "snippets": [
     "default/default-shallow",
