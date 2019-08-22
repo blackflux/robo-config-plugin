@@ -1,17 +1,18 @@
 {
   "root": true,
   "extends": [
-    "airbnb-base",
-    "plugin:jasmine/recommended"
+    "airbnb-base"
   ],
   "rules": {
-    "jasmine/expect-single-argument": 0,
-    "@blackflux/rules/jasmine-expect-two-arguments": 1,
-    "jasmine/new-line-before-expect": 0,
     "@blackflux/rules/istanbul-prevent-ignore": 1,
     "@blackflux/rules/kebab-case-enforce": 1,
     "@blackflux/rules/prevent-typeof-object": 1,
-    "@blackflux/rules/enforce-optimal-require": 1,
+    "import/no-useless-path-segments": [
+      2,
+      {
+        "commonjs": true
+      }
+    ],
     "max-len": [
       "error",
       {
@@ -99,16 +100,11 @@
   "env": {
     "es6": true,
     "node": true,
-    "jasmine": true,
     "mocha": true
   },
-  "globals": {
-    "logger": true,
-    "log4js": true
-  },
+  "globals": {},
   "plugins": [
     "json",
-    "jasmine",
     "mocha",
     "markdown",
     "@blackflux/rules"
