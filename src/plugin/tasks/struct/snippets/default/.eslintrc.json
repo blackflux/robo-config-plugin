@@ -1,9 +1,12 @@
 {
   "root": true,
   "extends": [
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:mocha/recommended"
   ],
   "rules": {
+    "mocha/no-mocha-arrows": 0,
+    "mocha/no-hooks-for-single-case": 0,
     "@blackflux/rules/istanbul-prevent-ignore": 1,
     "@blackflux/rules/kebab-case-enforce": 1,
     "@blackflux/rules/prevent-typeof-object": 1,
