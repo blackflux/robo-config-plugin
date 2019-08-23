@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["airbnb-base"],
+  "extends": ["airbnb-base", "plugin:mocha/recommended"],
   "rules": {
     "@blackflux/rules/istanbul-prevent-ignore": 1,
     "@blackflux/rules/kebab-case-enforce": 1,
@@ -31,7 +31,9 @@
       }
     ],
     "@blackflux/rules/prevent-typeof-object": 1,
-    "import/no-useless-path-segments": [2, {"commonjs": true}]
+    "import/no-useless-path-segments": [2, {"commonjs": true}],
+    "mocha/no-mocha-arrows": 0,
+    "mocha/no-hooks-for-single-case": 0
   },
   "env": {"es6": true, "node": true, "mocha": true},
   "globals": {},
