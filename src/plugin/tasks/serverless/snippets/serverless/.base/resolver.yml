@@ -9,7 +9,7 @@ provider:
   stage: '${opt:env}'
   region: '${opt:region}'
   deploymentBucket:
-    name: 'com.sls.wf.${opt:region}.${self:provider.stage}.deploys'
+    name: '${namespace}.${opt:region}.${self:provider.stage}.deploys'
   environment:
     ENVIRONMENT: '${self:provider.stage}'
   versionFunctions: false
