@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 const { load } = require('robo-config');
 const plugin = require('../src/index');
 
-describe('Testing index.spec.js', () => {
+describe('Testing Plugin', () => {
   it('Documenting Plugin Tasks', () => {
     expect(load(plugin).syncDocs()).to.deep.equal([]);
   });
