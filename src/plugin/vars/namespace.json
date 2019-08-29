@@ -1,0 +1,9 @@
+{
+  "description": "Namespace for this project.",
+  "details": [
+    "A namespace is used to groups projects.",
+    "Projects with the same namespace will use the same deployment bucket.",
+    "Typically set to something like 'com.sls.ORGNAME'"
+  ],
+  "type": "string"
+}
