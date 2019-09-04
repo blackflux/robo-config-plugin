@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "docker/#serverless"
+  ],
+  "description": "Manage AWS Lambda docker runner for project."
+}

@@ -107,6 +107,7 @@ Manage various configuration files for react serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -306,6 +307,7 @@ Manage serverless configuration for deployment to AWS.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
       </td>
@@ -373,6 +375,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
       </td>
@@ -1471,6 +1474,14 @@ Automates the package release workflow including:
 ------
 
 ## Variables
+
+### <a name="blackfluxrobo-config-plugin-var-ref-namespace">namespace</a>  : `string`
+
+*Namespace for this project.*
+
+A namespace is used to groups projects.
+Projects with the same namespace will use the same deployment bucket.
+Typically set to something like 'com.sls.ORGNAME'
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
 

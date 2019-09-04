@@ -20,9 +20,11 @@ LambdaTdd({
   modifiers
 }).execute();
 
-it('Synchronizing swagger file...', async () => {
-  const swaggerFile = path.join(__dirname, '..', 'swagger.yml');
-  const swaggerContent = await api.generateSwagger();
-  const result = fs.smartWrite(swaggerFile, swaggerContent);
-  expect(result, 'Swagger file updated').to.equal(false);
+describe('Testing handler.spec.js', () => {
+  it('Synchronizing swagger file...', async () => {
+    const swaggerFile = path.join(__dirname, '..', 'swagger.yml');
+    const swaggerContent = await api.generateSwagger();
+    const result = fs.smartWrite(swaggerFile, swaggerContent);
+    expect(result, 'Swagger file updated').to.equal(false);
+  });
 });
