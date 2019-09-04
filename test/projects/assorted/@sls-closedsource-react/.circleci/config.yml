@@ -106,7 +106,7 @@ jobs:
       - checkout
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
-      - run: yarn global add serverless@1.46.1
+      - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
           command: >-
@@ -126,7 +126,7 @@ jobs:
       - checkout
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
-      - run: yarn global add serverless@1.46.1
+      - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
           command: >-
@@ -146,7 +146,7 @@ jobs:
       - checkout
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
-      - run: yarn global add serverless@1.46.1
+      - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
           command: >-
@@ -166,7 +166,7 @@ jobs:
       - checkout
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
-      - run: yarn global add serverless@1.46.1
+      - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
           command: >-
