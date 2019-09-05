@@ -52,7 +52,7 @@
     "eslint-plugin-mocha": "6.1.0",
     "js-gardener": "2.0.82",
     "nyc": "14.1.1",
-    "robo-config": "3.3.4",
+    "robo-config": "3.3.5",
     "semantic-release": "15.13.24"
   },
   "nyc": {
