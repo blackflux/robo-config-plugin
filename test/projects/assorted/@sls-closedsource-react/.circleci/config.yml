@@ -70,8 +70,29 @@ jobs:
           >> $BASH_ENV
       - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
       - checkout
-      - run: rm -rf node_modules
-      - run: yarn install --frozen-lockfile
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
       - run: yarn test
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
@@ -87,8 +108,29 @@ jobs:
           >> $BASH_ENV
       - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
       - checkout
-      - run: rm -rf node_modules
-      - run: yarn install --frozen-lockfile
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
       - run: yarn test
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
@@ -104,8 +146,29 @@ jobs:
           >> $BASH_ENV
       - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
       - checkout
-      - run: rm -rf node_modules
-      - run: yarn install --frozen-lockfile
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
       - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
@@ -124,8 +187,29 @@ jobs:
           >> $BASH_ENV
       - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
       - checkout
-      - run: rm -rf node_modules
-      - run: yarn install --frozen-lockfile
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
       - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
@@ -144,8 +228,29 @@ jobs:
           >> $BASH_ENV
       - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
       - checkout
-      - run: rm -rf node_modules
-      - run: yarn install --frozen-lockfile
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
       - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:
@@ -164,8 +269,29 @@ jobs:
           >> $BASH_ENV
       - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
       - checkout
-      - run: rm -rf node_modules
-      - run: yarn install --frozen-lockfile
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
       - run: yarn global add serverless@1.51.0
       - run: yarn run build-clean
       - run:

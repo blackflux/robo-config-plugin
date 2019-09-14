@@ -1,7 +1,6 @@
-steps:
-  - run: curl -o- -L https://yarnpkg.com/install.sh | bash
-  - run: echo 'export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH' >> $BASH_ENV
-  - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
-  - checkout
-  - run: rm -rf node_modules
-  - run: yarn install --frozen-lockfile
+<<<:
+  - steps:
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
+      - run: echo 'export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH' >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+  - ${file(^/../../../meta/yarn-setup.yml)}
