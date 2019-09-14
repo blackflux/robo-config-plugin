@@ -10,7 +10,6 @@ LambdaTdd({
   verbose: process.argv.slice(2).includes('--verbose'),
   enabled: true,
   handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
-  ignoreCassetteRequestBody: false,
   cassetteFolder: path.join(__dirname, 'handler', '__cassettes'),
   envVarYml: path.join(__dirname, 'env.yml'),
   envVarYmlRecording: path.join(__dirname, 'env.recording.yml'),
