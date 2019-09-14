@@ -28,7 +28,8 @@
     "$full-dev": {
       "@": "$full",
       "restrictions": {
-        "users": "${mergeDevUsers}"
+        "users": "${mergeDevUsers}",
+        "apps": ["dependabot-preview"]
       }
     },
     "$full-master": {
@@ -54,7 +55,8 @@
       },
       "restrictions": {
         "users": "${releaseUsers}",
-        "teams": []
+        "teams": [],
+        "apps": []
       }
     }
   }

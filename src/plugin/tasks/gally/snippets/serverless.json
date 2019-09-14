@@ -37,7 +37,8 @@
         "contexts": []
       },
       "restrictions": {
-        "users": "${mergeDevUsers}"
+        "users": "${mergeDevUsers}",
+        "apps": ["dependabot-preview"]
       }
     },
     "$stage": {
@@ -81,7 +82,8 @@
       },
       "restrictions": {
         "users": "${releaseUsers}",
-        "teams": []
+        "teams": [],
+        "apps": []
       }
     }
   }
