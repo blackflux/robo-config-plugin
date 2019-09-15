@@ -43,9 +43,9 @@
       }
     },
     {
-      "name": "dependabot-auto-merge",
+      "name": "dependabot-auto-approve",
       "variables": {
-        "jobName": "gally-auto-merge",
+        "jobName": "gally-auto-approve",
         "dockerImage": "circleci/node:12",
         "jobOptions": {
           "requires": [
