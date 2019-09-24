@@ -21,7 +21,7 @@ describe('Testing routes.spec.js', () => {
       return p;
     }, []);
     const result = fs.smartWrite(routesFile, [
-      ...{ true: ['/* eslint-disable max-len */'], false: [] }[routes.some((e) => e.length > 120)],
+      ...{ true: ['/* eslint-disable max-len */'], false: [] }[routes.some((r) => r.length > 120)],
       ...routes
     ], { treatAs: 'txt' });
     expect(result, 'Routes file updated').to.equal(false);
