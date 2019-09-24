@@ -20,7 +20,10 @@ describe('Testing routes.spec.js', () => {
       methods.forEach((m) => p.push(`module.exports.${toRouteName(`$\{f}/$\{m}`)} = require('./handler/$\{f}').$\{m};`));
       return p;
     }, []);
-    const result = fs.smartWrite(routesFile, ['/* eslint-disable max-len */', ...routes], { treatAs: 'txt' });
+    const result = fs.smartWrite(routesFile, [
+      ...{ true: ['/* eslint-disable max-len */'], false: [] }[routes.some((r) => r.length > 120)],
+      ...routes
+    ], { treatAs: 'txt' });
     expect(result, 'Routes file updated').to.equal(false);
   });
 });
