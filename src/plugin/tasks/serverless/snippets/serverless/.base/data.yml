@@ -192,6 +192,8 @@ resources:
                 - 'logs:DeleteLogStream'
                 - 'logs:DescribeLogStreams'
                 - 'logs:FilterLogEvents'
+                - 'logs:PutRetentionPolicy'
+                - 'logs:DeleteRetentionPolicy'
               Resource:
                 - 'Fn::Join':
                     - ':'
