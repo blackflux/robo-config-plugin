@@ -1,6 +1,7 @@
 {
   "target": ".circleci/config.yml",
   "strategy": "overwrite",
+  "resolve": true,
   "snippets": [
     {
       "name": "serverless/config.yml",
