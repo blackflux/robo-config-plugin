@@ -12,7 +12,7 @@ RUN touch ~/.bashrc && \
   source ~/.bashrc && \
   yarn global add serverless@1.51.0
 
-RUN touch ~/.bash_aliases && \
+RUN touch ~/.bashrc && \
   echo '# yarn-upgrade' >> ~/.bashrc && \
   echo "alias u='yarn upgrade --latest --force'" >> ~/.bashrc && \
   echo '# yarn re-install' >> ~/.bashrc && \
@@ -22,7 +22,7 @@ RUN touch ~/.bash_aliases && \
   echo "alias ts='yarn run test-simple'" >> ~/.bashrc && \
   echo "alias tsv='yarn run test-simple --verbose'" >> ~/.bashrc && \
   echo "alias s='yarn start-offline'" >> ~/.bashrc && \
-  source ~/.bash_aliases
+  source ~/.bashrc
 
 RUN chmod -R 757 /user
 
