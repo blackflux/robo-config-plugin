@@ -18,6 +18,7 @@
         ],
         "requiredStatusChecks": [
           "ci/circleci: gally-create-pr",
+          "ci/circleci: test-node-v13",
           "ci/circleci: test-node-v12",
           "ci/circleci: test-node-v10"
         ],

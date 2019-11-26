@@ -6,7 +6,7 @@ workflows:
       - test-node-v13:
           requires:
             - gally
-      - test-node-v12:
+      - test-node-v12.x:
           requires:
             - gally
       - deploy-local:
@@ -35,7 +35,7 @@ jobs:
     ${file(^/jobs/gally.yml)}
   test-node-v13:
     ${file(^/jobs/test.yml), image=circleci/node:13}
-  test-node-v12:
+  test-node-v12.x:
     ${file(^/jobs/test.yml), image=lambci/lambda:build-nodejs12.x}
   deploy-local:
     ${file(^/jobs/deploy.yml), env=local}
