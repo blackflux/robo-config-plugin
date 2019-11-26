@@ -137,7 +137,7 @@ jobs:
           1);
   deploy-local:
     docker:
-      - image: 'lambci/lambda:build-nodejs10.x'
+      - image: 'lambci/lambda:build-nodejs12.x'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -169,7 +169,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.51.0
+      - run: yarn global add serverless@1.58.0
       - run: yarn run build-clean
       - run:
           command: >-
@@ -178,7 +178,7 @@ jobs:
           no_output_timeout: 10m
   deploy-dev:
     docker:
-      - image: 'lambci/lambda:build-nodejs10.x'
+      - image: 'lambci/lambda:build-nodejs12.x'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -210,7 +210,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.51.0
+      - run: yarn global add serverless@1.58.0
       - run: yarn run build-clean
       - run:
           command: >-
@@ -219,7 +219,7 @@ jobs:
           no_output_timeout: 10m
   deploy-stage:
     docker:
-      - image: 'lambci/lambda:build-nodejs10.x'
+      - image: 'lambci/lambda:build-nodejs12.x'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -251,7 +251,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.51.0
+      - run: yarn global add serverless@1.58.0
       - run: yarn run build-clean
       - run:
           command: >-
@@ -260,7 +260,7 @@ jobs:
           no_output_timeout: 10m
   deploy-prod:
     docker:
-      - image: 'lambci/lambda:build-nodejs10.x'
+      - image: 'lambci/lambda:build-nodejs12.x'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -292,7 +292,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.51.0
+      - run: yarn global add serverless@1.58.0
       - run: yarn run build-clean
       - run:
           command: >-
