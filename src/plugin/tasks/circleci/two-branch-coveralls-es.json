@@ -15,6 +15,18 @@
     {
       "name": "run-yarn-tests-es",
       "variables": {
+        "jobName": "test-node-v13",
+        "dockerImage": "circleci/node:13",
+        "jobOptions": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
+      }
+    },
+    {
+      "name": "run-yarn-tests-es",
+      "variables": {
         "jobName": "test-node-v12",
         "dockerImage": "circleci/node:12",
         "jobOptions": {
@@ -51,6 +63,7 @@
         "jobOptions": {
           "requires": [
             "gally-create-pr",
+            "test-node-v13",
             "test-node-v12",
             "test-node-v10"
           ],
@@ -70,6 +83,7 @@
         "jobOptions": {
           "requires": [
             "gally-create-pr",
+            "test-node-v13",
             "test-node-v12",
             "test-node-v10"
           ],
