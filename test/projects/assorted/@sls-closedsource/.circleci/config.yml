@@ -3,10 +3,10 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v12:
+      - test-node-v13:
           requires:
             - gally
-      - test-node-v10.x:
+      - test-node-v12:
           requires:
             - gally
       - deploy-local:
@@ -223,9 +223,9 @@ jobs:
             sls deploy --config serverless/config.js --stack api --region
             awsRegion --env prod --force
           no_output_timeout: 10m
-  test-node-v10.x:
+  test-node-v12:
     docker:
-      - image: 'lambci/lambda:build-nodejs10.x'
+      - image: 'lambci/lambda:build-nodejs12.x'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -261,9 +261,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v12:
+  test-node-v13:
     docker:
-      - image: 'circleci/node:12'
+      - image: 'circleci/node:13'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
