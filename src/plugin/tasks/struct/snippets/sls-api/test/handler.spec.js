@@ -9,6 +9,7 @@ const { stripHeaders, flush, modifiers } = require('./handler.conf');
 LambdaTdd({
   cwd: path.join(__dirname, '..'),
   verbose: minimist(process.argv.slice(2)).verbose === true,
+  timeout: minimist(process.argv.slice(2)).timeout,
   enabled: true,
   handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
   cassetteFolder: path.join(__dirname, 'handler', '__cassettes'),
