@@ -1,4 +1,5 @@
 const path = require('path');
+const minimist = require('minimist');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
@@ -7,7 +8,7 @@ const { stripHeaders, flush, modifiers } = require('./handler.conf');
 
 LambdaTdd({
   cwd: path.join(__dirname, '..'),
-  verbose: process.argv.slice(2).includes('--verbose'),
+  verbose: minimist(process.argv.slice(2)).verbose === true,
   enabled: true,
   handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
   cassetteFolder: path.join(__dirname, 'handler', '__cassettes'),
