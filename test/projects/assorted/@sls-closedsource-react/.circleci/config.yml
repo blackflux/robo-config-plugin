@@ -169,7 +169,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.58.0
+      - run: yarn global add serverless@1.59.3
       - run: yarn run build-clean
       - run:
           command: >-
@@ -210,7 +210,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.58.0
+      - run: yarn global add serverless@1.59.3
       - run: yarn run build-clean
       - run:
           command: >-
@@ -251,7 +251,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.58.0
+      - run: yarn global add serverless@1.59.3
       - run: yarn run build-clean
       - run:
           command: >-
@@ -292,7 +292,7 @@ jobs:
           key: 'yarn-packages-{{ checksum "yarn.lock" }}'
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@1.58.0
+      - run: yarn global add serverless@1.59.3
       - run: yarn run build-clean
       - run:
           command: >-
