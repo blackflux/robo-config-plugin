@@ -3682,6 +3682,13 @@ java-properties@^1.0.0:
   resolved "https://registry.yarnpkg.com/java-properties/-/java-properties-1.0.2.tgz#ccd1fa73907438a5b5c38982269d0e771fe78211"
   integrity sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==
 
+joi-strict@1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.10.tgz#8b9d68f5955f036df7730948fa0047d7216e8f0b"
+  integrity sha512-udjdcfGMsB3GIFUU/OeylfXc1I700NfaH1Gqf12izFQ/BMYrmaes7E9qQcsmjLoehm9LRjrv+2DDOYLISQp5jQ==
+  dependencies:
+    "@hapi/joi" "16.1.8"
+
 joi-strict@1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.9.tgz#95087451a65040bc6d0cd4c1e4e10b433abb2044"
@@ -6325,6 +6332,22 @@ robo-config@3.4.12:
     object-scan "10.0.14"
     object-treeify "1.1.21"
     smart-fs "1.11.2"
+
+robo-config@3.4.14:
+  version "3.4.14"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.14.tgz#f37aa89835ff44f4624a25b64d573798cfac164e"
+  integrity sha512-OeuWMpQ4afzGPKJp40Sa0bG6i95yNwwRvNi92VyfKcPTBGNI+R/9Nm5sHfYKJ+rJXjUru4nqa5q+hovVLcjUQA==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.1.10"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.20"
+    object-scan "10.0.14"
+    object-treeify "1.1.21"
+    smart-fs "1.11.3"
 
 run-async@^0.1.0:
   version "0.1.0"
