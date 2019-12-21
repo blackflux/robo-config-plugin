@@ -257,6 +257,9 @@ resources:
                 - 'lambda:TagResource'
                 - 'lambda:UntagResource'
                 - 'lambda:PutFunctionConcurrency'
+                - "lambda:PutProvisionedConcurrencyConfig"
+                - "lambda:GetProvisionedConcurrencyConfig"
+                - "lambda:DeleteProvisionedConcurrencyConfig"
               Resource:
                 - 'Fn::Join':
                     - ':'
