@@ -1,5 +1,6 @@
 const path = require('path');
 const minimist = require('minimist');
+const Joi = require('joi-strict');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
