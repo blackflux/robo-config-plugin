@@ -1,6 +1,5 @@
 const path = require('path');
 const minimist = require('minimist');
-const Joi = require('joi-strict');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
@@ -11,7 +10,7 @@ LambdaTdd({
   cwd: path.join(__dirname, '..'),
   verbose: minimist(process.argv.slice(2)).verbose === true,
   timeout: minimist(process.argv.slice(2)).timeout,
-  nockHeal: Joi.alternatives(Joi.boolean(), Joi.string()).optional(),
+  nockHeal: minimist(process.argv.slice(2))['nock-heal'],
   enabled: true,
   handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
   cassetteFolder: path.join(__dirname, 'handler', '__cassettes'),
