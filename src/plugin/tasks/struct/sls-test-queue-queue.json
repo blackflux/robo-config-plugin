@@ -9,6 +9,6 @@
     "javascript"
   ],
   "purpose": [
-    "Creates a digraph for a queue processor."
+    "Creates generic test suite for queue processor."
   ]
 }

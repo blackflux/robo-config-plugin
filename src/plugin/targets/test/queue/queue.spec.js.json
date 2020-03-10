@@ -1,7 +1,7 @@
 {
-  "description": "Digraph Generation Test.",
-  "details": ["Generates a digraph for a queue processor."],
+  "description": "Queue Processor Tests.",
+  "details": ["Contains tests for queue processor."],
   "formats": ["other"],
-  "requires": ["javascript"],
+  "requires": ["javascript", "serverless"],
   "website": null
 }

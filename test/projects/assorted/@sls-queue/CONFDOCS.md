@@ -71,7 +71,7 @@ Manage queues using QueueProcessor in aws-sdk-wrap.
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testqueuequeuespecjs">test/queue/queue.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
 
-- Creates a digraph for a queue processor.
+- Creates generic test suite for queue processor.
 
 <table>
   <tbody>
@@ -101,7 +101,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testqueuequeuespecjs"
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcqueuequeuejs">src/queue/queue.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
 
-- Creates an initial queue.js file.
+- Creates a queue processor template.
 
 <table>
   <tbody>
@@ -144,23 +144,23 @@ It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testqueuequeuespecjs">test/queue/queue.spec.js</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>, <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
 :small_blue_diamond: `other`
 
-*Digraph Generation Test.*
+*Queue Processor Tests.*
 
-Generates a digraph for a queue processor.
+Contains tests for queue processor.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-srcqueuequeuejs">src/queue/queue.js</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>, <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
 :small_blue_diamond: `other`
 
 *Creates a queue processor.*
 
-Exposes a minimal declaration of a queue processor.
+Contains queue processor declaration.
 
 ------
 

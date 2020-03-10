@@ -1,7 +1,7 @@
 {
   "description": "Creates a queue processor.",
-  "details": ["Exposes a minimal declaration of a queue processor."],
+  "details": ["Contains queue processor declaration."],
   "formats": ["other"],
-  "requires": ["javascript"],
+  "requires": ["javascript", "serverless"],
   "website": null
 }
