@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "sls-src-queue-queue",
+    "sls-test-queue-queue"
+  ],
+  "description": "Manage queues using QueueProcessor in aws-sdk-wrap."
+}

@@ -1,0 +1,14 @@
+{
+  "target": "test/queue/queue.spec.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-queue/test/queue/queue.spec.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Creates a digraph for a queue processor."
+  ]
+}

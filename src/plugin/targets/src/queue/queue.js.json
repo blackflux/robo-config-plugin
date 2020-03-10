@@ -1,0 +1,7 @@
+{
+  "description": "Creates a queue processor.",
+  "details": ["Exposes a minimal declaration of a queue processor."],
+  "formats": ["other"],
+  "requires": ["javascript"],
+  "website": null
+}
