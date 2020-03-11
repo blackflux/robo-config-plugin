@@ -9,6 +9,6 @@
     "javascript"
   ],
   "purpose": [
-    "Creates generic test suite for queue processor."
+    "Manages generic test suite for queue processor."
   ]
 }

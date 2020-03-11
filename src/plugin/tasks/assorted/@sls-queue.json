@@ -2,5 +2,5 @@
   "tasks": [
     "struct/#serverless-queue"
   ],
-  "description": "Manage serverless queues using aws-sdk-wrap."
+  "description": "Logic for serverless queues containing steps."
 }

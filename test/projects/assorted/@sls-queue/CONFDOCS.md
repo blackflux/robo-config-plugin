@@ -7,7 +7,7 @@
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-queue">assorted/@sls-queue</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-queue">`index`</a>)
 
-Manage serverless queues using aws-sdk-wrap.
+Logic for serverless queues containing steps.
 
 <table>
   <tbody>
@@ -71,7 +71,7 @@ Manage queues using QueueProcessor in aws-sdk-wrap.
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testqueuequeuespecjs">test/queue/queue.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
 
-- Creates generic test suite for queue processor.
+- Manages generic test suite for queue processor.
 
 <table>
   <tbody>
@@ -158,7 +158,7 @@ Contains tests for queue processor.
 
 :small_blue_diamond: `other`
 
-*Creates a queue processor.*
+*Queue processor declaration.*
 
 Contains queue processor declaration.
 
