@@ -1,0 +1,14 @@
+{
+  "target": "src/queue/queue.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "sls-queue/src/queue/queue.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Creates a queue processor template."
+  ]
+}

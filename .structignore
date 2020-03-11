@@ -4,3 +4,4 @@ test/projects/assorted/@npm-opensource-es/test/index.spec.js
 test/projects/assorted/@sls-api/test/errors.spec.js
 test/projects/assorted/@sls-api/test/routes.spec.js
 test/projects/assorted/@sls-api/test/handler.spec.js
+test/projects/assorted/@sls-queue/test/queue/queue.spec.js

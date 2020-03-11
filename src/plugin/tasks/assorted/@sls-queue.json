@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "struct/#serverless-queue"
+  ],
+  "description": "Manage SQS finite state machine using aws-sdk-wrap."
+}

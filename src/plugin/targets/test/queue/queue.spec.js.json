@@ -1,0 +1,7 @@
+{
+  "description": "Queue Processor Tests.",
+  "details": ["Contains tests for queue processor."],
+  "formats": ["other"],
+  "requires": ["javascript", "serverless"],
+  "website": null
+}
