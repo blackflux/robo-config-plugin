@@ -3,5 +3,5 @@
     "sls-src-queue-queue",
     "sls-test-queue-queue"
   ],
-  "description": "Manage queues using QueueProcessor in aws-sdk-wrap."
+  "description": "Manage files for SQS finite state machine using aws-sdk-wrap."
 }

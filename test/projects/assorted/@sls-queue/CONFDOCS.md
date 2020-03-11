@@ -7,7 +7,7 @@
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-queue">assorted/@sls-queue</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-queue">`index`</a>)
 
-Logic for serverless queues containing steps.
+Manage SQS finite state machine using aws-sdk-wrap.
 
 <table>
   <tbody>
@@ -38,7 +38,7 @@ Logic for serverless queues containing steps.
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-structserverless-queue">struct/#serverless-queue</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structserverless-queue">`index`</a>)
 
-Manage queues using QueueProcessor in aws-sdk-wrap.
+Manage files for SQS finite state machine using aws-sdk-wrap.
 
 <table>
   <tbody>
