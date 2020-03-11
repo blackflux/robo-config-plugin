@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "sls-src-queue-queue",
+    "sls-test-queue-queue"
+  ],
+  "description": "Manage files for SQS finite state machine using aws-sdk-wrap."
+}
