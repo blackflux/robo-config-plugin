@@ -50,9 +50,9 @@
     "eslint-plugin-json": "2.1.1",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "6.3.0",
-    "js-gardener": "2.0.138",
+    "js-gardener": "2.0.139",
     "nyc": "15.0.0",
-    "robo-config": "3.4.26",
+    "robo-config": "3.4.27",
     "semantic-release": "17.0.4"
   },
   "nyc": {
