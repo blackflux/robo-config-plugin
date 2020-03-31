@@ -3816,10 +3816,10 @@ joi-strict@1.2.1:
   dependencies:
     "@hapi/joi" "17.1.1"
 
-js-gardener@2.0.145:
-  version "2.0.145"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.145.tgz#cbd9e5bce327949faf0285b9c68a6987612714c3"
-  integrity sha512-vD9+hzbtu+v1MZ2XnfdZ4WI1hsOiRk2ODIufrXkBHhGylAhuR6fN9zTOxkgtTeUmRA2xcx++q9tE5wczNurKyQ==
+js-gardener@2.0.146:
+  version "2.0.146"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.146.tgz#08b7334dc7db9224208e89a07c797a7358f16334"
+  integrity sha512-aLtDXoGxKbJMjVakWypkUlJyw1koR8lOBlmgo9jCROkHzBdVCPZYOU6MGDg31HDxoaoEXFAHPMBsnogy9j9Vzw==
   dependencies:
     chalk "3.0.0"
     fancy-log "1.3.3"
@@ -3830,7 +3830,7 @@ js-gardener@2.0.145:
     lodash.get "4.4.2"
     mocha "7.1.1"
     npm-check "5.9.2"
-    robo-config "3.4.33"
+    robo-config "3.5.0"
 
 js-tokens@^3.0.0:
   version "3.0.2"
@@ -5244,6 +5244,11 @@ object-scan@11.0.2:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-11.0.2.tgz#cb9e0b4ccb8b4800994533409377dcb4c4e2e6fc"
   integrity sha512-w5g1d+4qSkryOhNucAy+SI0DQUGC5HfsCphdbraQ2LKDbtZj5e9J+nMpiK30tSGVgE261R6P6yxUf2tvwi4UEg==
 
+object-scan@11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-11.0.3.tgz#0791cd82bdfc53604d9fa261ac78b4645420eb64"
+  integrity sha512-uH4fBhTgE6WGiDCIJMsB8Kc/vXhQOKqFGKI2qPytu+0amlFxldb7LohP0fqRLqhOW33ziVY1qBqhvYNeFp/nHw==
+
 object-treeify@1.1.24:
   version "1.1.24"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.24.tgz#ff3be5a93635d0f79af5e8a06d08c9bd3600e1a6"
@@ -6405,22 +6410,6 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-robo-config@3.4.33:
-  version "3.4.33"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.33.tgz#baec7b791613d18bdfba368063c6fdd6205800bd"
-  integrity sha512-YW4+ESq/Rf1kUXRyEK13QpxgiytEOwmR1zkbmFHshUjgFOi0NB92KpG0cJhUpUnMfPxGFFWTCcx0kPNQHI32yg==
-  dependencies:
-    app-root-path "3.0.0"
-    deepmerge "4.2.2"
-    joi-strict "1.2.1"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    object-deep-contain "1.0.23"
-    object-scan "11.0.2"
-    object-treeify "1.1.24"
-    smart-fs "1.11.11"
-
 robo-config@3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.5.0.tgz#6a8db7e1c0c6826a3e1a9a045bb0cb05aba1337a"
@@ -6434,6 +6423,22 @@ robo-config@3.5.0:
     lodash.get "4.4.2"
     object-deep-contain "1.0.23"
     object-scan "11.0.2"
+    object-treeify "1.1.24"
+    smart-fs "1.11.11"
+
+robo-config@3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.5.1.tgz#5509a8f43c413f830805209becac3bcfe13d5394"
+  integrity sha512-40bYzvLB25pLrhOeMo4KoM6mQMAVGjwsNCvPun4b8/UFTWYBWqY/6+ME2sATXn3vqGA1c6fm1Qz+j0FxNxGVxQ==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.1"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.23"
+    object-scan "11.0.3"
     object-treeify "1.1.24"
     smart-fs "1.11.11"
 
