@@ -186,6 +186,18 @@ resources:
                       - Ref: 'AWS::Region'
                       - ''
                       - /restapis/*
+                - 'Fn::Join':
+                    - ':'
+                    - - 'arn:aws:apigateway'
+                      - Ref: 'AWS::Region'
+                      - ''
+                      - /apis
+                - 'Fn::Join':
+                    - ':'
+                    - - 'arn:aws:apigateway'
+                      - Ref: 'AWS::Region'
+                      - ''
+                      - /apis/*
             - Effect: Allow
               Action:
                 - 'logs:DescribeLogGroups'
