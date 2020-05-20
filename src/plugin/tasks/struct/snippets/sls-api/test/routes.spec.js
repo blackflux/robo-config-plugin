@@ -25,5 +25,5 @@ describe('Testing routes.spec.js', () => {
       ...routes
     ], { treatAs: 'txt' });
     expect(result, 'Routes file updated').to.equal(false);
-  });
+  }).timeout(10000);
 });
