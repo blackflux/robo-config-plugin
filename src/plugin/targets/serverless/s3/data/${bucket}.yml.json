@@ -1,0 +1,7 @@
+{
+  "description": "Data stack resource definition for an s3 bucket.",
+  "details": ["Contains data stack definition for s3."],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}
