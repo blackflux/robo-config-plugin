@@ -1,0 +1,12 @@
+provider:
+  environment:
+    ${queue|UPPER}_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.${queue}QueueUrl}
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sqs:SendMessage
+        - sqs:GetQueueAttributes
+      Resource:
+        - ${cf:${opt:service}-data-${self:provider.stage}.${queue}QueueArn}
+        - ${cf:${opt:service}-data-${self:provider.stage}.${queue}DeadLetterQueueArn}

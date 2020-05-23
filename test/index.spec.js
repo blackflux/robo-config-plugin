@@ -17,7 +17,8 @@ describe('Testing Plugin', () => {
       'assorted/@sls-api': [],
       'assorted/@sls-closedsource': [],
       'assorted/@sls-closedsource-react': [],
-      'assorted/@sls-queue': []
+      'assorted/@sls-queue': [],
+      'assorted/@sls-queue-instance': []
     });
   });
 });

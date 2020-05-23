@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#sqs"
+  ],
+  "description": "Manages SQS instance cloud formation files."
+}
