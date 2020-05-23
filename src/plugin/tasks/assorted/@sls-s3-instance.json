@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#s3"
+  ],
+  "description": "Manages S3 instance cloud formation files."
+}

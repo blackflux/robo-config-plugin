@@ -1,0 +1,3 @@
+provider:
+  environment:
+    ${bucket|UPPER}_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.${bucket}S3BucketName}

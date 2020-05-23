@@ -1,0 +1,20 @@
+{
+  "target": "serverless/api.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/s3/api.yml",
+      "variables": {
+        "bucket": "${bucket|LOWER}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Reference api stack resource definitions for an s3 bucket."
+  ]
+}

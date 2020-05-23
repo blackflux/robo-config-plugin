@@ -1,0 +1,9 @@
+resources:
+  Resources:
+    ${bucket}S3Bucket:
+      Type: AWS::S3::Bucket
+
+  Outputs:
+    ${bucket}S3BucketName:
+      Value:
+        "Ref": ${bucket}S3Bucket

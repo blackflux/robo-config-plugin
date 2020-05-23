@@ -1,0 +1,9 @@
+resources:
+  Resources:
+    BucketS3Bucket:
+      Type: AWS::S3::Bucket
+
+  Outputs:
+    BucketS3BucketName:
+      Value:
+        "Ref": BucketS3Bucket
