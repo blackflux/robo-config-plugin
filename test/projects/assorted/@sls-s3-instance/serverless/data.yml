@@ -1,0 +1,2 @@
+<<<:
+  - '${file(^/s3/data/bucket.yml)}'

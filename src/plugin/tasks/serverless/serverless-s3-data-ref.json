@@ -1,0 +1,20 @@
+{
+  "target": "serverless/data.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/s3/data.yml",
+      "variables": {
+        "bucket": "${bucket|LOWER}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Reference data stack resource definitions for an s3 bucket."
+  ]
+}

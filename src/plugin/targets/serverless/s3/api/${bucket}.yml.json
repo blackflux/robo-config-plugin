@@ -1,0 +1,7 @@
+{
+  "description": "Api stack resource definition for an s3 bucket.",
+  "details": ["Contains api stack definition for s3."],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}
