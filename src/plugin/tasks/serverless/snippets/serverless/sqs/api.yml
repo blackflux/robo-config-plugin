@@ -1,0 +1,2 @@
+<<<:
+  - ${file(^/sqs/api/${queue}.yml)}

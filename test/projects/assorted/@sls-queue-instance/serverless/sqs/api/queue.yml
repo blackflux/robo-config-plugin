@@ -1,0 +1,12 @@
+provider:
+  environment:
+    QUEUE_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueUrl}
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sqs:SendMessage
+        - sqs:GetQueueAttributes
+      Resource:
+        - ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
+        - ${cf:${opt:service}-data-${self:provider.stage}.QueueDeadLetterQueueArn}

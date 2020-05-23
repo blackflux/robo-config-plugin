@@ -1,0 +1,7 @@
+{
+  "description": "Data stack resource definition for an sqs queue.",
+  "details": ["Contains data stack definition for sqs."],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}

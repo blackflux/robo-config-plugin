@@ -1,0 +1,40 @@
+resources:
+  Resources:
+    ${queue}Queue:
+      Type: AWS::SQS::Queue
+      Properties:
+        DelaySeconds: 0
+        MaximumMessageSize: 262144
+        MessageRetentionPeriod: 345600
+        ReceiveMessageWaitTimeSeconds: 0
+        VisibilityTimeout: 900
+        RedrivePolicy:
+          deadLetterTargetArn:
+            Fn::GetAtt:
+              - ${queue}DeadLetterQueue
+              - Arn
+          maxReceiveCount: 10
+    ${queue}DeadLetterQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        MessageRetentionPeriod: 1209600
+
+  Outputs:
+    ${queue}QueueUrl:
+      Value:
+        Ref: ${queue}Queue
+    ${queue}QueueArn:
+      Value:
+        Fn::GetAtt: [ '${queue}Queue' , Arn ]
+    ${queue}QueueName:
+      Value:
+        Fn::GetAtt: [ '${queue}Queue' , QueueName ]
+    ${queue}DeadLetterQueueUrl:
+      Value:
+        Ref: ${queue}DeadLetterQueue
+    ${queue}DeadLetterQueueArn:
+      Value:
+        Fn::GetAtt: [ '${queue}DeadLetterQueue' , Arn ]
+    ${queue}DeadLetterQueueName:
+      Value:
+        Fn::GetAtt: [ '${queue}DeadLetterQueue' , QueueName ]
