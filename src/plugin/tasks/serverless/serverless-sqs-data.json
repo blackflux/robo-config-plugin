@@ -1,0 +1,20 @@
+{
+  "target": "serverless/sqs/data/${queue}.yml",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/sqs/data/${queue}.yml",
+      "variables": {
+        "queue": "${queue|TITLE}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize data stack resource definitions for an sqs queue."
+  ]
+}

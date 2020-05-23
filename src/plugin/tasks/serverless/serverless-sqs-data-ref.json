@@ -1,0 +1,20 @@
+{
+  "target": "serverless/data.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/sqs/data.yml",
+      "variables": {
+        "queue": "${queue|LOWER}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Reference data stack resource definitions for an sqs queue."
+  ]
+}
