@@ -1,5 +1,5 @@
 {
-  "target": "serverless/s3/api/${bucket}.yml",
+  "target": "serverless/api/s3/${bucket}.yml",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [

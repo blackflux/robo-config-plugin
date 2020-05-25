@@ -1,0 +1,7 @@
+{
+  "description": "Batch size of Queue Processor.",
+  "details": [
+    "Maximum number of payloads processed in parallel in code logic by aws lambda processor"
+  ],
+  "type": "number"
+}

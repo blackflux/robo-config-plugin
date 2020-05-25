@@ -1,12 +1,13 @@
 {
-  "target": "serverless/sqs/data/${queue}.yml",
+  "target": "serverless/data/sqs/${queue}.yml",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
     {
       "name": "serverless/sqs/data/${queue}.yml",
       "variables": {
-        "queue": "${queue|TITLE}"
+        "queue": "${queue|TITLE}",
+        "queueVisibilityTimeout": "${queueTimeout}"
       }
     }
   ],

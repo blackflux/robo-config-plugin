@@ -1,0 +1,15 @@
+{
+  "target": "src/handler/queue/processor/${queue}.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/sqs/${queue}.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Create queue processor handler."
+  ]
+}

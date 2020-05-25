@@ -1,2 +1,2 @@
 <<<:
-  - ${file(^/s3/api/${bucket}.yml)}
+  - ${file(^/api/s3/${bucket}.yml)}
