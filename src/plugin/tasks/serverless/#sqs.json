@@ -1,10 +1,10 @@
 {
   "tasks": [
-    "serverless-sqs-api",
-    "serverless-sqs-api-ref",
-    "serverless-sqs-api-handler",
-    "serverless-sqs-data",
-    "serverless-sqs-data-ref"
+    "serverless-api-sqs",
+    "serverless-api-sqs-queue",
+    "serverless-data-sqs",
+    "serverless-data-sqs-queue",
+    "serverless-src-handler-queue-processor-queue"
   ],
   "description": "Manage serverless configuration for an sqs queue."
 }

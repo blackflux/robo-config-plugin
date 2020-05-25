@@ -1,9 +1,9 @@
 {
   "tasks": [
-    "serverless-s3-api",
-    "serverless-s3-api-ref",
-    "serverless-s3-data",
-    "serverless-s3-data-ref"
+    "serverless-api-s3",
+    "serverless-api-s3-bucket",
+    "serverless-data-s3",
+    "serverless-data-s3-bucket"
   ],
   "description": "Manage serverless configuration for an s3 bucket."
 }
