@@ -1,2 +1,2 @@
 <<<:
-  - '${file(^/sqs/api/queue.yml)}'
+  - '${file(^/api/sqs/queue.yml)}'

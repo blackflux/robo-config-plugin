@@ -10,3 +10,14 @@ provider:
       Resource:
         - ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
         - ${cf:${opt:service}-data-${self:provider.stage}.QueueDeadLetterQueueArn}
+
+functions:
+  queueProcessorQueueHandler:
+    memorySize: queueProcessorMemorySize
+    handler: lib/handler.queueProcessorQueueHandler
+    reservedConcurrency: queueProcessorReservedConcurrency
+    timeout: queueTimeout
+    events:
+      - sqs:
+          arn: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
+          batchSize: queueProcessorBatchSize

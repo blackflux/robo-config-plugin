@@ -1,0 +1,7 @@
+{
+  "description": "Reserved Concurrency for Queue Processor.",
+  "details": [
+    "Restricts how many concurrent aws lambda processors for this queue can be spawned by aws"
+  ],
+  "type": "number"
+}

@@ -1,0 +1,24 @@
+{
+  "target": "serverless/api/sqs/${queue}.yml",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/sqs/api/${queue}.yml",
+      "variables": {
+        "queue": "${queue|TITLE}",
+        "queueProcessorTimeout": "${queueTimeout}",
+        "queueProcessorMemorySize": "${queueProcessorMemorySize}",
+        "queueProcessorReservedConcurrency": "${queueProcessorReservedConcurrency}",
+        "queueProcessorBatchSize": "${queueProcessorBatchSize}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api stack resource definitions for an sqs queue."
+  ]
+}
