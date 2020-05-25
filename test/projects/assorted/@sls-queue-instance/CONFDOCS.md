@@ -5,6 +5,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-data-ref">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-data-ref">`serverless/serverless-sqs-data-ref`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-data">`serverless/serverless-sqs-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-api-ref">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-api-ref">`serverless/serverless-sqs-api-ref`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-api-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-api-handler">`serverless/serverless-sqs-api-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-api">`serverless/serverless-sqs-api`</a>
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-queue-instance">assorted/@sls-queue-instance</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-queue-instance">`index`</a>)
@@ -22,15 +23,20 @@ Manages SQS instance cloud formation files.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
+<code>├─&nbsp;serverless</code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -42,6 +48,10 @@ Manages SQS instance cloud formation files.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
         </ul>
       </td>
     </tr>
@@ -63,15 +73,20 @@ Manage serverless configuration for an sqs queue.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
+<code>├─&nbsp;serverless</code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -83,6 +98,10 @@ Manage serverless configuration for an sqs queue.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
         </ul>
       </td>
     </tr>
@@ -157,6 +176,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueu
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
         </ul>
       </td>
     </tr>
@@ -182,6 +202,45 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-api-handler">serverless/serverless-sqs-api-handler</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-api-handler">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">src/handler/queue/processor/${queue}.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create queue processor handler.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -231,6 +290,10 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueue
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
         </ul>
       </td>
     </tr>
@@ -262,6 +325,28 @@ computing platforms to individuals, companies and governments, on a metered pay-
 ### <a name="blackfluxrobo-config-plugin-var-ref-queue">queue</a>  : `string`
 
 *Name of Queue.*
+
+### <a name="blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a>  : `number`
+
+*Timeout of Queue.*
+
+Maximum duration that a queue step can take to process
+
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a>  : `number`
+
+*Batch size of Queue Processor.*
+
+Maximum number of payloads processed in parallel in code logic by aws lambda processor
+
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a>  : `number`
+
+*Reserved Concurrency for Queue Processor.*
+
+Restricts how many concurrent aws lambda processors for this queue can be spawned by aws
+
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a>  : `number`
+
+*Memory Size of Queue Processor.*
 
 ------
 
@@ -296,6 +381,16 @@ Contains data stack definition for sqs.
 *Api stack resource definition.*
 
 Contains user defined api stack resource definitions.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">src/handler/queue/processor/${queue}.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>, <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
+
+:small_blue_diamond: `other`
+
+*Queue processor handler.*
+
+Contains queue processor handler declaration.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">serverless/api/sqs/${queue}.yml</a>  
 

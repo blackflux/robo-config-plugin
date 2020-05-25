@@ -6,7 +6,11 @@
     {
       "name": "serverless/sqs/api/${queue}.yml",
       "variables": {
-        "queue": "${queue|TITLE}"
+        "queue": "${queue|TITLE}",
+        "queueProcessorTimeout": "${queueTimeout}",
+        "queueProcessorMemorySize": "${queueProcessorMemorySize}",
+        "queueProcessorReservedConcurrency": "${queueProcessorReservedConcurrency}",
+        "queueProcessorBatchSize": "${queueProcessorBatchSize}"
       }
     }
   ],

@@ -2,6 +2,7 @@
   "tasks": [
     "serverless-sqs-api",
     "serverless-sqs-api-ref",
+    "serverless-sqs-api-handler",
     "serverless-sqs-data",
     "serverless-sqs-data-ref"
   ],

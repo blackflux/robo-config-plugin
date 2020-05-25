@@ -1,0 +1,7 @@
+{
+  "description": "Queue processor handler.",
+  "details": ["Contains queue processor handler declaration."],
+  "formats": ["other"],
+  "requires": ["javascript", "serverless"],
+  "website": null
+}

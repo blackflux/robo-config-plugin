@@ -6,7 +6,8 @@
     {
       "name": "serverless/sqs/data/${queue}.yml",
       "variables": {
-        "queue": "${queue|TITLE}"
+        "queue": "${queue|TITLE}",
+        "queueVisibilityTimeout": "${queueTimeout}"
       }
     }
   ],
