@@ -23,11 +23,12 @@ Manages S3 instance cloud formation files.
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3apibucketyml">${bucket}.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3databucketyml">${bucket}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;s3</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">${bucket}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">${bucket}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -63,11 +64,12 @@ Manage serverless configuration for an s3 bucket.
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3apibucketyml">${bucket}.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3databucketyml">${bucket}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;s3</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">${bucket}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">${bucket}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -123,7 +125,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-s3-data">serverless/serverless-s3-data</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-s3-data">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3databucketyml">serverless/s3/data/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">serverless/data/s3/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Initialize data stack resource definitions for an s3 bucket.
 
@@ -139,9 +141,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3databucke
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3databucketyml">${bucket}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">${bucket}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -197,7 +199,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-s3-api">serverless/serverless-s3-api</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-s3-api">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3apibucketyml">serverless/s3/api/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">serverless/api/s3/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Initialize api stack resource definitions for an s3 bucket.
 
@@ -213,9 +215,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3apibucket
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesss3apibucketyml">${bucket}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">${bucket}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -273,7 +275,7 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 Contains user defined data stack resource definitions.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlesss3databucketyml">serverless/s3/data/${bucket}.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">serverless/data/s3/${bucket}.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
@@ -293,7 +295,7 @@ Contains data stack definition for s3.
 
 Contains user defined api stack resource definitions.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlesss3apibucketyml">serverless/s3/api/${bucket}.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">serverless/api/s3/${bucket}.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 

@@ -1,5 +1,5 @@
 {
-  "target": "serverless/sqs/data/${queue}.yml",
+  "target": "serverless/data/sqs/${queue}.yml",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [

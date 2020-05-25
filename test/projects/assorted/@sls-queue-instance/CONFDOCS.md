@@ -25,11 +25,12 @@ Manages SQS instance cloud formation files.
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsapiqueueyml">${queue}.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsdataqueueyml">${queue}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -65,11 +66,12 @@ Manage serverless configuration for an sqs queue.
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsapiqueueyml">${queue}.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsdataqueueyml">${queue}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -125,7 +127,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-data">serverless/serverless-sqs-data</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-data">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsdataqueueyml">serverless/sqs/data/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">serverless/data/sqs/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Initialize data stack resource definitions for an sqs queue.
 
@@ -141,9 +143,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsdataqueu
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsdataqueueyml">${queue}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;data</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -199,7 +201,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-sqs-api">serverless/serverless-sqs-api</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-sqs-api">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsapiqueueyml">serverless/sqs/api/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">serverless/api/sqs/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Initialize api stack resource definitions for an sqs queue.
 
@@ -215,9 +217,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsapiqueue
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesssqsapiqueueyml">${queue}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">${queue}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -275,7 +277,7 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 Contains user defined data stack resource definitions.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlesssqsdataqueueyml">serverless/sqs/data/${queue}.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">serverless/data/sqs/${queue}.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
@@ -295,7 +297,7 @@ Contains data stack definition for sqs.
 
 Contains user defined api stack resource definitions.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlesssqsapiqueueyml">serverless/sqs/api/${queue}.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">serverless/api/sqs/${queue}.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
