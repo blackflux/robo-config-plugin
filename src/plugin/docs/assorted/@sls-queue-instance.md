@@ -147,7 +147,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueproces
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-data-sqs-queue">serverless/serverless-data-sqs-queue</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data-sqs-queue">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">serverless/data/sqs/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">serverless/data/sqs/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize data stack resource definitions for an sqs queue.
 
@@ -222,7 +222,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-sqs-queue">serverless/serverless-api-sqs-queue</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-sqs-queue">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">serverless/api/sqs/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueueyml">serverless/api/sqs/${queue}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize api stack resource definitions for an sqs queue.
 

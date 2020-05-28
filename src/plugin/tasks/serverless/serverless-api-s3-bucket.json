@@ -1,7 +1,7 @@
 {
   "target": "serverless/api/s3/${bucket}.yml",
-  "format": "txt",
-  "strategy": "overwrite",
+  "format": "yml",
+  "strategy": "merge-deep",
   "snippets": [
     {
       "name": "serverless/s3/api/${bucket}.yml",
