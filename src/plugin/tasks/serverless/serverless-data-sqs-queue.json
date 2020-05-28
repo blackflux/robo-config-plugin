@@ -1,7 +1,7 @@
 {
   "target": "serverless/data/sqs/${queue}.yml",
-  "format": "txt",
-  "strategy": "overwrite",
+  "format": "yml",
+  "strategy": "merge-deep",
   "snippets": [
     {
       "name": "serverless/sqs/data/${queue}.yml",

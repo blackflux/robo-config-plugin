@@ -89,7 +89,7 @@ Manage serverless configuration for an s3 bucket.
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-data-s3-bucket">serverless/serverless-data-s3-bucket</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data-s3-bucket">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">serverless/data/s3/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">serverless/data/s3/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize data stack resource definitions for an s3 bucket.
 
@@ -163,7 +163,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-s3-bucket">serverless/serverless-api-s3-bucket</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-s3-bucket">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">serverless/api/s3/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapis3bucketyml">serverless/api/s3/${bucket}.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize api stack resource definitions for an s3 bucket.
 
@@ -308,12 +308,6 @@ Contains user defined api stack resource definitions.
 ------
 
 ## Strategies
-
-### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
-
-:small_blue_diamond: `any`
-
-*Simply replace the old with the new content.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
 
