@@ -1,6 +1,6 @@
 resources:
   Resources:
-    ${queue}Queue:
+    ${queue|TITLE|STRIP}Queue:
       Type: AWS::SQS::Queue
       Properties:
         DelaySeconds: 0
@@ -11,30 +11,30 @@ resources:
         RedrivePolicy:
           deadLetterTargetArn:
             Fn::GetAtt:
-              - ${queue}DeadLetterQueue
+              - ${queue|TITLE|STRIP}DeadLetterQueue
               - Arn
           maxReceiveCount: 10
-    ${queue}DeadLetterQueue:
+    ${queue|TITLE|STRIP}DeadLetterQueue:
       Type: AWS::SQS::Queue
       Properties:
         MessageRetentionPeriod: 1209600
 
   Outputs:
-    ${queue}QueueUrl:
+    ${queue|TITLE|STRIP}QueueUrl:
       Value:
-        Ref: ${queue}Queue
-    ${queue}QueueArn:
+        Ref: ${queue|TITLE|STRIP}Queue
+    ${queue|TITLE|STRIP}QueueArn:
       Value:
-        Fn::GetAtt: [ '${queue}Queue' , Arn ]
-    ${queue}QueueName:
+        Fn::GetAtt: [ '${queue|TITLE|STRIP}Queue' , Arn ]
+    ${queue|TITLE|STRIP}QueueName:
       Value:
-        Fn::GetAtt: [ '${queue}Queue' , QueueName ]
-    ${queue}DeadLetterQueueUrl:
+        Fn::GetAtt: [ '${queue|TITLE|STRIP}Queue' , QueueName ]
+    ${queue|TITLE|STRIP}DeadLetterQueueUrl:
       Value:
-        Ref: ${queue}DeadLetterQueue
-    ${queue}DeadLetterQueueArn:
+        Ref: ${queue|TITLE|STRIP}DeadLetterQueue
+    ${queue|TITLE|STRIP}DeadLetterQueueArn:
       Value:
-        Fn::GetAtt: [ '${queue}DeadLetterQueue' , Arn ]
-    ${queue}DeadLetterQueueName:
+        Fn::GetAtt: [ '${queue|TITLE|STRIP}DeadLetterQueue' , Arn ]
+    ${queue|TITLE|STRIP}DeadLetterQueueName:
       Value:
-        Fn::GetAtt: [ '${queue}DeadLetterQueue' , QueueName ]
+        Fn::GetAtt: [ '${queue|TITLE|STRIP}DeadLetterQueue' , QueueName ]
