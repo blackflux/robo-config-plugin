@@ -1,9 +1,9 @@
 resources:
   Resources:
-    ${bucket}S3Bucket:
+    ${bucket|TITLE|STRIP}S3Bucket:
       Type: AWS::S3::Bucket
 
   Outputs:
-    ${bucket}S3BucketName:
+    ${bucket|TITLE|STRIP}S3BucketName:
       Value:
-        "Ref": ${bucket}S3Bucket
+        "Ref": ${bucket|TITLE|STRIP}S3Bucket
