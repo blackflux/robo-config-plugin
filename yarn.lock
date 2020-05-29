@@ -5249,6 +5249,11 @@ object-deep-contain@1.0.23:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.23.tgz#5e0e76634cc8b5d0291395dcdb897d2c37290dbc"
   integrity sha512-y//xnySc0wul+bKzjbuMMkV31sX3AqXq83CzxoY3GvxoEYaRWRwOddGr2n704w0wCmSIcvlAZZbUnL5MJbsF6A==
 
+object-deep-contain@1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.24.tgz#6d1088f00545eca1dd160100d3e7ba7ca94aaf73"
+  integrity sha512-49NP9G7PKdkQnh44yhQQsZqYIXgg4qpwS8ZxOW5tyVEPwR/FSoCT9UyeMZgddzvFsN0nSIMe8gq6HV6DxspHng==
+
 object-inspect@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.7.0.tgz#f4f6bd181ad77f006b5ece60bd0b6f398ff74a67"
@@ -5263,6 +5268,11 @@ object-scan@13.0.2:
   version "13.0.2"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.0.2.tgz#6c77818699d09d8b4e3192c94960e72ba2315260"
   integrity sha512-fzvo5Jr+zzCcIdauqNhBjYboM7bAV6bUBp3dviqoyhwDVhfNxFy4hlcvqsdIcsLyeoSqTamRXUcVVoSzvhTPFw==
+
+object-scan@13.0.3:
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.0.3.tgz#2e8b19ffa6b527407fcd897946af26fd54861f8f"
+  integrity sha512-Y/c67L3mFd0zDerQuzv3jEAqQzQXsnPwesr772PKo2LbcQ/liwk+XYvja8neUvOpYMPXbWzhYtN3gi1YYQ87mA==
 
 object-treeify@1.1.24:
   version "1.1.24"
@@ -6402,6 +6412,22 @@ robo-config@3.7.2:
     object-scan "13.0.2"
     object-treeify "1.1.24"
     smart-fs "1.11.11"
+
+robo-config@3.7.3:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.7.3.tgz#98a26dd73b00de5db46f6aa5fefae9291cefd692"
+  integrity sha512-5XqVimeJFcKI+j1p309xeuQIbsPDJy6V8R80XW1GZ8NR9qUKvK2cz8WKDfrkK/2w/MWAZP5vMzUCBha9N9Ov/Q==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.2"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.24"
+    object-scan "13.0.3"
+    object-treeify "1.1.24"
+    smart-fs "1.11.12"
 
 run-async@^0.1.0:
   version "0.1.0"
