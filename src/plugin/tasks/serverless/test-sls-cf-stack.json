@@ -1,0 +1,15 @@
+{
+  "target": "test/sls-cf-stack.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/test/sls-cf-stack.spec.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Test to visualize sls cf stack definition."
+  ]
+}

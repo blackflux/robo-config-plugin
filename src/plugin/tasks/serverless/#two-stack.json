@@ -1,6 +1,8 @@
 {
   "tasks": [
     "serverless",
+    "serverless-wrapper",
+    "test-sls-cf-stack",
     "serverless-base-resolver",
     "serverless-base-api",
     "serverless-base-data",

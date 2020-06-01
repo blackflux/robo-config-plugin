@@ -1,0 +1,15 @@
+{
+  "target": "serverless.wrapper.yml",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/serverless.wrapper.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Dummy file to expose serverless definition."
+  ]
+}
