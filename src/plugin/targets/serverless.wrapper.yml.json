@@ -1,0 +1,7 @@
+{
+  "description": "Dummy file for serverless cf stack definition access.",
+  "details": [],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}

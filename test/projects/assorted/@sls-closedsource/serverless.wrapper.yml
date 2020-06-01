@@ -1,0 +1,2 @@
+<<<:
+  - ${file(^/serverless/.base/resolver.yml)}
