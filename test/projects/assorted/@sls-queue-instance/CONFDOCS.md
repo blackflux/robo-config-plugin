@@ -326,25 +326,25 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 *Name of Queue.*
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a>  : `number`
+### <a name="blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a>  : `integer`
 
 *Timeout of Queue.*
 
 Maximum duration that a queue step can take to process
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a>  : `number`
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a>  : `integer`
 
 *Batch size of Queue Processor.*
 
 Maximum number of payloads processed in parallel in code logic by aws lambda processor
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a>  : `number`
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a>  : `integer`
 
 *Reserved Concurrency for Queue Processor.*
 
 Restricts how many concurrent aws lambda processors for this queue can be spawned by aws
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a>  : `number`
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a>  : `integer`
 
 *Memory Size of Queue Processor.*
 
