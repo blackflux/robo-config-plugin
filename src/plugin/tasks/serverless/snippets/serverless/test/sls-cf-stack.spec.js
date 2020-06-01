@@ -19,7 +19,7 @@ describe('Testing serverless cf stack definitions', () => {
       expect(
         fs.smartWrite(path.join(__dirname, 'sls-cf-stack', `$\{stack}.yml`), stackCf),
         'Stack cf updated. Please re-run.'
-      ).to.equal(true);
+      ).to.equal(false);
     };
   });
 
