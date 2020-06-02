@@ -1,9 +1,9 @@
 {
-  "target": "test/0_sls-cf-stack.spec.js",
+  "target": "test/0-sls-cf-stack.spec.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/test/0_sls-cf-stack.spec.js"
+    "serverless/test/0-sls-cf-stack.spec.js"
   ],
   "requires": [
     "serverless",
