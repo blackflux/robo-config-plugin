@@ -85,8 +85,8 @@ Manage various configuration files for react serverless project.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">config.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stackspecjs">sls-cf-stack.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0_sls-cf-stackspecjs">0_sls-cf-stack.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -305,7 +305,7 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">config.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stackspecjs">sls-cf-stack.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0_sls-cf-stackspecjs">0_sls-cf-stack.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -326,7 +326,7 @@ Manage serverless configuration for deployment to AWS.
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">serverless/test-sls-cf-stack</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stackspecjs">test/sls-cf-stack.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0_sls-cf-stackspecjs">test/0_sls-cf-stack.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Test to visualize sls cf stack definition.
 
@@ -341,7 +341,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stackspecj
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stackspecjs">sls-cf-stack.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0_sls-cf-stackspecjs">0_sls-cf-stack.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1629,7 +1629,7 @@ CircleCi read only api token used to access build status.
 
 Execute all configured js-gardener tasks.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testsls-cf-stackspecjs">test/sls-cf-stack.spec.js</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-test0_sls-cf-stackspecjs">test/0_sls-cf-stack.spec.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
