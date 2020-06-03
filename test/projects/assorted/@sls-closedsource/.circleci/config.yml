@@ -3,7 +3,7 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v13:
+      - test-node-v14:
           requires:
             - gally
       - test-node-v12.x:
@@ -13,7 +13,7 @@ workflows:
           context: projectName-local
           requires:
             - gally
-            - test-node-v13
+            - test-node-v14
             - test-node-v12.x
           filters:
             branches:
@@ -23,7 +23,7 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v13
+            - test-node-v14
             - test-node-v12.x
             - deploy-local
           filters:
@@ -34,7 +34,7 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v13
+            - test-node-v14
             - test-node-v12.x
           filters:
             branches:
@@ -44,7 +44,7 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v13
+            - test-node-v14
             - test-node-v12.x
           filters:
             branches:
@@ -261,9 +261,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v13:
+  test-node-v14:
     docker:
-      - image: 'circleci/node:13'
+      - image: 'circleci/node:14'
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
