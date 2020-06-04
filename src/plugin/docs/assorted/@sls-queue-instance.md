@@ -336,7 +336,7 @@ Maximum duration that a queue step can take to process
 
 Maximum number of payloads processed in parallel in code logic by aws lambda processor
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a>  : `integer`
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a>  : [`integer`, `string`]
 
 *Reserved Concurrency for Queue Processor.*
 
