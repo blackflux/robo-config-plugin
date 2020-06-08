@@ -26,15 +26,9 @@ resources:
     ${queue|TITLE|STRIP}QueueArn:
       Value:
         Fn::GetAtt: [ '${queue|TITLE|STRIP}Queue' , Arn ]
-    ${queue|TITLE|STRIP}QueueName:
-      Value:
-        Fn::GetAtt: [ '${queue|TITLE|STRIP}Queue' , QueueName ]
     ${queue|TITLE|STRIP}DeadLetterQueueUrl:
       Value:
         Ref: ${queue|TITLE|STRIP}DeadLetterQueue
     ${queue|TITLE|STRIP}DeadLetterQueueArn:
       Value:
         Fn::GetAtt: [ '${queue|TITLE|STRIP}DeadLetterQueue' , Arn ]
-    ${queue|TITLE|STRIP}DeadLetterQueueName:
-      Value:
-        Fn::GetAtt: [ '${queue|TITLE|STRIP}DeadLetterQueue' , QueueName ]

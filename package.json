@@ -46,11 +46,11 @@
     "coveralls": "3.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
-    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-import": "2.21.1",
     "eslint-plugin-json": "2.1.1",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "7.0.1",
-    "js-gardener": "2.0.159",
+    "js-gardener": "2.0.161",
     "nyc": "15.1.0",
     "robo-config": "3.8.0",
     "semantic-release": "17.0.8"
