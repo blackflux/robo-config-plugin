@@ -26,15 +26,9 @@ resources:
     QueueQueueArn:
       Value:
         Fn::GetAtt: [ 'QueueQueue' , Arn ]
-    QueueQueueName:
-      Value:
-        Fn::GetAtt: [ 'QueueQueue' , QueueName ]
     QueueDeadLetterQueueUrl:
       Value:
         Ref: QueueDeadLetterQueue
     QueueDeadLetterQueueArn:
       Value:
         Fn::GetAtt: [ 'QueueDeadLetterQueue' , Arn ]
-    QueueDeadLetterQueueName:
-      Value:
-        Fn::GetAtt: [ 'QueueDeadLetterQueue' , QueueName ]
