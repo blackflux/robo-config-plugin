@@ -4,7 +4,8 @@
     "serverless-api-sqs-queue",
     "serverless-data-sqs",
     "serverless-data-sqs-queue",
-    "serverless-src-handler-queue-processor-queue"
+    "serverless-src-handler-queue-processor-queue",
+    "serverless-test-env-sqs"
   ],
   "description": "Manage serverless configuration for an sqs queue."
 }

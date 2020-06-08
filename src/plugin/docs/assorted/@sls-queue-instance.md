@@ -1,5 +1,6 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-queue-instancejson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-queue-instancejson">`assorted/@sls-queue-instance.json`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssqs">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssqs">`serverless/#sqs`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-test-env-sqs">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-test-env-sqs">`serverless/serverless-test-env-sqs`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-src-handler-queue-processor-queue">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-src-handler-queue-processor-queue">`serverless/serverless-src-handler-queue-processor-queue`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data-sqs-queue">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data-sqs-queue">`serverless/serverless-data-sqs-queue`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data-sqs">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data-sqs">`serverless/serverless-data-sqs`</a>
@@ -30,11 +31,13 @@ Manages SQS instance cloud formation files.
 <code>│&nbsp;&nbsp;└─&nbsp;data</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
-<code>└─&nbsp;src</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -45,6 +48,8 @@ Manages SQS instance cloud formation files.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
@@ -80,11 +85,13 @@ Manage serverless configuration for an sqs queue.
 <code>│&nbsp;&nbsp;└─&nbsp;data</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;sqs</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueueyml">${queue}.yml</a></code><br/>
-<code>└─&nbsp;src</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;queue</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -95,11 +102,51 @@ Manage serverless configuration for an sqs queue.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-test-env-sqs">serverless/serverless-test-env-sqs</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-test-env-sqs">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+
+- Initialize SQS Url in test configuration.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
         </ul>
       </td>
     </tr>
@@ -320,6 +367,18 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 ## Variables
 
+### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
+
+*Name of the project.*
+
+The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-queue">queue</a>  : `string`
 
 *Name of Queue.*
@@ -349,6 +408,14 @@ Restricts how many concurrent aws lambda processors for this queue can be spawne
 ------
 
 ## Targets
+
+### <a name="blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
+
+:small_blue_diamond: `other`
+
+*Configuration definitions for lambda-tdd test setup.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">src/handler/queue/processor/${queue}.js</a>  
 
@@ -404,12 +471,6 @@ Contains user defined api stack resource definitions.
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
-
-:small_blue_diamond: `any`
-
-*Simply replace the old with the new content.*
-
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
 
 :small_blue_diamond: `json`, `yml`
@@ -417,4 +478,10 @@ Contains user defined api stack resource definitions.
 *Does a "smart" deep merge.*
 
 This will not work as desired for all object deep merging, but should for many cases.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
+
+:small_blue_diamond: `any`
+
+*Simply replace the old with the new content.*
 

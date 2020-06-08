@@ -3,7 +3,8 @@
     "serverless-api-s3",
     "serverless-api-s3-bucket",
     "serverless-data-s3",
-    "serverless-data-s3-bucket"
+    "serverless-data-s3-bucket",
+    "serverless-test-env-s3"
   ],
   "description": "Manage serverless configuration for an s3 bucket."
 }
