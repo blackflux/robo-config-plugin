@@ -1,0 +1,22 @@
+{
+  "target": "test/env.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/sqs/env.yml",
+      "variables": {
+        "queue": "${queue}",
+        "awsRegion": "${awsRegion}",
+        "projectName": "${projectName}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize SQS Url in test configuration."
+  ]
+}

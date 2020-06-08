@@ -1,0 +1,21 @@
+{
+  "target": "test/env.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/s3/env.yml",
+      "variables": {
+        "bucket": "${bucket}",
+        "projectName": "${projectName}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize S3 Name in test configuration."
+  ]
+}
