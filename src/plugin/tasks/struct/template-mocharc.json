@@ -1,8 +1,8 @@
 {
-  "target": "test/mocha.opts",
+  "target": ".mocharc.yml",
   "strategy": "create-only",
   "snippets": [
-    "default/test/mocha.opts"
+    "default/.mocharc.yml"
   ],
   "requires": [
     "javascript",
