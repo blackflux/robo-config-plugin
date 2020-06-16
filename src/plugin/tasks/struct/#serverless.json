@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "template-mocha-opts",
+    "template-mocharc",
     "template-eslintrc",
     "template-babelrc",
     "force-gardener-dockerized"
