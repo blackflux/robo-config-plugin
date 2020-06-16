@@ -3,7 +3,7 @@
     "template-readme",
     "template-index",
     "template-index-test",
-    "template-mocha-opts",
+    "template-mocharc",
     "template-eslintrc",
     "template-babelrc"
   ],

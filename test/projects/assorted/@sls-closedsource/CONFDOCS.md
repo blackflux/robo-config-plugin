@@ -2,7 +2,7 @@
 
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-closedsource">`assorted/@sls-closedsource`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless">`struct/#serverless`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">`struct/template-mocha-opts`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">`struct/template-mocharc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">`struct/force-gardener-dockerized`</a>
@@ -68,6 +68,7 @@ Manage various configuration files for serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-license">LICENSE</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a></code><br/>
@@ -83,8 +84,7 @@ Manage various configuration files for serverless project.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">config.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -142,8 +142,7 @@ Manage basic project structure for serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
-<code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -159,9 +158,9 @@ Manage basic project structure for serverless project.
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-mocha-opts">struct/template-mocha-opts</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocha-opts">`index`</a>)
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">struct/template-mocharc</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">test/mocha.opts</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
 
 - Create options file for mocha tests.
 
@@ -175,8 +174,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">test/m
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testmochaopts">mocha.opts</a></code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1554,7 +1552,7 @@ CircleCi read only api token used to access build status.
 
 ## Targets
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testmochaopts">test/mocha.opts</a> ([`link`](https://mochajs.org/#mochaopts)) 
+### <a name="blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a> ([`link`](https://mochajs.org/#mochaopts)) 
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
 
