@@ -7,3 +7,5 @@ test/projects/assorted/@sls-api/test/handler.spec.js
 test/projects/assorted/@sls-queue/test/queue/queue.spec.js
 test/projects/assorted/@sls-closedsource/test/0-sls-cf-stack.spec.js
 test/projects/assorted/@sls-closedsource-react/test/0-sls-cf-stack.spec.js
+test/projects/assorted/@sls-closedsource/test/5-sls-cfg.spec.js
+test/projects/assorted/@sls-closedsource-react/test/5-sls-cfg.spec.js
