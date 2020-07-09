@@ -74,7 +74,7 @@ describe('Testing handler.spec.js', () => {
       const isApiEndpoint = handlerFile[handler].isApiEndpoint === true;
       expect(
         !isApiEndpoint
-        || handlerFile[handler].isRouter === true
+        || handlerFile[handler].router === true
         || methods.some((m) => handler.endsWith(m)),
         `Bad Handler Name: ${handler}`
       ).to.equal(true);
