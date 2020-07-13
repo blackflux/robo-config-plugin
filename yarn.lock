@@ -3864,10 +3864,10 @@ joi-strict@1.2.2:
   dependencies:
     "@hapi/joi" "17.1.1"
 
-js-gardener@2.0.164:
-  version "2.0.164"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.164.tgz#014d83dcae0aa202618a42ac27bb864a3b685200"
-  integrity sha512-eIOfiww/HUMBHHsgBw4n1r/ovA/8DjJTUl+56BkCeepkt8z+BOAuFlSfKM4wQn484MAc8k/B8w96Qa762D9l7Q==
+js-gardener@2.0.165:
+  version "2.0.165"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.165.tgz#a8813451a3ebe3d5997e4c0a0483e9b989a8ce74"
+  integrity sha512-QqBLoeCxXatIWnAcQgz3WeDOa5sYqI0k3Y87BnV8PXxkidEKGQEf8wFz1x4E+06L9c9MAtbm4FPtfuP3eMoFIQ==
   dependencies:
     chalk "4.1.0"
     fancy-log "1.3.3"
@@ -6450,6 +6450,22 @@ robo-config@3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.8.2.tgz#b70cf0edcaf5ade777498d11a3dd93d02b7db54a"
   integrity sha512-aSSKW/d1fRD/sQRnumWNJVmGMc9J4P5sGBRW1x1cmdtUWNv5r6zjtH2drTXQQUIvy2v68JbhF7HL6HlXvas6nw==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.2"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.24"
+    object-scan "13.1.1"
+    object-treeify "1.1.25"
+    smart-fs "1.11.14"
+
+robo-config@3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.8.3.tgz#f0856e3c982b95329481e9b754bcca23820c406a"
+  integrity sha512-Sezgk6expJTiiXJqZhYUygyfSoAkgZ1U8UiawqWjndM04SwhsvOc3EOcoW65kmgyP//OP0MKcqDjXR2NwNMYAA==
   dependencies:
     app-root-path "3.0.0"
     deepmerge "4.2.2"
