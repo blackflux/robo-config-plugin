@@ -36,7 +36,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
     runner('data');
   });
 
-  it('Testing stack function methods', () => {
+  it('Testing stack http methods', () => {
     const methods = ['Get', 'Post', 'Put', 'Patch', 'Options', 'Head', 'Delete', 'Any'];
     const methodsUpper = methods.map((e) => e.toUpperCase());
     [apiStack, dataStack].forEach((stack) => {
@@ -48,7 +48,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
     });
   });
 
-  it('Testing that parameters are not explicitly defined', () => {
+  it('Testing stack http parameters not explicitly defined', () => {
     expect(
       objectScan(['functions.*.events[*].http.request.parameters'])(apiStack),
       'Parameters should not be explicitly defined.'
