@@ -1,4 +1,5 @@
 const { describe } = require('node-tdd');
+const objectScan = require('object-scan');
 const path = require('path');
 const yaml = require('yaml-boost');
 const fs = require('smart-fs');
