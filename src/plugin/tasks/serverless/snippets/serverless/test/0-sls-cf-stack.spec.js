@@ -1,3 +1,4 @@
+const get = require('lodash.get');
 const { describe } = require('node-tdd');
 const objectScan = require('object-scan');
 const path = require('path');
