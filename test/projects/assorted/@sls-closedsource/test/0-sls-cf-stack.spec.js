@@ -66,9 +66,10 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
             'PointInTimeRecoverySpecification',
             'PointInTimeRecoveryEnabled'
           ]);
-          expect([true, false].includes(setting),
-            'DynamoDB Point-in-time recovery should be explicitly specified.')
-            .to.deep.equal(true);
+          expect(
+            [true, false].includes(setting),
+            'DynamoDB Point-in-time recovery should be explicitly specified.'
+          ).to.deep.equal(true);
         }
       }
     })(dataStack);
