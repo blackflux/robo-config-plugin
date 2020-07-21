@@ -55,4 +55,17 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
       'Parameters should not be explicitly defined.'
     ).to.deep.equal([]);
   });
+
+  it('Testing DynamoDB Point-in-time', () => {
+    expect(
+      objectScan(['resources.Resources.*.Type'], {
+        filterFn: ({ value, parent }) => (
+          value === 'AWS::DynamoDB::Table'
+          && ['true', 'false']
+            .includes(get(parent, 'Properties.PointInTimeRecoverySpecification.PointInTimeRecoveryEnabled'))
+        )
+      })(dataStack),
+      'DynamoDB Point-in-time recovery should be explicitly specified.'
+    ).to.deep.equal([]);
+  });
 });
