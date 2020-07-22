@@ -1,3 +1,4 @@
+const get = require('lodash.get');
 const { describe } = require('node-tdd');
 const objectScan = require('object-scan');
 const path = require('path');
@@ -54,5 +55,23 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
       objectScan(['functions.*.events[*].http.request.parameters'])(apiStack),
       'Parameters should not be explicitly defined.'
     ).to.deep.equal([]);
+  });
+
+  it('Testing DynamoDB Point-in-time', () => {
+    objectScan(['resources.Resources.*.Type'], {
+      filterFn: ({ value, parent }) => {
+        if (value === 'AWS::DynamoDB::Table') {
+          const setting = get(parent, [
+            'Properties',
+            'PointInTimeRecoverySpecification',
+            'PointInTimeRecoveryEnabled'
+          ]);
+          expect(
+            [true, false].includes(setting),
+            'DynamoDB Point-in-time recovery should be explicitly specified.'
+          ).to.deep.equal(true);
+        }
+      }
+    })(dataStack);
   });
 });
