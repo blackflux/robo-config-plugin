@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#dynamodb"
+  ],
+  "description": "Manages Dynamodb instance cloud formation files."
+}
