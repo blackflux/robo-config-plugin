@@ -1,0 +1,14 @@
+{
+  "target": ".github/ISSUE_TEMPLATE/feature_request.md",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    ".github/ISSUE_TEMPLATE/feature_request.md"
+  ],
+  "requires": [
+    "github"
+  ],
+  "purpose": [
+    "Generate Github Feature Request template."
+  ]
+}

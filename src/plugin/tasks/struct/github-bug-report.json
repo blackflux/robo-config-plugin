@@ -1,0 +1,14 @@
+{
+  "target": ".github/ISSUE_TEMPLATE/bug_report.md",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    ".github/ISSUE_TEMPLATE/bug_report.md"
+  ],
+  "requires": [
+    "github"
+  ],
+  "purpose": [
+    "Generate Github Bug Report template."
+  ]
+}

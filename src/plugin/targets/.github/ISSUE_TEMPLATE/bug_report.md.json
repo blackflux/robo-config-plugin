@@ -1,0 +1,7 @@
+{
+  "description": "Github Bug Report Template",
+  "details": ["Template for Github Bug Report"],
+  "formats": ["yml"],
+  "requires": ["github", "serverless"],
+  "website": null
+}
