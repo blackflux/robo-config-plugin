@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    "serverless-api-dynamodb",
+    "serverless-api-dynamodb-table",
+    "serverless-data-dynamodb",
+    "serverless-data-dynamodb-table",
+    "serverless-test-env-dynamodb"
+  ],
+  "description": "Manage serverless configuration for a dynamodb table."
+}

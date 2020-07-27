@@ -1,0 +1,20 @@
+{
+  "target": "serverless/api/dynamodb/${table}.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/dynamodb/api/${table}.yml",
+      "variables": {
+        "table": "${table|TITLE}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api stack resource definitions for a dynamodb table."
+  ]
+}
