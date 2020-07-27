@@ -1,0 +1,7 @@
+{
+  "description": "Github Feature Request Template",
+  "details": ["Template for Github Feature Request"],
+  "formats": ["yml"],
+  "requires": ["github", "serverless"],
+  "website": null
+}
