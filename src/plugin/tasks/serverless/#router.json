@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "serverless-api-routers",
+    "serverless-api-routers-router"
+  ],
+  "description": "Manage serverless configuration for a serverless api router."
+}

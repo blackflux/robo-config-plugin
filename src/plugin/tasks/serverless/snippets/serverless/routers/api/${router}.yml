@@ -1,0 +1,12 @@
+${router|CAMEL}:
+  handler: lib/handler.${router|CAMEL}
+  memorySize: ${routerMemorySize}
+  provisionedConcurrency: ${routerProvisionedConcurrency}
+  events:
+    - schedule:
+        name: ${opt:service}-api-${self:provider.stage}-apiRouter-warmer
+        rate: rate(${routerWarmerRateInMinutes} minutes)
+    - http:
+        path: /{proxy+}
+        method: ${routerMethod|UPPER}
+        authorizer: ${routerAuthorizer}

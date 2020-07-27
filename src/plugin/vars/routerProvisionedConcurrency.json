@@ -1,0 +1,5 @@
+{
+  "description": "Router allocated concurrency.",
+  "details": [],
+  "type": "integer"
+}
