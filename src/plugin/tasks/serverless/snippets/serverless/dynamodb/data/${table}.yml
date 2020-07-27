@@ -1,0 +1,18 @@
+resources:
+  Resources:
+    Dynamo${table|TITLE|STRIP}Table:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER|STRIP}
+
+        BillingMode: PAY_PER_REQUEST
+        PointInTimeRecoverySpecification:
+          PointInTimeRecoveryEnabled: true
+
+  Outputs:
+    Dynamo${table|TITLE|STRIP}TableArn:
+      Value:
+        "Fn::GetAtt": Dynamo${table|TITLE|STRIP}Table.Arn
+    Dynamo${table|TITLE|STRIP}TableName:
+      Value:
+        "Ref": Dynamo${table|TITLE|STRIP}Table
