@@ -1,0 +1,25 @@
+{
+  "target": "serverless/api/routers/${router}.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/routers/api/${router}.yml",
+      "variables": {
+        "router": "${router|TITLE}",
+        "routerAuthorizer": "${routerAuthorizer}",
+        "routerMethod": "${routerMethod}",
+        "routerWarmerRateInMinutes": "${routerWarmerRateInMinutes}",
+        "routerProvisionedConcurrency": "${routerProvisionedConcurrency}",
+        "routerMemorySize": "${routerMemorySize}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api router definition."
+  ]
+}

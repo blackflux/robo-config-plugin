@@ -1,0 +1,5 @@
+{
+  "description": "Warmer invoke interval for Router in minutes.",
+  "details": [],
+  "type": "integer"
+}

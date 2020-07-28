@@ -20,6 +20,7 @@ describe('Testing Plugin', () => {
       'assorted/@sls-dynamodb-instance': [],
       'assorted/@sls-queue': [],
       'assorted/@sls-queue-instance': [],
+      'assorted/@sls-router-instance': [],
       'assorted/@sls-s3-instance': []
     });
   });
