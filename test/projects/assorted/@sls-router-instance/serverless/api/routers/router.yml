@@ -1,12 +1,13 @@
-router:
-  handler: lib/handler.router
-  memorySize: routerMemorySize
-  provisionedConcurrency: routerProvisionedConcurrency
-  events:
-    - schedule:
-        name: '${opt:service}-api-${self:provider.stage}-router-warmer'
-        rate: rate(routerWarmerRateInMinutes minutes)
-    - http:
-        path: '/{proxy+}'
-        method: ROUTERMETHOD
-        authorizer: routerAuthorizer
+functions:
+  router:
+    handler: lib/handler.router
+    memorySize: routerMemorySize
+    provisionedConcurrency: routerProvisionedConcurrency
+    events:
+      - schedule:
+          name: '${opt:service}-api-${self:provider.stage}-router-warmer'
+          rate: rate(routerWarmerRateInMinutes minutes)
+      - http:
+          path: '/{proxy+}'
+          method: ROUTERMETHOD
+          authorizer: routerAuthorizer
