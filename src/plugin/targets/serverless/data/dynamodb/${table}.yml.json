@@ -1,0 +1,7 @@
+{
+  "description": "Data stack resource definition for a dynamodb table.",
+  "details": ["Contains data stack definition for dynamodb."],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}

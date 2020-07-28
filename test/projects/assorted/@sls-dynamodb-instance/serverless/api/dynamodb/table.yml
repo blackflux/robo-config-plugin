@@ -1,0 +1,20 @@
+provider:
+  environment:
+    DYNAMO_TABLE_TABLE: '${cf:${opt:service}-data-${self:provider.stage}.DynamoTableTableName}'
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - 'dynamodb:Query'
+        - 'dynamodb:Scan'
+        - 'dynamodb:GetItem'
+        - 'dynamodb:PutItem'
+        - 'dynamodb:UpdateItem'
+        - 'dynamodb:DeleteItem'
+      Resource:
+        - '${cf:${opt:service}-data-${self:provider.stage}.DynamoTableTableArn}'
+    - Effect: Allow
+      Action:
+        - 'dynamodb:Query'
+      Resource:
+        - >-
+          ${cf:${opt:service}-data-${self:provider.stage}.DynamoTableTableArn}/index/*

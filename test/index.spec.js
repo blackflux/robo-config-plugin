@@ -17,8 +17,10 @@ describe('Testing Plugin', () => {
       'assorted/@sls-api': [],
       'assorted/@sls-closedsource': [],
       'assorted/@sls-closedsource-react': [],
+      'assorted/@sls-dynamodb-instance': [],
       'assorted/@sls-queue': [],
       'assorted/@sls-queue-instance': [],
+      'assorted/@sls-router-instance': [],
       'assorted/@sls-s3-instance': []
     });
   });

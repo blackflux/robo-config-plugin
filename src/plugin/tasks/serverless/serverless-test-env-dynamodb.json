@@ -1,0 +1,21 @@
+{
+  "target": "test/env.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/dynamodb/env.yml",
+      "variables": {
+        "table": "${table}",
+        "projectName": "${projectName}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize DynamoDb Table Name in test configuration."
+  ]
+}

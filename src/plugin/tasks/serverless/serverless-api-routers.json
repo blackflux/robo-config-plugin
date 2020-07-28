@@ -1,0 +1,20 @@
+{
+  "target": "serverless/api.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/routers/api.yml",
+      "variables": {
+        "router": "${router|LOWER}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Reference api stack resource definitions for an api router."
+  ]
+}

@@ -1,5 +1,7 @@
 {
   "tasks": [
+    "github-bug-report",
+    "github-feature-request",
     "template-mocharc",
     "template-eslintrc",
     "template-babelrc",
