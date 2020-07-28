@@ -4,7 +4,7 @@ router:
   provisionedConcurrency: routerProvisionedConcurrency
   events:
     - schedule:
-        name: '${opt:service}-api-${self:provider.stage}-apiRouter-warmer'
+        name: '${opt:service}-api-${self:provider.stage}-router-warmer'
         rate: rate(routerWarmerRateInMinutes minutes)
     - http:
         path: '/{proxy+}'
