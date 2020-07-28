@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#router"
+  ],
+  "description": "Manages router instance cloud formation files."
+}
