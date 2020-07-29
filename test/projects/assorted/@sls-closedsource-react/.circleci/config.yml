@@ -13,8 +13,8 @@ workflows:
           context: projectName-local
           requires:
             - gally
-            - test-node-v14
             - test-node-v12.x
+            - test-node-v14
           filters:
             branches:
               only:
@@ -23,8 +23,8 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v14
             - test-node-v12.x
+            - test-node-v14
             - deploy-local
           filters:
             branches:
@@ -34,8 +34,8 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v14
             - test-node-v12.x
+            - test-node-v14
           filters:
             branches:
               only:
@@ -44,8 +44,8 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v14
             - test-node-v12.x
+            - test-node-v14
           filters:
             branches:
               only:
