@@ -3,7 +3,7 @@ resources:
     Dynamo${table|TITLE|STRIP}Table:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER|STRIP}
+        TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER}
 
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
