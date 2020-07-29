@@ -4,7 +4,12 @@ resources:
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER}
-
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
