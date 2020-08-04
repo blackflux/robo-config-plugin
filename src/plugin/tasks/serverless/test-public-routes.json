@@ -1,0 +1,15 @@
+{
+  "target": "test/public-routes.yml",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/test/public-routes.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Used in tests to ensure sls configuration consistency."
+  ]
+}

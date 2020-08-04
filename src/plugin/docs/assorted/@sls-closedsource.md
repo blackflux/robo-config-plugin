@@ -9,6 +9,7 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstwo-stack">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstwo-stack">`serverless/#two-stack`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cfg">`serverless/test-sls-cfg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-public-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-public-routes">`serverless/test-public-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-wrapper">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-wrapper">`serverless/serverless-wrapper`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver">`serverless/serverless-base-resolver`</a>
@@ -90,7 +91,8 @@ Manage various configuration files for serverless project.
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testpublic-routesyml">public-routes.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -372,7 +374,8 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testpublic-routesyml">public-routes.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -439,6 +442,36 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-public-routes">serverless/test-public-routes</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-public-routes">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testpublic-routesyml">test/public-routes.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Used in tests to ensure sls configuration consistency.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testpublic-routesyml">public-routes.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1723,6 +1756,14 @@ Execute all configured js-gardener tasks.
 :small_blue_diamond: `other`
 
 *Test for visualizing serverless cf stack definitions.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-testpublic-routesyml">test/public-routes.yml</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
+
+:small_blue_diamond: `other`
+
+*Documented public routes for testing*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a>  
 
