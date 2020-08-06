@@ -1,15 +1,17 @@
+<<<:
+  - randomDeployHash: '${file(^/../random-deploy-hash.js)}'
 resources:
   Resources:
     TriggerTriggerLambdaResource:
       DependsOn:
-        - PostDashdeployLambdaFunction
+        - TriggerFnLambdaFunction
       Type: 'Custom::LambdaDependency'
       Properties:
         ServiceToken:
           'Fn::GetAtt':
-            - PostDashdeployLambdaFunction
+            - TriggerFnLambdaFunction
             - Arn
-        custom: '${self:custom.randomDeployHash}'
+        custom: '${self:randomDeployHash}'
 functions:
   triggerFn:
     handler: lib/handler.triggerFn

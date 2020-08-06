@@ -1,15 +1,18 @@
+<<<:
+  - randomDeployHash: ${file(^/../random-deploy-hash.js)}
+
 resources:
   Resources:
     Trigger${trigger|TITLE}LambdaResource:
       DependsOn:
-        - PostDashdeployLambdaFunction
+        - ${trigger|TITLE|STRIP}FnLambdaFunction
       Type: 'Custom::LambdaDependency'
       Properties:
         ServiceToken:
           'Fn::GetAtt':
-            - PostDashdeployLambdaFunction
+            - ${trigger|TITLE|STRIP}FnLambdaFunction
             - Arn
-        custom: '${self:custom.randomDeployHash}'
+        custom: '${self:randomDeployHash}'
 
 functions:
   ${trigger|CAMEL}Fn:
