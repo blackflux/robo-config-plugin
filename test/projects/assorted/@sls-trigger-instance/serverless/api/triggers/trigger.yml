@@ -1,5 +1,3 @@
-<<<:
-  - randomDeployHash: '${file(^/../random-deploy-hash.js)}'
 resources:
   Resources:
     TriggerTriggerLambdaResource:
@@ -11,7 +9,7 @@ resources:
           'Fn::GetAtt':
             - TriggerFnLambdaFunction
             - Arn
-        custom: '${self:randomDeployHash}'
+        custom: '${file(^/../random-deploy-hash.js)}'
 functions:
   triggerFn:
     handler: lib/handler.triggerFn
