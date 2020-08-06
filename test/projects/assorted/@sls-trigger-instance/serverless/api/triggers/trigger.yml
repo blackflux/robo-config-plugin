@@ -1,0 +1,15 @@
+resources:
+  Resources:
+    TriggerTriggerLambdaResource:
+      DependsOn:
+        - PostDashdeployLambdaFunction
+      Type: 'Custom::LambdaDependency'
+      Properties:
+        ServiceToken:
+          'Fn::GetAtt':
+            - PostDashdeployLambdaFunction
+            - Arn
+        custom: '${self:custom.randomDeployHash}'
+functions:
+  triggerFn:
+    handler: lib/handler.triggerFn

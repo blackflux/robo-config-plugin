@@ -1,0 +1,7 @@
+{
+  "description": "Api stack resource definition for a trigger instance.",
+  "details": ["Contains api stack definition for a trigger."],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}

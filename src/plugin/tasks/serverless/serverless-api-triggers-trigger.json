@@ -1,0 +1,20 @@
+{
+  "target": "serverless/api/triggers/${trigger}.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/triggers/api/${trigger}.yml",
+      "variables": {
+        "trigger": "${trigger|TITLE}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api trigger definition."
+  ]
+}

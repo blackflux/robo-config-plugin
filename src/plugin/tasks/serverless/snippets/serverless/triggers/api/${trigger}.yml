@@ -1,0 +1,16 @@
+resources:
+  Resources:
+    Trigger${trigger|TITLE}LambdaResource:
+      DependsOn:
+        - PostDashdeployLambdaFunction
+      Type: 'Custom::LambdaDependency'
+      Properties:
+        ServiceToken:
+          'Fn::GetAtt':
+            - PostDashdeployLambdaFunction
+            - Arn
+        custom: '${self:custom.randomDeployHash}'
+
+functions:
+  ${trigger|CAMEL}Fn:
+    handler: lib/handler.${trigger|CAMEL}Fn
