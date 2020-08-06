@@ -1,5 +1,6 @@
 const { describe } = require('node-tdd');
 const objectScan = require('object-scan');
+const get = require('lodash.get');
 const path = require('path');
 const yaml = require('yaml-boost');
 const fs = require('smart-fs');
@@ -9,6 +10,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   let apiStack;
   let dataStack;
   let runner;
+  let definedRoutes;
   before(() => {
     const loadStack = (stack) => yaml.load(
       path.join(__dirname, '..', 'serverless.wrapper.yml'),
@@ -27,6 +29,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
         'Stack cf updated. Please re-run.'
       ).to.equal(false);
     };
+    definedRoutes = fs.smartRead(path.join(__dirname, 'sls-cf-stack-routes.yml'));
   });
 
   it('Testing api stack', () => {
@@ -54,5 +57,28 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
       objectScan(['functions.*.events[*].http.request.parameters'])(apiStack),
       'Parameters should not be explicitly defined.'
     ).to.deep.equal([]);
+  });
+
+  it('Testing authorizer on routes', () => {
+    const routes = {};
+    objectScan(['functions.*.events[*].http'], {
+      filterFn: ({ key, value }) => {
+        routes[key[1]] = value.authorizer !== 'aws_iam';
+      }
+    })(apiStack);
+    expect(routes).to.deep.equal(definedRoutes);
+  });
+
+  it('Testing function handlers', () => {
+    // eslint-disable-next-line global-require, import/no-dynamic-require
+    const handlers = require(path.join(__dirname, '..', 'src', 'handler'));
+    objectScan(['functions.*'], {
+      filterFn: ({ key }) => {
+        const fn = key[1];
+        const handler = get(apiStack, `functions.$\{fn}.handler`);
+        expect(handler).to.equal(`lib/handler.$\{fn}`);
+        expect(typeof handlers[fn]).to.equal('function');
+      }
+    })(apiStack);
   });
 });

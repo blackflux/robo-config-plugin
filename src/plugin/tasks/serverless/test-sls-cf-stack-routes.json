@@ -1,9 +1,9 @@
 {
-  "target": "test/public-routes.yml",
-  "format": "txt",
+  "target": "test/sls-cf-stack-routes.yml",
+  "format": "yml",
   "strategy": "create-only",
   "snippets": [
-    "serverless/test/public-routes.yml"
+    "serverless/test/sls-cf-stack-routes.yml"
   ],
   "requires": [
     "serverless",

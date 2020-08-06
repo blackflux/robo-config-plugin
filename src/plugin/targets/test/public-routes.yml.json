@@ -1,7 +1,0 @@
-{
-  "description": "Documented public routes for testing",
-  "details": [],
-  "formats": ["other"],
-  "requires": ["lambda-tdd"],
-  "website": null
-}

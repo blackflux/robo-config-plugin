@@ -2,8 +2,8 @@
   "tasks": [
     "serverless",
     "serverless-wrapper",
-    "test-public-routes",
     "test-sls-cf-stack",
+    "test-sls-cf-stack-routes",
     "test-sls-cfg",
     "serverless-base-resolver",
     "serverless-base-api",
