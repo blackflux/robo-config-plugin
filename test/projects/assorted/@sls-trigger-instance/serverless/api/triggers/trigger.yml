@@ -12,4 +12,4 @@ resources:
         custom: '${file(^/../random-deploy-hash.js)}'
 functions:
   triggerFn:
-    handler: lib/handler.triggerFn
+    handler: lib/handler.triggersTriggerFn

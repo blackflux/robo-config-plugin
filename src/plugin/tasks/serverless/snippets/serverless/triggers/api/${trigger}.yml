@@ -13,4 +13,4 @@ resources:
 
 functions:
   ${trigger|CAMEL}Fn:
-    handler: lib/handler.${trigger|CAMEL}Fn
+    handler: lib/handler.triggers${trigger|TITLE|STRIP}Fn
