@@ -60,12 +60,11 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   });
 
   it('Testing authorizer on routes', () => {
-    const routes = {};
-    objectScan(['functions.*.events[*].http'], {
-      filterFn: ({ key, value }) => {
-        routes[key[1]] = value.authorizer !== 'aws_iam';
+    const routes = objectScan(['functions.*.events[*].http'], {
+      filterFn: ({ key, value, context }) => {
+        context[key[1]] = value.authorizer !== 'aws_iam';
       }
-    })(apiStack);
+    })(apiStack, {});
     expect(routes).to.deep.equal(definedRoutes);
   });
 
