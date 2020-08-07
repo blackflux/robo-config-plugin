@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#trigger"
+  ],
+  "description": "Manages trigger instance cloud formation files."
+}

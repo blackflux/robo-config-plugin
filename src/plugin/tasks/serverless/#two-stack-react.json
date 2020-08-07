@@ -3,6 +3,7 @@
     "serverless",
     "serverless-wrapper",
     "test-sls-cf-stack",
+    "test-sls-cf-stack-routes",
     "test-sls-cfg",
     "serverless-base-resolver",
     "serverless-base-api",
