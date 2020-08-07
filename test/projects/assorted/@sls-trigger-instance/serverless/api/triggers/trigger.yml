@@ -2,12 +2,12 @@ resources:
   Resources:
     TriggerTriggerLambdaResource:
       DependsOn:
-        - TriggerFnLambdaFunction
+        - TriggersTriggerFnLambdaFunction
       Type: 'Custom::LambdaDependency'
       Properties:
         ServiceToken:
           'Fn::GetAtt':
-            - TriggerFnLambdaFunction
+            - TriggersTriggerFnLambdaFunction
             - Arn
         custom: '${file(^/../random-deploy-hash.js)}'
 functions:
