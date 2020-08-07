@@ -21,7 +21,8 @@ describe('Testing Plugin', () => {
       'assorted/@sls-queue': [],
       'assorted/@sls-queue-instance': [],
       'assorted/@sls-router-instance': [],
-      'assorted/@sls-s3-instance': []
+      'assorted/@sls-s3-instance': [],
+      'assorted/@sls-trigger-instance': []
     });
   });
 });
