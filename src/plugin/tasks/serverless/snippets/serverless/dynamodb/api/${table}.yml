@@ -10,6 +10,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
+        - dynamodb:BatchWriteItem
       Resource:
         - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableArn}
     - Effect: Allow  # repo specific
