@@ -11,5 +11,5 @@ resources:
             - Arn
         custom: '${file(^/../random-deploy-hash.js)}'
 functions:
-  triggerFn:
-    handler: lib/handler.triggerFn
+  triggersTriggerFn:
+    handler: lib/handler.triggersTriggerFn
