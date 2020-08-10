@@ -11,6 +11,6 @@ module.exports = (args) => {
   }
   return objectHash(yaml.load(
     path.join(__dirname, 'data.yml'),
-    { [identifier]: true, ...args }
+    { [identifier]: true, ...args, stack: 'data' }
   ));
 };
