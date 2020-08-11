@@ -1,6 +1,6 @@
 resources:
   Resources:
-    TriggerTriggerLambdaResource:
+    TriggersTriggerLambdaResource:
       DependsOn:
         - TriggersTriggerFnLambdaFunction
       Type: 'Custom::LambdaDependency'
