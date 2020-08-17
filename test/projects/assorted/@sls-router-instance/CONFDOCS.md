@@ -36,6 +36,7 @@ Manages router instance cloud formation files.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-router">router</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-routertimeout">routerTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routermemorysize">routerMemorySize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routerprovisionedconcurrency">routerProvisionedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routerwarmerrateinminutes">routerWarmerRateInMinutes</a></li>
@@ -78,6 +79,7 @@ Manage serverless configuration for a serverless api router.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-router">router</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-routertimeout">routerTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routermemorysize">routerMemorySize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routerprovisionedconcurrency">routerProvisionedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routerwarmerrateinminutes">routerWarmerRateInMinutes</a></li>
@@ -121,6 +123,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiroutersr
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-router">router</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-routertimeout">routerTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routermemorysize">routerMemorySize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routerprovisionedconcurrency">routerProvisionedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-routerwarmerrateinminutes">routerWarmerRateInMinutes</a></li>
@@ -193,6 +196,10 @@ computing platforms to individuals, companies and governments, on a metered pay-
 ### <a name="blackfluxrobo-config-plugin-var-ref-router">router</a>  : `string`
 
 *Name of Router.*
+
+### <a name="blackfluxrobo-config-plugin-var-ref-routertimeout">routerTimeout</a>  : `integer`
+
+*Router timeout.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-routermemorysize">routerMemorySize</a>  : `integer`
 
