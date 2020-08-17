@@ -1707,7 +1707,7 @@ Enables displaying of a status badge indicated whether the dependencies are outd
 The name of the project as published to npm.
 Note that for scoped packages the name can differ significantly from the repo name.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `integer`
+### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `string`
 
 *The minimum node version targeted.*
 

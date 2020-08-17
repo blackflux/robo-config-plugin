@@ -1650,7 +1650,7 @@ Automates the package release workflow including:
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `integer`
+### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `string`
 
 *The minimum node version targeted.*
 
