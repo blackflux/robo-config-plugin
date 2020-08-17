@@ -197,7 +197,7 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-routertimeout">routerTimeout</a>  : `integer`
 
-*Router allocated timeout.*
+*Router timeout.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-routermemorysize">routerMemorySize</a>  : `integer`
 

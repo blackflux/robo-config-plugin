@@ -1,5 +1,5 @@
 {
-  "description": "Router allocated timeout.",
+  "description": "Router timeout.",
   "details": [],
   "type": "integer"
 }
