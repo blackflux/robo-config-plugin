@@ -2,6 +2,7 @@ functions:
   router:
     handler: lib/handler.router
     memorySize: routerMemorySize
+    timeout: routerTimeout
     provisionedConcurrency: routerProvisionedConcurrency
     events:
       - schedule:
