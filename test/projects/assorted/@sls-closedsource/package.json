@@ -12,8 +12,6 @@
     "@babel/register": "7.0.0",
     "babel-eslint": "8.2.3",
     "@babel/core": "7.1.2",
-    "@babel/cli": "7.1.2",
-    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
     "nyc": "12.0.2",
@@ -23,9 +21,12 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-mocha": "6.0.0",
     "eslint-plugin-json": "1.4.0",
-    "eslint-plugin-markdown": "1.0.0"
+    "eslint-plugin-markdown": "1.0.0",
+    "babel-preset-latest-node": "4.1.0"
   },
-  "engines": {"node": ">= 8.10"},
+  "engines": {
+    "node": ">= nodeVersion"
+  },
   "files": [],
   "keywords": [],
   "nyc": {
@@ -43,12 +44,19 @@
     "check-coverage": true,
     "extension": [],
     "functions": 100,
-    "include": ["**/*.js"],
+    "include": [
+      "**/*.js"
+    ],
     "lines": 100,
     "per-file": false,
     "report-dir": "./coverage",
-    "reporter": ["lcov", "text-summary"],
-    "require": ["@babel/register"],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [
+      "@babel/register"
+    ],
     "statements": 100,
     "tempDir": "./coverage/.nyc_output"
   },
@@ -66,10 +74,15 @@
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose"
   },
-  "bugs": {"url": "https://github.com/repoKey/issues"},
+  "bugs": {
+    "url": "https://github.com/repoKey/issues"
+  },
   "homepage": "https://github.com/repoKey#readme",
   "name": "projectName",
-  "repository": {"type": "git", "url": "https://github.com/repoKey.git"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/repoKey.git"
+  },
   "version": "0.0.0-development",
   "private": true
 }

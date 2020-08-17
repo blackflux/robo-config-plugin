@@ -98,6 +98,7 @@ Manage various configuration files for closed source npm package on github.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
@@ -149,6 +150,7 @@ Manage basic project structure for npm package on github.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -221,6 +223,7 @@ Manage basic project structure for npm package on github.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -383,6 +386,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -395,6 +399,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -480,6 +489,7 @@ Manage package.json for npm package on github.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
         </ul>
@@ -543,6 +553,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
         </ul>
@@ -1331,6 +1342,12 @@ All major programming languages are supported or work is done towards supporting
 
 The name of the project as published to npm.
 Note that for scoped packages the name can differ significantly from the repo name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `integer`
+
+*The minimum node version targeted.*
+
+The minimum nodejs version that the project targets.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
 
