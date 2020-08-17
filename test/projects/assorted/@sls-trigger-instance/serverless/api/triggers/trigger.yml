@@ -1,0 +1,15 @@
+resources:
+  Resources:
+    TriggerTriggerLambdaResource:
+      DependsOn:
+        - TriggersTriggerFnLambdaFunction
+      Type: 'Custom::LambdaDependency'
+      Properties:
+        ServiceToken:
+          'Fn::GetAtt':
+            - TriggersTriggerFnLambdaFunction
+            - Arn
+        custom: '${file(^/../random-deploy-hash.js)}'
+functions:
+  triggersTriggerFn:
+    handler: lib/handler.triggersTriggerFn

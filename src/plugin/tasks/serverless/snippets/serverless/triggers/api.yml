@@ -1,0 +1,2 @@
+<<<:
+  - ${file(^/api/triggers/${trigger}.yml)}

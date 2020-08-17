@@ -1,0 +1,7 @@
+{
+  "description": "Documented routes for testing",
+  "details": [],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}

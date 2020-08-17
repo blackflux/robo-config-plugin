@@ -1,0 +1,15 @@
+{
+  "target": "test/sls-cf-stack-routes.yml",
+  "format": "yml",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/test/sls-cf-stack-routes.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Used in tests to ensure sls configuration consistency."
+  ]
+}
