@@ -5,7 +5,6 @@ const path = require('path');
 const yaml = require('yaml-boost');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
-const Joi = require('joi-strict');
 
 describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () => {
   let apiStack;
@@ -83,11 +82,10 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   });
 
   it('Testing memorySize and timeout are explicitly set', () => {
-    const schema = Joi.number().integer();
     const { functions } = apiStack;
     Object.values(functions).forEach((f) => {
-      expect(Joi.test(f.memorySize, schema)).to.equal(true);
-      expect(Joi.test(f.timeout, schema)).to.equal(true);
+      expect(Number.isInteger(f.memorySize)).to.equal(true);
+      expect(Number.isInteger(f.timeout)).to.equal(true);
     });
   });
 });
