@@ -11,7 +11,8 @@
         "routerMethod": "${routerMethod}",
         "routerWarmerRateInMinutes": "${routerWarmerRateInMinutes}",
         "routerProvisionedConcurrency": "${routerProvisionedConcurrency}",
-        "routerMemorySize": "${routerMemorySize}"
+        "routerMemorySize": "${routerMemorySize}",
+        "routerTimeout": "${routerTimeout}"
       }
     }
   ],
