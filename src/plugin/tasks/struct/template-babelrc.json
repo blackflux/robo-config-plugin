@@ -3,7 +3,12 @@
   "format": "json",
   "strategy": "merge-deep",
   "snippets": [
-    "default/.babelrc"
+    {
+      "name": "default/.babelrc",
+      "variables": {
+        "nodeVersion": "${nodeVersion}"
+      }
+    }
   ],
   "requires": [
     "javascript",

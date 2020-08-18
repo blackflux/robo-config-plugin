@@ -1,0 +1,7 @@
+{
+  "description": "The minimum node version targeted.",
+  "details": [
+    "The minimum nodejs version that the project targets."
+  ],
+  "type": "string"
+}
