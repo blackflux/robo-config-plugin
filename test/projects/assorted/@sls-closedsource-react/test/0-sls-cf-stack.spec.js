@@ -80,4 +80,12 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
       }
     })(apiStack);
   });
+
+  it('Testing memorySize and timeout are explicitly set', () => {
+    const { functions } = apiStack;
+    Object.values(functions).forEach((f) => {
+      expect(Number.isInteger(f.memorySize)).to.equal(true);
+      expect(Number.isInteger(f.timeout)).to.equal(true);
+    });
+  });
 });

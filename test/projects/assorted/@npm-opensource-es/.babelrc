@@ -1,7 +1,7 @@
 {
-  "presets": [],
-  "plugins": [
-    "@babel/plugin-proposal-object-rest-spread"
+  "presets": [
+    ["latest-node", {"target": "nodeVersion"}]
   ],
-  "sourceMaps": "inline"
+  "plugins": [],
+  "sourceMaps": false
 }

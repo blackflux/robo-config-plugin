@@ -6,7 +6,8 @@
     {
       "name": "default/merge-deep",
       "variables": {
-        "repoKey": "${repoKey}"
+        "repoKey": "${repoKey}",
+        "nodeVersion": "${nodeVersion}"
       }
     },
     {
