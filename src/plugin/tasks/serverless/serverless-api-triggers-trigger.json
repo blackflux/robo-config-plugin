@@ -6,7 +6,9 @@
     {
       "name": "serverless/triggers/api/${trigger}.yml",
       "variables": {
-        "trigger": "${trigger|TITLE}"
+        "trigger": "${trigger|TITLE}",
+        "triggerMemorySize": "${triggerMemorySize}",
+        "triggerTimeout": "${triggerTimeout}"
       }
     }
   ],

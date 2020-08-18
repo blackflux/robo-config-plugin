@@ -36,6 +36,8 @@ Manages trigger instance cloud formation files.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-trigger">trigger</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-triggertimeout">triggerTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-triggermemorysize">triggerMemorySize</a></li>
         </ul>
       </td>
     </tr>
@@ -73,6 +75,8 @@ Manage serverless configuration for a serverless api trigger.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-trigger">trigger</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-triggertimeout">triggerTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-triggermemorysize">triggerMemorySize</a></li>
         </ul>
       </td>
     </tr>
@@ -111,6 +115,8 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapitriggers
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-trigger">trigger</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-triggertimeout">triggerTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-triggermemorysize">triggerMemorySize</a></li>
         </ul>
       </td>
     </tr>
@@ -178,6 +184,14 @@ computing platforms to individuals, companies and governments, on a metered pay-
 ### <a name="blackfluxrobo-config-plugin-var-ref-trigger">trigger</a>  : `string`
 
 *Name of Trigger.*
+
+### <a name="blackfluxrobo-config-plugin-var-ref-triggertimeout">triggerTimeout</a>  : `integer`
+
+*Trigger timeout.*
+
+### <a name="blackfluxrobo-config-plugin-var-ref-triggermemorysize">triggerMemorySize</a>  : `integer`
+
+*Trigger allocated memory size.*
 
 ------
 
