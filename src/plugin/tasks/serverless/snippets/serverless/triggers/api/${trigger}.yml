@@ -14,3 +14,5 @@ resources:
 functions:
   triggers${trigger|TITLE|STRIP}Fn:
     handler: lib/handler.triggers${trigger|TITLE|STRIP}Fn
+    memorySize: ${triggerMemorySize}
+    timeout: ${triggerTimeout}
