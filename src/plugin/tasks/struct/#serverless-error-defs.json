@@ -4,5 +4,5 @@
     "sls-src-errors",
     "sls-test-errors"
   ],
-  "description": "Manage error files."
+  "description": "Manages error related files."
 }

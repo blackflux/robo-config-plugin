@@ -6,7 +6,7 @@
 
 # :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-error-defsjson">assorted/@sls-error-defs.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-error-defsjson">`index`</a>)
 
-Manage handle of errors related files.
+Manages handling of error related files.
 
 <table>
   <tbody>
@@ -43,7 +43,7 @@ Manage handle of errors related files.
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-structserverless-error-defs">struct/#serverless-error-defs</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structserverless-error-defs">`index`</a>)
 
-Manage error files.
+Manages error related files.
 
 <table>
   <tbody>
