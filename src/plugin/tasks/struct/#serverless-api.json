@@ -2,12 +2,9 @@
   "tasks": [
     "sls-swagger",
     "sls-src-handler",
-    "sls-src-errors",
     "sls-src-routes",
     "sls-src-core-api",
-    "sls-src-core-errors",
     "sls-test-handler",
-    "sls-test-errors",
     "sls-test-routes",
     "sls-test-handler-conf",
     "sls-test-env"

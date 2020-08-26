@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    "sls-src-core-errors",
+    "sls-src-errors",
+    "sls-test-errors"
+  ],
+  "description": "Manages error related files."
+}
