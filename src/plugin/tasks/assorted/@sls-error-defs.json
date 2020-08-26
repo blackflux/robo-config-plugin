@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "struct/#serverless-error-defs"
+  ],
+  "description": "Manages handling of error related files."
+}
