@@ -8,6 +8,7 @@
       "packageName": "@blackflux/robo-config-plugin",
       "projectName": "robo-config-plugin",
       "owner": "simlu",
+      "nodeVersion": "10",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux"
     }
