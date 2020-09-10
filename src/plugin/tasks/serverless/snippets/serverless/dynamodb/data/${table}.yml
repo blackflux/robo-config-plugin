@@ -5,6 +5,8 @@ resources:
       Properties:
         TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER}
 
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
@@ -16,3 +18,6 @@ resources:
     Dynamo${table|TITLE|STRIP}TableName:
       Value:
         "Ref": Dynamo${table|TITLE|STRIP}Table
+    Dynamo${table|TITLE|STRIP}TableStreamArn:
+      Value:
+        "Ref": Dynamo${table|TITLE|STRIP}Table.StreamArn

@@ -18,3 +18,11 @@ provider:
         - dynamodb:Query
       Resource:
         - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableArn}/index/*
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeStream
+        - dynamodb:GetRecords
+        - dynamodb:GetShardIterator
+        - dynamodb:ListStreams
+      Resource:
+        - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableStreamArn}/index/*
