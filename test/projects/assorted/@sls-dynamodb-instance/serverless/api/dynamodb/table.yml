@@ -19,3 +19,12 @@ provider:
       Resource:
         - >-
           ${cf:${opt:service}-data-${self:provider.stage}.DynamoTableTableArn}/index/*
+    - Effect: Allow
+      Action:
+        - 'dynamodb:DescribeStream'
+        - 'dynamodb:GetRecords'
+        - 'dynamodb:GetShardIterator'
+        - 'dynamodb:ListStreams'
+      Resource:
+        - >-
+          ${cf:${opt:service}-data-${self:provider.stage}.DynamoTableTableStreamArn}/index/*
