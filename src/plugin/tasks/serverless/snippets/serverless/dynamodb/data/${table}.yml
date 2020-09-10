@@ -5,11 +5,11 @@ resources:
       Properties:
         TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER}
 
-        StreamSpecification:
-          StreamViewType: NEW_AND_OLD_IMAGES
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES
 
   Outputs:
     Dynamo${table|TITLE|STRIP}TableArn:
