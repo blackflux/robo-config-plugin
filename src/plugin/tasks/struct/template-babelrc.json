@@ -4,7 +4,7 @@
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "default/.babelrc.raw",
+      "name": "default/.babelrc",
       "variables": {
         "nodeVersion": "${nodeVersion}"
       }
