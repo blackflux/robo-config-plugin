@@ -20,4 +20,4 @@ resources:
         "Ref": Dynamo${table|TITLE|STRIP}Table
     Dynamo${table|TITLE|STRIP}TableStreamArn:
       Value:
-        "Ref": Dynamo${table|TITLE|STRIP}Table.StreamArn
+        "Fn::GetAtt": Dynamo${table|TITLE|STRIP}Table.StreamArn

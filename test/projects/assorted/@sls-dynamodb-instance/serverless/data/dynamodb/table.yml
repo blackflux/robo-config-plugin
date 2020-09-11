@@ -18,4 +18,4 @@ resources:
         'Fn::GetAtt': DynamoTableTable.Arn
     DynamoTableTableStreamArn:
       Value:
-        Ref: DynamoTableTable.StreamArn
+        'Fn::GetAtt': DynamoTableTable.StreamArn
