@@ -45,7 +45,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
         'aws dynamodb create-table \\',
         ` --cli-input-json '${JSON.stringify(t)}' \\`,
         ' --endpoint-url http://dynamodb-local:8000 \\',
-        ' --region us-west-2'
+        ' --region ${awsRegion|LOWER}'
       );
     });
     expect(

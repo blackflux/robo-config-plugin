@@ -4,7 +4,12 @@
   "strategy": "merge-shallow",
   "snippets": [
     "serverless/merge-shallow",
-    "serverless-dynamodb/merge-shallow"
+    {
+      "name": "serverless-dynamodb/merge-shallow",
+      "variables": {
+        "awsRegion": "${awsRegion}"
+      }
+    }
   ],
   "requires": [
     "javascript"
