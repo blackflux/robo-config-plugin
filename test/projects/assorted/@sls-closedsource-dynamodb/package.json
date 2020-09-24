@@ -1,0 +1,91 @@
+{
+  "license": "UNLICENSED",
+  "licenses": [
+    {
+      "type": "UNLICENSED",
+      "url": "https://github.com/repoKey/blob/master/LICENSE"
+    }
+  ],
+  "author": "ownerName",
+  "description": "???",
+  "keywords": [],
+  "devDependencies": {
+    "@babel/register": "7.0.0",
+    "babel-eslint": "8.2.3",
+    "babel-preset-latest-node": "4.1.0",
+    "@babel/core": "7.1.2",
+    "@blackflux/eslint-plugin-rules": "1.0.0",
+    "@blackflux/robo-config-plugin": "1.2.1",
+    "nyc": "12.0.2",
+    "chai": "4.2.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-mocha": "6.0.0",
+    "eslint-plugin-json": "1.4.0",
+    "eslint-plugin-markdown": "1.0.0",
+    "dynamodb-admin": "4.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "gardener.js",
+      "node_modules/*",
+      "coverage/*",
+      "lib/*",
+      "serverless/config.js"
+    ],
+    "tempDir": "./coverage/.nyc_output",
+    "report-dir": "./coverage",
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": [
+      "**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "extension": [],
+    "cache": true,
+    "all": true,
+    "babel": true
+  },
+  "scripts": {
+    "ddba": "AWS_REGION=us-west-2 AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXX AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX DYNAMO_ENDPOINT=http://0.0.0.0:8000 dynamodb-admin",
+    "clean": "rm -rf lib",
+    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc",
+    "build-clean": "yarn run clean && yarn run build",
+    "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
+    "test": "yarn run clean && yarn run gardener && yarn run test-simple",
+    "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
+    "u": "yarn upgrade --latest --force",
+    "i": "yarn install --frozen-lockfile",
+    "it": "yarn run i && yarn run t",
+    "t": "yarn test",
+    "ts": "yarn run test-simple",
+    "tsv": "yarn run test-simple --verbose",
+    "gardener": "node gardener"
+  },
+  "files": [],
+  "homepage": "https://github.com/repoKey#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/repoKey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/repoKey/issues"
+  },
+  "version": "0.0.0-development",
+  "engines": {
+    "node": ">= nodeVersion"
+  },
+  "private": true,
+  "name": "projectName"
+}

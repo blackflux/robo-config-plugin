@@ -1,0 +1,15 @@
+{
+  "target": "package.json",
+  "pretty": false,
+  "strategy": "merge-shallow",
+  "snippets": [
+    "serverless/merge-shallow",
+    "serverless-dynamodb/merge-shallow"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set various entries."
+  ]
+}

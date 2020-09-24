@@ -1,0 +1,14 @@
+{
+  "target": "docker/Dockerfile",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls-dynamodb/Dockerfile"
+  ],
+  "requires": [
+    "docker",
+    "serverless"
+  ],
+  "purpose": [
+    "Docker environment definition for allow to run tests making use of local DynamoDB container as well automate table(s) creation."
+  ]
+}

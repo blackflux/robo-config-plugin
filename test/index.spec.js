@@ -16,6 +16,7 @@ describe('Testing Plugin', () => {
       'assorted/@npm-opensource-es': [],
       'assorted/@sls-api': [],
       'assorted/@sls-closedsource': [],
+      'assorted/@sls-closedsource-dynamodb': [],
       'assorted/@sls-closedsource-react': [],
       'assorted/@sls-dynamodb-instance': [],
       'assorted/@sls-queue': [],

@@ -1,0 +1,14 @@
+{
+  "target": "manage.sh",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls-dynamodb/manage.sh"
+  ],
+  "requires": [
+    "docker",
+    "serverless"
+  ],
+  "purpose": [
+    "Enable the option for spawning a docker serverless container as default or include a DynamoDB one too for testing and deploying."
+  ]
+}

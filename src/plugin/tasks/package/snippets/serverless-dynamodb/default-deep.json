@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "dynamodb-admin": "4.0.0"
+  }
+}

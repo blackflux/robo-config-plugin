@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    "struct/#serverless",
+    "badges/#serverless",
+    "circleci/#serverless",
+    "docker/#serverless-dynamodb",
+    "gally/#serverless",
+    "editor/#default",
+    "gitignore/#serverless",
+    "jetbrains/#default",
+    "license/#closedsource",
+    "package/#serverless-dynamodb",
+    "serverless/#two-stack-dynamodb"
+  ],
+  "description": "Manage various configuration files for serverless project with the option for DynamoDB locally."
+}
