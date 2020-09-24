@@ -9,6 +9,6 @@
     "serverless"
   ],
   "purpose": [
-    "Docker environment definition for allow to run tests making use of local DynamoDB container as well automate table(s) creation."
+    "Docker environment definition for allowing to run tests using DynamoDB local and automate table(s) creation."
   ]
 }

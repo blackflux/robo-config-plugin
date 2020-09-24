@@ -1313,7 +1313,7 @@ Manage DynamoDB docker test configuration for a DynamoDB-based serverless projec
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Enable the option for spawning a docker serverless container as default or include a DynamoDB one too for testing and deploying.
+- Enable spawning a docker serverless container as default or including an extra DynamoDB for testing and deploying.
 
 <table>
   <tbody>
@@ -1342,7 +1342,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Docker environment definition for allow to run tests making use of local DynamoDB container as well automate table(s) creation.
+- Docker environment definition for allowing to run tests using DynamoDB local and automate table(s) creation.
 
 <table>
   <tbody>
