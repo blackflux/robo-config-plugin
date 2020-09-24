@@ -46,7 +46,7 @@
 
 # :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-closedsource-dynamodbjson">assorted/@sls-closedsource-dynamodb.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsource-dynamodbjson">`index`</a>)
 
-Manage various configuration files for serverless project with the option for DynamoDB locally.
+Manage various configuration files for serverless project with the option of running DynamoDB locally.
 
 <table>
   <tbody>
@@ -1801,7 +1801,7 @@ Execute all configured js-gardener tasks.
 
 :small_blue_diamond: `other`
 
-*Test for creating automation script for DynamoDB table(s).*
+*Test for creating script for DynamoDB table(s) init.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">test/5-sls-cfg.spec.js</a>  
 

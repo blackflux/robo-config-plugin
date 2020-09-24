@@ -12,5 +12,5 @@
     "package/#serverless-dynamodb",
     "serverless/#two-stack-dynamodb"
   ],
-  "description": "Manage various configuration files for serverless project with the option for DynamoDB locally."
+  "description": "Manage various configuration files for serverless project with the option of running DynamoDB locally."
 }
