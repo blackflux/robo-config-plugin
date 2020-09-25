@@ -9,6 +9,6 @@
     "serverless"
   ],
   "purpose": [
-    "Enable spawning a docker serverless container as default or including an extra DynamoDB for testing and deploying."
+    "Enable spawning a docker serverless container as default or with a local DynamoDB instance."
   ]
 }
