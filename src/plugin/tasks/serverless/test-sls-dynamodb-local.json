@@ -3,18 +3,13 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    {
-      "name": "serverless-dynamodb/test/1-sls-dynamodb-local.spec.js",
-      "variables": {
-        "awsRegion": "${awsRegion}"
-      }
-    }
+    "serverless-dynamodb/test/1-sls-dynamodb-local.spec.js"
   ],
   "requires": [
     "serverless",
     "aws"
   ],
   "purpose": [
-    "Test for generating ./docker/dynamodb.sh script for DynamoDB table(s) creation."
+    "Test for generating script for DynamoDB table(s) creation.."
   ]
 }
