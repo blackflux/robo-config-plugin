@@ -9,7 +9,7 @@ resources:
           PointInTimeRecoveryEnabled: true
         StreamSpecification:
           StreamViewType: NEW_AND_OLD_IMAGES
-          StreamEnabled: true
+          StreamEnabled: false
   Outputs:
     DynamoTableTableName:
       Value:
