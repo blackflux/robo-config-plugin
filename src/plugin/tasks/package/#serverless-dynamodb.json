@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    "serverless-dynamodb_default-shallow",
+    "serverless-dynamodb_default-deep",
+    "serverless-dynamodb_merge-shallow",
+    "serverless_merge-deep"
+  ],
+  "description": "Manage package.json for serverless project with DynamoDB local."
+}

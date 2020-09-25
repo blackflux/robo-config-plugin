@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    "serverless",
+    "serverless-wrapper",
+    "test-sls-cf-stack",
+    "test-sls-cf-stack-routes",
+    "test-sls-cfg",
+    "test-sls-dynamodb-local",
+    "serverless-base-resolver",
+    "serverless-base-api",
+    "serverless-base-data",
+    "serverless-base-data-stack-hash",
+    "serverless-api",
+    "serverless-data"
+  ],
+  "description": "Manage serverless configuration for deployment to AWS."
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Test for creating script for DynamoDB table(s) init.",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["serverless"],
+  "website": null
+}

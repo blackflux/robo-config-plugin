@@ -1,0 +1,15 @@
+{
+  "target": "package.json",
+  "pretty": false,
+  "strategy": "default-deep",
+  "snippets": [
+    "default/default-deep",
+    "serverless-dynamodb/default-deep"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set defaults for various entries."
+  ]
+}

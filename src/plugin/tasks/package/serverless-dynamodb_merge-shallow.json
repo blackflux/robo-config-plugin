@@ -1,0 +1,20 @@
+{
+  "target": "package.json",
+  "pretty": false,
+  "strategy": "merge-shallow",
+  "snippets": [
+    "serverless/merge-shallow",
+    {
+      "name": "serverless-dynamodb/merge-shallow",
+      "variables": {
+        "awsRegion": "${awsRegion}"
+      }
+    }
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set various entries."
+  ]
+}
