@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "ddba": "AWS_REGION=${awsRegion|LOWER} AWS_ACCESS_KEY_ID=${awsAccessKeyId} AWS_SECRET_ACCESS_KEY=${awsSecretAccessKey} DYNAMO_ENDPOINT=http://0.0.0.0:8000 dynamodb-admin"
+  }
+}

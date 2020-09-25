@@ -1,0 +1,15 @@
+{
+  "target": "test/1-sls-dynamodb-local.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless-dynamodb/test/1-sls-dynamodb-local.spec.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Test for generating script for DynamoDB table(s) creation.."
+  ]
+}

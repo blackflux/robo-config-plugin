@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "sls-dynamodb-docker",
+    "sls-dynamodb-manage"
+  ],
+  "description": "Manage DynamoDB docker test configuration for a DynamoDB-based serverless project."
+}
