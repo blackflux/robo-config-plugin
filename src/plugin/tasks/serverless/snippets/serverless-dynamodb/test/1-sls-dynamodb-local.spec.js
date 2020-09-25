@@ -13,7 +13,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
       path.join(__dirname, '..', 'serverless.wrapper.yml'),
       {
         stack: 'data',
-        region: process.env.REGION,
+        region: process.env.AWS_REGION,
         env: 'local'
       }
     );
@@ -41,7 +41,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
       result.push(
         `AWS_ACCESS_KEY_ID=${process.env.AWS_ACCESS_KEY_ID} \\`,
         `AWS_SECRET_ACCESS_KEY=${process.env.AWS_SECRET_ACCESS_KEY} \\`,
-        `REGION=${process.env.REGION} \\`,
+        `AWS_REGION=${process.env.AWS_REGION} \\`,
         'aws dynamodb create-table \\',
         ` --cli-input-json '${JSON.stringify(t)}' \\`,
         ' --endpoint-url http://dynamodb-local:8000 \\',
