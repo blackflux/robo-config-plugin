@@ -44,7 +44,6 @@ Manages Dynamodb instance cloud formation files.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-table">table</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-tablestreamenabled">tableStreamEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -89,7 +88,6 @@ Manage serverless configuration for a dynamodb table.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-table">table</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-tablestreamenabled">tableStreamEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -165,7 +163,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatadynamod
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-table">table</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-tablestreamenabled">tableStreamEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -313,10 +310,6 @@ The project name is in most cases identical to the repository name.
 ### <a name="blackfluxrobo-config-plugin-var-ref-table">table</a>  : `string`
 
 *Name of Table.*
-
-### <a name="blackfluxrobo-config-plugin-var-ref-tablestreamenabled">tableStreamEnabled</a>  : `boolean`
-
-*Enable Stream for Table.*
 
 ------
 
