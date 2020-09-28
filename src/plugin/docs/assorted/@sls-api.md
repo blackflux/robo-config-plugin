@@ -50,6 +50,9 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssessiontoken">awsSessionToken</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
@@ -94,6 +97,9 @@ Manage project structure for serverless project using lambda-serverless-api and 
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssessiontoken">awsSessionToken</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
@@ -217,6 +223,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssessiontoken">awsSessionToken</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
@@ -427,6 +436,30 @@ The most used version control system. Not to be confused with github (which uses
 ------
 
 ## Variables
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awssessiontoken">awsSessionToken</a>  : `string`
+
+**Default**: `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+
+*Aws session token.*
+
+Should only be filled in with dummy credentials for tests.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a>  : `string`
+
+**Default**: `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+
+*Aws secret access key.*
+
+Should only be filled in with dummy credentials for tests.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a>  : `string`
+
+**Default**: `XXXXXXXXXXXXXXXXXXXX`
+
+*Aws access key id.*
+
+Should only be filled in with dummy credentials for tests.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
 
