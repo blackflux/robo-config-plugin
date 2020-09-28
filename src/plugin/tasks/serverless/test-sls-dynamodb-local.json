@@ -1,9 +1,9 @@
 {
-  "target": "test/1-sls-dynamodb-local.spec.js",
+  "target": "test/9-sls-dynamodb-local.spec.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless-dynamodb/test/1-sls-dynamodb-local.spec.js"
+    "serverless-dynamodb/test/9-sls-dynamodb-local.spec.js"
   ],
   "requires": [
     "serverless",
