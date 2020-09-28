@@ -29,7 +29,7 @@ ENV LAMBDA_TASK_ROOT /user/project
 ENV BABEL_DISABLE_CACHE 1
 
 ENTRYPOINT (cd project && \
- if [[ "$\{DYNAMODB_LOCAL_ENABLE}" = true  ]]; \
+ if [[ "$\{DYNAMODB_LOCAL_ENABLE}" = true ]]; \
  then sh ./docker/dynamodb.sh &> /dev/null; \
  fi && \
  bash)

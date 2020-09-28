@@ -8,8 +8,8 @@
       "name": "serverless-dynamodb/merge-shallow",
       "variables": {
         "awsRegion": "${awsRegion}",
-        "awsAccessKeyId": "XXXXXXXXXXXXXXXXXXXX",
-        "awsSecretAccessKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        "awsAccessKeyId": "${awsAccessKeyId}",
+        "awsSecretAccessKey": "${awsSecretAccessKey}"
       }
     }
   ],

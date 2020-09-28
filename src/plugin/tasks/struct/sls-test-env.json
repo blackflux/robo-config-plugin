@@ -1,15 +1,15 @@
 {
   "target": "test/env.yml",
-  "format": "txt",
-  "strategy": "create-only",
+  "format": "yml",
+  "strategy": "merge-deep",
   "snippets": [
     {
       "name": "sls-api/test/env.yml",
       "variables": {
         "awsRegion": "${awsRegion}",
-        "awsAccessKeyId": "XXXXXXXXXXXXXXXXXXXX",
-        "awsSecretAccessKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        "awsSessionToken": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        "awsAccessKeyId": "${awsAccessKeyId}",
+        "awsSecretAccessKey": "${awsSecretAccessKey}",
+        "awsSessionToken": "${awsSessionToken}"
       }
     }
   ],

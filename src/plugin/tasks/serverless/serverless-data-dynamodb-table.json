@@ -6,7 +6,8 @@
     {
       "name": "serverless/dynamodb/data/${table}.yml",
       "variables": {
-        "table": "${table|TITLE}"
+        "table": "${table|TITLE}",
+        "tableStreamEnabled": "${tableStreamEnabled}"
       }
     }
   ],
