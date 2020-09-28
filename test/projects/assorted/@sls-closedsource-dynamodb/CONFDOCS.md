@@ -126,6 +126,8 @@ Manage various configuration files for serverless project with the option of run
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
@@ -807,6 +809,8 @@ Manage package.json for serverless project with DynamoDB local.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -844,6 +848,8 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
@@ -1711,6 +1717,22 @@ Typically set to something like 'com.sls.ORGNAME'
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a>  : `string`
+
+**Default**: `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+
+*Aws secret access key.*
+
+Should only be filled in with dummy credentials for tests.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a>  : `string`
+
+**Default**: `XXXXXXXXXXXXXXXXXXXX`
+
+*Aws access key id.*
+
+Should only be filled in with dummy credentials for tests.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
 
