@@ -199,7 +199,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">te
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-env">struct/sls-test-env</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Create configuration template for lambda-tdd test setup.
 
@@ -570,6 +570,14 @@ Specifies files intentionally untracked by git.
 :small_blue_diamond: `any`
 
 *Does nothing when the file is already present, otherwise creates it.*
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Does a "smart" deep merge.*
+
+This will not work as desired for all object deep merging, but should for many cases.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-append-new">append-new</a>  
 
