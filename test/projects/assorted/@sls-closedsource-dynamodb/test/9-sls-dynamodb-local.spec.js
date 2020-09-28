@@ -34,7 +34,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
         .map(([k, v]) => {
           if (k === 'TableName') {
             // eslint-disable-next-line no-template-curly-in-string
-            return [k, v.replace('${self:provider.stage}', 'dynamodb')];
+            return [k, v.replace('${self:provider.stage}', 'local')];
           }
           return [k, v];
         }));

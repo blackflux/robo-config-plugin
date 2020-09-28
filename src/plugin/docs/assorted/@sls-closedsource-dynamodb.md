@@ -92,8 +92,8 @@ Manage various configuration files for serverless project with the option of run
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test1-sls-dynamodb-localspecjs">1-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
         </ul>
       </td>
@@ -391,8 +391,8 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test1-sls-dynamodb-localspecjs">1-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
         </ul>
       </td>
@@ -414,7 +414,7 @@ Manage serverless configuration for deployment to AWS.
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-dynamodb-local">serverless/test-sls-dynamodb-local</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-dynamodb-local">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-test1-sls-dynamodb-localspecjs">test/1-sls-dynamodb-local.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">test/9-sls-dynamodb-local.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Test for generating script for DynamoDB table(s) creation..
 
@@ -429,7 +429,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test1-sls-dynamodb-lo
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test1-sls-dynamodb-localspecjs">1-sls-dynamodb-local.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1824,7 +1824,7 @@ Template for Github Bug Report
 
 Execute all configured js-gardener tasks.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-test1-sls-dynamodb-localspecjs">test/1-sls-dynamodb-local.spec.js</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">test/9-sls-dynamodb-local.spec.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
 
