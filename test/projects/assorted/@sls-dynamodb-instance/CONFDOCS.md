@@ -318,7 +318,7 @@ The project name is in most cases identical to the repository name.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-tablestreamenabled">tableStreamEnabled</a>  : `boolean`
 
-*Enable stream for Table.*
+*Enable Stream for Table.*
 
 ------
 
