@@ -4,9 +4,10 @@
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "serverless/dynamodb/api/${table}.yml",
+      "name": "serverless/dynamodb/api/${table}.yml.mustache",
       "variables": {
-        "table": "${table|TITLE}"
+        "table": "${table|TITLE}",
+        "tableStreamEnabled": "${tableStreamEnabled}"
       }
     }
   ],

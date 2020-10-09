@@ -7,6 +7,8 @@ resources:
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES
   Outputs:
     DynamoTableTableName:
       Value:
