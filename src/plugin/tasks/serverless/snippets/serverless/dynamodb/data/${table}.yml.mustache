@@ -19,6 +19,8 @@ resources:
     Dynamo${table|TITLE|STRIP}TableName:
       Value:
         "Ref": Dynamo${table|TITLE|STRIP}Table
+{{#tableStreamEnabled}}
     Dynamo${table|TITLE|STRIP}TableStreamArn:
       Value:
         "Fn::GetAtt": Dynamo${table|TITLE|STRIP}Table.StreamArn
+{{/tableStreamEnabled}}
