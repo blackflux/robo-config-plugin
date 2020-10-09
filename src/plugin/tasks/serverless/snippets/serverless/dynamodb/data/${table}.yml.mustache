@@ -4,10 +4,13 @@ resources:
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: ${opt:service}-${opt:stack}-${self:provider.stage}-${table|LOWER}
-
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
+{{#tableStreamEnabled}}
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES
+{{/tableStreamEnabled}}
 
   Outputs:
     Dynamo${table|TITLE|STRIP}TableArn:
