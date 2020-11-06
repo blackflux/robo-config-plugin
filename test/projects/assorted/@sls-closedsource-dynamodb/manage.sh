@@ -8,7 +8,7 @@ then
     -d amazon/dynamodb-local
   LINK='--link dynamodb-local -e DYNAMODB_LOCAL_ENABLE=true'
 else
-  NET_HOST = '--net host'
+  NET_HOST='--net host'
 fi
 
 docker build -t lambda-environment-node ./docker &&

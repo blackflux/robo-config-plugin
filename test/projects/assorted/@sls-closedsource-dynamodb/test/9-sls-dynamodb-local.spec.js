@@ -30,7 +30,10 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
     const result = ['#!/bin/sh'];
     tables.forEach((table) => {
       const t = Object.fromEntries(Object.entries(table)
-        .filter(([k]) => k !== 'PointInTimeRecoverySpecification')
+      .filter(([k]) => [
+        'PointInTimeRecoverySpecification',
+        'TimeToLiveSpecification'
+      ].includes(k) === false)
         .map(([k, v]) => {
           if (k === 'TableName') {
             // eslint-disable-next-line no-template-curly-in-string
