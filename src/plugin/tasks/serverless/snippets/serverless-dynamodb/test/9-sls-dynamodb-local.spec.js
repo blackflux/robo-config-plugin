@@ -40,9 +40,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
             return [k, v.replace('${self:provider.stage}', 'local')];
           }
           if (k === 'StreamSpecification') {
-            const streamSettings = Object.assign({}, v);
-            streamSettings.StreamEnabled = true;
-            return [k, streamSettings];
+            return [k, { StreamEnabled: true, ...v }];
           }
           return [k, v];
         }));
