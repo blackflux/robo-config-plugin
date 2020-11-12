@@ -40,8 +40,9 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
             return [k, v.replace('${self:provider.stage}', 'local')];
           }
           if (k === 'StreamSpecification') {
-            // eslint-disable-next-line no-param-reassign
-            v.StreamEnabled = true;
+            const streamSettings = Object.assign({}, v);
+            streamSettings.StreamEnabled = true;
+            return [k, streamSettings];
           }
           return [k, v];
         }));
