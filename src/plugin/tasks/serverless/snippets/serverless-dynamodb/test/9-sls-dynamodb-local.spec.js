@@ -39,6 +39,9 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
             // eslint-disable-next-line no-template-curly-in-string
             return [k, v.replace('${self:provider.stage}', 'local')];
           }
+          if (k === 'StreamSpecification') {
+            return [k, { StreamEnabled: true, ...v }];
+          }
           return [k, v];
         }));
       result.push(
