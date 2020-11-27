@@ -6,15 +6,14 @@ then
     --name dynamodb-local \
     -p 0.0.0.0:8000:8000 \
     -d amazon/dynamodb-local
-  LINK='--link dynamodb-local -e DYNAMODB_LOCAL_ENABLE=true'
+  OPT='--link dynamodb-local -e DYNAMODB_LOCAL_ENABLE=true'
 else
-  NET_HOST='--net host'
+  OPT='--net host'
 fi
 
 docker build -t lambda-environment-node ./docker &&
 docker run \
-  $NET_HOST \
-  $LINK \
+  $OPT \
   -u`id -u`:`id -g` \
   -v $(pwd):/user/project \
   -v ~/.aws:/user/.aws \
