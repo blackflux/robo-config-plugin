@@ -11,6 +11,7 @@ describe('Testing Plugin', () => {
   it('Testing Plugin Tasks', () => {
     expect(load(plugin).test(path.join(__dirname, 'projects'))).to.deep.equal({
       'assorted/@docker-lambda': [],
+      'assorted/@dynamo-testing': [],
       'assorted/@npm-closedsource': [],
       'assorted/@npm-opensource': [],
       'assorted/@npm-opensource-es': [],
