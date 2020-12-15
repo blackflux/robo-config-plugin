@@ -1,0 +1,13 @@
+{
+  "target": "manage.sh",
+  "strategy": "overwrite",
+  "snippets": [
+    "dynamo-testing/manage.sh"
+  ],
+  "requires": [
+    "docker"
+  ],
+  "purpose": [
+    "Spawn docker container with joined dynamodb container."
+  ]
+}
