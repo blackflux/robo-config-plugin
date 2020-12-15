@@ -4815,6 +4815,11 @@ mustache@4.0.1:
   resolved "https://registry.yarnpkg.com/mustache/-/mustache-4.0.1.tgz#d99beb031701ad433338e7ea65e0489416c854a2"
   integrity sha512-yL5VE97+OXn4+Er3THSmTdCFCtx5hHWzrolvH+JObZnUYwuaG7XV+Ch4fR2cIrcYI0tFHxS7iyFYl14bW8y2sA==
 
+mustache@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/mustache/-/mustache-4.1.0.tgz#8c1b042238a982d2eb2d30efc6c14296ae3f699d"
+  integrity sha512-0FsgP/WVq4mKyjolIyX+Z9Bd+3WS8GOwoUTyKXT5cTYMGeauNTi2HPCwERqseC1IHAy0Z7MDZnJBfjabd4O8GQ==
+
 mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
@@ -5336,10 +5341,20 @@ object-scan@13.6.6:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.6.6.tgz#e44677a7f5411b96bf5d5f66ce627e94ea09e599"
   integrity sha512-Ag+m0/43i2HhbxMptWA9gZT0XvEQAv2fsvPkUQzvZTgo8sGcFgqdXEDFtru1VnYSTZpBWcEePy8dI0yyyFI5wA==
 
+object-scan@13.6.7:
+  version "13.6.7"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.6.7.tgz#bdd7386c0d8b134f98d526f77fbb1661237a3260"
+  integrity sha512-4srLoK81bMdUhT/A/9BHr9Iv2iG8TauegngTqrqi1JVX9cKitZBDp/nm6dpZ6+chLBjJUm+R/JI6NfXoMWce/Q==
+
 object-treeify@1.1.29:
   version "1.1.29"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.29.tgz#53a0fe8346ca0936ed9f3b5dfb24438d534a7e17"
   integrity sha512-XnPIMyiv6fJeb/z3Bz+u43Fcw3C9fs1uoRITd8x3mau/rsSAUhx7qpIO10Q/dzJeMleJesccUSMiFx8FF+ruBA==
+
+object-treeify@1.1.30:
+  version "1.1.30"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.30.tgz#59559fefc53af923720ac257fd5ea6aef326d84d"
+  integrity sha512-BhsTZj8kbeCnyBKWuAgAakbGgrcVV/IJhUAGF25lOSwDZoHoDmnynUtXfyrrDn8A1Xy3G9k5uLP+V5onOOq3WA==
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -6496,6 +6511,23 @@ robo-config@3.10.3:
     object-scan "13.6.6"
     object-treeify "1.1.29"
     smart-fs "1.12.1"
+
+robo-config@3.10.4:
+  version "3.10.4"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.10.4.tgz#9117ab47ee8f9b92685d58d49a6b4d9dc26f5d5e"
+  integrity sha512-PZ84ZdksWemT0xE2AXhJtWNVECPPJDWNYokQ9yrrStq3ygcwhYQzvadyVjOHHkp9jIm27OY/s9B6LI+L6B2VeA==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.6"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    mustache "4.1.0"
+    object-deep-contain "1.0.28"
+    object-scan "13.6.7"
+    object-treeify "1.1.30"
+    smart-fs "1.12.2"
 
 run-async@^0.1.0:
   version "0.1.0"
