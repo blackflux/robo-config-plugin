@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "docker/#dynamo-testing"
+  ],
+  "description": "Manage AWS Lambda docker runner for project."
+}

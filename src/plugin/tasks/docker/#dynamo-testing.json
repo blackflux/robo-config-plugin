@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "dynamo-testing-docker",
+    "dynamo-testing-manage"
+  ],
+  "description": "Manage docker test configuration for npm package on github using elasticsearch."
+}
