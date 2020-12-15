@@ -1,0 +1,13 @@
+{
+  "target": "docker/Dockerfile",
+  "strategy": "overwrite",
+  "snippets": [
+    "dynamo-testing/Dockerfile"
+  ],
+  "requires": [
+    "docker"
+  ],
+  "purpose": [
+    "Docker environment definition for running tests in AWS Lambda container."
+  ]
+}
