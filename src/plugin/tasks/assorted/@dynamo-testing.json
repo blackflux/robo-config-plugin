@@ -2,5 +2,5 @@
   "tasks": [
     "docker/#dynamo-testing"
   ],
-  "description": "Manage AWS Lambda docker runner for project."
+  "description": "Manage AWS Lambda docker allowing to record dynamodb tests against dynamodb local."
 }
