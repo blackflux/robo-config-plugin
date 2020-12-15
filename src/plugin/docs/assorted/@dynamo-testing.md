@@ -5,7 +5,7 @@
 
 # :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assorteddynamo-testingjson">assorted/@dynamo-testing.json</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assorteddynamo-testingjson">`index`</a>)
 
-Manage AWS Lambda docker runner for project.
+Manage AWS Lambda docker to run tests against dynamodb local.
 
 <table>
   <tbody>
@@ -33,7 +33,7 @@ Manage AWS Lambda docker runner for project.
 
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dockerdynamo-testing">docker/#dynamo-testing</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockerdynamo-testing">`index`</a>)
 
-Manage docker test configuration for npm package on github using elasticsearch.
+Manage AWS Lambda docker to run tests against dynamodb local.
 
 <table>
   <tbody>
