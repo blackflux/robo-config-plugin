@@ -18,6 +18,7 @@ resources:
     QueueDeadLetterQueue:
       Type: AWS::SQS::Queue
       Properties:
+        FifoQueue: fifoQueue
         MessageRetentionPeriod: 1209600
 
   Outputs:
