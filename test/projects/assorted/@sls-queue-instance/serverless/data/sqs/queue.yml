@@ -4,6 +4,7 @@ resources:
       Type: AWS::SQS::Queue
       Properties:
         DelaySeconds: 0
+        FifoQueue: fifoQueue
         MaximumMessageSize: 262144
         MessageRetentionPeriod: 345600
         ReceiveMessageWaitTimeSeconds: 0

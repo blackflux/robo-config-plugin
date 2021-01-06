@@ -7,7 +7,8 @@
       "name": "serverless/sqs/data/${queue}.yml",
       "variables": {
         "queue": "${queue|TITLE}",
-        "queueVisibilityTimeout": "${queueTimeout}"
+        "queueVisibilityTimeout": "${queueTimeout}",
+        "fifoQueue": "${fifoQueue}"
       }
     }
   ],
