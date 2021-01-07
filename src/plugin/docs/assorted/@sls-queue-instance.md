@@ -51,6 +51,7 @@ Manages SQS instance cloud formation files.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
@@ -105,6 +106,7 @@ Manage serverless configuration for an sqs queue.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
@@ -224,6 +226,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueu
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a></li>
         </ul>
       </td>
@@ -382,6 +385,12 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 ### <a name="blackfluxrobo-config-plugin-var-ref-queue">queue</a>  : `string`
 
 *Name of Queue.*
+
+### <a name="blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a>  : `boolean`
+
+*Creates FIFO Queue.*
+
+If set to true then a FIFO queue is created. Otherwise a standard queue will be created.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-queuetimeout">queueTimeout</a>  : `integer`
 
