@@ -4,7 +4,9 @@ resources:
       Type: AWS::SQS::Queue
       Properties:
         DelaySeconds: 0
-        FifoQueue: ${fifoQueue}
+{{#fifoQueue}}
+        FifoQueue: true
+{{/fifoQueue}}
         MaximumMessageSize: 262144
         MessageRetentionPeriod: 345600
         ReceiveMessageWaitTimeSeconds: 0
@@ -15,10 +17,12 @@ resources:
               - ${queue|TITLE|STRIP}DeadLetterQueue
               - Arn
           maxReceiveCount: 10
-    ${queue|TITLE|STRIP}DeadLetterQueue:
-      Type: AWS::SQS::Queue
-      Properties:
-        FifoQueue: ${fifoQueue}
+      ${queue|TITLE|STRIP}DeadLetterQueue:
+        Type: AWS::SQS::Queue
+        Properties:
+{{#fifoQueue}}
+        FifoQueue: true
+{{/fifoQueue}}
         MessageRetentionPeriod: 1209600
 
   Outputs:

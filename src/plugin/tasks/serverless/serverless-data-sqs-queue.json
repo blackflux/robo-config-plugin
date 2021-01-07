@@ -4,7 +4,7 @@
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "serverless/sqs/data/${queue}.yml",
+      "name": "serverless/sqs/data/${queue}.yml.mustache",
       "variables": {
         "queue": "${queue|TITLE}",
         "queueVisibilityTimeout": "${queueTimeout}",
