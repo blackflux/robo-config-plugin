@@ -17,9 +17,9 @@ resources:
               - ${queue|TITLE|STRIP}DeadLetterQueue
               - Arn
           maxReceiveCount: 10
-      ${queue|TITLE|STRIP}DeadLetterQueue:
-        Type: AWS::SQS::Queue
-        Properties:
+    ${queue|TITLE|STRIP}DeadLetterQueue:
+      Type: AWS::SQS::Queue
+      Properties:
 {{#fifoQueue}}
         FifoQueue: true
 {{/fifoQueue}}

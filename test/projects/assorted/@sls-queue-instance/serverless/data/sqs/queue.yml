@@ -1,7 +1,7 @@
 resources:
   Resources:
     QueueQueue:
-      Type: 'AWS::SQS::Queue'
+      Type: AWS::SQS::Queue
       Properties:
         DelaySeconds: 0
         FifoQueue: true
@@ -11,34 +11,26 @@ resources:
         VisibilityTimeout: queueTimeout
         RedrivePolicy:
           deadLetterTargetArn:
-            'Fn::GetAtt':
+            Fn::GetAtt:
               - QueueDeadLetterQueue
               - Arn
           maxReceiveCount: 10
-      QueueDeadLetterQueue:
-        Type: 'AWS::SQS::Queue'
-        Properties: null
+    QueueDeadLetterQueue:
+      Type: AWS::SQS::Queue
+      Properties:
         FifoQueue: true
         MessageRetentionPeriod: 1209600
-    QueueDeadLetterQueue:
-      Type: 'AWS::SQS::Queue'
-      Properties:
-        FifoQueue: fifoQueue
-        MessageRetentionPeriod: 1209600
+
   Outputs:
     QueueQueueUrl:
       Value:
         Ref: QueueQueue
     QueueQueueArn:
       Value:
-        'Fn::GetAtt':
-          - QueueQueue
-          - Arn
+        Fn::GetAtt: [ 'QueueQueue' , Arn ]
     QueueDeadLetterQueueUrl:
       Value:
         Ref: QueueDeadLetterQueue
     QueueDeadLetterQueueArn:
       Value:
-        'Fn::GetAtt':
-          - QueueDeadLetterQueue
-          - Arn
+        Fn::GetAtt: [ 'QueueDeadLetterQueue' , Arn ]
