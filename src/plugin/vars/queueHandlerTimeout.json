@@ -1,0 +1,7 @@
+{
+  "description": "Queue Handler Timeout.",
+  "details": [
+    "Maximum duration that a consumer has to process a message."
+  ],
+  "type": "integer"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Queue Visibility Timeout.",
+  "details": [
+    "Maximum duration that a message is not visible to a consumer."
+  ],
+  "type": "integer"
+}
