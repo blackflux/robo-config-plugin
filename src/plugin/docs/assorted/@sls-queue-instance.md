@@ -398,7 +398,7 @@ If set to true then a FIFO queue is created. Otherwise a standard queue will be 
 
 *Queue Visibility Timeout.*
 
-Maximum duration that a message is not visible to a consumer.
+Maximum duration that a message is not visible to a queue handler.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a>  : `integer`
 
@@ -420,7 +420,7 @@ Restricts how many concurrent aws lambda processors for this queue can be spawne
 
 *Queue Handler Timeout.*
 
-Maximum duration that a consumer has to process a message.
+Maximum duration that a queue handler has to process a message.
 
 ------
 
