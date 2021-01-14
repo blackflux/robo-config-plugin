@@ -56,7 +56,7 @@ Manages SQS instance cloud formation files.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuehandlertimeout">queueHandlerTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a></li>
         </ul>
       </td>
     </tr>
@@ -112,7 +112,7 @@ Manage serverless configuration for an sqs queue.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuehandlertimeout">queueHandlerTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a></li>
         </ul>
       </td>
     </tr>
@@ -307,7 +307,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueue
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuehandlertimeout">queueHandlerTimeout</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a></li>
         </ul>
       </td>
     </tr>
@@ -398,7 +398,7 @@ If set to true then a FIFO queue is created. Otherwise a standard queue will be 
 
 *Queue Visibility Timeout.*
 
-Maximum duration that a message is not visible to a queue handler.
+The length of time during which a message will be unavailable after a message is delivered from the queue.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a>  : `integer`
 
@@ -416,11 +416,11 @@ Restricts how many concurrent aws lambda processors for this queue can be spawne
 
 *Memory Size of Queue Processor.*
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queuehandlertimeout">queueHandlerTimeout</a>  : `integer`
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a>  : `integer`
 
-*Queue Handler Timeout.*
+*Queue Processor Timeout.*
 
-Maximum duration that a queue handler has to process a message.
+The amount of time that the processor is allowed to run before being stopped.
 
 ------
 

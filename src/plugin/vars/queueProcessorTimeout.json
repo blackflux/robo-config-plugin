@@ -1,0 +1,7 @@
+{
+  "description": "Queue Processor Timeout.",
+  "details": [
+    "The amount of time that the processor is allowed to run before being stopped."
+  ],
+  "type": "integer"
+}

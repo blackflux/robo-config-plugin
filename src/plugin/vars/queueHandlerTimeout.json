@@ -1,7 +1,0 @@
-{
-  "description": "Queue Handler Timeout.",
-  "details": [
-    "Maximum duration that a queue handler has to process a message."
-  ],
-  "type": "integer"
-}

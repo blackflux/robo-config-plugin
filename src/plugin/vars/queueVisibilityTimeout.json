@@ -1,7 +1,7 @@
 {
   "description": "Queue Visibility Timeout.",
   "details": [
-    "Maximum duration that a message is not visible to a queue handler."
+    "The length of time during which a message will be unavailable after a message is delivered from the queue."
   ],
   "type": "integer"
 }
