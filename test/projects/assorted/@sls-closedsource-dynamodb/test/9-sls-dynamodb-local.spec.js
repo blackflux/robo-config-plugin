@@ -12,13 +12,17 @@ const normalize = (table) => objectScan([
 ], {
   reverse: false,
   filterFn: ({ property, value, context }) => {
-    if (property === 'TableName') {
-      // eslint-disable-next-line no-template-curly-in-string
-      context[property] = value.replace('${self:provider.stage}', 'local');
-    } else if (property === 'StreamSpecification') {
-      context[property] = { StreamEnabled: true, ...value };
-    } else {
-      context[property] = value;
+    switch (property) {
+      case 'TableName':
+        // eslint-disable-next-line no-template-curly-in-string
+        context[property] = value.replace('${self:provider.stage}', 'local');
+        break;
+      case 'StreamSpecification':
+        context[property] = { StreamEnabled: true, ...value };
+        break;
+      default:
+        context[property] = value;
+        break;
     }
   }
 })(table, {});
