@@ -8,7 +8,7 @@ resources:
         MaximumMessageSize: 262144
         MessageRetentionPeriod: 345600
         ReceiveMessageWaitTimeSeconds: 0
-        VisibilityTimeout: queueTimeout
+        VisibilityTimeout: queueVisibilityTimeout
         RedrivePolicy:
           deadLetterTargetArn:
             Fn::GetAtt:

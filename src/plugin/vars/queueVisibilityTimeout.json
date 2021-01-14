@@ -1,0 +1,7 @@
+{
+  "description": "Queue Visibility Timeout.",
+  "details": [
+    "The length of time during which a message will be unavailable after a message is delivered from the queue."
+  ],
+  "type": "integer"
+}
