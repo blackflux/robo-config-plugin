@@ -7,7 +7,7 @@
       "name": "serverless/sqs/data/${queue}.yml.mustache",
       "variables": {
         "queue": "${queue|TITLE}",
-        "queueVisibilityTimeout": "${queueTimeout}",
+        "queueVisibilityTimeout": "${queueVisibilityTimeout}",
         "fifoQueue": "${fifoQueue}"
       }
     }

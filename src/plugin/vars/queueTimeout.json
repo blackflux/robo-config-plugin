@@ -1,7 +1,0 @@
-{
-  "description": "Timeout of Queue.",
-  "details": [
-    "Maximum duration that a queue step can take to process"
-  ],
-  "type": "integer"
-}
