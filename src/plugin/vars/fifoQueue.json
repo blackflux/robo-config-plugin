@@ -1,0 +1,7 @@
+{
+  "description": "Creates FIFO Queue.",
+  "details": [
+    "If set to true then a FIFO queue is created. Otherwise a standard queue will be created."
+  ],
+  "type": "boolean"
+}

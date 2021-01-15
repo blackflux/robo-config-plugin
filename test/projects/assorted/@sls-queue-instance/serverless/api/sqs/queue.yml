@@ -16,7 +16,7 @@ functions:
     memorySize: queueProcessorMemorySize
     handler: lib/handler.queueProcessorQueueHandler
     reservedConcurrency: queueProcessorReservedConcurrency
-    timeout: queueTimeout
+    timeout: queueProcessorTimeout
     events:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
