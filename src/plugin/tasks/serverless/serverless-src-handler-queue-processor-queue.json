@@ -3,7 +3,12 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/sqs/${queue}.js"
+    {
+      "name": "serverless/sqs/${queue}.js",
+      "variables": {
+        "queue": "${queue|CAMEL}"
+      }
+    }
   ],
   "requires": [
     "serverless",
