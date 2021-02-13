@@ -3,6 +3,7 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-dynamodb-instance">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-dynamodb-instance">`assorted/@sls-dynamodb-instance`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessdynamodb">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessdynamodb">`serverless/#dynamodb`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-test-env-dynamodb">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-test-env-dynamodb">`serverless/serverless-test-env-dynamodb`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-src-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-src-dynamodb-dy">`serverless/serverless-src-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data-dynamodb-table">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data-dynamodb-table">`serverless/serverless-data-dynamodb-table`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data-dynamodb">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data-dynamodb">`serverless/serverless-data-dynamodb`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-dynamodb-table">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-dynamodb-table">`serverless/serverless-api-dynamodb-table`</a>
@@ -32,6 +33,9 @@ Manages Dynamodb instance cloud formation files.
 <code>│&nbsp;&nbsp;└─&nbsp;data</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatadynamodbtableyml">${table}.yml</a></code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">dy.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
         </ul>
@@ -40,6 +44,7 @@ Manages Dynamodb instance cloud formation files.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -77,6 +82,9 @@ Manage serverless configuration for a dynamodb table.
 <code>│&nbsp;&nbsp;└─&nbsp;data</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatadynamodbtableyml">${table}.yml</a></code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">dy.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
         </ul>
@@ -85,6 +93,7 @@ Manage serverless configuration for a dynamodb table.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -129,6 +138,36 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-table">table</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-src-dynamodb-dy">serverless/serverless-src-dynamodb-dy</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-src-dynamodb-dy">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/dynamodb/dy.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create aws-sdk-wrap dynamodb-tools function file to access defined models.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">dy.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
     </tr>
@@ -303,6 +342,13 @@ developed for building serverless applications.
 Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud 
 computing platforms to individuals, companies and governments, on a metered pay-as-you-go basis.
 
+### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
+
+*Programming Language.*
+
+JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
+It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+
 ------
 
 ## Variables
@@ -332,6 +378,16 @@ The project name is in most cases identical to the repository name.
 :small_blue_diamond: `other`
 
 *Configuration definitions for lambda-tdd test setup.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/dynamodb/dy.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>
+
+:small_blue_diamond: `other`
+
+*Dynamodb function to access defined models.*
+
+Dy tables initialization file.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatadynamodbtableyml">serverless/data/dynamodb/${table}.yml</a>  
 
@@ -384,4 +440,10 @@ Contains user defined api stack resource definitions.
 *Does a "smart" deep merge.*
 
 This will not work as desired for all object deep merging, but should for many cases.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
+
+:small_blue_diamond: `any`
+
+*Simply replace the old with the new content.*
 

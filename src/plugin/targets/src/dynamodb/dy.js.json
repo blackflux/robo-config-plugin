@@ -1,0 +1,7 @@
+{
+  "description": "Dynamodb function to access defined models.",
+  "details": ["Dy tables initialization file."],
+  "formats": ["other"],
+  "requires": ["aws"],
+  "website": null
+}
