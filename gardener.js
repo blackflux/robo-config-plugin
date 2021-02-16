@@ -2,5 +2,7 @@
 const gardener = require('js-gardener');
 
 if (require.main === module) {
-  gardener().catch(() => process.exit(1));
+  gardener({
+    skip: ['robo']
+  }).catch(() => process.exit(1));
 }
