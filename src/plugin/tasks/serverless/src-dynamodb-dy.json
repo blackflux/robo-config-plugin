@@ -1,0 +1,14 @@
+{
+  "target": "src/dynamodb/dy.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/src/dynamodb/dy.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create DynamoDB function for access of defined models."
+  ]
+}
