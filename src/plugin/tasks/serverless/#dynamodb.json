@@ -4,7 +4,6 @@
     "serverless-api-dynamodb-table",
     "serverless-data-dynamodb",
     "serverless-data-dynamodb-table",
-    "serverless-src-dynamodb-dy",
     "serverless-test-env-dynamodb"
   ],
   "description": "Manage serverless configuration for a dynamodb table."

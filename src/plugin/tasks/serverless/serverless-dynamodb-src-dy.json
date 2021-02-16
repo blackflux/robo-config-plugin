@@ -3,12 +3,12 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/dynamodb/dy.js"
+    "serverless-dynamodb/src/dy.js"
   ],
   "requires": [
     "javascript"
   ],
   "purpose": [
-    "Create aws-sdk-wrap dynamodb-tools function file to access defined models."
+    "Create DynamoDB function for access of defined models."
   ]
 }
