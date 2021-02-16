@@ -3,7 +3,7 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless-dynamodb/test/9-sls-dynamodb-local.spec.js"
+    "serverless/test/9-sls-dynamodb-local.spec.js"
   ],
   "requires": [
     "serverless",

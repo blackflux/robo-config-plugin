@@ -11,8 +11,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cfg">`serverless/test-sls-cfg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-dynamodb-dy">`serverless/src-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-wrapper">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-wrapper">`serverless/serverless-wrapper`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-dynamodb-serverless-src-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-dynamodb-serverless-src-dynamodb-dy">`serverless/serverless-dynamodb-serverless-src-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver">`serverless/serverless-base-resolver`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data-stack-hash">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data-stack-hash">`serverless/serverless-base-data-stack-hash`</a>
@@ -540,36 +540,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-wrapper">serverless/serverless-wrapper</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-wrapper">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
-
-- Dummy file to expose serverless definition.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-dynamodb-serverless-src-dynamodb-dy">serverless/serverless-dynamodb-serverless-src-dynamodb-dy</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-dynamodb-serverless-src-dynamodb-dy">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesssrc-dynamodb-dy">serverless/src-dynamodb-dy</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-dynamodb-dy">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/dynamodb/dy.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -593,6 +564,35 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-wrapper">serverless/serverless-wrapper</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-wrapper">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Dummy file to expose serverless definition.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
       </td>
     </tr>
@@ -1894,14 +1894,6 @@ Execute all configured js-gardener tasks.
 
 *Test for visualizing serverless cf stack definitions.*
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a>  
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
-
-:small_blue_diamond: `yml`
-
-*Dummy file for serverless cf stack definition access.*
-
 ### <a name="blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/dynamodb/dy.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>
@@ -1909,6 +1901,14 @@ Execute all configured js-gardener tasks.
 :small_blue_diamond: `other`
 
 *Wrapper to access defined DynamoDB models.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml">serverless.wrapper.yml</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
+
+:small_blue_diamond: `yml`
+
+*Dummy file for serverless cf stack definition access.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a>  
 
