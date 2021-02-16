@@ -14,7 +14,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-wrapper">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-wrapper">`serverless/serverless-wrapper`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-dynamodb-src-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-dynamodb-src-dy">`serverless/serverless-dynamodb-src-dy`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-dynamodb-serverless-src-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-dynamodb-serverless-src-dy">`serverless/serverless-dynamodb-serverless-src-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver">`serverless/serverless-base-resolver`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data-stack-hash">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data-stack-hash">`serverless/serverless-base-data-stack-hash`</a>
@@ -571,7 +571,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesswrapperyml"
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-dynamodb-src-dy">serverless/serverless-dynamodb-src-dy</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-dynamodb-src-dy">`index`</a>)
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-dynamodb-serverless-src-dy">serverless/serverless-dynamodb-serverless-src-dy</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-dynamodb-serverless-src-dy">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/dynamodb/dy.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 

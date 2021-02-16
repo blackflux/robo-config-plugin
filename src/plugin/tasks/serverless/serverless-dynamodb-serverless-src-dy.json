@@ -3,7 +3,7 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless-dynamodb/src/dy.js"
+    "serverless-dynamodb/src/dynamodb/dy.js"
   ],
   "requires": [
     "javascript"
