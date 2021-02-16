@@ -1,0 +1,7 @@
+{
+  "description": "Wrapper to access defined DynamoDB models.",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["aws"],
+  "website": null
+}
