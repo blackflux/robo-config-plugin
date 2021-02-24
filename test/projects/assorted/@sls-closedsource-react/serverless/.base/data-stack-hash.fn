@@ -10,7 +10,7 @@ module.exports = (args) => {
     return '--hash--';
   }
   return objectHash(yaml.load(
-    path.join(__dirname, 'data.yml'),
+    path.join(__dirname, 'resolver.yml'),
     { [identifier]: true, ...args, stack: 'data' }
   ));
 };
