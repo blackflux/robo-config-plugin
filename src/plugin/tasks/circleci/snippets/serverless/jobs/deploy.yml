@@ -3,7 +3,7 @@ docker:
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:
-      - run: yarn global add serverless@2.19.0
+      - run: yarn global add serverless@2.25.2
       - run: yarn run build-clean
       - run:
           command: sls deploy --config serverless/config.js --stack api --region ${awsRegion} --env ${opt:env} --force
