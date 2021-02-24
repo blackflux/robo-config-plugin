@@ -47,8 +47,8 @@
         "contexts": [
           "ci/circleci: deploy-local",
           "ci/circleci: deploy-dev",
-          "ci/circleci: test-node-v14",
-          "ci/circleci: test-node-v12.x"
+          "ci/circleci: test-node-v14.x",
+          "ci/circleci: test-node-v15"
         ]
       }
     },
@@ -57,8 +57,8 @@
       "required_status_checks": {
         "contexts": [
           "ci/circleci: deploy-stage",
-          "ci/circleci: test-node-v14",
-          "ci/circleci: test-node-v12.x"
+          "ci/circleci: test-node-v14.x",
+          "ci/circleci: test-node-v15"
         ]
       }
     },
@@ -66,8 +66,8 @@
       "required_status_checks": {
         "strict": false,
         "contexts": [
-          "ci/circleci: test-node-v14",
-          "ci/circleci: test-node-v12.x"
+          "ci/circleci: test-node-v14.x",
+          "ci/circleci: test-node-v15"
         ]
       },
       "enforce_admins": true,

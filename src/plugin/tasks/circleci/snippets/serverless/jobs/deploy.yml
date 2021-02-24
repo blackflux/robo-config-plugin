@@ -1,5 +1,5 @@
 docker:
-  - image: 'lambci/lambda:build-nodejs12.x'
+  - image: 'amazon/aws-sam-cli-build-image-nodejs14.x'
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:

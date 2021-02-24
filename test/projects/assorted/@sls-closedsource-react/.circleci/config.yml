@@ -3,18 +3,18 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v14:
+      - test-node-v14.x:
           requires:
             - gally
-      - test-node-v12.x:
+      - test-node-v15:
           requires:
             - gally
       - deploy-local:
           context: projectName-local
           requires:
             - gally
-            - test-node-v12.x
-            - test-node-v14
+            - test-node-v14.x
+            - test-node-v15
           filters:
             branches:
               only:
@@ -23,8 +23,8 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v12.x
-            - test-node-v14
+            - test-node-v14.x
+            - test-node-v15
             - deploy-local
           filters:
             branches:
@@ -34,8 +34,8 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v12.x
-            - test-node-v14
+            - test-node-v14.x
+            - test-node-v15
           filters:
             branches:
               only:
@@ -44,8 +44,8 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v12.x
-            - test-node-v14
+            - test-node-v14.x
+            - test-node-v15
           filters:
             branches:
               only:
@@ -54,90 +54,14 @@ version: 2
 jobs:
   gally:
     docker:
-      - image: 'circleci/node:12'
+      - image: 'circleci/node:14'
     steps:
       - checkout
       - run: sudo yarn global add gally
       - run: gally promote $CIRCLE_BRANCH
-  test-node-v12.x:
-    docker:
-      - image: 'lambci/lambda:build-nodejs12.x'
-    steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
-      - run: >-
-          echo 'export
-          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
-          >> $BASH_ENV
-      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
-      - checkout
-      - run:
-          command: |
-            # sync submodules as checkout doesn't do this automatically
-            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
-              git submodule sync && git submodule update --init
-            fi
-      - run:
-          command: |
-            if [[ -n "${NPM_TOKEN}" ]]; then
-              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-            fi
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
-      - run:
-          name: Install Dependencies
-          command: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
-          paths:
-            - ~/.cache/yarn
-      - run: yarn test
-      - run: >-
-          (git add . && git diff-index --quiet HEAD --) || (git status && exit
-          1);
-  test-node-v14:
-    docker:
-      - image: 'circleci/node:14'
-    steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
-      - run: >-
-          echo 'export
-          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
-          >> $BASH_ENV
-      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
-      - checkout
-      - run:
-          command: |
-            # sync submodules as checkout doesn't do this automatically
-            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
-              git submodule sync && git submodule update --init
-            fi
-      - run:
-          command: |
-            if [[ -n "${NPM_TOKEN}" ]]; then
-              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-            fi
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
-      - run:
-          name: Install Dependencies
-          command: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
-          paths:
-            - ~/.cache/yarn
-      - run: yarn test
-      - run: >-
-          (git add . && git diff-index --quiet HEAD --) || (git status && exit
-          1);
   deploy-local:
     docker:
-      - image: 'lambci/lambda:build-nodejs12.x'
+      - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -178,7 +102,7 @@ jobs:
           no_output_timeout: 10m
   deploy-dev:
     docker:
-      - image: 'lambci/lambda:build-nodejs12.x'
+      - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -219,7 +143,7 @@ jobs:
           no_output_timeout: 10m
   deploy-stage:
     docker:
-      - image: 'lambci/lambda:build-nodejs12.x'
+      - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -260,7 +184,7 @@ jobs:
           no_output_timeout: 10m
   deploy-prod:
     docker:
-      - image: 'lambci/lambda:build-nodejs12.x'
+      - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
       - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
       - run: >-
@@ -299,3 +223,79 @@ jobs:
             sls deploy --config serverless/config.js --stack api --region
             awsRegion --env prod --force
           no_output_timeout: 10m
+  test-node-v14.x:
+    docker:
+      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
+      - run: yarn test
+      - run: >-
+          (git add . && git diff-index --quiet HEAD --) || (git status && exit
+          1);
+  test-node-v15:
+    docker:
+      - image: 'circleci/node:15'
+    steps:
+      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          paths:
+            - ~/.cache/yarn
+      - run: yarn test
+      - run: >-
+          (git add . && git diff-index --quiet HEAD --) || (git status && exit
+          1);
