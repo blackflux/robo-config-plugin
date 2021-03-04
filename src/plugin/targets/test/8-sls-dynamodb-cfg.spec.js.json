@@ -1,0 +1,7 @@
+{
+  "description": "Test for generating serverless dynamodb configuration.",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["serverless"],
+  "website": null
+}

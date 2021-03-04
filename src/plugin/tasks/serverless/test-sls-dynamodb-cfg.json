@@ -1,0 +1,15 @@
+{
+  "target": "test/8-sls-dynamodb-cfg.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/test/8-sls-dynamodb-cfg.spec.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Test for generating serverless dynamodb configuration."
+  ]
+}
