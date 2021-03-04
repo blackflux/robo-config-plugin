@@ -8,8 +8,20 @@
       "name": "gally-create-staging-pr",
       "variables": {
         "jobName": "gally-create-pr",
-        "dockerImage": "circleci/node:12",
+        "dockerImage": "circleci/node:14",
         "ciEnvBranchName": "$CIRCLE_BRANCH"
+      }
+    },
+    {
+      "name": "run-yarn-tests",
+      "variables": {
+        "jobName": "test-node-v15",
+        "dockerImage": "circleci/node:15",
+        "jobOptions": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
       }
     },
     {
@@ -37,28 +49,16 @@
       }
     },
     {
-      "name": "run-yarn-tests",
-      "variables": {
-        "jobName": "test-node-v10",
-        "dockerImage": "circleci/node:10",
-        "jobOptions": {
-          "requires": [
-            "gally-create-pr"
-          ]
-        }
-      }
-    },
-    {
       "name": "dependabot-auto-approve",
       "variables": {
         "jobName": "gally-auto-approve",
-        "dockerImage": "circleci/node:12",
+        "dockerImage": "circleci/node:14",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
+            "test-node-v15",
             "test-node-v14",
-            "test-node-v12",
-            "test-node-v10"
+            "test-node-v12"
           ],
           "filters": {
             "branches": {
@@ -72,13 +72,13 @@
       "name": "semantic-release",
       "variables": {
         "jobName": "release",
-        "dockerImage": "circleci/node:12",
+        "dockerImage": "circleci/node:14",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
+            "test-node-v15",
             "test-node-v14",
-            "test-node-v12",
-            "test-node-v10"
+            "test-node-v12"
           ],
           "filters": {
             "branches": {
