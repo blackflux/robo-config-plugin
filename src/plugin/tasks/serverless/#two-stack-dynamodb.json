@@ -6,6 +6,7 @@
     "test-sls-cf-stack-routes",
     "test-sls-cfg",
     "test-sls-dynamodb-local",
+    "test-sls-dynamodb-cfg",
     "serverless-base-resolver",
     "serverless-base-api",
     "serverless-base-data",

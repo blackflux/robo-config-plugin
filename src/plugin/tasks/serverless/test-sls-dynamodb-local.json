@@ -10,6 +10,6 @@
     "aws"
   ],
   "purpose": [
-    "Test for generating script for DynamoDB table(s) creation.."
+    "Test for generating script for DynamoDB table(s) creation."
   ]
 }
