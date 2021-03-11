@@ -20,6 +20,7 @@ LambdaTdd({
   verbose: minimist(process.argv.slice(2)).verbose === true,
   timeout: minimist(process.argv.slice(2)).timeout,
   nockHeal: minimist(process.argv.slice(2))['nock-heal'],
+  testHeal: minimist(process.argv.slice(2))['test-heal'],
   enabled: true,
   handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
   cassetteFolder: path.join(__dirname, 'handler', '__cassettes'),
