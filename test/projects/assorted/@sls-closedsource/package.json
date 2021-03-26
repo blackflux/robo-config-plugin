@@ -22,7 +22,8 @@
     "eslint-plugin-mocha": "6.0.0",
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0",
-    "babel-preset-latest-node": "4.1.0"
+    "babel-preset-latest-node": "4.1.0",
+    "@babel/cli": "7.13.10"
   },
   "engines": {
     "node": ">= nodeVersion"
