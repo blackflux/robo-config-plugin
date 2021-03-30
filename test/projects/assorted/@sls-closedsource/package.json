@@ -36,6 +36,7 @@
       "node_modules/*",
       "coverage/*",
       "lib/*",
+      "serverless.config.js",
       "serverless/config.js"
     ],
     "all": true,

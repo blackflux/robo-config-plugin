@@ -1,9 +1,9 @@
 {
-  "target": "serverless/config.js",
+  "target": "serverless.config.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/config.js"
+    "serverless.config.js"
   ],
   "requires": [
     "serverless",
