@@ -13,7 +13,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   let definedRoutes;
   before(() => {
     const loadStack = (stack) => yaml.load(
-      path.join(__dirname, '..', 'serverless.wrapper.yml'),
+      path.join(__dirname, '..', 'serverless/.base/resolver.yml'),
       {
         stack,
         region: 'us-west-2',

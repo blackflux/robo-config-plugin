@@ -32,7 +32,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
   let tables;
   before(() => {
     dataStack = yaml.load(
-      path.join(__dirname, '..', 'serverless.wrapper.yml'),
+      path.join(__dirname, '..', 'serverless/.base/resolver.yml'),
       {
         stack: 'data',
         region: process.env.AWS_REGION,
