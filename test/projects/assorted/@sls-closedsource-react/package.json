@@ -35,7 +35,7 @@
       "node_modules/*",
       "coverage/*",
       "lib/*",
-      "serverless/config.js"
+      "serverless.config.js"
     ],
     "tempDir": "./coverage/.nyc_output",
     "report-dir": "./coverage",
@@ -74,7 +74,7 @@
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
     "gardener": "node gardener",
-    "start-offline": "yarn run build-clean && sls offline start --config serverless/config.js --stack=api-offline --region=awsRegion --env=offline"
+    "start-offline": "yarn run build-clean && sls offline start --config serverless.config.js --stack=api-offline --region=awsRegion --env=offline"
   },
   "files": [],
   "homepage": "https://github.com/repoKey#readme",

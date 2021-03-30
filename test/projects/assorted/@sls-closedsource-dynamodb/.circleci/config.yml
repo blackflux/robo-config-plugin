@@ -54,7 +54,7 @@ version: 2
 jobs:
   gally:
     docker:
-      - image: 'circleci/node:14'
+      - image: circleci/node:14
     steps:
       - checkout
       - run: sudo yarn global add gally
@@ -63,7 +63,7 @@ jobs:
     docker:
       - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: >-
           echo 'export
           PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
@@ -84,27 +84,27 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.25.2
       - run: yarn run build-clean
       - run:
           command: >-
-            sls deploy --config serverless/config.js --stack api --region
+            sls deploy --config serverless.config.js --stack api --region
             awsRegion --env local --force
           no_output_timeout: 10m
   deploy-dev:
     docker:
       - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: >-
           echo 'export
           PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
@@ -125,27 +125,27 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.25.2
       - run: yarn run build-clean
       - run:
           command: >-
-            sls deploy --config serverless/config.js --stack api --region
+            sls deploy --config serverless.config.js --stack api --region
             awsRegion --env dev --force
           no_output_timeout: 10m
   deploy-stage:
     docker:
       - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: >-
           echo 'export
           PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
@@ -166,27 +166,27 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.25.2
       - run: yarn run build-clean
       - run:
           command: >-
-            sls deploy --config serverless/config.js --stack api --region
+            sls deploy --config serverless.config.js --stack api --region
             awsRegion --env stage --force
           no_output_timeout: 10m
   deploy-prod:
     docker:
       - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: >-
           echo 'export
           PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
@@ -207,27 +207,27 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.25.2
       - run: yarn run build-clean
       - run:
           command: >-
-            sls deploy --config serverless/config.js --stack api --region
+            sls deploy --config serverless.config.js --stack api --region
             awsRegion --env prod --force
           no_output_timeout: 10m
   test-node-v14.x:
     docker:
       - image: amazon/aws-sam-cli-build-image-nodejs14.x
     steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: >-
           echo 'export
           PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
@@ -248,13 +248,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn test
@@ -263,9 +263,9 @@ jobs:
           1);
   test-node-v15:
     docker:
-      - image: 'circleci/node:15'
+      - image: circleci/node:15
     steps:
-      - run: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: >-
           echo 'export
           PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
@@ -286,13 +286,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn test
