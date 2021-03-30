@@ -32,7 +32,8 @@
       "gardener.js",
       "node_modules/*",
       "coverage/*",
-      "lib/*"
+      "lib/*",
+      "serverless.config.js"
     ],
     "tempDir": "./coverage/.nyc_output",
     "report-dir": "./coverage",

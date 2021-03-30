@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "dynamodb-admin": "4.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "serverless.config.js"
+    ]
   }
 }
