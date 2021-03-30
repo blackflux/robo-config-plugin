@@ -35,8 +35,7 @@
       "node_modules/*",
       "coverage/*",
       "lib/*",
-      "serverless.config.js",
-      "serverless/config.js"
+      "serverless.config.js"
     ],
     "tempDir": "./coverage/.nyc_output",
     "report-dir": "./coverage",
