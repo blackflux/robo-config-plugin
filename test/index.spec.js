@@ -19,6 +19,7 @@ describe('Testing Plugin', () => {
       'assorted/@sls-closedsource': [],
       'assorted/@sls-closedsource-dynamodb': [],
       'assorted/@sls-closedsource-react': [],
+      'assorted/@sls-cron-instance': [],
       'assorted/@sls-dynamodb-instance': [],
       'assorted/@sls-queue': [],
       'assorted/@sls-queue-instance': [],

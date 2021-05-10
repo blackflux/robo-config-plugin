@@ -1,0 +1,23 @@
+{
+  "target": "serverless/api/crons/${cron}.yml",
+  "format": "yml",
+  "strategy": "merge-deep",
+  "snippets": [
+    {
+      "name": "serverless/crons/api/${cron}.yml",
+      "variables": {
+        "cron": "${cron|TITLE}",
+        "cronMemorySize": "${cronMemorySize}",
+        "cronTimeout": "${cronTimeout}",
+        "cronRate": "${cronRate}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api cron definition."
+  ]
+}

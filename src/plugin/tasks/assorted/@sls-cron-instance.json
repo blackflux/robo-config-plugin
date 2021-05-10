@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#cron"
+  ],
+  "description": "Manages cron instance cloud formation files."
+}
