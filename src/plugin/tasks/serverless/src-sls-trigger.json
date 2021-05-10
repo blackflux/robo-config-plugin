@@ -1,0 +1,14 @@
+{
+  "target": "src/handler/triggers/${trigger}.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/src/triggers/${trigger}.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create serverless file that is executed for trigger."
+  ]
+}

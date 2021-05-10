@@ -1,7 +1,8 @@
 {
   "tasks": [
     "serverless-api-triggers",
-    "serverless-api-triggers-trigger"
+    "serverless-api-triggers-trigger",
+    "src-sls-trigger"
   ],
   "description": "Manage serverless configuration for a serverless api trigger."
 }

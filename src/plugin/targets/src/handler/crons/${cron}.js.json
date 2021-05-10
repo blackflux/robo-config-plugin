@@ -1,0 +1,7 @@
+{
+  "description": "Cron processor handler.",
+  "details": ["Contains cron processor handler declaration."],
+  "formats": ["other"],
+  "requires": ["javascript", "serverless"],
+  "website": null
+}

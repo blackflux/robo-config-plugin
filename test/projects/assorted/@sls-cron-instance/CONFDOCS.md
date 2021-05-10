@@ -2,6 +2,7 @@
 
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-cron-instance">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-cron-instance">`assorted/@sls-cron-instance`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesscron">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesscron">`serverless/#cron`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-sls-cron">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-sls-cron">`serverless/src-sls-cron`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-crons-cron">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-crons-cron">`serverless/serverless-api-crons-cron`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-crons">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-crons">`serverless/serverless-api-crons`</a>
 
@@ -20,15 +21,20 @@ Manages cron instance cloud formation files.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>├─&nbsp;serverless</code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;crons</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapicronscronyml">${cron}.yml</a></code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;crons</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapicronscronyml">${cron}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlercronscronjs">${cron}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
@@ -60,15 +66,20 @@ Manage serverless configuration for a serverless api cron.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>├─&nbsp;serverless</code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;crons</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapicronscronyml">${cron}.yml</a></code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;crons</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapicronscronyml">${cron}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlercronscronjs">${cron}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
@@ -79,6 +90,43 @@ Manage serverless configuration for a serverless api cron.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-cronrate">cronRate</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-crontimeout">cronTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-cronmemorysize">cronMemorySize</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesssrc-sls-cron">serverless/src-sls-cron</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-sls-cron">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchandlercronscronjs">src/handler/crons/${cron}.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create serverless file that is executed for cron.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;crons</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlercronscronjs">${cron}.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-cron">cron</a></li>
         </ul>
       </td>
     </tr>
@@ -166,6 +214,13 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 
 ## Requires
 
+### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
+
+*Programming Language.*
+
+JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
+It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
 
 *Serverless Framework.*
@@ -206,6 +261,16 @@ As [defined](https://www.serverless.com/examples/aws-node-scheduled-cron) by ser
 
 ## Targets
 
+### <a name="blackfluxrobo-config-plugin-target-ref-srchandlercronscronjs">src/handler/crons/${cron}.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>, <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
+
+:small_blue_diamond: `other`
+
+*Cron processor handler.*
+
+Contains cron processor handler declaration.
+
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapicronscronyml">serverless/api/crons/${cron}.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
@@ -229,6 +294,12 @@ Contains user defined api stack resource definitions.
 ------
 
 ## Strategies
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>  
+
+:small_blue_diamond: `any`
+
+*Does nothing when the file is already present, otherwise creates it.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
 
