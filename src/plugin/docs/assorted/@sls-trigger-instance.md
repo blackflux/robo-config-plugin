@@ -1,5 +1,6 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-trigger-instancejson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-trigger-instancejson">`assorted/@sls-trigger-instance.json`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstrigger">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstrigger">`serverless/#trigger`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-sls-trigger">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-sls-trigger">`serverless/src-sls-trigger`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-triggers-trigger">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-triggers-trigger">`serverless/serverless-api-triggers-trigger`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-triggers">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-triggers">`serverless/serverless-api-triggers`</a>
 
@@ -18,15 +19,20 @@ Manages trigger instance cloud formation files.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>├─&nbsp;serverless</code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;triggers</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapitriggerstriggeryml">${trigger}.yml</a></code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;triggers</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapitriggerstriggeryml">${trigger}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlertriggerstriggerjs">${trigger}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
@@ -57,15 +63,20 @@ Manage serverless configuration for a serverless api trigger.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>├─&nbsp;serverless</code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;triggers</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapitriggerstriggeryml">${trigger}.yml</a></code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;triggers</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapitriggerstriggeryml">${trigger}.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlertriggerstriggerjs">${trigger}.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
@@ -75,6 +86,43 @@ Manage serverless configuration for a serverless api trigger.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-trigger">trigger</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-triggertimeout">triggerTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-triggermemorysize">triggerMemorySize</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesssrc-sls-trigger">serverless/src-sls-trigger</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-sls-trigger">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchandlertriggerstriggerjs">src/handler/triggers/${trigger}.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create serverless file that is executed for trigger.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;handler</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;triggers</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlertriggerstriggerjs">${trigger}.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-trigger">trigger</a></li>
         </ul>
       </td>
     </tr>
@@ -161,6 +209,13 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 
 ## Requires
 
+### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
+
+*Programming Language.*
+
+JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
+It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
 
 *Serverless Framework.*
@@ -195,6 +250,16 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 ## Targets
 
+### <a name="blackfluxrobo-config-plugin-target-ref-srchandlertriggerstriggerjs">src/handler/triggers/${trigger}.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>, <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
+
+:small_blue_diamond: `other`
+
+*Trigger processor handler.*
+
+Contains trigger processor handler declaration.
+
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapitriggerstriggeryml">serverless/api/triggers/${trigger}.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
@@ -218,6 +283,12 @@ Contains user defined api stack resource definitions.
 ------
 
 ## Strategies
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>  
+
+:small_blue_diamond: `any`
+
+*Does nothing when the file is already present, otherwise creates it.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
 

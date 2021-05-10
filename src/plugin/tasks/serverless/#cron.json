@@ -1,7 +1,8 @@
 {
   "tasks": [
     "serverless-api-crons",
-    "serverless-api-crons-cron"
+    "serverless-api-crons-cron",
+    "src-sls-cron"
   ],
   "description": "Manage serverless configuration for a serverless api cron."
 }
