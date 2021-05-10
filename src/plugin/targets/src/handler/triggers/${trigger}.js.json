@@ -1,0 +1,7 @@
+{
+  "description": "Trigger processor handler.",
+  "details": ["Contains trigger processor handler declaration."],
+  "formats": ["other"],
+  "requires": ["javascript", "serverless"],
+  "website": null
+}

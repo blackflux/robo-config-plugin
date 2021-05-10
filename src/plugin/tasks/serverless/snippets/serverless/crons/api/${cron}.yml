@@ -1,0 +1,9 @@
+functions:
+  crons${cron|TITLE|STRIP}Fn:
+    handler: lib/handler.crons${cron|TITLE|STRIP}Fn
+    memorySize: ${cronMemorySize}
+    timeout: ${cronTimeout}
+    events:
+      - schedule:
+          name: ${opt:service}-api-${self:provider.stage}-${cron|LOWER|KEBAB}
+          rate: ${cronRate}
