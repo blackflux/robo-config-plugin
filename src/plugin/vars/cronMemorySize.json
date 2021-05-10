@@ -1,0 +1,5 @@
+{
+  "description": "Cron allocated memory size.",
+  "details": [],
+  "type": "integer"
+}

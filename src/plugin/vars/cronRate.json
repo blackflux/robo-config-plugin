@@ -1,0 +1,7 @@
+{
+  "description": "Cron rate.",
+  "details": [
+    "As [defined](https://www.serverless.com/examples/aws-node-scheduled-cron) by serverless framework"
+  ],
+  "type": "string"
+}
