@@ -15,6 +15,9 @@ resources:
               - QueueDeadLetterQueue
               - Arn
           maxReceiveCount: 10
+        Tags:
+          service: ${cf:${self:service}-${self:provider.stage}}
+          resource: ${cf:Queue-${self:provider.stage}}
     QueueDeadLetterQueue:
       Type: AWS::SQS::Queue
       Properties:
