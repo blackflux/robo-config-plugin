@@ -4,7 +4,7 @@ const objectScan = require('object-scan');
 const { describe } = require('node-tdd');
 const expect = require('chai').expect;
 
-const tagNames = ['service', 'resource'];
+const tagNames = ['service', 'stage', 'resource'];
 
 const resourceTypes = [
   'AWS::Lambda::Function',
