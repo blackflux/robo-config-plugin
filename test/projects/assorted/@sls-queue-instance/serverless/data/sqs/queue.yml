@@ -28,6 +28,7 @@ resources:
           service: ${self:service}
           stage: ${self.provider.stage}
           resource: QueueDeadLetterQueue
+
   Outputs:
     QueueQueueUrl:
       Value:
