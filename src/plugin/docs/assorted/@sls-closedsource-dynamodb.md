@@ -7,6 +7,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-bug-report">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-bug-report">`struct/github-bug-report`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">`struct/force-gardener-dockerized`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstwo-stack-dynamodb">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstwo-stack-dynamodb">`serverless/#two-stack-dynamodb`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-tags">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-tags">`serverless/test-sls-tags`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-dynamodb-local">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-dynamodb-local">`serverless/test-sls-dynamodb-local`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-dynamodb-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-dynamodb-cfg">`serverless/test-sls-dynamodb-cfg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cfg">`serverless/test-sls-cfg`</a>
@@ -96,6 +97,7 @@ Manage various configuration files for serverless project with the option of run
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">7-sls-tags.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test8-sls-dynamodb-cfgspecjs">8-sls-dynamodb-cfg.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
@@ -398,6 +400,7 @@ Manage serverless configuration for deployment to AWS.
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">7-sls-tags.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test8-sls-dynamodb-cfgspecjs">8-sls-dynamodb-cfg.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
@@ -414,6 +417,36 @@ Manage serverless configuration for deployment to AWS.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-tags">serverless/test-sls-tags</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-tags">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">test/7-sls-tags.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Test to check resources tags are defined.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">7-sls-tags.spec.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
         </ul>
       </td>
     </tr>
@@ -1861,6 +1894,14 @@ Template for Github Bug Report
 *Runner for js-gardener.*
 
 Execute all configured js-gardener tasks.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">test/7-sls-tags.spec.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
+
+:small_blue_diamond: `other`
+
+*Test for resource tagging.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">test/9-sls-dynamodb-local.spec.js</a>  
 
