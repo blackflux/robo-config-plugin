@@ -10,6 +10,7 @@ provider:
       Resource:
         - ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
         - ${cf:${opt:service}-data-${self:provider.stage}.QueueDeadLetterQueueArn}
+
 functions:
   queueProcessorQueueHandler:
     memorySize: queueProcessorMemorySize
