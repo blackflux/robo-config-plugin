@@ -28,6 +28,10 @@ resources:
         FifoQueue: true
 {{/fifoQueue}}
         MessageRetentionPeriod: 1209600
+        Tags:
+          service: ${self:service}
+          stage: ${self.provider.stage}
+          resource: ${queue|TITLE|STRIP}DeadLetterQueue
 
   Outputs:
     ${queue|TITLE|STRIP}QueueUrl:
