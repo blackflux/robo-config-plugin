@@ -7,6 +7,7 @@ resources:
           service: ${self:service}
           stage: ${self.provider.stage}
           resource: BucketS3Bucket
+
   Outputs:
     BucketS3BucketName:
       Value:

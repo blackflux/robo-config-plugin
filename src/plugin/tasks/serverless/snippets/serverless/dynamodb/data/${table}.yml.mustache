@@ -15,6 +15,7 @@ resources:
           service: ${self:service}
           stage: ${self.provider.stage}
           resource: Dynamo${table|TITLE|STRIP}Table
+
   Outputs:
     Dynamo${table|TITLE|STRIP}TableArn:
       Value:
