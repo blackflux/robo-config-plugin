@@ -17,27 +17,24 @@ resources:
           maxReceiveCount: 10
         Tags:
           service: ${self:service}
-          resource: queueProcessorQueueHandler
-          env: ${self.provider.stage}
+          resource: QueueQueue
+          stage: ${self.provider.stage}
     QueueDeadLetterQueue:
       Type: AWS::SQS::Queue
       Properties:
         FifoQueue: true
         MessageRetentionPeriod: 1209600
+
   Outputs:
     QueueQueueUrl:
       Value:
         Ref: QueueQueue
     QueueQueueArn:
       Value:
-        Fn::GetAtt:
-          - QueueQueue
-          - Arn
+        Fn::GetAtt: [ 'QueueQueue' , Arn ]
     QueueDeadLetterQueueUrl:
       Value:
         Ref: QueueDeadLetterQueue
     QueueDeadLetterQueueArn:
       Value:
-        Fn::GetAtt:
-          - QueueDeadLetterQueue
-          - Arn
+        Fn::GetAtt: [ 'QueueDeadLetterQueue' , Arn ]

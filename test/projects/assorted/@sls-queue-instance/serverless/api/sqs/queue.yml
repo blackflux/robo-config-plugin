@@ -1,6 +1,7 @@
 provider:
   environment:
     QUEUE_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueUrl}
+
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -8,8 +9,7 @@ provider:
         - sqs:GetQueueAttributes
       Resource:
         - ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
-        - >-
-          ${cf:${opt:service}-data-${self:provider.stage}.QueueDeadLetterQueueArn}
+        - ${cf:${opt:service}-data-${self:provider.stage}.QueueDeadLetterQueueArn}
 functions:
   queueProcessorQueueHandler:
     memorySize: queueProcessorMemorySize
@@ -19,7 +19,7 @@ functions:
     tags:
       service: ${self:service}
       resource: queueProcessorQueueHandler
-      env: ${self.provider.stage}
+      stage: ${self.provider.stage}
     events:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}

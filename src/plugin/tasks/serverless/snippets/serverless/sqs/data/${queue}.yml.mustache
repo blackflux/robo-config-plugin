@@ -19,8 +19,8 @@ resources:
           maxReceiveCount: 10
         Tags:
           service: ${self:service}
-          env: ${self.provider.stage}
-          resource: queueProcessor${queue|TITLE|STRIP}Handler
+          stage: ${self.provider.stage}
+          resource: ${queue|TITLE|STRIP}Queue
     ${queue|TITLE|STRIP}DeadLetterQueue:
       Type: AWS::SQS::Queue
       Properties:
