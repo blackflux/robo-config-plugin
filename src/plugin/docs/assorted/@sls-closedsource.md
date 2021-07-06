@@ -411,7 +411,7 @@ Manage serverless configuration for deployment to AWS.
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">test/7-sls-tags.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Test to check resources tags are defined.
+- Test to enforce resources tagging.
 
 <table>
   <tbody>
@@ -1768,7 +1768,7 @@ Execute all configured js-gardener tasks.
 
 :small_blue_diamond: `other`
 
-*Test for resource tagging.*
+*Test to enforce resource tagging.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">test/5-sls-cfg.spec.js</a>  
 

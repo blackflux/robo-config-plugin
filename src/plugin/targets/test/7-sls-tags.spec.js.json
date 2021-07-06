@@ -1,5 +1,5 @@
 {
-  "description": "Test for resource tagging.",
+  "description": "Test to enforce resource tagging.",
   "details": [],
   "formats": ["other"],
   "requires": ["serverless"],
