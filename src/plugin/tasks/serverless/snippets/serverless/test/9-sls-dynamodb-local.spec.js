@@ -8,7 +8,8 @@ const expect = require('chai').expect;
 const normalize = (table) => objectScan([
   '*',
   '!PointInTimeRecoverySpecification',
-  '!TimeToLiveSpecification'
+  '!TimeToLiveSpecification',
+  '!Tags'
 ], {
   reverse: false,
   filterFn: ({ property, value, context }) => {
