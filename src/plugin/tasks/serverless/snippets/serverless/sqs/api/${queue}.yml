@@ -19,7 +19,7 @@ functions:
     timeout: ${queueProcessorTimeout}
     tags:
       service: ${self:service}
-      stage: ${self.provider.stage}
+      stage: ${self:provider.stage}
       resource: queueProcessor${queue|TITLE|STRIP}Handler
     events:
       - sqs:

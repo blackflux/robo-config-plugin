@@ -17,5 +17,5 @@ functions:
     timeout: triggerTimeout
     tags:
       service: ${self:service}
-      stage: ${self.provider.stage}
+      stage: ${self:provider.stage}
       resource: triggersTriggerFn
