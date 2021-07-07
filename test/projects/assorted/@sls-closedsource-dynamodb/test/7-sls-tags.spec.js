@@ -16,9 +16,14 @@ const resourceTypes = [
   'AWS::CloudFront::Distribution'
 ];
 
-const hasTags = (tags) => tags instanceof Object
-  && !Array.isArray(tags)
-  && tagNames.every((t) => t in tags);
+const hasTags = (tagsRaw) => {
+  const tags = Array.isArray(tagsRaw)
+    ? Object.fromEntries(tagsRaw.map(({ Key, Value }) => [Key, Value]))
+    : tagsRaw;
+  return tags instanceof Object
+    && !Array.isArray(tags)
+    && tagNames.every((t) => t in tags);
+};
 
 const logic = {
   'functions.*': ({ value }) => !hasTags(value.tags),
