@@ -12,10 +12,12 @@ resources:
           StreamViewType: NEW_AND_OLD_IMAGES
 {{/tableStreamEnabled}}
         Tags:
-          service: ${self:service}
-          stage: ${self.provider.stage}
-          resource: Dynamo${table|TITLE|STRIP}Table
-
+          - Key: service
+            Value: ${self:service}
+          - Key: stage
+            Value: ${self.provider.stage}
+          - Key: resource
+            Value: Dynamo${table|TITLE|STRIP}Table
   Outputs:
     Dynamo${table|TITLE|STRIP}TableArn:
       Value:
