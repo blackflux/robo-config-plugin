@@ -17,10 +17,12 @@ const resourceTypes = [
 ];
 
 const hasTags = (tagsRaw) => {
-  const tags = tagsRaw instanceof Object && !Array.isArray(tagsRaw)
-    ? tagsRaw
-    : Object.fromEntries(tagsRaw.map(({ Key, Value }) => [Key, Value]));
-  return tagNames.every((t) => t in tags);
+  const tags = Array.isArray(tagsRaw)
+    ? Object.fromEntries(tagsRaw.map(({ Key, Value }) => [Key, Value]))
+    : tagsRaw;
+  return tags instanceof Object
+    && !Array.isArray(tags)
+    && tagNames.every((t) => t in tags);
 };
 
 const logic = {
