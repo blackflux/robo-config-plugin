@@ -18,9 +18,12 @@ resources:
               - Arn
           maxReceiveCount: 10
         Tags:
-          service: ${self:service}
-          stage: ${self.provider.stage}
-          resource: ${queue|TITLE|STRIP}Queue
+          - Key: service
+            Value: ${self:service}
+          - Key: stage
+            Value: ${self.provider.stage}
+          - Key: resource
+            Value: ${queue|TITLE|STRIP}Queue
     ${queue|TITLE|STRIP}DeadLetterQueue:
       Type: AWS::SQS::Queue
       Properties:
@@ -29,9 +32,12 @@ resources:
 {{/fifoQueue}}
         MessageRetentionPeriod: 1209600
         Tags:
-          service: ${self:service}
-          stage: ${self.provider.stage}
-          resource: ${queue|TITLE|STRIP}DeadLetterQueue
+          - Key: service
+            Value: ${self:service}
+          - Key: stage
+            Value: ${self.provider.stage}
+          - Key: resource
+            Value: ${queue|TITLE|STRIP}DeadLetterQueue
 
   Outputs:
     ${queue|TITLE|STRIP}QueueUrl:

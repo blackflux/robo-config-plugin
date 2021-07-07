@@ -10,9 +10,12 @@ resources:
         StreamSpecification:
           StreamViewType: NEW_AND_OLD_IMAGES
         Tags:
-          service: ${self:service}
-          stage: ${self.provider.stage}
-          resource: DynamoTableTable
+          - Key: service
+            Value: ${self:service}
+          - Key: stage
+            Value: ${self.provider.stage}
+          - Key: resource
+            Value: DynamoTableTable
   Outputs:
     DynamoTableTableName:
       Value:
