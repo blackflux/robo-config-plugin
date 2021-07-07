@@ -19,7 +19,7 @@ resources:
           - Key: service
             Value: ${self:service}
           - Key: stage
-            Value: ${self.provider.stage}
+            Value: ${self:provider.stage}
           - Key: resource
             Value: QueueQueue
     QueueDeadLetterQueue:
@@ -31,7 +31,7 @@ resources:
           - Key: service
             Value: ${self:service}
           - Key: stage
-            Value: ${self.provider.stage}
+            Value: ${self:provider.stage}
           - Key: resource
             Value: QueueDeadLetterQueue
   Outputs:

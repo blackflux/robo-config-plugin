@@ -6,7 +6,7 @@ functions:
     tags:
       service: ${self:service}
       resource: cronsCronFn
-      stage: ${self.provider.stage}
+      stage: ${self:provider.stage}
     events:
       - schedule:
           name: ${opt:service}-api-${self:provider.stage}-cron
