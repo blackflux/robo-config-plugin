@@ -22,7 +22,7 @@ const hasTags = (tags) => tags instanceof Object
 
 const logic = {
   'functions.*': ({ value }) => !hasTags(value.tags),
-  'resources.Resources.*': ({ value }) => resourceTypes.includes(value.Type) && !hasTags(value.Tags)
+  'resources.Resources.*': ({ value }) => resourceTypes.includes(value.Type) && !hasTags(value.Properties.Tags)
 };
 
 const scan = objectScan(Object.keys(logic), {
