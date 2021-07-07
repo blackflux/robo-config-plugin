@@ -6,7 +6,7 @@ functions:
     provisionedConcurrency: routerProvisionedConcurrency
     tags:
       service: ${self:service}
-      stage: ${self.provider.stage}
+      stage: ${self:provider.stage}
       resource: router
     events:
       - schedule:

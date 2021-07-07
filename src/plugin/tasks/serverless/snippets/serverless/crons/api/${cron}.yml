@@ -5,7 +5,7 @@ functions:
     timeout: ${cronTimeout}
     tags:
       service: ${self:service}
-      stage: ${self.provider.stage}
+      stage: ${self:provider.stage}
       resource: crons${cron|TITLE|STRIP}Fn
     events:
       - schedule:
