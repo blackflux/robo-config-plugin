@@ -15,3 +15,7 @@ functions:
     handler: lib/handler.triggersTriggerFn
     memorySize: triggerMemorySize
     timeout: triggerTimeout
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: triggersTriggerFn

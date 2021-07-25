@@ -9,6 +9,13 @@ resources:
           PointInTimeRecoveryEnabled: true
         StreamSpecification:
           StreamViewType: NEW_AND_OLD_IMAGES
+        Tags:
+          - Key: service
+            Value: ${self:service}
+          - Key: stage
+            Value: ${self:provider.stage}
+          - Key: resource
+            Value: DynamoTableTable
   Outputs:
     DynamoTableTableName:
       Value:

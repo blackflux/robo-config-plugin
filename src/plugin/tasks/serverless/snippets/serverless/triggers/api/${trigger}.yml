@@ -16,3 +16,7 @@ functions:
     handler: lib/handler.triggers${trigger|TITLE|STRIP}Fn
     memorySize: ${triggerMemorySize}
     timeout: ${triggerTimeout}
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: triggers${trigger|TITLE|STRIP}Fn

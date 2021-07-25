@@ -17,6 +17,10 @@ functions:
     handler: lib/handler.queueProcessor${queue|TITLE|STRIP}Handler
     reservedConcurrency: ${queueProcessorReservedConcurrency}
     timeout: ${queueProcessorTimeout}
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: queueProcessor${queue|TITLE|STRIP}Handler
     events:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}QueueArn}

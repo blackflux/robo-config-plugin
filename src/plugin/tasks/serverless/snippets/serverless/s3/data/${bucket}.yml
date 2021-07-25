@@ -2,6 +2,14 @@ resources:
   Resources:
     ${bucket|TITLE|STRIP}S3Bucket:
       Type: AWS::S3::Bucket
+      Properties:
+        Tags:
+          - Key: service
+            Value: ${self:service}
+          - Key: stage
+            Value: ${self:provider.stage}
+          - Key: resource
+            Value: ${bucket|TITLE|STRIP}S3Bucket
 
   Outputs:
     ${bucket|TITLE|STRIP}S3BucketName:
