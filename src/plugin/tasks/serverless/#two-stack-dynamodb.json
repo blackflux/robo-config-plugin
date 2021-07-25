@@ -12,6 +12,7 @@
     "serverless-base-data-stack-hash",
     "serverless-api",
     "serverless-data",
+    "src-core-aws",
     "src-dynamodb-dy"
   ],
   "description": "Manage serverless configuration for deployment to AWS."
