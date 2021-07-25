@@ -1,0 +1,14 @@
+{
+  "target": "src/core/aws.js",
+  "format": "txt",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/src/core/aws.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create aws sdk initialization file."
+  ]
+}

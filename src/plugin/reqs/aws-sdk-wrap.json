@@ -1,0 +1,7 @@
+{
+  "description": "Amazon Web Services SDK wrapper.",
+  "details": [
+    "AWS SDK wrapper npm package."
+  ],
+  "website": "https://github.com/blackflux/aws-sdk-wrap"
+}
