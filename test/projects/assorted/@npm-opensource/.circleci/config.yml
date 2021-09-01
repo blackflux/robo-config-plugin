@@ -3,7 +3,7 @@ workflows:
   node-multi-build:
     jobs:
       - gally-create-pr
-      - test-node-v15:
+      - test-node-v16:
           requires:
             - gally-create-pr
       - test-node-v14:
@@ -15,7 +15,7 @@ workflows:
       - gally-auto-approve:
           requires:
             - gally-create-pr
-            - test-node-v15
+            - test-node-v16
             - test-node-v14
             - test-node-v12
           filters:
@@ -24,7 +24,7 @@ workflows:
       - release:
           requires:
             - gally-create-pr
-            - test-node-v15
+            - test-node-v16
             - test-node-v14
             - test-node-v12
           filters:
@@ -156,9 +156,9 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
               yarn run coveralls
             fi
-  test-node-v15:
+  test-node-v16:
     docker:
-      - image: 'circleci/node:15'
+      - image: 'circleci/node:16'
     steps:
       - checkout
       - run:
