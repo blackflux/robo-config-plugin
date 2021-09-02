@@ -48,7 +48,7 @@
           "ci/circleci: deploy-local",
           "ci/circleci: deploy-dev",
           "ci/circleci: test-node-v14.x",
-          "ci/circleci: test-node-v15"
+          "ci/circleci: test-node-v16"
         ]
       }
     },
@@ -58,7 +58,7 @@
         "contexts": [
           "ci/circleci: deploy-stage",
           "ci/circleci: test-node-v14.x",
-          "ci/circleci: test-node-v15"
+          "ci/circleci: test-node-v16"
         ]
       }
     },
@@ -67,7 +67,7 @@
         "strict": false,
         "contexts": [
           "ci/circleci: test-node-v14.x",
-          "ci/circleci: test-node-v15"
+          "ci/circleci: test-node-v16"
         ]
       },
       "enforce_admins": true,
