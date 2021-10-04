@@ -3,6 +3,7 @@ const minimist = require('minimist');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
+const { describe } = require('node-tdd');
 const api = require('../src/handler').internalApi;
 const { stripHeaders, flush, modifiers } = require('./handler.conf');
 
@@ -32,7 +33,9 @@ LambdaTdd({
   modifiers
 }).execute();
 
-describe('Testing handler.spec.js', () => {
+describe('Testing handler.spec.js', {
+  timeout: 10000
+}, () => {
   let handlerFile;
   let handlerTestDir;
   let handlerTestFiles;
