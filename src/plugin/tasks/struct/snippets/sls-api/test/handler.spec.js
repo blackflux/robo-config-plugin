@@ -32,7 +32,9 @@ LambdaTdd({
   modifiers
 }).execute();
 
-describe('Testing handler.spec.js', () => {
+describe('Testing handler.spec.js', ({
+  timeout: 10000
+}), () => {
   let handlerFile;
   let handlerTestDir;
   let handlerTestFiles;
