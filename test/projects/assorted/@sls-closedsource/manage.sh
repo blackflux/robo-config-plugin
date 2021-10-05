@@ -1,6 +1,10 @@
 #!/bin/sh
 
-docker build -t lambda-environment-node ./docker &&
+docker build \
+  -t lambda-environment-node \
+  --network="host" \
+  -f docker/Dockerfile \
+  . &&
 docker run \
   --net host \
   -u`id -u`:`id -g` \
