@@ -6,18 +6,20 @@ const { describe } = require('node-tdd');
 
 describe('Testing sls configuration', { timeout: 10000 }, () => {
   it('Testing aws-sdk version', async () => {
-    const r = await new Promise((resolve) => https.get(
-      'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html',
-      (resp) => {
-        let data = '';
-        resp.on('data', (chunk) => {
-          data += chunk;
-        });
-        resp.on('end', () => {
-          resolve(data);
-        });
-      }
-    ));
+    const r = await new Promise((resolve) => {
+      https.get(
+        'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html',
+        (resp) => {
+          let data = '';
+          resp.on('data', (chunk) => {
+            data += chunk;
+          });
+          resp.on('end', () => {
+            resolve(data);
+          });
+        }
+      );
+    });
     const version = r.match(
       /<td>\s+<p><code class="code">nodejs12\.x<\/code><\/p>\s+<\/td>\s+<td>\s+<p>(\d+\.\d+\.\d+)<\/p>\s+<\/td>/
     )[1];
