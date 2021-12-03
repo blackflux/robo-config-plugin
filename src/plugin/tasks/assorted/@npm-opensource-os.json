@@ -2,7 +2,7 @@
   "tasks": [
     "struct/#npm-dockerized",
     "badges/#npm-opensource",
-    "circleci/#npm-default-coveralls-es",
+    "circleci/#npm-default-coveralls-os",
     "docker/#npm-opensearch",
     "dependabot/#npm-default",
     "gally/#npm-default",

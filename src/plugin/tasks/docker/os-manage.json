@@ -2,7 +2,7 @@
   "target": "manage.sh",
   "strategy": "overwrite",
   "snippets": [
-    "es/manage.sh"
+    "os/manage.sh"
   ],
   "requires": [
     "docker"

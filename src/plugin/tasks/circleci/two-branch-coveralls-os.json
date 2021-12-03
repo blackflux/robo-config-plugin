@@ -13,7 +13,7 @@
       }
     },
     {
-      "name": "run-yarn-tests-es",
+      "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v16",
         "dockerImage": "circleci/node:16",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "name": "run-yarn-tests-es",
+      "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v14",
         "dockerImage": "circleci/node:14",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "name": "run-yarn-tests-es",
+      "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v12",
         "dockerImage": "circleci/node:12",

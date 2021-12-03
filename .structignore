@@ -1,6 +1,6 @@
 test/projects/assorted/@npm-closedsource/test/index.spec.js
 test/projects/assorted/@npm-opensource/test/index.spec.js
-test/projects/assorted/@npm-opensource-es/test/index.spec.js
+test/projects/assorted/@npm-opensource-os/test/index.spec.js
 test/projects/assorted/@sls-error-defs/test/errors.spec.js
 test/projects/assorted/@sls-api/test/routes.spec.js
 test/projects/assorted/@sls-api/test/handler.spec.js
