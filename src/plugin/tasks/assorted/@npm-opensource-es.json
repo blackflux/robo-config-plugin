@@ -3,7 +3,7 @@
     "struct/#npm-dockerized",
     "badges/#npm-opensource",
     "circleci/#npm-default-coveralls-es",
-    "docker/#npm-elasticsearch",
+    "docker/#npm-opensearch",
     "dependabot/#npm-default",
     "gally/#npm-default",
     "editor/#default",
@@ -14,5 +14,5 @@
     "package/#npm-default",
     "semantic-release/#npm-default"
   ],
-  "description": "Manage various configuration files for an elasticsearch open source npm package on github."
+  "description": "Manage various configuration files for an opensearch open source npm package on github."
 }

@@ -103,7 +103,7 @@
     "github",
     "circleci",
     "coveralls",
-    "elasticsearch",
+    "opensearch",
     "dependabot",
     "semantic-release"
   ],

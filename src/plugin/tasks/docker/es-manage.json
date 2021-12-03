@@ -8,6 +8,6 @@
     "docker"
   ],
   "purpose": [
-    "Spawn docker container with joined elasticsearch container."
+    "Spawn docker container with joined opensearch container."
   ]
 }
