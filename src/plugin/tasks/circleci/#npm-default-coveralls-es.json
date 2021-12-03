@@ -1,6 +1,0 @@
-{
-  "tasks": [
-    "two-branch-coveralls-es"
-  ],
-  "description": "Manage circleci configuration for npm package on github with coveralls and elasticsearch."
-}

@@ -1,7 +1,0 @@
-{
-  "tasks": [
-    "es-docker",
-    "es-manage"
-  ],
-  "description": "Manage docker test configuration for npm package on github using elasticsearch."
-}

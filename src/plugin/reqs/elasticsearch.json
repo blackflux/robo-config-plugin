@@ -1,7 +1,0 @@
-{
-  "description": "Data store.",
-  "details": [
-    "Elasticsearch is a search engine based on the Lucene library."
-  ],
-  "website": "https://www.elastic.co/products/elasticsearch"
-}
