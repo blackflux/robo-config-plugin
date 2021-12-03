@@ -1,0 +1,7 @@
+{
+  "description": "Data store.",
+  "details": [
+    "Opensearch is a search engine based on the Lucene library."
+  ],
+  "website": "https://opensearch.org/"
+}

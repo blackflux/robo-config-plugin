@@ -34,14 +34,14 @@ version: 2
 jobs:
   gally-create-pr:
     docker:
-      - image: 'circleci/node:14'
+      - image: circleci/node:14
     steps:
       - checkout
       - run: sudo yarn global add gally
       - run: ga promote $CIRCLE_BRANCH
   gally-auto-approve:
     docker:
-      - image: 'circleci/node:14'
+      - image: circleci/node:14
     steps:
       - run:
           name: Set PR number
@@ -60,7 +60,7 @@ jobs:
           "base.ref=dev&state=open&user.login=dependabot-preview[bot]"
   release:
     docker:
-      - image: 'circleci/node:14'
+      - image: circleci/node:14
     steps:
       - checkout
       - run:
@@ -77,28 +77,25 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn run semantic-release
   test-node-v12:
     docker:
-      - image: 'circleci/node:12'
+      - image: circleci/node:12
         environment:
-          elasticsearchEndpoint: 'localhost:9200'
-      - image: 'docker.elastic.co/elasticsearch/elasticsearch:7.10.0'
+          opensearchEndpoint: localhost:9200
+      - image: opensearchproject/opensearch:1.0.1
         environment:
           - discovery.type=single-node
-          - http.host=0.0.0.0
-          - transport.host=127.0.0.1
-          - xpack.security.enabled=false
-          - ES_JAVA_OPTS=-Xms750m -Xmx750m
+          - plugins.security.disabled=true
     steps:
       - run:
           command: >
@@ -121,13 +118,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn test
@@ -136,16 +133,13 @@ jobs:
           1);
   test-node-v14:
     docker:
-      - image: 'circleci/node:14'
+      - image: circleci/node:14
         environment:
-          elasticsearchEndpoint: 'localhost:9200'
-      - image: 'docker.elastic.co/elasticsearch/elasticsearch:7.10.0'
+          opensearchEndpoint: localhost:9200
+      - image: opensearchproject/opensearch:1.0.1
         environment:
           - discovery.type=single-node
-          - http.host=0.0.0.0
-          - transport.host=127.0.0.1
-          - xpack.security.enabled=false
-          - ES_JAVA_OPTS=-Xms750m -Xmx750m
+          - plugins.security.disabled=true
     steps:
       - run:
           command: >
@@ -168,13 +162,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn test
@@ -188,16 +182,13 @@ jobs:
             fi
   test-node-v16:
     docker:
-      - image: 'circleci/node:16'
+      - image: circleci/node:16
         environment:
-          elasticsearchEndpoint: 'localhost:9200'
-      - image: 'docker.elastic.co/elasticsearch/elasticsearch:7.10.0'
+          opensearchEndpoint: localhost:9200
+      - image: opensearchproject/opensearch:1.0.1
         environment:
           - discovery.type=single-node
-          - http.host=0.0.0.0
-          - transport.host=127.0.0.1
-          - xpack.security.enabled=false
-          - ES_JAVA_OPTS=-Xms750m -Xmx750m
+          - plugins.security.disabled=true
     steps:
       - run:
           command: >
@@ -220,13 +211,13 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
-            - 'yarn-packages-{{ checksum "yarn.lock" }}'
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: 'yarn-packages-{{ checksum "yarn.lock" }}'
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run: yarn test
