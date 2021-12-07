@@ -1,8 +1,5 @@
-const path = require('path');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const minimist = require('minimist');
-// eslint-disable-next-line import/no-extraneous-dependencies
-const yaml = require('yaml-boost');
+const resolver = require('./serverless/.base/resolver');
 
-const configFile = path.join(__dirname, 'serverless', '.base', 'resolver.yml');
-module.exports = yaml.load(configFile, minimist(process.argv.slice(2)));
+module.exports = resolver(minimist(process.argv.slice(2)));
