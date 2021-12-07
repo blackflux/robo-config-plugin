@@ -1,0 +1,15 @@
+{
+  "target": "serverless/.base/resolver.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/.base/resolver.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Create serverless stack resolver js configuration file."
+  ]
+}

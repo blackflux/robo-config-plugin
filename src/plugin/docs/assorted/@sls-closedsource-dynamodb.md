@@ -16,6 +16,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-dynamodb-dy">`serverless/src-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws">`serverless/src-core-aws`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver-js">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver-js">`serverless/serverless-base-resolver-js`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver">`serverless/serverless-base-resolver`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data-stack-hash">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data-stack-hash">`serverless/serverless-base-data-stack-hash`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data">`serverless/serverless-base-data`</a>
@@ -89,6 +90,7 @@ Manage various configuration files for serverless project with the option of run
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">data-stack-hash.fn</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">resolver.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
@@ -394,6 +396,7 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">data-stack-hash.fn</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">resolver.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
@@ -686,6 +689,37 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver-js">serverless/serverless-base-resolver-js</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver-js">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">serverless/.base/resolver.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create serverless stack resolver js configuration file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;serverless</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;.base</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -2005,6 +2039,16 @@ AWS SDK initialization file.
 *Data stack resource definition.*
 
 Contains user defined data stack resource definitions.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">serverless/.base/resolver.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `yml`
+
+*Stack resolver js configuration.*
+
+Resolve serverless js configuration to requested stack.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">serverless/.base/resolver.yml</a>  
 

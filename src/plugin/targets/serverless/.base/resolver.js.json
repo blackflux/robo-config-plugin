@@ -1,0 +1,7 @@
+{
+  "description": "Stack resolver js configuration.",
+  "details": ["Resolve serverless js configuration to requested stack."],
+  "formats": ["yml"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}
