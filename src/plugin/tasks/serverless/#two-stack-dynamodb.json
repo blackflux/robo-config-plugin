@@ -8,6 +8,7 @@
     "test-sls-dynamodb-local",
     "test-sls-dynamodb-cfg",
     "serverless-base-resolver",
+    "serverless-base-resolver-js",
     "serverless-base-api",
     "serverless-base-data",
     "serverless-base-data-stack-hash",

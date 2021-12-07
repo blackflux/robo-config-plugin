@@ -1,9 +1,9 @@
 const path = require('path');
-const yaml = require('yaml-boost');
 const objectScan = require('object-scan');
 const { describe } = require('node-tdd');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
+const resolver = require('../serverless/.base/resolver');
 
 const normalize = (table) => objectScan([
   '*',
@@ -32,14 +32,11 @@ describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
   let dataStack;
   let tables;
   before(() => {
-    dataStack = yaml.load(
-      path.join(__dirname, '..', 'serverless', '.base', 'resolver.yml'),
-      {
-        stack: 'data',
-        region: process.env.AWS_REGION,
-        env: 'local'
-      }
-    );
+    dataStack = resolver({
+      stack: 'data',
+      region: process.env.AWS_REGION,
+      env: 'local'
+    });
     tables = objectScan(['resources.Resources.*'], {
       filterFn: ({ value, context }) => {
         if (value.Type === 'AWS::DynamoDB::Table') {

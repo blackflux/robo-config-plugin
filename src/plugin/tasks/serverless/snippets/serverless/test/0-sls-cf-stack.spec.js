@@ -2,9 +2,9 @@ const { describe } = require('node-tdd');
 const objectScan = require('object-scan');
 const get = require('lodash.get');
 const path = require('path');
-const yaml = require('yaml-boost');
 const fs = require('smart-fs');
 const expect = require('chai').expect;
+const resolver = require('../serverless/.base/resolver');
 
 describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () => {
   let apiStack;
@@ -12,14 +12,11 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   let runner;
   let definedRoutes;
   before(() => {
-    const loadStack = (stack) => yaml.load(
-      path.join(__dirname, '..', 'serverless', '.base', 'resolver.yml'),
-      {
-        stack,
-        region: 'us-west-2',
-        env: 'local'
-      }
-    );
+    const loadStack = (stack) => resolver({
+      stack,
+      region: 'us-west-2',
+      env: 'local'
+    });
     apiStack = loadStack('api');
     dataStack = loadStack('data');
     runner = (stack) => {

@@ -1,8 +1,7 @@
-const path = require('path');
-const yaml = require('yaml-boost');
 const objectScan = require('object-scan');
 const { describe } = require('node-tdd');
 const expect = require('chai').expect;
+const resolver = require('../serverless/.base/resolver');
 
 const tagNames = ['service', 'stage', 'resource'];
 
@@ -40,10 +39,7 @@ describe('Testing sls resource tags', () => {
   let dataStack;
 
   before(() => {
-    const loadStack = (stack) => yaml.load(
-      path.join(__dirname, '..', 'serverless', '.base', 'resolver.yml'),
-      { stack }
-    );
+    const loadStack = (stack) => resolver({ stack });
     apiStack = loadStack('api');
     dataStack = loadStack('data');
   });
