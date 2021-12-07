@@ -1,9 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const yaml = require('yaml-boost');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const objectScan = require('object-scan');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const objectHash = require('object-hash-strict');
 
 module.exports = (kwargs) => {
