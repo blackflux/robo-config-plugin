@@ -37,7 +37,7 @@ Manages SQS instance cloud formation files.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -93,7 +93,7 @@ Manage serverless configuration for an sqs queue.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;processor</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerqueueprocessorqueuejs">${queue}.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -121,7 +121,7 @@ Manage serverless configuration for an sqs queue.
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-test-env-sqs">serverless/serverless-test-env-sqs</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-test-env-sqs">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize SQS Url in test configuration.
 
@@ -137,7 +137,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -426,7 +426,7 @@ The amount of time that the processor is allowed to run before being stopped.
 
 ## Targets
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
 

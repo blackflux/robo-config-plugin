@@ -31,7 +31,7 @@ Manages S3 instance cloud formation files.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">${bucket}.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -75,7 +75,7 @@ Manage serverless configuration for an s3 bucket.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;s3</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatas3bucketyml">${bucket}.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -96,7 +96,7 @@ Manage serverless configuration for an s3 bucket.
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-test-env-s3">serverless/serverless-test-env-s3</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-test-env-s3">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize S3 Name in test configuration.
 
@@ -112,7 +112,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -315,7 +315,7 @@ The project name is in most cases identical to the repository name.
 
 ## Targets
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
 

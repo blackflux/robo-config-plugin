@@ -28,7 +28,7 @@ const normalize = (table) => objectScan([
   }
 })(table, {});
 
-describe('Testing dynamodb-local', { envVarsFile: 'env.yml' }, () => {
+describe('Testing dynamodb-local', { envVarsFile: 'env-vars.yml' }, () => {
   let dataStack;
   let tables;
   before(() => {

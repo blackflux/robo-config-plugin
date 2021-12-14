@@ -1,10 +1,10 @@
 {
-  "target": "test/env.yml",
+  "target": "test/env-vars.yml",
   "format": "yml",
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "sls-api/test/env.yml",
+      "name": "sls-api/test/env-vars.yml",
       "variables": {
         "awsRegion": "${awsRegion}",
         "awsAccessKeyId": "${awsAccessKeyId}",
