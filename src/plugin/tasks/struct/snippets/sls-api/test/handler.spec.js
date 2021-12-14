@@ -5,7 +5,7 @@ const expect = require('chai').expect;
 const LambdaTdd = require('lambda-tdd');
 const { describe } = require('node-tdd');
 const api = require('../src/handler').internalApi;
-const { stripHeaders, flush, modifiers } = require('./handler.conf');
+const handlerConf = require('./handler.conf');
 
 const methods = ['Get', 'Post', 'Put', 'Patch', 'Options', 'Head', 'Delete', 'Any'];
 
@@ -28,9 +28,7 @@ LambdaTdd({
   envVarYml: path.join(__dirname, 'env-vars.yml'),
   envVarYmlRecording: path.join(__dirname, 'env-vars.recording.yml'),
   testFolder: path.join(__dirname, 'handler'),
-  stripHeaders,
-  flush,
-  modifiers
+  ...handlerConf
 }).execute();
 
 describe('Testing handler.spec.js', {
