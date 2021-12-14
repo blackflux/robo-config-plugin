@@ -33,7 +33,7 @@ Manages Dynamodb instance cloud formation files.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatadynamodbtableyml">${table}.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -78,7 +78,7 @@ Manage serverless configuration for a dynamodb table.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatadynamodbtableyml">${table}.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -100,7 +100,7 @@ Manage serverless configuration for a dynamodb table.
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-test-env-dynamodb">serverless/serverless-test-env-dynamodb</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-test-env-dynamodb">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Initialize DynamoDb Table Name in test configuration.
 
@@ -116,7 +116,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenvyml">env.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -325,7 +325,7 @@ The project name is in most cases identical to the repository name.
 
 ## Targets
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testenvyml">test/env.yml</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
 

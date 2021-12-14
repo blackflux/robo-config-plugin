@@ -5,7 +5,7 @@ const path = require('path');
 const deepmerge = require('deepmerge');
 const dy = require('../src/dynamodb/dy');
 
-describe('Testing dynamodb serverless configuration', { envVarsFile: './env.yml' }, () => {
+describe('Testing dynamodb serverless configuration', { envVarsFile: './env-vars.yml' }, () => {
   // eslint-disable-next-line mocha/no-setup-in-describe
   fs.walkDir(path.join(__dirname, '..', 'src', 'dynamodb', 'tables'))
     .map((e) => e.slice(0, -3))
