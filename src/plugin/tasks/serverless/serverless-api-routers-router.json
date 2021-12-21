@@ -4,7 +4,7 @@
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "serverless/routers/api/${router}.yml",
+      "name": "serverless/routers/api/${router}.yml.mustache",
       "variables": {
         "router": "${router|TITLE}",
         "routerAuthorizer": "${routerAuthorizer}",

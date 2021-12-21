@@ -3,7 +3,9 @@ functions:
     handler: lib/handler.${router|CAMEL}
     memorySize: ${routerMemorySize}
     timeout: ${routerTimeout}
+{{#routerProvisionedConcurrency}}
     provisionedConcurrency: ${routerProvisionedConcurrency}
+{{/routerProvisionedConcurrency}}
     tags:
       service: ${self:service}
       stage: ${self:provider.stage}
