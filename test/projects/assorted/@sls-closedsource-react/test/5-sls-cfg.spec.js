@@ -8,7 +8,14 @@ describe('Testing sls configuration', { timeout: 10000 }, () => {
   it('Testing aws-sdk version', async () => {
     const r = await new Promise((resolve) => {
       https.get(
-        'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html',
+        {
+          protocol: 'https:',
+          hostname: 'docs.aws.amazon.com',
+          path: '/lambda/latest/dg/lambda-runtimes.html',
+          headers: {
+            'user-agent': '@blackflux/robo-config-plugin'
+          }
+        },
         (resp) => {
           let data = '';
           resp.on('data', (chunk) => {
