@@ -13,7 +13,6 @@ fi
 
 docker build \
   -t lambda-environment-node \
-  --network="host" \
   -f docker/Dockerfile \
   . &&
 docker run \
