@@ -13,8 +13,8 @@ fi
 
 docker build \
   -t lambda-environment-node \
-  -f docker/Dockerfile \
-  . &&
+  --network="host" \
+  docker/. &&
 docker run \
   $OPT \
   -u`id -u`:`id -g` \
