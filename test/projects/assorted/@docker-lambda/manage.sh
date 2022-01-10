@@ -3,8 +3,7 @@
 docker build \
   -t lambda-environment-node \
   --network="host" \
-  -f docker/Dockerfile \
-  . &&
+  docker/. &&
 docker run \
   --net host \
   -u`id -u`:`id -g` \
