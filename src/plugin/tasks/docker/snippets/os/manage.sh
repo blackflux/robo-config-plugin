@@ -9,8 +9,7 @@ docker run \
 docker build \
   -t lambda-environment-node \
   --network="host" \
-  -f docker/Dockerfile \
-  . &&
+  docker/. &&
 docker run \
   --link os1:opensearch \
   -u`id -u`:`id -g` \
