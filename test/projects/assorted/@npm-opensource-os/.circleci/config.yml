@@ -86,6 +86,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+      - run: yarn global add semantic-release
       - run: yarn run semantic-release
   test-node-v12:
     docker:

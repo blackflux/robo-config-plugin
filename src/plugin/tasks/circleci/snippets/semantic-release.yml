@@ -10,4 +10,5 @@ jobs:
     <<<:
       - ${file(^/meta/yarn-setup.yml)}
       - steps:
+          - run: yarn global add semantic-release
           - run: yarn run semantic-release
