@@ -1,9 +1,11 @@
 {
   "presets": [
     [
-      "latest-node",
+      "@babel/preset-env",
       {
-        "target": "${nodeVersion}"
+        "targets": {
+          "node": "${nodeVersion}"
+        }
       }
     ]
   ],
