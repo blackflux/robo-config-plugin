@@ -63,7 +63,9 @@
       "@babel/register"
     ],
     "statements": 100,
-    "tempDir": "./coverage/.nyc_output"
+    "tempDir": "./coverage/.nyc_output",
+    "sourceMap": false,
+    "instrument": false
   },
   "scripts": {
     "clean": "rm -rf lib",

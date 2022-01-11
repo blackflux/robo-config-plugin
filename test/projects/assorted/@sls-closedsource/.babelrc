@@ -1,7 +1,5 @@
 {
-  "presets": [
-    ["latest-node", {"target": "nodeVersion"}]
-  ],
-  "plugins": [],
+  "presets": [["latest-node", {"target": "nodeVersion"}]],
+  "plugins": ["istanbul"],
   "sourceMaps": false
 }
