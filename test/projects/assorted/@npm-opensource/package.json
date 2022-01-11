@@ -10,7 +10,6 @@
   "description": "???",
   "devDependencies": {
     "@babel/register": "7.0.0",
-    "babel-eslint": "8.2.3",
     "@babel/core": "7.1.2",
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
