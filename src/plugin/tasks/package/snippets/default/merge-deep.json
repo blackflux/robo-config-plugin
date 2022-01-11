@@ -33,6 +33,8 @@
     "extension": [],
     "cache": true,
     "all": true,
-    "babel": true
+    "babel": true,
+    "sourceMap": false,
+    "instrument": false
   }
 }
