@@ -28,7 +28,7 @@ describe('Testing sls configuration', { timeout: 10000 }, () => {
       );
     });
     const version = r.match(
-      /<td>\s+<p><code class="code">nodejs12\.x<\/code><\/p>\s+<\/td>\s+<td>\s+<p>(\d+\.\d+\.\d+)<\/p>\s+<\/td>/
+      /<td>\s+<p><code class="code">nodejs14\.x<\/code><\/p>\s+<\/td>\s+<td>\s+<p>(\d+\.\d+\.\d+)<\/p>\s+<\/td>/
     )[1];
     const pkg = fs.smartRead(path.join(__dirname, '..', 'package.json'));
     expect(pkg.devDependencies['aws-sdk'], `devDependencies.aws-sdk !== $\{version}`).to.equal(version);
