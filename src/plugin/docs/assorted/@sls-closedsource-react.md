@@ -2,7 +2,7 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless">`struct/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">`struct/template-mocharc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">`struct/template-babelrc`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babel-config">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babel-config">`struct/template-babel-config`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-feature-request">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-feature-request">`struct/github-feature-request`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-bug-report">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-bug-report">`struct/github-bug-report`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">`struct/force-gardener-dockerized`</a>
@@ -67,7 +67,7 @@ Manage various configuration files for react serverless project.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">feature_request.md</a></code><br/>
 <code>├─&nbsp;.idea</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a></code><br/>
@@ -155,7 +155,7 @@ Manage basic project structure for serverless project.
 <code>│&nbsp;&nbsp;└─&nbsp;ISSUE_TEMPLATE</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatebug_reportmd">bug_report.md</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">feature_request.md</a></code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
@@ -238,9 +238,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslint
   </tbody>
 </table>
 
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-babelrc">struct/template-babelrc</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babelrc">`index`</a>)
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-babel-config">struct/template-babel-config</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babel-config">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Create configuration file for babel.
 
@@ -255,7 +255,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a>
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a></code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1766,7 +1766,7 @@ CircleCi read only api token used to access build status.
 
 *Configuration file for eslint.*
 
-### <a name="blackfluxrobo-config-plugin-target-ref-babelrc">.babelrc</a> ([`link`](https://babeljs.io/docs/en/configuration#babelrc)) 
+### <a name="blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a> ([`link`](https://babeljs.io/docs/en/configuration)) 
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a>
 

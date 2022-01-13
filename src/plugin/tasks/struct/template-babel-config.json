@@ -1,10 +1,10 @@
 {
-  "target": ".babelrc",
+  "target": "babel.config.json",
   "format": "json",
   "strategy": "merge-deep",
   "snippets": [
     {
-      "name": "default/.babelrc",
+      "name": "default/babel.config.json",
       "variables": {
         "nodeVersion": "${nodeVersion}"
       }

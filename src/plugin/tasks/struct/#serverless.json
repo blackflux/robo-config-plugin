@@ -4,7 +4,7 @@
     "github-feature-request",
     "template-mocharc",
     "template-eslintrc",
-    "template-babelrc",
+    "template-babel-config",
     "force-gardener-dockerized"
   ],
   "description": "Manage basic project structure for serverless project."
