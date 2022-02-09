@@ -1,0 +1,14 @@
+{
+  "target": ".c8rc.json",
+  "pretty": false,
+  "strategy": "default-shallow",
+  "snippets": [
+    "default-shallow"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set defaults for various entries."
+  ]
+}

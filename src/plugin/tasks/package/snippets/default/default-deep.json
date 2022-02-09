@@ -9,7 +9,7 @@
     "@babel/core": "7.1.2",
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
-    "nyc": "12.0.2",
+    "c8": "7.11.0",
     "chai": "4.2.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -17,13 +17,5 @@
     "eslint-plugin-mocha": "6.0.0",
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0"
-  },
-  "nyc": {
-    "exclude": [
-      "gardener.js",
-      "node_modules/*",
-      "coverage/*",
-      "lib/*"
-    ]
   }
 }

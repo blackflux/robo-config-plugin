@@ -13,7 +13,6 @@
     "@babel/core": "7.1.2",
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
-    "nyc": "12.0.2",
     "chai": "4.2.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -23,53 +22,21 @@
     "eslint-plugin-markdown": "1.0.0",
     "@babel/cli": "7.13.10",
     "@babel/eslint-parser": "7.16.5",
-    "@babel/preset-env": "7.16.8"
+    "@babel/preset-env": "7.16.8",
+    "c8": "7.11.0"
   },
   "engines": {
     "node": ">= nodeVersion"
   },
   "files": [],
   "keywords": [],
-  "nyc": {
-    "exclude": [
-      "gardener.js",
-      "node_modules/*",
-      "coverage/*",
-      "lib/*",
-      "serverless.config.js"
-    ],
-    "all": true,
-    "babel": true,
-    "branches": 100,
-    "cache": true,
-    "check-coverage": true,
-    "extension": [],
-    "functions": 100,
-    "include": [
-      "**/*.js"
-    ],
-    "lines": 100,
-    "per-file": false,
-    "report-dir": "./coverage",
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "require": [
-      "@babel/register"
-    ],
-    "statements": 100,
-    "tempDir": "./coverage/.nyc_output",
-    "sourceMap": false,
-    "instrument": false
-  },
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./babel.config.json",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
+    "test-simple": "c8 mocha \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
-    "gardener": "node gardener",
+    "gardener": "node gardener.js",
     "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "u": "yarn upgrade --latest --force",
     "i": "yarn install --frozen-lockfile",

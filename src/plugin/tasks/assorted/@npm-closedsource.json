@@ -10,6 +10,7 @@
     "license/#closedsource",
     "npm/#npm-default",
     "package/#npm-default",
+    "c8/#default",
     "semantic-release/#npm-default"
   ],
   "description": "Manage various configuration files for closed source npm package on github."

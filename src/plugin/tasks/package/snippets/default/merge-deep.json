@@ -10,31 +10,5 @@
   "version": "0.0.0-development",
   "engines": {
     "node": ">= ${nodeVersion}"
-  },
-  "nyc": {
-    "tempDir": "./coverage/.nyc_output",
-    "report-dir": "./coverage",
-    "check-coverage": true,
-    "per-file": false,
-    "lines": 100,
-    "statements": 100,
-    "functions": 100,
-    "branches": 100,
-    "include": [
-      "**/*.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "require": [
-      "@babel/register"
-    ],
-    "extension": [],
-    "cache": true,
-    "all": true,
-    "babel": true,
-    "sourceMap": false,
-    "instrument": false
   }
 }

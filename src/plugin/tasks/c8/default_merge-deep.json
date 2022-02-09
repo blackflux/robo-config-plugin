@@ -1,0 +1,14 @@
+{
+  "target": ".c8rc.json",
+  "pretty": false,
+  "strategy": "merge-deep",
+  "snippets": [
+    "merge-deep"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Set various entries."
+  ]
+}

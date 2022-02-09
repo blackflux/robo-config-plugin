@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    "default_default-shallow",
+    "default_default-deep",
+    "default_merge-shallow",
+    "default_merge-deep"
+  ],
+  "description": "Manage .c8rc.json for npm package on github."
+}

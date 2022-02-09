@@ -3,7 +3,7 @@
     "clean": "rm -rf lib build .webpack",
     "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./babel.config.json && react-scripts build",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "yarn run build-clean && nyc mocha \"./test/**/*.spec.js\"",
+    "test-simple": "yarn run build-clean && c8 mocha \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "u": "yarn upgrade --latest --force",
@@ -12,7 +12,7 @@
     "t": "yarn test",
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
-    "gardener": "node gardener",
+    "gardener": "node gardener.js",
     "start-offline": "yarn run build-clean && sls offline start --config serverless.config.js --stack=api-offline --region=${awsRegion} --env=offline"
   },
   "files": []
