@@ -10,6 +10,7 @@
     "jetbrains/#default",
     "license/#closedsource",
     "package/#serverless",
+    "c8/#default",
     "serverless/#two-stack"
   ],
   "description": "Manage various configuration files for serverless project."

@@ -11,6 +11,7 @@
     "license/#opensource",
     "npm/#npm-default",
     "package/#npm-default",
+    "c8/#default",
     "semantic-release/#npm-default"
   ],
   "description": "Manage various configuration files for an open source npm package on github."

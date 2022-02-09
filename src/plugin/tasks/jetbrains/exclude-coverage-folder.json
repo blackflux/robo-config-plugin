@@ -13,7 +13,7 @@
   ],
   "requires": [
     "jetbrains",
-    "nyc"
+    "c8"
   ],
   "purpose": [
     "Mark `coverage` Folder as excluded in Jetbrains."
