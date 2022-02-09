@@ -4,5 +4,5 @@
     "A major coverage testing framework for javascript.",
     "Comes with all the bells and whistles."
   ],
-  "website": "https://github.com/istanbuljs/nyc#readme"
+  "website": "https://github.com/bcoe/c8"
 }

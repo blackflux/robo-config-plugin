@@ -1,0 +1,7 @@
+{
+  "description": "Configuration for c8 package.",
+  "details": [],
+  "formats": ["json"],
+  "requires": ["c8"],
+  "website": "https://github.com/bcoe/c8"
+}

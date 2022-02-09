@@ -1,0 +1,8 @@
+{
+  "exclude": [
+    "gardener.js",
+    "node_modules/*",
+    "coverage/*",
+    "lib/*"
+  ]
+}

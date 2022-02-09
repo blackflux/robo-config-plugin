@@ -1,7 +1,1 @@
-{
-  "nyc": {
-    "exclude": [
-      "serverless.config.js"
-    ]
-  }
-}
+{}

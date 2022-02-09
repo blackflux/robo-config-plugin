@@ -99,6 +99,10 @@
           "balanced": true
         }
       }
+    ],
+    "import/extensions": [
+      2,
+      "always"
     ]
   },
   "env": {
