@@ -5,5 +5,5 @@
     "default_merge-shallow",
     "default_merge-deep"
   ],
-  "description": "Manage .c8rc.json for npm package on github."
+  "description": "Manage .c8rc.json for c8 coverage testing."
 }

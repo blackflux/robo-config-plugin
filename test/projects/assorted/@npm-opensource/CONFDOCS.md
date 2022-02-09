@@ -1165,7 +1165,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.c
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-c8default">c8/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-c8default">`index`</a>)
 
-Manage .c8rc.json for npm package on github.
+Manage .c8rc.json for c8 coverage testing.
 
 <table>
   <tbody>
