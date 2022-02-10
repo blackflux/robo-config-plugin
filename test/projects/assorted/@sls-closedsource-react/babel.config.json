@@ -1,5 +1,5 @@
 {
   "presets": [["@babel/preset-env", {"targets": {"node": "nodeVersion"}}]],
-  "plugins": ["istanbul"],
+  "plugins": [],
   "sourceMaps": false
 }
