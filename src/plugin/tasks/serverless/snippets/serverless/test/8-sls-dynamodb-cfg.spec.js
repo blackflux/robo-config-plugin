@@ -1,17 +1,24 @@
-const { describe } = require('node-tdd');
-const expect = require('chai').expect;
-const fs = require('smart-fs');
-const path = require('path');
-const deepmerge = require('deepmerge');
-const dy = require('../src/dynamodb/dy');
+import { describe } from 'node-tdd';
+import { expect } from 'chai';
+import fs from 'smart-fs';
+import path from 'path';
+import deepmerge from 'deepmerge';
+import dirname from '../src/util/dirname.js';
 
 describe('Testing dynamodb serverless configuration', { envVarsFile: './env-vars.yml' }, () => {
+  let dy;
+
+  beforeEach(async () => {
+    process.env.TEST_SEED = Math.random();
+    dy = (await import('../src/dynamodb/dy.js')).default;
+  });
+
   // eslint-disable-next-line mocha/no-setup-in-describe
-  fs.walkDir(path.join(__dirname, '..', 'src', 'dynamodb', 'tables'))
+  fs.walkDir(path.join(dirname(import.meta.url), '..', 'src', 'dynamodb', 'tables'))
     .map((e) => e.slice(0, -3))
     .forEach((name) => {
       it(`Generating dynamodb schema: $\{name}`, () => {
-        const filepath = path.join(__dirname, '..', 'serverless', 'data', 'dynamodb', `$\{name}.yml`);
+        const filepath = path.join(dirname(import.meta.url), '..', 'serverless', 'data', 'dynamodb', `$\{name}.yml`);
         const nameTitleCase = name.replace(
           /-?\b([a-z])/g,
           (_, m) => m.toUpperCase()

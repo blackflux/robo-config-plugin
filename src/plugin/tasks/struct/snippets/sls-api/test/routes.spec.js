@@ -1,6 +1,7 @@
-const path = require('path');
-const fs = require('smart-fs');
-const expect = require('chai').expect;
+import path from 'path';
+import fs from 'smart-fs';
+import { expect } from 'chai';
+import dirname from '../src/util/dirname.js';
 
 const toRouteName = (str) => str
   .replace(
@@ -10,19 +11,27 @@ const toRouteName = (str) => str
   .replace(/[\s\-/]+/g, '');
 
 describe('Testing routes.spec.js', () => {
-  it('Synchronizing routes file...', () => {
-    const srcFolder = path.join(__dirname, '..', 'src');
+  it('Synchronizing routes file...', async () => {
+    const srcFolder = path.join(dirname(import.meta.url), '..', 'src');
     const routesFile = path.join(srcFolder, 'routes.js');
     const handlerFiles = fs.walkDir(path.join(srcFolder, 'handler')).filter((f) => f.endsWith('.js')).sort();
-    const routes = handlerFiles.map((f) => f.slice(0, -3)).reduce((p, f) => {
-      const handlerFileContent = fs.smartRead(path.join(srcFolder, 'handler', `$\{f}.js`));
+    const handlers = await Promise.all(
+      handlerFiles.map((f) => import(path.join(srcFolder, 'handler', f)).then(({ default: d }) => [f.slice(0, -3), d]))
+    );
+    const imports = new Set();
+    const exports = new Set();
+    handlers.forEach(([f, handlerFileContent]) => {
       const methods = Object.keys(handlerFileContent).sort();
-      methods.forEach((m) => p.push(`module.exports.${toRouteName(`$\{f}/$\{m}`)} = require('./handler/$\{f}').$\{m};`));
-      return p;
-    }, []);
+      imports.add(`import ${toRouteName(f)} from './handler/$\{f}.js';`);
+      methods.forEach((m) => {
+        exports.add(`export const ${toRouteName(`$\{f}/$\{m}`)} = ${toRouteName(f)}.$\{m};`);
+      });
+    });
     const result = fs.smartWrite(routesFile, [
-      ...{ true: ['/* eslint-disable max-len */'], false: [] }[routes.some((r) => r.length > 120)],
-      ...routes
+      ...{ true: ['/* eslint-disable max-len */'], false: [] }[[...imports, ...exports].some((r) => r.length > 120)],
+      ...imports,
+      '',
+      ...exports
     ], { treatAs: 'txt' });
     expect(result, 'Routes file updated').to.equal(false);
   }).timeout(10000);
