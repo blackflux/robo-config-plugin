@@ -3,12 +3,12 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-api">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-api">`assorted/@sls-api`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless-api">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless-api">`struct/#serverless-api`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-routes">`struct/sls-test-routes`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-hangler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-hangler">`struct/sls-test-hangler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler-conf">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler-conf">`struct/sls-test-handler-conf`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-handler">`struct/sls-test-handler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-test-env">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-test-env">`struct/sls-test-env`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-swagger">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-swagger">`struct/sls-swagger`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-routes">`struct/sls-src-routes`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-handler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-handler">`struct/sls-src-handler`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-hangler">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-hangler">`struct/sls-src-hangler`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsls-src-core-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsls-src-core-api">`struct/sls-src-core-api`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignoreserverless-api">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignoreserverless-api">`gitignore/#serverless-api`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitignorelambda-tdd">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitignorelambda-tdd">`gitignore/lambda-tdd`</a>
@@ -31,14 +31,14 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gitignore">.gitignore</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-swaggeryml">swagger.yml</a></code><br/>
 <code>├─&nbsp;src</code><br/>
-<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerjs">handler.js</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchanglerjs">hangler.js</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcroutesjs">routes.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;core</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
       </td>
@@ -79,14 +79,14 @@ Manage project structure for serverless project using lambda-serverless-api and 
 <code>project</code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-swaggeryml">swagger.yml</a></code><br/>
 <code>├─&nbsp;src</code><br/>
-<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerjs">handler.js</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchanglerjs">hangler.js</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcroutesjs">routes.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;core</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
       </td>
@@ -138,6 +138,36 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">tes
   </tbody>
 </table>
 
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-hangler">struct/sls-test-hangler</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-hangler">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">test/hangler.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Managed file to run lambda-tdd tests and sync swagger docs.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-handler-conf">struct/sls-test-handler-conf</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler-conf">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">test/handler.conf.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
@@ -160,36 +190,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">te
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-handler">struct/sls-test-handler</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">test/handler.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
-
-- Managed file to run lambda-tdd tests and sync swagger docs.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">handler.spec.js</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a></li>
         </ul>
       </td>
@@ -292,9 +292,9 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcroutesjs">src/rout
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-src-handler">struct/sls-src-handler</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-src-handler">`index`</a>)
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-src-hangler">struct/sls-src-hangler</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-src-hangler">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchandlerjs">src/handler.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchanglerjs">src/hangler.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Manage handler definition file.
 
@@ -309,7 +309,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srchandlerjs">src/han
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;src</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchandlerjs">handler.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srchanglerjs">hangler.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -481,6 +481,14 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 
 *Utility test to sync routes file.*
 
+### <a name="blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">test/hangler.spec.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a>, <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
+
+:small_blue_diamond: `other`
+
+*Test Utility to run lambda-tdd tests and sync swagger docs.*
+
 ### <a name="blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">test/handler.conf.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
@@ -488,14 +496,6 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 :small_blue_diamond: `other`
 
 *Configuration for lambda-tdd test setup.*
-
-### <a name="blackfluxrobo-config-plugin-target-ref-testhandlerspecjs">test/handler.spec.js</a>  
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a>, <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
-
-:small_blue_diamond: `other`
-
-*Test Utility to run lambda-tdd tests and sync swagger docs.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test/env-vars.yml</a>  
 
@@ -525,7 +525,7 @@ Swagger documentation for project.
 
 Auto generated Route definitions for Lambda handlers
 
-### <a name="blackfluxrobo-config-plugin-target-ref-srchandlerjs">src/handler.js</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-srchanglerjs">src/hangler.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-serverless-api">lambda-serverless-api</a>, <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>
 

@@ -1,10 +1,10 @@
 {
   "tasks": [
     "sls-swagger",
-    "sls-src-handler",
+    "sls-src-hangler",
     "sls-src-routes",
     "sls-src-core-api",
-    "sls-test-handler",
+    "sls-test-hangler",
     "sls-test-routes",
     "sls-test-handler-conf",
     "sls-test-env"

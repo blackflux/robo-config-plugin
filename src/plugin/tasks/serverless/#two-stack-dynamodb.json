@@ -1,6 +1,5 @@
 {
   "tasks": [
-    "serverless",
     "test-sls-cf-stack",
     "test-sls-tags",
     "test-sls-cf-stack-routes",

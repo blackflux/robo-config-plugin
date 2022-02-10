@@ -1,9 +1,9 @@
 {
-  "target": "test/handler.spec.js",
+  "target": "test/hangler.spec.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "sls-api/test/handler.spec.js"
+    "sls-api/test/hangler.spec.js"
   ],
   "requires": [
     "lambda-serverless-api",

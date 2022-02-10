@@ -3,8 +3,7 @@
     "gardener.js",
     "node_modules/*",
     "coverage/*",
-    "lib/*",
-    "serverless.config.js"
+    "lib/*"
   ],
   "temp-directory": "./coverage/.c8_output",
   "reports-dir": "./coverage",
