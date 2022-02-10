@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "homepage": "https://github.com/${repoKey}#readme",
   "repository": {
     "type": "git",
