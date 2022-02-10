@@ -2,7 +2,6 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless">`struct/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">`struct/template-mocharc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babel-config">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babel-config">`struct/template-babel-config`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-feature-request">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-feature-request">`struct/github-feature-request`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-bug-report">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-bug-report">`struct/github-bug-report`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">`struct/force-gardener-dockerized`</a>
@@ -72,7 +71,6 @@ Manage various configuration files for serverless project.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">feature_request.md</a></code><br/>
 <code>├─&nbsp;.idea</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
@@ -108,7 +106,6 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
@@ -127,9 +124,9 @@ Manage various configuration files for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
@@ -151,7 +148,6 @@ Manage basic project structure for serverless project.
     <tr>
       <th>Targets</th>
       <th>Requires</th>
-      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -161,7 +157,6 @@ Manage basic project structure for serverless project.
 <code>│&nbsp;&nbsp;└─&nbsp;ISSUE_TEMPLATE</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatebug_reportmd">bug_report.md</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">feature_request.md</a></code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
@@ -172,14 +167,8 @@ Manage basic project structure for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -238,41 +227,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslint
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-babel-config">struct/template-babel-config</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babel-config">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
-
-- Create configuration file for babel.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-      <th>Variables</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -1718,13 +1672,6 @@ Mocha is a JavaScript test framework for Node.js programs, featuring browser sup
 JSLint is a static code analysis tool used in software development for 
 checking if JavaScript source code complies with coding rules.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-babel">babel</a> ([`link`](https://babeljs.io/)) 
-
-*JavaScript Compiler.*
-
-Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
-compatible version of JavaScript in current and older browsers or environments.
-
 ### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a> ([`link`](https://github.com/)) 
 
 *Major development platform powered by git.*
@@ -1828,12 +1775,6 @@ Automates the package release workflow including:
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `string`
-
-*The minimum node version targeted.*
-
-The minimum nodejs version that the project targets.
-
 ### <a name="blackfluxrobo-config-plugin-var-ref-namespace">namespace</a>  : `string`
 
 *Namespace for this project.*
@@ -1847,6 +1788,12 @@ Typically set to something like 'com.sls.ORGNAME'
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `string`
+
+*The minimum node version targeted.*
+
+The minimum nodejs version that the project targets.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
 
@@ -1901,14 +1848,6 @@ CircleCi read only api token used to access build status.
 :small_blue_diamond: `json`
 
 *Configuration file for eslint.*
-
-### <a name="blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a> ([`link`](https://babeljs.io/docs/en/configuration)) 
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a>
-
-:small_blue_diamond: `json`
-
-*Configuration for babel.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">.github/ISSUE_TEMPLATE/feature_request.md</a>  
 
@@ -2165,14 +2104,6 @@ Contains lots of information about the project itself.
 
 *Simply replace the old with the new content.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
-
-:small_blue_diamond: `json`, `yml`
-
-*Does a "smart" deep merge.*
-
-This will not work as desired for all object deep merging, but should for many cases.
-
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
 :small_blue_diamond: `json`, `yml`
@@ -2180,6 +2111,14 @@ This will not work as desired for all object deep merging, but should for many c
 *Does a shallow merge aka `Object.assign()`.*
 
 Useful when specific keys of the target need to be overwritten.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Does a "smart" deep merge.*
+
+This will not work as desired for all object deep merging, but should for many cases.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>  
 
