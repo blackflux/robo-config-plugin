@@ -60,5 +60,6 @@
     "node": ">= nodeVersion"
   },
   "main": "lib/index.js",
-  "name": "packageName"
+  "name": "packageName",
+  "type": "module"
 }

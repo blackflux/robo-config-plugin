@@ -57,5 +57,6 @@
     "node": ">= nodeVersion"
   },
   "private": true,
-  "name": "projectName"
+  "name": "projectName",
+  "type": "module"
 }
