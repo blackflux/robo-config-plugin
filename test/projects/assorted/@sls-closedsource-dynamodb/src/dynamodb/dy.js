@@ -1,13 +1,12 @@
-const path = require('path');
-const sfs = require('smart-fs');
-const LRU = require('lru-cache-ext');
-const aws = require('../core/aws');
+import * as migrationState from './tables/migration-state.js';
+import * as model from './tables/model.js';
+import * as relChild from './tables/rel-child.js';
+import * as relParent from './tables/rel-parent.js';
+import aws from '../core/aws.js';
 
-const tableCache = new LRU({ maxAge: 24 * 60 * 60 * 1000 });
-
-module.exports = (table) => tableCache.memoizeSync(
-  table,
-  () => aws.dy.Model(
-    sfs.smartRead(path.join(__dirname, 'tables', `${table}.js`))
-  )
-);
+export default (table) => ({
+  'migration-state': aws.dy.Model(migrationState),
+  model: aws.dy.Model(model),
+  'rel-child': aws.dy.Model(relChild),
+  'rel-parent': aws.dy.Model(relParent)
+}[table]);
