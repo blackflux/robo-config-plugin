@@ -42,5 +42,6 @@
   },
   "env": {"es6": true, "node": true, "mocha": true},
   "globals": {},
-  "plugins": ["json", "mocha", "@blackflux/rules"]
+  "plugins": ["json", "mocha", "@blackflux/rules"],
+  "parser": "babel-eslint"
 }
