@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "rm -rf lib build .webpack",
-    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./babel.config.json && react-scripts build",
+    "build": "cp -rf ./src ./lib",
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "yarn run build-clean && c8 mocha \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
