@@ -20,7 +20,10 @@
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0",
     "coveralls": "3.0.0",
-    "c8": "7.11.0"
+    "c8": "7.11.0",
+    "@babel/core": "7.17.2",
+    "@babel/eslint-parser": "7.17.0",
+    "@babel/register": "7.17.0"
   },
   "files": [
     "lib"
