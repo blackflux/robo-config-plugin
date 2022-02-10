@@ -20,7 +20,10 @@
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0",
     "dynamodb-admin": "4.0.0",
-    "c8": "7.11.0"
+    "c8": "7.11.0",
+    "@babel/core": "7.17.2",
+    "@babel/eslint-parser": "7.17.0",
+    "@babel/register": "7.17.0"
   },
   "scripts": {
     "ddba": "AWS_REGION=awsregion AWS_ACCESS_KEY_ID=awsAccessKeyId AWS_SECRET_ACCESS_KEY=awsSecretAccessKey DYNAMO_ENDPOINT=http://0.0.0.0:8000 dynamodb-admin",

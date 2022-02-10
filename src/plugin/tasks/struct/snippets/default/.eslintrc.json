@@ -116,5 +116,8 @@
     "mocha",
     "@blackflux/rules"
   ],
-  "parser": "babel-eslint"
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  }
 }
