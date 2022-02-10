@@ -12,7 +12,7 @@ resources:
         custom: '${file(^/../random-deploy-hash.js)}'
 functions:
   triggersTriggerFn:
-    handler: lib/handler.triggersTriggerFn
+    handler: lib/hangler.default.triggersTriggerFn
     memorySize: triggerMemorySize
     timeout: triggerTimeout
     tags:

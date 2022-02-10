@@ -72,7 +72,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
       filterFn: ({ key }) => {
         const fn = key[1];
         const handler = get(apiStack, `functions.${fn}.handler`);
-        expect(handler).to.equal(`lib/handler.${fn}`);
+        expect(handler).to.equal(`lib/hangler.default.${fn}`);
         expect(typeof handlers[fn]).to.equal('function');
       }
     })(apiStack);

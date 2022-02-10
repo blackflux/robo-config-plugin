@@ -1,11 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const path = require('path');
-const yaml = require('yaml-boost');
-const objectScan = require('object-scan');
-const objectHash = require('object-hash-strict');
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import yaml from 'yaml-boost';
+import objectScan from 'object-scan';
+import objectHash from 'object-hash-strict';
 
-module.exports = (kwargs) => {
-  const configFile = path.join(__dirname, 'resolver.yml');
+export default (kwargs) => {
+  const configFile = join(dirname(fileURLToPath(import.meta.url)), 'resolver.yml');
   const r = yaml.load(configFile, kwargs);
   const logic = {
     'provider.iamRoleStatements[*].Action': ({ value }) => {
