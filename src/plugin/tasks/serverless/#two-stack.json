@@ -11,6 +11,7 @@
     "serverless-base-data",
     "serverless-base-data-stack-hash",
     "serverless-api",
+    "serverless-api-random-deploy-hash",
     "serverless-data"
   ],
   "description": "Manage serverless configuration for deployment to AWS."

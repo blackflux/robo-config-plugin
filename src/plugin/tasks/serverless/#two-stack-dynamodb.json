@@ -13,6 +13,7 @@
     "serverless-base-data",
     "serverless-base-data-stack-hash",
     "serverless-api",
+    "serverless-api-random-deploy-hash",
     "serverless-data",
     "src-core-aws",
     "src-dynamodb-dy"
