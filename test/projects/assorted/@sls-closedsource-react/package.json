@@ -41,7 +41,8 @@
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
     "gardener": "node gardener.js",
-    "start-offline": "yarn run build-clean && sls offline start --config serverless.config.js --stack=api-offline --region=awsRegion --env=offline"
+    "start-offline": "yarn sls-compile --region=awsRegion --env=offline && yarn run build-clean && sls offline start --config serverless-offline.config.yml --stack=api-offline",
+    "sls-compile": "node serverless/compile.js"
   },
   "files": [],
   "homepage": "https://github.com/repoKey#readme",

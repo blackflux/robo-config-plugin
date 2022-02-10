@@ -12,7 +12,8 @@
     "t": "yarn test",
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
-    "gardener": "node gardener.js"
+    "gardener": "node gardener.js",
+    "sls-compile": "node serverless/compile.js"
   },
   "files": []
 }

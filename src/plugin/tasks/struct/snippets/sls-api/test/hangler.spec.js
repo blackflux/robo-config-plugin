@@ -1,11 +1,14 @@
-const path = require('path');
-const minimist = require('minimist');
-const fs = require('smart-fs');
-const expect = require('chai').expect;
-const LambdaTdd = require('lambda-tdd');
-const { describe } = require('node-tdd');
-const api = require('../src/handler').internalApi;
-const handlerConf = require('./handler.conf');
+import path from 'path';
+import minimist from 'minimist';
+import fs from 'smart-fs';
+import LambdaTdd from 'lambda-tdd';
+import { describe } from 'node-tdd';
+import { expect } from 'chai';
+import handlerConf from './handler.conf.js';
+import handlers from '../src/hangler.js';
+import dirname from '../src/util/dirname.js';
+
+const api = handlers.internalApi;
 
 const methods = ['Get', 'Post', 'Put', 'Patch', 'Options', 'Head', 'Delete', 'Any'];
 
@@ -17,36 +20,36 @@ const pathToCamelCase = (str) => str
   .replace(/[\s\-/]+/g, '');
 
 LambdaTdd({
-  cwd: path.join(__dirname, '..'),
+  cwd: path.join(dirname(import.meta.url), '..'),
   verbose: minimist(process.argv.slice(2)).verbose === true,
   timeout: minimist(process.argv.slice(2)).timeout,
   nockHeal: minimist(process.argv.slice(2))['nock-heal'],
   testHeal: minimist(process.argv.slice(2))['test-heal'],
   enabled: true,
-  handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
-  cassetteFolder: path.join(__dirname, 'handler', '__cassettes'),
-  envVarYml: path.join(__dirname, 'env-vars.yml'),
-  envVarYmlRecording: path.join(__dirname, 'env-vars.recording.yml'),
-  testFolder: path.join(__dirname, 'handler'),
+  handlerFile: path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'),
+  cassetteFolder: path.join(dirname(import.meta.url), 'handler', '__cassettes'),
+  envVarYml: path.join(dirname(import.meta.url), 'env-vars.yml'),
+  envVarYmlRecording: path.join(dirname(import.meta.url), 'env-vars.recording.yml'),
+  testFolder: path.join(dirname(import.meta.url), 'handler'),
   ...handlerConf
 }).execute();
 
-describe('Testing handler.spec.js', {
+describe('Testing hangler.spec.js', {
   timeout: 10000
 }, () => {
   let handlerFile;
   let handlerTestDir;
   let handlerTestFiles;
 
-  before(() => {
-    handlerFile = fs.smartRead(path.join(__dirname, '..', 'src', 'handler.js'));
-    handlerTestDir = path.join(__dirname, 'handler');
+  before(async () => {
+    handlerFile = (await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'))).default;
+    handlerTestDir = path.join(dirname(import.meta.url), 'handler');
     handlerTestFiles = fs.walkDir(handlerTestDir)
       .filter((f) => !f.startsWith('__cassettes'));
   });
 
   it('Synchronizing swagger file...', async () => {
-    const swaggerFile = path.join(__dirname, '..', 'swagger.yml');
+    const swaggerFile = path.join(dirname(import.meta.url), '..', 'swagger.yml');
     const swaggerContent = await api.generateSwagger();
     const result = fs.smartWrite(swaggerFile, swaggerContent);
     expect(result, 'Swagger file updated').to.equal(false);
@@ -54,7 +57,7 @@ describe('Testing handler.spec.js', {
 
   it('Testing for unexpected files', () => {
     handlerTestFiles.forEach((f) => {
-      expect(f.endsWith('.spec.json'), `Unexpected File: ${f}`).to.equal(true);
+      expect(f.endsWith('.spec.json'), `Unexpected File: $\{f}`).to.equal(true);
     });
   });
 
@@ -65,7 +68,7 @@ describe('Testing handler.spec.js', {
       const inApiFolder = /^api\//.test(f);
       expect(
         inApiFolder === isApiEndpoint,
-        `Api Gateway Endpoints need to be in handler/api: ${handler}`
+        `Api Gateway Endpoints need to be in handler/api: $\{handler}`
       ).to.equal(true);
     });
   });
@@ -78,7 +81,7 @@ describe('Testing handler.spec.js', {
         !isApiEndpoint
         || handlerFile[handler].isRouter === true
         || methods.some((m) => handler.endsWith(m)),
-        `Bad Handler Name: ${handler}`
+        `Bad Handler Name: $\{handler}`
       ).to.equal(true);
     });
   });
@@ -89,7 +92,7 @@ describe('Testing handler.spec.js', {
       const { handler } = fs.smartRead(path.join(handlerTestDir, f));
       expect(
         uri.startsWith(handler),
-        `Bad Test File Name: ${f}. Expected "${uri}" to start with "${handler}"`
+        `Bad Test File Name: $\{f}. Expected "$\{uri}" to start with "$\{handler}"`
       ).to.equal(true);
     });
   });

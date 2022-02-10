@@ -1,7 +1,7 @@
-const objectScan = require('object-scan');
-const { describe } = require('node-tdd');
-const expect = require('chai').expect;
-const resolver = require('../serverless/.base/resolver');
+import objectScan from 'object-scan';
+import { describe } from 'node-tdd';
+import { expect } from 'chai';
+import resolver from '../serverless/.base/resolver.js';
 
 const tagNames = ['service', 'stage', 'resource'];
 

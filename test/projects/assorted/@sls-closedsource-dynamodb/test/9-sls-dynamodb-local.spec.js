@@ -1,9 +1,10 @@
-const path = require('path');
-const objectScan = require('object-scan');
-const { describe } = require('node-tdd');
-const fs = require('smart-fs');
-const expect = require('chai').expect;
-const resolver = require('../serverless/.base/resolver');
+import path from 'path';
+import objectScan from 'object-scan';
+import { describe } from 'node-tdd';
+import fs from 'smart-fs';
+
+import { expect } from 'chai';
+import dirname from '../src/util/dirname.js';
 
 const normalize = (table) => objectScan([
   '*',
@@ -31,7 +32,11 @@ const normalize = (table) => objectScan([
 describe('Testing dynamodb-local', { envVarsFile: 'env-vars.yml' }, () => {
   let dataStack;
   let tables;
-  before(() => {
+
+  beforeEach(async () => {
+    process.env.TEST_SEED = Math.random();
+    const resolver = (await import('../serverless/.base/resolver.js')).default;
+
     dataStack = resolver({
       stack: 'data',
       region: process.env.AWS_REGION,
@@ -67,7 +72,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env-vars.yml' }, () => {
         );
       });
     expect(
-      fs.smartWrite(path.join(__dirname, '..', 'docker', 'dynamodb.sh'), result),
+      fs.smartWrite(path.join(dirname(import.meta.url), '..', 'docker', 'dynamodb.sh'), result),
       'DynamoDb tables updated. Please re-run.'
     ).to.equal(false);
   });
