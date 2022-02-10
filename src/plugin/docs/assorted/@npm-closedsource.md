@@ -7,7 +7,6 @@
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index-test">`struct/template-index-test`</a>
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index">`struct/template-index`</a>
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
-      - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babel-config">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-babel-config">`struct/template-babel-config`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-default">`semantic-release/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default">`package/#npm-default`</a>
@@ -59,7 +58,6 @@ Manage various configuration files for closed source npm package on github.
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">config.yml</a></code><br/>
 <code>├─&nbsp;.idea</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
@@ -85,7 +83,6 @@ Manage various configuration files for closed source npm package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a></li>
@@ -130,7 +127,6 @@ Manage basic project structure for npm package on github.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
@@ -148,13 +144,11 @@ Manage basic project structure for npm package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -205,7 +199,6 @@ Manage basic project structure for npm package on github.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a></code><br/>
@@ -221,13 +214,11 @@ Manage basic project structure for npm package on github.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -373,41 +364,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslint
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-babel-config">struct/template-babel-config</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-babel-config">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
-
-- Create configuration file for babel.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-      <th>Variables</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a></li>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
         </ul>
       </td>
     </tr>
@@ -1391,13 +1347,6 @@ Chai is a BDD / TDD assertion library for node and the browser that can be paire
 JSLint is a static code analysis tool used in software development for 
 checking if JavaScript source code complies with coding rules.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-babel">babel</a> ([`link`](https://babeljs.io/)) 
-
-*JavaScript Compiler.*
-
-Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
-compatible version of JavaScript in current and older browsers or environments.
-
 ### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a> ([`link`](https://github.com/semantic-release/semantic-release)) 
 
 *Automates npm package release workflow.*
@@ -1583,14 +1532,6 @@ Main file for the project. Exposes functionality for libraries.
 
 *Configuration file for eslint.*
 
-### <a name="blackfluxrobo-config-plugin-target-ref-babelconfigjson">babel.config.json</a> ([`link`](https://babeljs.io/docs/en/configuration)) 
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-babel">babel</a>
-
-:small_blue_diamond: `json`
-
-*Configuration for babel.*
-
 ### <a name="blackfluxrobo-config-plugin-target-ref-releasercjson">.releaserc.json</a> ([`link`](https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file)) 
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a>
@@ -1697,14 +1638,6 @@ Defines file formatting that an IDE can pick up and use to format project files.
 
 *Does nothing when the file is already present, otherwise creates it.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
-
-:small_blue_diamond: `json`, `yml`
-
-*Does a "smart" deep merge.*
-
-This will not work as desired for all object deep merging, but should for many cases.
-
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
 :small_blue_diamond: `json`, `yml`
@@ -1712,6 +1645,14 @@ This will not work as desired for all object deep merging, but should for many c
 *Does a shallow merge aka `Object.assign()`.*
 
 Useful when specific keys of the target need to be overwritten.
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>  
+
+:small_blue_diamond: `json`, `yml`
+
+*Does a "smart" deep merge.*
+
+This will not work as desired for all object deep merging, but should for many cases.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-default-shallow">default-shallow</a>  
 
