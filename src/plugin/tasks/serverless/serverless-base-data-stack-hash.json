@@ -1,9 +1,9 @@
 {
-  "target": "serverless/.base/data-stack-hash.fn",
+  "target": "serverless/.base/data-stack-hash.cjs",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/.base/data-stack-hash.fn"
+    "serverless/.base/data-stack-hash.cjs"
   ],
   "requires": [
     "serverless",

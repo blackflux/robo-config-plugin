@@ -95,10 +95,9 @@ jobs:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.60.3
       - run: yarn run build-clean
+      - run: yarn run sls-compile --stack api --region awsRegion --env local
       - run:
-          command: >-
-            sls deploy --config serverless.config.js --stack api --region
-            awsRegion --env local --force
+          command: sls deploy --config serverless-local.config.yml --force
           no_output_timeout: 10m
   deploy-dev:
     docker:
@@ -136,10 +135,9 @@ jobs:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.60.3
       - run: yarn run build-clean
+      - run: yarn run sls-compile --stack api --region awsRegion --env dev
       - run:
-          command: >-
-            sls deploy --config serverless.config.js --stack api --region
-            awsRegion --env dev --force
+          command: sls deploy --config serverless-dev.config.yml --force
           no_output_timeout: 10m
   deploy-stage:
     docker:
@@ -177,10 +175,9 @@ jobs:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.60.3
       - run: yarn run build-clean
+      - run: yarn run sls-compile --stack api --region awsRegion --env stage
       - run:
-          command: >-
-            sls deploy --config serverless.config.js --stack api --region
-            awsRegion --env stage --force
+          command: sls deploy --config serverless-stage.config.yml --force
           no_output_timeout: 10m
   deploy-prod:
     docker:
@@ -218,10 +215,9 @@ jobs:
             - ~/.cache/yarn
       - run: yarn global add serverless@2.60.3
       - run: yarn run build-clean
+      - run: yarn run sls-compile --stack api --region awsRegion --env prod
       - run:
-          command: >-
-            sls deploy --config serverless.config.js --stack api --region
-            awsRegion --env prod --force
+          command: sls deploy --config serverless-prod.config.yml --force
           no_output_timeout: 10m
   test-node-v14.x:
     docker:

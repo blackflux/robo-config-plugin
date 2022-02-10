@@ -343,7 +343,7 @@ resources:
           - CfnAssumeRole
           - Arn
     dataStackHash:
-      Value: ${fileFn(^/data-stack-hash.fn)}
+      Value: ${fileFn(^/data-stack-hash.cjs)}
 
 <<<:
   - ${file(^/../data.yml)}
