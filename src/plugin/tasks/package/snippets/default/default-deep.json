@@ -2,6 +2,9 @@
   "description": "???",
   "keywords": [],
   "devDependencies": {
+    "@babel/core": "7.17.2",
+    "@babel/eslint-parser": "7.17.0",
+    "@babel/register": "7.17.0",
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
     "c8": "7.11.0",
