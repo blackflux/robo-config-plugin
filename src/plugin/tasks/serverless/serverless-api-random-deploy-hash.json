@@ -1,0 +1,16 @@
+{
+  "target": "serverless/api/random-deploy-hash.cjs",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/api/random-deploy-hash.cjs"
+  ],
+  "requires": [
+    "javascript",
+    "aws",
+    "serverless"
+  ],
+  "purpose": [
+    "Random hash to ensure lambda custom resource is redeployed."
+  ]
+}

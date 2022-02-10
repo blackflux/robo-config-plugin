@@ -1,3 +1,5 @@
-const { handler } = require('../../../queue/queue');
+import Queue from '../../../queue/queue.js';
 
-module.exports.handler = handler('${queue}');
+export default {
+  handler: Queue.handler('${queue}')
+};

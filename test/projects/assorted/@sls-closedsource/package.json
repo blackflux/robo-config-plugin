@@ -41,7 +41,8 @@
     "it": "yarn run i && yarn run t",
     "t": "yarn test",
     "ts": "yarn run test-simple",
-    "tsv": "yarn run test-simple --verbose"
+    "tsv": "yarn run test-simple --verbose",
+    "sls-compile": "node serverless/compile.js"
   },
   "bugs": {
     "url": "https://github.com/repoKey/issues"

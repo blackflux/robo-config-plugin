@@ -1,8 +1,9 @@
-const path = require('path');
-const https = require('https');
-const fs = require('smart-fs');
-const expect = require('chai').expect;
-const { describe } = require('node-tdd');
+import path from 'path';
+import https from 'https';
+import fs from 'smart-fs';
+import { expect } from 'chai';
+import { describe } from 'node-tdd';
+import dirname from '../src/util/dirname.js';
 
 describe('Testing sls configuration', { timeout: 10000 }, () => {
   it('Testing aws-sdk version', async () => {
@@ -30,7 +31,7 @@ describe('Testing sls configuration', { timeout: 10000 }, () => {
     const version = r.match(
       /<td>\s+<p><code class="code">nodejs14\.x<\/code><\/p>\s+<\/td>\s+<td>\s+<p>(\d+\.\d+\.\d+)<\/p>\s+<\/td>/
     )[1];
-    const pkg = fs.smartRead(path.join(__dirname, '..', 'package.json'));
+    const pkg = fs.smartRead(path.join(dirname(import.meta.url), '..', 'package.json'));
     expect(pkg.devDependencies['aws-sdk'], `devDependencies.aws-sdk !== ${version}`).to.equal(version);
     expect(pkg.peerDependencies['aws-sdk'], `peerDependencies.aws-sdk !== ${version}`).to.equal(version);
   });

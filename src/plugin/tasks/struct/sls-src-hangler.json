@@ -1,9 +1,9 @@
 {
-  "target": "src/handler.js",
+  "target": "src/hangler.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "sls-api/src/handler.js"
+    "sls-api/src/hangler.js"
   ],
   "requires": [
     "lambda-serverless-api"

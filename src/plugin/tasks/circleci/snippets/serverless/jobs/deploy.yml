@@ -5,6 +5,7 @@ docker:
   - steps:
       - run: yarn global add serverless@2.60.3
       - run: yarn run build-clean
+      - run: yarn run sls-compile --stack api --region ${awsRegion} --env ${opt:env}
       - run:
-          command: sls deploy --config serverless.config.js --stack api --region ${awsRegion} --env ${opt:env} --force
+          command: sls deploy --config serverless-${opt:env}.config.yml --force
           no_output_timeout: 10m

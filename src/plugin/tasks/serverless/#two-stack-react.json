@@ -1,6 +1,5 @@
 {
   "tasks": [
-    "serverless",
     "test-sls-cf-stack",
     "test-sls-cf-stack-routes",
     "test-sls-cfg",
@@ -10,6 +9,7 @@
     "serverless-base-data",
     "serverless-base-data-stack-hash",
     "serverless-api",
+    "serverless-api-random-deploy-hash",
     "serverless-data",
     "serverless-base-api-offline"
   ],

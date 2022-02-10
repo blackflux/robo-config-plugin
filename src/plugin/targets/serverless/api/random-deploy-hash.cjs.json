@@ -1,0 +1,7 @@
+{
+  "description": "Api Stack Script Variable",
+  "details": ["Random hash to ensure lambda custom resource is redeployed."],
+  "formats": ["other"],
+  "requires": ["javascript", "aws", "serverless"],
+  "website": null
+}

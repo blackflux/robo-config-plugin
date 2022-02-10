@@ -1,6 +1,6 @@
 functions:
   cronsCronFn:
-    handler: lib/handler.cronsCronFn
+    handler: lib/hangler.default.cronsCronFn
     memorySize: cronMemorySize
     timeout: cronTimeout
     tags:

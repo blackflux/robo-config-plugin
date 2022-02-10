@@ -16,8 +16,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data">`serverless/serverless-base-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-api-offline">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-api-offline">`serverless/serverless-base-api-offline`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-api">`serverless/serverless-base-api`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-random-deploy-hash">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-random-deploy-hash">`serverless/serverless-api-random-deploy-hash`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api">`serverless/serverless-api`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless">`serverless/serverless`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless-react">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless-react">`package/#serverless-react`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless-react_merge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless-react_merge-shallow">`package/serverless-react_merge-shallow`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-packageserverless-react_merge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packageserverless-react_merge-deep">`package/serverless-react_merge-deep`</a>
@@ -82,19 +82,20 @@ Manage various configuration files for react serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a></code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">serverless.config.js</a></code><br/>
 <code>├─&nbsp;docker</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">Dockerfile</a></code><br/>
 <code>├─&nbsp;serverless</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;.base</code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapi-offlineyml">api-offline.yml</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml">api.yml</a></code><br/>
-<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">data-stack-hash.fn</a></code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashcjs">data-stack-hash.cjs</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedatayml">data.yml</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">resolver.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
@@ -337,17 +338,18 @@ Manage serverless configuration for deployment to AWS.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">serverless.config.js</a></code><br/>
 <code>├─&nbsp;serverless</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;.base</code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapi-offlineyml">api-offline.yml</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml">api.yml</a></code><br/>
-<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">data-stack-hash.fn</a></code><br/>
+<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashcjs">data-stack-hash.cjs</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedatayml">data.yml</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">resolver.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
@@ -358,6 +360,7 @@ Manage serverless configuration for deployment to AWS.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -561,7 +564,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
 
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data-stack-hash">serverless/serverless-base-data-stack-hash</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data-stack-hash">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">serverless/.base/data-stack-hash.fn</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashcjs">serverless/.base/data-stack-hash.cjs</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Manage data stack hash resolver file.
 
@@ -577,7 +580,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-st
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;.base</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">data-stack-hash.fn</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashcjs">data-stack-hash.cjs</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -683,6 +686,38 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml"
   </tbody>
 </table>
 
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-api-random-deploy-hash">serverless/serverless-api-random-deploy-hash</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api-random-deploy-hash">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">serverless/api/random-deploy-hash.cjs</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Random hash to ensure lambda custom resource is redeployed.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;serverless</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-api">serverless/serverless-api</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">serverless/api.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
@@ -701,35 +736,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless">serverless/serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">serverless.config.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
-
-- Manage flexible serverless configuration file.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">serverless.config.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1941,7 +1947,7 @@ Resolve serverless js configuration to requested stack.
 
 Resolve serverless configuration to requested stack.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashfn">serverless/.base/data-stack-hash.fn</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessbasedata-stack-hashcjs">serverless/.base/data-stack-hash.cjs</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
 
@@ -1981,6 +1987,16 @@ Defines api offline stack base configuration. This stack can not be deployed and
 
 Defines api stack base configuration.
 
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">serverless/api/random-deploy-hash.cjs</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>, <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>, <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
+
+:small_blue_diamond: `other`
+
+*Api Stack Script Variable*
+
+Random hash to ensure lambda custom resource is redeployed.
+
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapiyml">serverless/api.yml</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
@@ -1990,16 +2006,6 @@ Defines api stack base configuration.
 *Api stack resource definition.*
 
 Contains user defined api stack resource definitions.
-
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlessconfigjs">serverless.config.js</a> ([`link`](https://serverless.com/framework/docs/providers/aws/guide/intro#services)) 
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
-
-:small_blue_diamond: `other`
-
-*Configuration file for serverless.*
-
-Load serverless configuration dynamically.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-packagejson">package.json</a> ([`link`](https://docs.npmjs.com/files/package.json)) 
 
