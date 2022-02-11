@@ -4,7 +4,7 @@ import fs from 'smart-fs';
 import LambdaTdd from 'lambda-tdd';
 import { describe } from 'node-tdd';
 import { expect } from 'chai';
-import handlerConf from './handler.conf.js';
+import hanglerConf from './hangler.conf.js';
 import handlers from '../src/hangler.js';
 import dirname from '../src/util/dirname.js';
 
@@ -31,7 +31,7 @@ LambdaTdd({
   envVarYml: path.join(dirname(import.meta.url), 'env-vars.yml'),
   envVarYmlRecording: path.join(dirname(import.meta.url), 'env-vars.recording.yml'),
   testFolder: path.join(dirname(import.meta.url), 'handler'),
-  ...handlerConf
+  ...hanglerConf
 }).execute();
 
 describe('Testing hangler.spec.js', {
