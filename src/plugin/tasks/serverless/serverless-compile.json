@@ -1,0 +1,15 @@
+{
+  "target": "serverless/compile.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/compile.js"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Create file that compiles serverless configuration to yml."
+  ]
+}

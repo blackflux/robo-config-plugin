@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless_merge-deep"
+  ],
+  "description": "Manage .c8rc.json for c8 coverage testing."
+}
