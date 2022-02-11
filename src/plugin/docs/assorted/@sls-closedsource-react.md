@@ -1,5 +1,6 @@
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsource-reactjson">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-closedsource-reactjson">`assorted/@sls-closedsource-react.json`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless">`struct/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtest-hot">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtest-hot">`struct/test-hot`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">`struct/template-mocharc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-feature-request">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-feature-request">`struct/github-feature-request`</a>
@@ -99,6 +100,7 @@ Manage various configuration files for react serverless project.
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
         </ul>
       </td>
@@ -160,7 +162,9 @@ Manage basic project structure for serverless project.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">feature_request.md</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -170,6 +174,35 @@ Manage basic project structure for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtest-hot">struct/test-hot</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtest-hot">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">test/hot.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create custom loader file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
     </tr>
@@ -1847,6 +1880,12 @@ CircleCi read only api token used to access build status.
 
 ## Targets
 
+### <a name="blackfluxrobo-config-plugin-target-ref-testhotjs">test/hot.js</a>  
+
+:small_blue_diamond: `other`
+
+*Custom loader to allow hot reloading of files for testing.*
+
 ### <a name="blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a> ([`link`](https://mochajs.org/#mochaopts)) 
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-mocha">mocha</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
@@ -2108,17 +2147,17 @@ Contains lots of information about the project itself.
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>  
-
-:small_blue_diamond: `any`
-
-*Does nothing when the file is already present, otherwise creates it.*
-
 ### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
 
 :small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
+
+### <a name="blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>  
+
+:small_blue_diamond: `any`
+
+*Does nothing when the file is already present, otherwise creates it.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 

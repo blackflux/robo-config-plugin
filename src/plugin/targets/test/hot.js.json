@@ -1,0 +1,7 @@
+{
+  "description": "Custom loader to allow hot reloading of files for testing.",
+  "details": [],
+  "formats": ["other"],
+  "requires": [],
+  "website": null
+}
