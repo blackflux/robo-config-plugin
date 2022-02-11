@@ -11,6 +11,7 @@
     "license/#closedsource",
     "package/#serverless",
     "c8/#default",
+    "c8/#serverless",
     "serverless/#two-stack"
   ],
   "description": "Manage various configuration files for serverless project."

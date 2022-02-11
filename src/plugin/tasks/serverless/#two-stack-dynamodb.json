@@ -14,6 +14,7 @@
     "serverless-api",
     "serverless-api-random-deploy-hash",
     "serverless-data",
+    "serverless-compile",
     "src-core-aws",
     "src-dynamodb-dy"
   ],

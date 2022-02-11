@@ -11,6 +11,7 @@
     "license/#closedsource",
     "package/#serverless-react",
     "c8/#default",
+    "c8/#serverless",
     "serverless/#two-stack-react"
   ],
   "description": "Manage various configuration files for react serverless project."
