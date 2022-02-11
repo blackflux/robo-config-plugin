@@ -1,0 +1,14 @@
+{
+  "target": "test/hot.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "default/test/hot.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create custom loader file."
+  ]
+}

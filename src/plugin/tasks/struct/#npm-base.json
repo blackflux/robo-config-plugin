@@ -4,7 +4,8 @@
     "template-index",
     "template-index-test",
     "template-mocharc",
-    "template-eslintrc"
+    "template-eslintrc",
+    "test-hot"
   ],
   "description": "Manage basic project structure for npm package on github."
 }
