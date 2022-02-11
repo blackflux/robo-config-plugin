@@ -1,9 +1,9 @@
 {
-  "target": "test/handler.conf.js",
+  "target": "test/hangler.conf.js",
   "format": "txt",
   "strategy": "create-only",
   "snippets": [
-    "sls-api/test/handler.conf.js"
+    "sls-api/test/hangler.conf.js"
   ],
   "requires": [
     "lambda-tdd"
