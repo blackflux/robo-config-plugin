@@ -37,7 +37,7 @@ Manage serverless project using lambda-serverless-api and lambda-tdd.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerconfjs">hangler.conf.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
@@ -85,7 +85,7 @@ Manage project structure for serverless project using lambda-serverless-api and 
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreapijs">api.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">env-vars.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerconfjs">hangler.conf.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testroutesspecjs">routes.spec.js</a></code><br/>
         </ul>
@@ -170,7 +170,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhanglerspecjs">te
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsls-test-handler-conf">struct/sls-test-handler-conf</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsls-test-handler-conf">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">test/handler.conf.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhanglerconfjs">test/hangler.conf.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
 
 - Create confiuration template for lambda-tdd test setup.
 
@@ -185,7 +185,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">te
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">handler.conf.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhanglerconfjs">hangler.conf.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -489,7 +489,7 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 
 *Test Utility to run lambda-tdd tests and sync swagger docs.*
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testhandlerconfjs">test/handler.conf.js</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-testhanglerconfjs">test/hangler.conf.js</a>  
 
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-lambda-tdd">lambda-tdd</a>
 
