@@ -31,7 +31,7 @@
     "clean": "rm -rf lib build .webpack",
     "build": "cp -rf ./src ./lib",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "yarn run build-clean && c8 mocha \"./test/**/*.spec.js\"",
+    "test-simple": "yarn run build-clean && c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "u": "yarn upgrade --latest --force",
