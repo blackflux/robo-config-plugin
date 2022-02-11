@@ -1,0 +1,7 @@
+{
+  "description": "Serverless config compiler.",
+  "details": ["Compiles serverless stack definition into output file."],
+  "formats": ["other"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}

@@ -11,6 +11,7 @@
     "license/#closedsource",
     "package/#serverless-dynamodb",
     "c8/#default",
+    "c8/#serverless",
     "serverless/#two-stack-dynamodb"
   ],
   "description": "Manage various configuration files for serverless project with the option of running DynamoDB locally."

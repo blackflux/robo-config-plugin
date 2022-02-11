@@ -12,6 +12,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-compile">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-compile">`serverless/serverless-compile`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver-js">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver-js">`serverless/serverless-base-resolver-js`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver">`serverless/serverless-base-resolver`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-data-stack-hash">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-data-stack-hash">`serverless/serverless-base-data-stack-hash`</a>
@@ -40,6 +41,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockersls-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockersls-docker">`docker/sls-docker`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circleciserverless">`circleci/#serverless`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-circleciserverless">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circleciserverless">`circleci/serverless`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8serverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8serverless">`c8/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8serverless_merge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8serverless_merge-deep">`c8/serverless_merge-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8default">`c8/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8default_merge-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8default_merge-shallow">`c8/default_merge-shallow`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8default_merge-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8default_merge-deep">`c8/default_merge-deep`</a>
@@ -93,6 +96,7 @@ Manage various configuration files for serverless project.
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">resolver.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">compile.js</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
@@ -379,6 +383,7 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">resolver.js</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolveryml">resolver.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">compile.js</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
@@ -544,6 +549,36 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-compile">serverless/serverless-compile</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-compile">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">serverless/compile.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create file that compiles serverless configuration to yml.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;serverless</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">compile.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1452,6 +1487,60 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.c
   </tbody>
 </table>
 
+## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-c8serverless">c8/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-c8serverless">`index`</a>)
+
+Manage .c8rc.json for c8 coverage testing.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-c8serverless_merge-deep">c8/serverless_merge-deep</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-c8serverless_merge-deep">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-deep">merge-deep</a>._
+
+- Set various entries.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-c8default">c8/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-c8default">`index`</a>)
 
 Manage .c8rc.json for c8 coverage testing.
@@ -1965,6 +2054,16 @@ Execute all configured js-gardener tasks.
 *Data stack resource definition.*
 
 Contains user defined data stack resource definitions.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">serverless/compile.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `other`
+
+*Serverless config compiler.*
+
+Compiles serverless stack definition into output file.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessbaseresolverjs">serverless/.base/resolver.js</a>  
 
