@@ -1,7 +1,7 @@
 {
   "target": "src/dynamodb/dy.js",
   "format": "txt",
-  "strategy": "overwrite",
+  "strategy": "create-only",
   "snippets": [
     "serverless/src/dynamodb/dy.js"
   ],

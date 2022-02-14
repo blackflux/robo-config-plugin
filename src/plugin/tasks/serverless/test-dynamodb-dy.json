@@ -1,0 +1,14 @@
+{
+  "target": "test/dynamodb/dy.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/test/dynamodb/dy.spec.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create file that generated dynamodb table lookup file."
+  ]
+}
