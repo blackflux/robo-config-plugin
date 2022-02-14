@@ -16,13 +16,13 @@ describe('Testing routes.spec.js', () => {
     const routesFile = path.join(srcFolder, 'routes.js');
     const handlerFiles = fs.walkDir(path.join(srcFolder, 'handler')).filter((f) => f.endsWith('.js')).sort();
     const handlers = await Promise.all(
-      handlerFiles.map((f) => import(path.join(srcFolder, 'handler', f)).then(({ default: d }) => [f.slice(0, -3), d]))
+      handlerFiles.map((f) => import(path.join(srcFolder, 'handler', f)).then((e) => [f.slice(0, -3), e]))
     );
     const imports = new Set();
     const exports = new Set();
     handlers.forEach(([f, handlerFileContent]) => {
       const methods = Object.keys(handlerFileContent).sort();
-      imports.add(`import ${toRouteName(f)} from './handler/${f}.js';`);
+      imports.add(`import * as ${toRouteName(f)} from './handler/${f}.js';`);
       methods.forEach((m) => {
         exports.add(`export const ${toRouteName(`${f}/${m}`)} = ${toRouteName(f)}.${m};`);
       });

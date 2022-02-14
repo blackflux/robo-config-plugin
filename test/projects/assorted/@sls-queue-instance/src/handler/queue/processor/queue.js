@@ -1,5 +1,4 @@
 import Queue from '../../../queue/queue.js';
 
-export default {
-  handler: Queue.handler('queue')
-};
+// eslint-disable-next-line import/prefer-default-export
+export const handler = Queue.handler('queue');
