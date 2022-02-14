@@ -1,7 +1,7 @@
 import fs from 'smart-fs';
 import path from 'path';
-import {expect} from 'chai';
-import {describe} from 'node-tdd';
+import { expect } from 'chai';
+import { describe } from 'node-tdd';
 import CamelCase from '../../src/util/camel-case.js';
 import dirname from '../../src/util/dirname.js';
 
