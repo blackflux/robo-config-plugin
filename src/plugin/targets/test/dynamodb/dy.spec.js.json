@@ -1,0 +1,7 @@
+{
+  "description": "Generator for src/dynamodb/dy.js",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["aws"],
+  "website": null
+}
