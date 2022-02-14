@@ -16,7 +16,8 @@
     "serverless-data",
     "serverless-compile",
     "src-core-aws",
-    "src-dynamodb-dy"
+    "src-dynamodb-dy",
+    "test-dynamodb-dy"
   ],
   "description": "Manage serverless configuration for deployment to AWS."
 }
