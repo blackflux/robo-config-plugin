@@ -5,7 +5,6 @@ import { URL } from 'url';
 
 const lookup = {};
 
-// eslint-disable-next-line import/prefer-default-export
 export const resolve = async (specifier, context, defaultResolve) => {
   const result = defaultResolve(specifier, context, defaultResolve);
   const child = new URL(result.url);
