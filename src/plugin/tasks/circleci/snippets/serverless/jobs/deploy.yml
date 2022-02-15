@@ -7,5 +7,5 @@ docker:
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region ${awsRegion} --env ${opt:env}
       - run:
-          command: sls deploy --config serverless-${opt:env}.config.yml --force
+          command: sls deploy --config serverless-${opt:env}-api.config.yml --force
           no_output_timeout: 10m
