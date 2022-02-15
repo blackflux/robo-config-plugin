@@ -67,12 +67,12 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   });
 
   it('Testing function handlers', async () => {
-    const handlers = (await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'))).default;
+    const handlers = await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'));
     objectScan(['functions.*'], {
       filterFn: ({ key }) => {
         const fn = key[1];
         const handler = get(apiStack, `functions.$\{fn}.handler`);
-        expect(handler).to.equal(`lib/hangler.default.$\{fn}`);
+        expect(handler).to.equal(`lib/hangler.$\{fn}`);
         expect(typeof handlers[fn], fn).to.equal('function');
       }
     })(apiStack);

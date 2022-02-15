@@ -1,0 +1,16 @@
+{
+  "target": "test/hangler-gen.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "sls-api/test/hangler-gen.spec.js"
+  ],
+  "requires": [
+    "lambda-serverless-api",
+    "lambda-tdd",
+    "serverless"
+  ],
+  "purpose": [
+    "Managed file to generate hangler.js file."
+  ]
+}

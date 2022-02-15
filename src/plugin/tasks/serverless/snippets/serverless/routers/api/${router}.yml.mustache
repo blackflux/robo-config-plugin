@@ -1,6 +1,6 @@
 functions:
   ${router|CAMEL}:
-    handler: lib/hangler.default.${router|CAMEL}
+    handler: lib/hangler.${router|CAMEL}
     memorySize: ${routerMemorySize}
     timeout: ${routerTimeout}
 {{#routerProvisionedConcurrency}}
