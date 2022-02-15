@@ -3,7 +3,6 @@ import { expect } from 'chai';
 import fs from 'smart-fs';
 import path from 'path';
 import deepmerge from 'deepmerge';
-import dirname from '../src/util/dirname.js';
 
 describe('Testing dynamodb serverless configuration', { envVarsFile: './env-vars.yml' }, () => {
   let dy;
@@ -14,11 +13,11 @@ describe('Testing dynamodb serverless configuration', { envVarsFile: './env-vars
   });
 
   // eslint-disable-next-line mocha/no-setup-in-describe
-  fs.walkDir(path.join(dirname(import.meta.url), '..', 'src', 'dynamodb', 'tables'))
+  fs.walkDir(path.join(fs.dirname(import.meta.url), '..', 'src', 'dynamodb', 'tables'))
     .map((e) => e.slice(0, -3))
     .forEach((name) => {
       it(`Generating dynamodb schema: $\{name}`, () => {
-        const filepath = path.join(dirname(import.meta.url), '..', 'serverless', 'data', 'dynamodb', `$\{name}.yml`);
+        const filepath = path.join(fs.dirname(import.meta.url), '..', 'serverless', 'data', 'dynamodb', `$\{name}.yml`);
         const nameTitleCase = name.replace(
           /-?\b([a-z])/g,
           (_, m) => m.toUpperCase()
