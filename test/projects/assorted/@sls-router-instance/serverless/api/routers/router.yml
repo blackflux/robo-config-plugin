@@ -1,6 +1,6 @@
 functions:
   router:
-    handler: lib/hangler.default.router
+    handler: lib/hangler.router
     memorySize: routerMemorySize
     timeout: routerTimeout
     provisionedConcurrency: routerProvisionedConcurrency

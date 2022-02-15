@@ -1,7 +1,7 @@
 {
   "target": "src/hangler.js",
   "format": "txt",
-  "strategy": "overwrite",
+  "strategy": "create-only",
   "snippets": [
     "sls-api/src/hangler.js"
   ],

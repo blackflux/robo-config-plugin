@@ -2,11 +2,10 @@
   "tasks": [
     "sls-swagger",
     "sls-src-hangler",
-    "sls-src-routes",
     "sls-src-core-api",
     "sls-test-hangler",
-    "sls-test-routes",
-    "sls-test-handler-conf",
+    "sls-test-hangler-gen",
+    "sls-test-hangler-conf",
     "sls-test-env"
   ],
   "description": "Manage project structure for serverless project using lambda-serverless-api and lambda-tdd."

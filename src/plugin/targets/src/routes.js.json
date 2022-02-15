@@ -1,7 +1,0 @@
-{
-  "description": "Route definitions.",
-  "details": ["Auto generated Route definitions for Lambda handlers"],
-  "formats": ["other"],
-  "requires": ["lambda-serverless-api", "aws"],
-  "website": null
-}

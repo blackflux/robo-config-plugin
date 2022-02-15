@@ -1,6 +1,6 @@
 functions:
   crons${cron|TITLE|STRIP}Fn:
-    handler: lib/hangler.default.crons${cron|TITLE|STRIP}Fn
+    handler: lib/hangler.crons${cron|TITLE|STRIP}Fn
     memorySize: ${cronMemorySize}
     timeout: ${cronTimeout}
     tags:

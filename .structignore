@@ -4,6 +4,7 @@ test/projects/assorted/@npm-opensource-os/test/index.spec.js
 test/projects/assorted/@sls-error-defs/test/errors.spec.js
 test/projects/assorted/@sls-api/test/routes.spec.js
 test/projects/assorted/@sls-api/test/hangler.spec.js
+test/projects/assorted/@sls-api/test/hangler-gen.spec.js
 test/projects/assorted/@sls-queue/test/queue/queue.spec.js
 test/projects/assorted/@sls-closedsource/test/0-sls-cf-stack.spec.js
 test/projects/assorted/@sls-closedsource-react/test/0-sls-cf-stack.spec.js
