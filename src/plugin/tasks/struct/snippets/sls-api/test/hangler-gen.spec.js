@@ -1,7 +1,6 @@
 import path from 'path';
 import fs from 'smart-fs';
 import { expect } from 'chai';
-import dirname from '../src/util/dirname.js';
 
 const toRouteName = (str) => str
   .replace(
@@ -12,7 +11,7 @@ const toRouteName = (str) => str
 
 describe('Testing hangler-gen.spec.js', () => {
   it('Synchronizing hangler file...', async () => {
-    const srcFolder = path.join(dirname(import.meta.url), '..', 'src');
+    const srcFolder = path.join(fs.dirname(import.meta.url), '..', 'src');
     const hanglerFile = path.join(srcFolder, 'hangler.js');
     const handlerFiles = fs.walkDir(path.join(srcFolder, 'handler')).filter((f) => f.endsWith('.js')).sort();
     const handlers = await Promise.all(

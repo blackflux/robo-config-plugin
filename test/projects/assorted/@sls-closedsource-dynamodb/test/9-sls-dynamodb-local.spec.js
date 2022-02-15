@@ -4,7 +4,6 @@ import { describe } from 'node-tdd';
 import fs from 'smart-fs';
 
 import { expect } from 'chai';
-import dirname from '../src/util/dirname.js';
 
 const normalize = (table) => objectScan([
   '*',
@@ -72,7 +71,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env-vars.yml' }, () => {
         );
       });
     expect(
-      fs.smartWrite(path.join(dirname(import.meta.url), '..', 'docker', 'dynamodb.sh'), result),
+      fs.smartWrite(path.join(fs.dirname(import.meta.url), '..', 'docker', 'dynamodb.sh'), result),
       'DynamoDb tables updated. Please re-run.'
     ).to.equal(false);
   });
