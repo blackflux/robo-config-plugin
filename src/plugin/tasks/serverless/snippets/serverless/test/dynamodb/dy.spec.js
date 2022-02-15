@@ -1,19 +1,23 @@
 import fs from 'smart-fs';
-import path from 'path';
+import { join, dirname } from 'path';
 import { expect } from 'chai';
 import { describe } from 'node-tdd';
-import CamelCase from '../../src/util/camel-case.js';
-import dirname from '../../src/util/dirname.js';
+import { fileURLToPath } from 'url';
 
-const { pathToCamelCase } = CamelCase;
+const pathToCamelCase = (str) => str
+  .replace(
+    /(?:^\w|[A-Z]|\b\w)/g,
+    (letter, index) => (index === 0 ? letter.toLowerCase() : letter.toUpperCase())
+  )
+  .replace(/[\s\-/]+/g, '');
 
-const folder = path.join(dirname(import.meta.url), '..', '..', 'src', 'dynamodb');
+const folder = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'src', 'dynamodb');
 
 describe('Testing dynamodb/dy.js', () => {
   it('Generating...', () => {
-    const files = fs.walkDir(path.join(folder, 'tables'));
+    const files = fs.walkDir(join(folder, 'tables'));
 
-    const r = fs.smartWrite(path.join(folder, 'dy.js'), [
+    const r = fs.smartWrite(join(folder, 'dy.js'), [
       "import LRU from 'lru-cache-ext';",
       "import aws from '../core/aws.js';",
       ...files.map((f) => `import * as ${pathToCamelCase(f.slice(0, -3))} from './tables/$\{f}';`),
