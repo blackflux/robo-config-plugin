@@ -1,8 +1,7 @@
 import fs from 'smart-fs';
-import { join, dirname } from 'path';
+import { join } from 'path';
 import { expect } from 'chai';
 import { describe } from 'node-tdd';
-import { fileURLToPath } from 'url';
 
 const pathToCamelCase = (str) => str
   .replace(
@@ -11,7 +10,7 @@ const pathToCamelCase = (str) => str
   )
   .replace(/[\s\-/]+/g, '');
 
-const folder = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'src', 'dynamodb');
+const folder = join(fs.dirname(import.meta.url), '..', '..', 'src', 'dynamodb');
 
 describe('Testing dynamodb/dy.js', () => {
   it('Generating...', () => {

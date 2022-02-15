@@ -4,7 +4,6 @@ import get from 'lodash.get';
 import path from 'path';
 import fs from 'smart-fs';
 import { expect } from 'chai';
-import dirname from '../src/util/dirname.js';
 import resolver from '../serverless/.base/resolver.js';
 
 describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () => {
@@ -23,11 +22,11 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
     runner = (stack) => {
       const stackCf = { api: apiStack, data: dataStack }[stack];
       expect(
-        fs.smartWrite(path.join(dirname(import.meta.url), 'sls-cf-stack', `$\{stack}.yml`), stackCf),
+        fs.smartWrite(path.join(fs.dirname(import.meta.url), 'sls-cf-stack', `$\{stack}.yml`), stackCf),
         'Stack cf updated. Please re-run.'
       ).to.equal(false);
     };
-    definedRoutes = fs.smartRead(path.join(dirname(import.meta.url), 'sls-cf-stack-routes.yml'));
+    definedRoutes = fs.smartRead(path.join(fs.dirname(import.meta.url), 'sls-cf-stack-routes.yml'));
   });
 
   it('Testing api stack', () => {
@@ -67,7 +66,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   });
 
   it('Testing function handlers', async () => {
-    const handlers = await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'));
+    const handlers = await import(path.join(fs.dirname(import.meta.url), '..', 'src', 'hangler.js'));
     objectScan(['functions.*'], {
       filterFn: ({ key }) => {
         const fn = key[1];

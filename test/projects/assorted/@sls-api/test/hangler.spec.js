@@ -6,7 +6,6 @@ import { describe } from 'node-tdd';
 import { expect } from 'chai';
 import hanglerConf from './hangler.conf.js';
 import { internalApi as api } from '../src/hangler.js';
-import dirname from '../src/util/dirname.js';
 
 const methods = ['Get', 'Post', 'Put', 'Patch', 'Options', 'Head', 'Delete', 'Any'];
 
@@ -18,17 +17,17 @@ const pathToCamelCase = (str) => str
   .replace(/[\s\-/]+/g, '');
 
 LambdaTdd({
-  cwd: path.join(dirname(import.meta.url), '..'),
+  cwd: path.join(fs.dirname(import.meta.url), '..'),
   verbose: minimist(process.argv.slice(2)).verbose === true,
   timeout: minimist(process.argv.slice(2)).timeout,
   nockHeal: minimist(process.argv.slice(2))['nock-heal'],
   testHeal: minimist(process.argv.slice(2))['test-heal'],
   enabled: true,
-  handlerFile: path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'),
-  cassetteFolder: path.join(dirname(import.meta.url), 'handler', '__cassettes'),
-  envVarYml: path.join(dirname(import.meta.url), 'env-vars.yml'),
-  envVarYmlRecording: path.join(dirname(import.meta.url), 'env-vars.recording.yml'),
-  testFolder: path.join(dirname(import.meta.url), 'handler'),
+  handlerFile: path.join(fs.dirname(import.meta.url), '..', 'src', 'hangler.js'),
+  cassetteFolder: path.join(fs.dirname(import.meta.url), 'handler', '__cassettes'),
+  envVarYml: path.join(fs.dirname(import.meta.url), 'env-vars.yml'),
+  envVarYmlRecording: path.join(fs.dirname(import.meta.url), 'env-vars.recording.yml'),
+  testFolder: path.join(fs.dirname(import.meta.url), 'handler'),
   ...hanglerConf
 }).execute();
 
@@ -40,14 +39,14 @@ describe('Testing hangler.spec.js', {
   let handlerTestFiles;
 
   before(async () => {
-    handlerFile = await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'));
-    handlerTestDir = path.join(dirname(import.meta.url), 'handler');
+    handlerFile = await import(path.join(fs.dirname(import.meta.url), '..', 'src', 'hangler.js'));
+    handlerTestDir = path.join(fs.dirname(import.meta.url), 'handler');
     handlerTestFiles = fs.walkDir(handlerTestDir)
       .filter((f) => !f.startsWith('__cassettes'));
   });
 
   it('Synchronizing swagger file...', async () => {
-    const swaggerFile = path.join(dirname(import.meta.url), '..', 'swagger.yml');
+    const swaggerFile = path.join(fs.dirname(import.meta.url), '..', 'swagger.yml');
     const swaggerContent = await api.generateSwagger();
     const result = fs.smartWrite(swaggerFile, swaggerContent);
     expect(result, 'Swagger file updated').to.equal(false);

@@ -1,11 +1,10 @@
 import path from 'path';
 import fs from 'smart-fs';
 import { expect } from 'chai';
-import dirname from '../src/util/dirname.js';
 
 describe('Testing errors.spec.js', () => {
   it('Synchronizing errors file...', () => {
-    const srcFolder = path.join(dirname(import.meta.url), '..', 'src');
+    const srcFolder = path.join(fs.dirname(import.meta.url), '..', 'src');
     const errorsFile = path.join(srcFolder, 'errors.js');
     const errorDefinitions = fs.smartRead(path.join(srcFolder, 'core', 'errors.json'));
     const serviceId = '${errorPrefix}';

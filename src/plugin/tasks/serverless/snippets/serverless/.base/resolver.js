@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'smart-fs';
+import { join } from 'path';
 import yaml from 'yaml-boost';
 import objectScan from 'object-scan';
 import objectHash from 'object-hash-strict';
 
 export default (kwargs) => {
-  const configFile = join(dirname(fileURLToPath(import.meta.url)), 'resolver.yml');
+  const configFile = join(fs.dirname(import.meta.url), 'resolver.yml');
   const r = yaml.load(configFile, kwargs);
   const logic = {
     'provider.iamRoleStatements[*].Action': ({ value }) => {
