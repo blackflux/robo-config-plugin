@@ -13,7 +13,7 @@ resources:
 
 functions:
   triggers${trigger|TITLE|STRIP}Fn:
-    handler: lib/hangler.default.triggers${trigger|TITLE|STRIP}Fn
+    handler: lib/hangler.triggers${trigger|TITLE|STRIP}Fn
     memorySize: ${triggerMemorySize}
     timeout: ${triggerTimeout}
     tags:

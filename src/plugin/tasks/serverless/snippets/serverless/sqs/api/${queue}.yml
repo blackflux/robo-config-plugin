@@ -14,7 +14,7 @@ provider:
 functions:
   queueProcessor${queue|TITLE|STRIP}Handler:
     memorySize: ${queueProcessorMemorySize}
-    handler: lib/hangler.default.queueProcessor${queue|TITLE|STRIP}Handler
+    handler: lib/hangler.queueProcessor${queue|TITLE|STRIP}Handler
     reservedConcurrency: ${queueProcessorReservedConcurrency}
     timeout: ${queueProcessorTimeout}
     tags:

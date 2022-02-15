@@ -5,10 +5,8 @@ import LambdaTdd from 'lambda-tdd';
 import { describe } from 'node-tdd';
 import { expect } from 'chai';
 import hanglerConf from './hangler.conf.js';
-import handlers from '../src/hangler.js';
+import { internalApi as api } from '../src/hangler.js';
 import dirname from '../src/util/dirname.js';
-
-const api = handlers.internalApi;
 
 const methods = ['Get', 'Post', 'Put', 'Patch', 'Options', 'Head', 'Delete', 'Any'];
 
@@ -42,7 +40,7 @@ describe('Testing hangler.spec.js', {
   let handlerTestFiles;
 
   before(async () => {
-    handlerFile = (await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'))).default;
+    handlerFile = await import(path.join(dirname(import.meta.url), '..', 'src', 'hangler.js'));
     handlerTestDir = path.join(dirname(import.meta.url), 'handler');
     handlerTestFiles = fs.walkDir(handlerTestDir)
       .filter((f) => !f.startsWith('__cassettes'));

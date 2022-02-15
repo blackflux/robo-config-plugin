@@ -1,0 +1,7 @@
+{
+  "description": "Managed file that generates hangler.js file.",
+  "details": [],
+  "formats": ["other"],
+  "requires": ["serverless", "lambda-serverless-api", "lambda-tdd"],
+  "website": null
+}
