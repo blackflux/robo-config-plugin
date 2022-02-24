@@ -3,5 +3,6 @@
   "details": [
     "The length of time a queue will postpone the delivery of new messages to a consumer."
   ],
-  "type": "integer"
+  "type": "integer",
+  "default": "0"
 }

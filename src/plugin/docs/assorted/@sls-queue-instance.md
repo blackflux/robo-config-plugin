@@ -399,6 +399,8 @@ If set to true then a FIFO queue is created. Otherwise a standard queue will be 
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a>  : `integer`
 
+**Default**: `0`
+
 *Queue Delay Seconds.*
 
 The length of time a queue will postpone the delivery of new messages to a consumer.
