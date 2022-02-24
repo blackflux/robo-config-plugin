@@ -3,7 +3,7 @@ resources:
     ${queue|TITLE|STRIP}Queue:
       Type: AWS::SQS::Queue
       Properties:
-        DelaySeconds: 0
+        DelaySeconds: ${queueDelaySeconds}
 {{#fifoQueue}}
         FifoQueue: true
 {{/fifoQueue}}
