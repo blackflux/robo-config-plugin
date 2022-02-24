@@ -54,6 +54,7 @@ Manages SQS instance cloud formation files.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
@@ -110,6 +111,7 @@ Manage serverless configuration for an sqs queue.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
@@ -231,6 +233,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatasqsqueu
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
         </ul>
       </td>
@@ -395,6 +398,14 @@ List of available regions can be found [here](https://docs.aws.amazon.com/genera
 *Creates FIFO Queue.*
 
 If set to true then a FIFO queue is created. Otherwise a standard queue will be created.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a>  : `integer`
+
+**Default**: `0`
+
+*Queue Delay Seconds.*
+
+The length of time a queue will postpone the delivery of new messages to a consumer.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a>  : `integer`
 
