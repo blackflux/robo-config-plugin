@@ -16,11 +16,11 @@ provider:
   versionFunctions: false
 
 package:
-  exclude:
-    - test/**
-    - coverage/**
-    - config/**
-    - src/**
+  patterns:
+    - '!test/**'
+    - '!coverage/**'
+    - '!config/**'
+    - '!src/**'
 
 <<<:
   - ${file(^/${opt:stack}.yml), service=${projectName}}
