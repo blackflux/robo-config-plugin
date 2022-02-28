@@ -1,16 +1,17 @@
 provider:
   cfnRole: '${cf:${opt:service}-data-${self:provider.stage}.CfnAssumeRoleArn}'
-  resourcePolicy:
-    - Effect: Allow
-      Principal: '*'
-      Action: 'execute-api:Invoke'
-      Resource:
-        'Fn::Join':
-          - ':'
-          - - 'arn:aws:execute-api'
-            - Ref: 'AWS::Region'
-            - Ref: 'AWS::AccountId'
-            - '*/*'
+  apiGateway:
+    resourcePolicy:
+      - Effect: Allow
+        Principal: '*'
+        Action: 'execute-api:Invoke'
+        Resource:
+          'Fn::Join':
+            - ':'
+            - - 'arn:aws:execute-api'
+              - Ref: 'AWS::Region'
+              - Ref: 'AWS::AccountId'
+              - '*/*'
 
 resources:
   Conditions:
