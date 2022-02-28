@@ -9,10 +9,10 @@ export default (kwargs) => {
   const configFile = join(fs.dirname(import.meta.url), 'resolver.yml');
   const r = yaml.load(configFile, kwargs);
   const logic = {
-    'provider.iamRoleStatements[*].Action': ({ value }) => {
+    'provider.iam.role.statements[*].Action': ({ value }) => {
       value.sort();
     },
-    'provider.iamRoleStatements': ({ parent, property, value }) => {
+    'provider.iam.role.statements': ({ parent, property, value }) => {
       const iamRoleStatements = {};
       value.forEach((e) => {
         const { Resource, ...other } = e;

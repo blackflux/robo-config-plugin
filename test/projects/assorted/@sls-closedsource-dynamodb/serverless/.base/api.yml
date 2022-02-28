@@ -1,5 +1,6 @@
 provider:
-  cfnRole: '${cf:${opt:service}-data-${self:provider.stage}.CfnAssumeRoleArn}'
+  iam:
+    deploymentRole: '${cf:${opt:service}-data-${self:provider.stage}.CfnAssumeRoleArn}'
   apiGateway:
     resourcePolicy:
       - Effect: Allow
