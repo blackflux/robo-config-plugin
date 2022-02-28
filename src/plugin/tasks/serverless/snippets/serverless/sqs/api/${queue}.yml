@@ -2,14 +2,16 @@ provider:
   environment:
     ${queue|UPPER|SNAKE}_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}QueueUrl}
 
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - sqs:SendMessage
-        - sqs:GetQueueAttributes
-      Resource:
-        - ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}QueueArn}
-        - ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}DeadLetterQueueArn}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - sqs:SendMessage
+            - sqs:GetQueueAttributes
+          Resource:
+            - ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}QueueArn}
+            - ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}DeadLetterQueueArn}
 
 functions:
   queueProcessor${queue|TITLE|STRIP}Handler:
