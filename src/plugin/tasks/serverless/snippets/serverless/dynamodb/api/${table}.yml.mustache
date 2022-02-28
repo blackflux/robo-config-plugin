@@ -1,30 +1,32 @@
 provider:
   environment:
     DYNAMO_${table|UPPER|SNAKE}_TABLE: ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableName}
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - dynamodb:Query
-        - dynamodb:Scan
-        - dynamodb:GetItem
-        - dynamodb:PutItem
-        - dynamodb:UpdateItem
-        - dynamodb:DeleteItem
-        - dynamodb:BatchWriteItem
-      Resource:
-        - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableArn}
-    - Effect: Allow  # repo specific
-      Action:
-        - dynamodb:Query
-      Resource:
-        - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableArn}/index/*
-{{#tableStreamEnabled}}
-    - Effect: Allow
-      Action:
-        - dynamodb:DescribeStream
-        - dynamodb:GetRecords
-        - dynamodb:GetShardIterator
-        - dynamodb:ListStreams
-      Resource:
-        - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableStreamArn}/index/*
-{{/tableStreamEnabled}}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:BatchWriteItem
+          Resource:
+            - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableArn}
+        - Effect: Allow  # repo specific
+          Action:
+            - dynamodb:Query
+          Resource:
+            - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableArn}/index/*
+      {{#tableStreamEnabled}}
+        - Effect: Allow
+          Action:
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource:
+            - ${cf:${opt:service}-data-${self:provider.stage}.Dynamo${table|TITLE|STRIP}TableStreamArn}/index/*
+      {{/tableStreamEnabled}}
