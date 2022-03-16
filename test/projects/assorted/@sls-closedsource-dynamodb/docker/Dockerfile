@@ -6,7 +6,7 @@ WORKDIR /user
 ENV HOME /user
 
 RUN touch ~/.bashrc && \
-  curl -o- -L https://yarnpkg.com/install.sh | bash && \
+  yarn -v || npm install --global yarn && \
   source ~/.bashrc && \
   yarn global add serverless@3.7.5
 
