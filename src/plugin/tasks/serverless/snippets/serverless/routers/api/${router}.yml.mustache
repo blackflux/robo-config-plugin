@@ -11,9 +11,11 @@ functions:
       stage: ${self:provider.stage}
       resource: ${router|CAMEL}
     events:
+{{#routerWarmerRateInMinutes}}
       - schedule:
           name: ${opt:service}-api-${self:provider.stage}-${router|CAMEL}-warmer
           rate: rate(${routerWarmerRateInMinutes} minutes)
+{{/routerWarmerRateInMinutes}}
       - http:
           path: /{proxy+}
           method: ${routerMethod|UPPER}
