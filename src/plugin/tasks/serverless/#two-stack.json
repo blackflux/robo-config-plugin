@@ -12,7 +12,9 @@
     "serverless-api",
     "serverless-api-random-deploy-hash",
     "serverless-data",
-    "serverless-compile"
+    "serverless-compile",
+    "src-core-aws",
+    "src-core-aws-cjs"
   ],
   "description": "Manage serverless configuration for deployment to AWS."
 }
