@@ -4,8 +4,6 @@
     "test-sls-tags",
     "test-sls-cf-stack-routes",
     "test-sls-cfg",
-    "test-sls-dynamodb-local",
-    "test-sls-dynamodb-cfg",
     "serverless-base-resolver",
     "serverless-base-resolver-js",
     "serverless-base-api",
@@ -17,6 +15,8 @@
     "serverless-compile",
     "src-core-aws",
     "src-core-aws-cjs",
+    "test-sls-dynamodb-local",
+    "test-sls-dynamodb-cfg",
     "src-dynamodb-dy",
     "test-dynamodb-dy"
   ],

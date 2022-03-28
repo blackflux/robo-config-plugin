@@ -13,6 +13,8 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cfg">`serverless/test-sls-cfg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws-cjs">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws-cjs">`serverless/src-core-aws-cjs`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws">`serverless/src-core-aws`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-compile">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-compile">`serverless/serverless-compile`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver-js">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver-js">`serverless/serverless-base-resolver-js`</a>
@@ -102,6 +104,10 @@ Manage various configuration files for serverless project.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;core</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">aws.cjs</a></code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawsjs">aws.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
@@ -389,6 +395,10 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
+<code>├─&nbsp;src</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;core</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">aws.cjs</a></code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawsjs">aws.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
@@ -527,6 +537,66 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws-cjs">serverless/src-core-aws-cjs</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws-cjs">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">src/core/aws.cjs</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create aws sdk require file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;core</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">aws.cjs</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws">serverless/src-core-aws</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srccoreawsjs">src/core/aws.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-create-only">create-only</a>._
+
+- Create aws sdk initialization file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;src</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;core</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawsjs">aws.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
     </tr>
@@ -2046,6 +2116,26 @@ Execute all configured js-gardener tasks.
 :small_blue_diamond: `other`
 
 *Test for visualizing serverless cf stack definitions.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-srccoreawscjs">src/core/aws.cjs</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-aws-sdk-wrap">aws-sdk-wrap</a>, <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>
+
+:small_blue_diamond: `other`
+
+*Configuration file for aws-sdk require.*
+
+AWS SDK initialization file.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-srccoreawsjs">src/core/aws.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-aws-sdk-wrap">aws-sdk-wrap</a>, <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>
+
+:small_blue_diamond: `other`
+
+*Configuration file for aws-sdk initiation.*
+
+AWS SDK initialization file.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a>  
 
