@@ -1,0 +1,14 @@
+{
+  "target": "src/core/aws.cjs",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/src/core/aws.cjs"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Create aws sdk require file."
+  ]
+}

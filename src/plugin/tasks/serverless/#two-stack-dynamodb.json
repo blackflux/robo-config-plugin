@@ -16,6 +16,7 @@
     "serverless-data",
     "serverless-compile",
     "src-core-aws",
+    "src-core-aws-cjs",
     "src-dynamodb-dy",
     "test-dynamodb-dy"
   ],

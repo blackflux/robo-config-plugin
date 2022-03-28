@@ -1,4 +1,11 @@
-const { logger } = require('lambda-monitor-logger');
-const aws = require('aws-sdk-wrap')({ logger });
+import { logger } from 'lambda-monitor-logger';
+import AwsSdkWrap from 'aws-sdk-wrap';
+import AWS from './aws.cjs';
 
-module.exports = aws;
+export default AwsSdkWrap({
+  logger,
+  configService: { dynamodb: { endpoint: process.env.DYNAMODB_ENDPOINT } },
+  services: {
+    S3: AWS.S3
+  }
+});
