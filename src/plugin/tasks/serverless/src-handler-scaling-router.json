@@ -1,0 +1,19 @@
+{
+  "target": "src/handler/scaling/${router}.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/scaling/handler/scaling/${router}.js",
+      "variables": {
+        "router": "${router|TITLE}"
+      }
+    }
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Define api router scaling functions."
+  ]
+}
