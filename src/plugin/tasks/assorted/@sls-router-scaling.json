@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    "serverless/#router-scaling"
+  ],
+  "description": "Manages automatic provisioned concurrency scaling for router instance."
+}

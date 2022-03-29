@@ -1,0 +1,20 @@
+{
+  "target": "serverless/api/scaling/${router}.yml",
+  "format": "yml",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/scaling/api/${router}.yml",
+      "variables": {
+        "router": "${router|LOWER}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Initialize api router scaling configuration."
+  ]
+}

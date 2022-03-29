@@ -1,0 +1,75 @@
+provider:
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - "ssm:GetParameter"
+          Resource:
+            - 'Fn::Join':
+                - ':'
+                - - 'arn:aws:ssm'
+                  - Ref: 'AWS::Region'
+                  - Ref: 'AWS::AccountId'
+                  - 'parameter/PROVISIONED_CONCURRENCY_ENABLED'
+        - Effect: Allow
+          Action:
+            - lambda:GetAlias
+          Resource:
+            - Fn::Join:
+                - ':'
+                - - arn:aws:lambda
+                  - Ref: AWS::Region
+                  - Ref: AWS::AccountId
+                  - function
+                  - Fn::Join:
+                      - '-'
+                      - - service-search-api
+                        - ${self:provider.stage}
+                        - ${router|CAMEL}
+        - Effect: Allow
+          Action:
+            - cloudwatch:GetMetricData
+            - lambda:PutProvisionedConcurrencyConfig
+            - lambda:DeleteProvisionedConcurrencyConfig
+            - lambda:GetProvisionedConcurrencyConfig
+          Resource:
+            - '*'
+
+resources:
+  Resources:
+    Scaling${router|TITLE|STRIP}HookPreLambdaResource:
+      DependsOn:
+        - Scaling${router|TITLE|STRIP}HookPreLambdaFunction
+      Type: Custom::LambdaDependency
+      Properties:
+        ServiceToken:
+          Fn::GetAtt:
+            - Scaling${router|TITLE|STRIP}HookPreLambdaFunction
+            - Arn
+        custom: ${file(^/../random-deploy-hash.cjs)}
+
+functions:
+  ${router|CAMEL}:
+    dependsOn:
+      - Scaling${router|TITLE|STRIP}HookPreLambdaResource
+  scaling${router|TITLE|STRIP}HookPre:
+    handler: lib/hangler.scaling${router|TITLE|STRIP}HookPre
+    memorySize: 256
+    timeout: 30
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: scaling${router|TITLE|STRIP}HookPre
+  scaling${router|TITLE|STRIP}Fn:
+    handler: lib/hangler.scaling${router|TITLE|STRIP}Fn
+    memorySize: 256
+    timeout: 30
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: scaling${router|TITLE|STRIP}Fn
+    events:
+      - schedule:
+          name: ${opt:service}-api-${self:provider.stage}-scaling-${router|TITLE|STRIP}
+          rate: cron(*/5 * * * ? *)

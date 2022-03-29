@@ -1,0 +1,9 @@
+{
+  "description": "Provisioned concurrency modulation",
+  "details": [
+    "Configuration for automatic provisioned concurrency scaling for api router"
+  ],
+  "formats": ["yml"],
+  "requires": ["serverless"],
+  "website": null
+}
