@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    "serverless-api-scaling",
+    "serverless-api-scaling-router",
+    "src-handler-scaling-router"
+  ],
+  "description": "Manage serverless configuration for automatic provisioned concurrency scaling for a serverless api router."
+}

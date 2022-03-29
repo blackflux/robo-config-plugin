@@ -1,0 +1,9 @@
+{
+  "description": "Provisioned concurrency modulation",
+  "details": [
+    "Functions for automatic provisioned concurrency scaling for api router"
+  ],
+  "formats": ["other"],
+  "requires": ["javascript", "serverless"],
+  "website": null
+}
