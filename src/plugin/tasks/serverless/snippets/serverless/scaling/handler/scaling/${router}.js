@@ -10,4 +10,3 @@ const scaler = lambda.FunctionScaler({
 
 export const fn = wrapFn(scaler());
 export const hookPre = wrapHook(scaler(true));
- 
