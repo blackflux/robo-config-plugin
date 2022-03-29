@@ -71,5 +71,5 @@ functions:
       resource: scaling${router|TITLE|STRIP}Fn
     events:
       - schedule:
-          name: ${opt:service}-api-${self:provider.stage}-scaling-${router|TITLE|STRIP}
+          name: ${opt:service}-api-${self:provider.stage}-scaling-${router}
           rate: cron(*/5 * * * ? *)
