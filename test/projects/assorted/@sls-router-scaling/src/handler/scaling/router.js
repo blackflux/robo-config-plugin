@@ -5,7 +5,7 @@ import aws from '../../core/aws.js';
 const { lambda } = aws;
 
 const scaler = lambda.FunctionScaler({
-  functionName: `${process.env.SERVICE_NAME}-api-${process.env.ENVIRONMENT}-Router`
+  functionName: `${process.env.SERVICE_NAME}-api-${process.env.ENVIRONMENT}-router`
 });
 
 export const fn = wrapFn(scaler());
