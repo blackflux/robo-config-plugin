@@ -24,7 +24,8 @@ provider:
                   - function
                   - Fn::Join:
                       - '-'
-                      - - service-search-api
+                      - - ${opt:service}
+                        - api
                         - ${self:provider.stage}
                         - router
         - Effect: Allow
