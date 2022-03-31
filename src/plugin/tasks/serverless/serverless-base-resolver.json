@@ -1,11 +1,12 @@
 {
   "target": "serverless/.base/resolver.yml",
-  "format": "txt",
+  "format": "yml",
   "strategy": "overwrite",
   "snippets": [
     {
-      "name": "serverless/.base/resolver.yml",
+      "name": "serverless/.base/resolver.yml.mustache",
       "variables": {
+        "nccEnabled": "${nccEnabled}",
         "projectName": "${projectName}",
         "namespace": "${namespace}"
       }

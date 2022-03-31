@@ -1,7 +1,12 @@
 {
   "scripts": {
     "clean": "rm -rf lib build .webpack",
+{{#nccEnabled}}
+    "build": "ncc build -e aws-sdk src/hangler.js -o lib && mv lib/index.js lib/hangler.js",
+{{/nccEnabled}}
+{{^nccEnabled}}
     "build": "cp -rf ./src ./lib",
+{{/nccEnabled}}
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "yarn run build-clean && c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
