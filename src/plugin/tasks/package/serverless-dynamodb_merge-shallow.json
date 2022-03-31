@@ -4,7 +4,7 @@
   "strategy": "merge-shallow",
   "snippets": [
     {
-      "name": "npm-default/merge-shallow.json.mustache",
+      "name": "serverless/merge-shallow.json.mustache",
       "variables": {
         "nccEnabled": "${nccEnabled}"
       }
