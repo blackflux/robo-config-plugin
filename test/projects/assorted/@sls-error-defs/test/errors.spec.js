@@ -18,9 +18,7 @@ describe('Testing errors.spec.js', () => {
     }, []);
     const result = fs.smartWrite(errorsFile, [
       ...{ true: ['/* eslint-disable max-len */'], false: [] }[errors.some((e) => e.length > 120)],
-      "import lsa from 'lambda-serverless-api';",
-      '',
-      'const { ApiError } = lsa;',
+      "import { ApiError } from 'lambda-serverless-api';",
       '',
       ...errors
     ], { treatAs: 'txt' });
