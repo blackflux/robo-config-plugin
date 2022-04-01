@@ -19,6 +19,8 @@
     "tsv": "yarn run test-simple --verbose",
     "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "semantic-release": "yarn run build-clean && npx semantic-release",
-    "gardener": "node gardener.js"
+    "gardener": "node gardener.js",
+    "lib-test": ". ./test/lib-test.sh",
+    "lt": "yarn run lib-test"
   }
 }

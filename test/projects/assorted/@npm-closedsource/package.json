@@ -46,7 +46,9 @@
     "it": "yarn run i && yarn run t",
     "t": "yarn test",
     "ts": "yarn run test-simple",
-    "tsv": "yarn run test-simple --verbose"
+    "tsv": "yarn run test-simple --verbose",
+    "lib-test": ". ./test/lib-test.sh",
+    "lt": "yarn run lib-test"
   },
   "bugs": {
     "url": "https://github.com/repoKey/issues"

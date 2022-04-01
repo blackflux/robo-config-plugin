@@ -16,14 +16,16 @@ const pathToCamelCase = (str) => str
   )
   .replace(/[\s\-/]+/g, '');
 
+const args = minimist(process.argv.slice(2));
+
 LambdaTdd({
   cwd: path.join(fs.dirname(import.meta.url), '..'),
-  verbose: minimist(process.argv.slice(2)).verbose === true,
-  timeout: minimist(process.argv.slice(2)).timeout,
-  nockHeal: minimist(process.argv.slice(2))['nock-heal'],
-  testHeal: minimist(process.argv.slice(2))['test-heal'],
+  verbose: args.verbose === true,
+  timeout: args.timeout,
+  nockHeal: args['nock-heal'],
+  testHeal: args['test-heal'],
   enabled: true,
-  handlerFile: path.join(fs.dirname(import.meta.url), '..', 'src', 'hangler.js'),
+  handlerFile: path.join(fs.dirname(import.meta.url), '..', args.folder || 'src', 'hangler.js'),
   cassetteFolder: path.join(fs.dirname(import.meta.url), 'handler', '__cassettes'),
   envVarYml: path.join(fs.dirname(import.meta.url), 'env-vars.yml'),
   envVarYmlRecording: path.join(fs.dirname(import.meta.url), 'env-vars.recording.yml'),
