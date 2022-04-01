@@ -151,6 +151,7 @@ Manage various configuration files for serverless project with the option of run
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
@@ -435,6 +436,7 @@ Manage serverless configuration for deployment to AWS.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -864,6 +866,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -1050,6 +1053,7 @@ Manage package.json for serverless project with DynamoDB local.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
@@ -1089,6 +1093,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
@@ -2137,6 +2142,13 @@ Typically set to something like 'com.sls.ORGNAME'
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a>  : `boolean`
+
+*Enable ncc for service.*
+
+Uses NCC to compile service.
+Please ensure that the service still works after ncc compilation.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a>  : `string`
 

@@ -17,10 +17,8 @@ provider:
 
 package:
   patterns:
-    - '!test/**'
-    - '!coverage/**'
-    - '!config/**'
-    - '!src/**'
+    - '!**'
+    - lib/**
 
 <<<:
   - ${file(^/${opt:stack}.yml), service=projectName}

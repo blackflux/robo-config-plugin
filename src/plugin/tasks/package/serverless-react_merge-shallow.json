@@ -4,9 +4,10 @@
   "strategy": "merge-shallow",
   "snippets": [
     {
-      "name": "serverless-react/merge-shallow",
+      "name": "serverless-react/merge-shallow.json.mustache",
       "variables": {
-        "awsRegion": "${awsRegion}"
+        "awsRegion": "${awsRegion}",
+        "nccEnabled": "${nccEnabled}"
       }
     }
   ],
