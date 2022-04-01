@@ -18,7 +18,8 @@
     "test-sls-dynamodb-local",
     "test-sls-dynamodb-cfg",
     "src-dynamodb-dy",
-    "test-dynamodb-dy"
+    "test-dynamodb-dy",
+    "test-lib-test-gen"
   ],
   "description": "Manage serverless configuration for deployment to AWS."
 }

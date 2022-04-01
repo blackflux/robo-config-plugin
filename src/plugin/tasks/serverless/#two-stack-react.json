@@ -12,7 +12,8 @@
     "serverless-api-random-deploy-hash",
     "serverless-data",
     "serverless-compile",
-    "serverless-base-api-offline"
+    "serverless-base-api-offline",
+    "test-lib-test-gen"
   ],
   "description": "Manage serverless configuration for deployment to AWS."
 }

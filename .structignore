@@ -18,3 +18,6 @@ test/projects/assorted/@sls-closedsource-dynamodb/test/7-sls-tags.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/8-sls-dynamodb-cfg.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/9-sls-dynamodb-local.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/dynamodb/dy.spec.js
+test/projects/assorted/@sls-closedsource-dynamodb/test/lib-test-gen.spec.js
+test/projects/assorted/@sls-closedsource-react/test/lib-test-gen.spec.js
+test/projects/assorted/@sls-closedsource/test/lib-test-gen.spec.js
