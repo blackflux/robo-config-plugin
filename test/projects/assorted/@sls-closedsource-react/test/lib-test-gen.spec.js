@@ -18,7 +18,7 @@ describe('Testing lib-test.sh', () => {
         `-g 'Test ${t.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}'`,
         '--folder lib',
         "2> /dev/null | grep '✔ Test' ||",
-        `printf "$\\{RED}    ✗ Test $\{t}$\\{NC}\\n"`
+        `printf "$\{RED}    ✗ Test ${t}$\{NC}\\n"`
       ].join(' ')),
       '',
       'yarn clean'

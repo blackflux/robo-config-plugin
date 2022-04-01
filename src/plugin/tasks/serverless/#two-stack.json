@@ -14,7 +14,8 @@
     "serverless-data",
     "serverless-compile",
     "src-core-aws",
-    "src-core-aws-cjs"
+    "src-core-aws-cjs",
+    "test-lib-test-gen"
   ],
   "description": "Manage serverless configuration for deployment to AWS."
 }
