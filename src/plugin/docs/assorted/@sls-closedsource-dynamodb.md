@@ -13,6 +13,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cfg">`serverless/test-sls-cfg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test-gen">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test-gen">`serverless/test-lib-test-gen`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-dynamodb-dy">`serverless/test-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-dynamodb-dy">`serverless/src-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws-cjs">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws-cjs">`serverless/src-core-aws-cjs`</a>
@@ -119,6 +120,7 @@ Manage various configuration files for serverless project with the option of run
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test8-sls-dynamodb-cfgspecjs">8-sls-dynamodb-cfg.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">lib-test-gen.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testdynamodbdyspecjs">dy.spec.js</a></code><br/>
@@ -418,6 +420,7 @@ Manage serverless configuration for deployment to AWS.
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test7-sls-tagsspecjs">7-sls-tags.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test8-sls-dynamodb-cfgspecjs">8-sls-dynamodb-cfg.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">lib-test-gen.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testdynamodbdyspecjs">dy.spec.js</a></code><br/>
@@ -609,6 +612,36 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test-gen">serverless/test-lib-test-gen</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test-gen">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">test/lib-test-gen.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Test for doing integration test against lib folder.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">lib-test-gen.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -2307,6 +2340,12 @@ Execute all configured js-gardener tasks.
 :small_blue_diamond: `other`
 
 *Test for visualizing serverless cf stack definitions.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">test/lib-test-gen.spec.js</a>  
+
+:small_blue_diamond: `other`
+
+*Test for generating lib-test.sh script.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-testdynamodbdyspecjs">test/dynamodb/dy.spec.js</a>  
 
