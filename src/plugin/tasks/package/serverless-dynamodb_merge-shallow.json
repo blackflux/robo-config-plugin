@@ -3,7 +3,12 @@
   "pretty": false,
   "strategy": "merge-shallow",
   "snippets": [
-    "serverless/merge-shallow",
+    {
+      "name": "serverless/merge-shallow.json.mustache",
+      "variables": {
+        "nccEnabled": "${nccEnabled}"
+      }
+    },
     {
       "name": "serverless-dynamodb/merge-shallow",
       "variables": {

@@ -139,6 +139,7 @@ Manage various configuration files for serverless project.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
@@ -415,6 +416,7 @@ Manage serverless configuration for deployment to AWS.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -724,6 +726,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -910,6 +913,7 @@ Manage package.json for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
@@ -930,6 +934,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -941,6 +946,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -1986,6 +1996,13 @@ Typically set to something like 'com.sls.ORGNAME'
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a>  : `boolean`
+
+*Enable ncc for service.*
+
+Uses NCC to compile service.
+Please ensure that the service still works after ncc compilation.
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `string`
 

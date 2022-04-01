@@ -1,9 +1,14 @@
 {
   "scripts": {
-    "clean": "rm -rf lib",
+    "clean": "rm -rf lib build .webpack",
+{{#nccEnabled}}
+    "build": "ncc build -m -e aws-sdk src/hangler.js -o lib && mv lib/index.js lib/hangler.js",
+{{/nccEnabled}}
+{{^nccEnabled}}
     "build": "cp -rf ./src ./lib",
+{{/nccEnabled}}
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
+    "test-simple": "yarn run build-clean && c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "u": "yarn upgrade --latest --force",
@@ -13,6 +18,7 @@
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
     "gardener": "node gardener.js",
+    "start-offline": "yarn sls-compile --region=${awsRegion} --env=offline && yarn run build-clean && sls offline start --config serverless-offline.config.yml --stack=api-offline",
     "sls-compile": "node serverless/compile.js"
   },
   "files": []

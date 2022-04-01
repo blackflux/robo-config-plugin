@@ -1,0 +1,8 @@
+{
+  "description": "Enable ncc for service.",
+  "details": [
+    "Uses NCC to compile service.",
+    "Please ensure that the service still works after ncc compilation."
+  ],
+  "type": "boolean"
+}
