@@ -20,7 +20,14 @@ describe('Testing hangler-gen.spec.js', () => {
     const imports = new Set();
     const exports = new Set();
     handlers.forEach(([f, handlerFileContent]) => {
+      const capitalized = f.startsWith('api/');
       const methods = Object.keys(handlerFileContent).sort();
+      methods.forEach((method) => {
+        expect(
+          method[0] === method[0].toUpperCase(),
+          `Api methods should start with a upper-case letter, other with lower-case: $\{f} $\{method}`
+        ).to.equal(capitalized);
+      });
       imports.add(`import * as ${toRouteName(f)} from './handler/$\{f}.js';`);
       methods.forEach((m) => {
         exports.add(`export const ${toRouteName(`$\{f}/$\{m}`)} = ${toRouteName(f)}.$\{m};`);
