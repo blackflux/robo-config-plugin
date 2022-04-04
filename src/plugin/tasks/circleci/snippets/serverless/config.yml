@@ -6,6 +6,9 @@ workflows:
       - test-node-v14.x:
           requires:
             - gally
+      - test-node-v14.x-lib:
+          requires:
+            - gally
       - test-node-v16:
           requires:
             - gally
@@ -35,6 +38,8 @@ jobs:
     ${file(^/jobs/gally.yml)}
   test-node-v14.x:
     ${file(^/jobs/test.yml), image=amazon/aws-sam-cli-build-image-nodejs14.x}
+  test-node-v14.x-lib:
+    ${file(^/jobs/lib-test.yml), image=amazon/aws-sam-cli-build-image-nodejs14.x}
   test-node-v16:
     ${file(^/jobs/test.yml), image=circleci/node:16}
   deploy-local:

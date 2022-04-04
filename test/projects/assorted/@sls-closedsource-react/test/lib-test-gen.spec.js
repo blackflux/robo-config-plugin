@@ -13,15 +13,24 @@ describe('Testing lib-test.sh', () => {
       "RED='\\033[0;31m'",
       "NC='\\033[0m'",
       '',
+      'code=0',
+      '',
       ...tests.map((t) => [
         'yarn tsv',
         `-g 'Test ${t.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}'`,
         '--folder lib',
         "2> /dev/null | grep '✔ Test' ||",
-        `printf "$\{RED}    ✗ Test ${t}$\{NC}\\n"`
+        [
+          '{',
+          `  printf "$\{RED}    ✗ Test ${t}$\{NC}\\n"`,
+          '  code=1',
+          '}'
+        ].join('\n')
       ].join(' ')),
       '',
-      'yarn clean'
+      'yarn clean',
+      '',
+      'exit $code'
     ]);
     expect(r, 'File lib-test.sh has updated').to.equal(false);
   });
