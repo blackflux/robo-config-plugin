@@ -15,18 +15,17 @@ describe('Testing lib-test.sh', () => {
       '',
       'code=0',
       '',
-      ...tests.map((t) => [
-        'yarn tsv',
-        `-g 'Test ${t.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}'`,
-        '--folder lib',
-        "2> /dev/null | grep '✔ Test' ||",
+      ...tests.flatMap((t) => [
         [
-          '{',
-          `  printf "$\\{RED}    ✗ Test $\{t}$\\{NC}\\n"`,
-          '  code=1',
-          '}'
-        ].join('\n')
-      ].join(' ')),
+          'yarn tsv',
+          `-g 'Test ${t.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}'`,
+          '--folder lib',
+          "2> /dev/null | grep '✔ Test' || {"
+        ].join(' '),
+        `  printf "$\\{RED}    ✗ Test $\{t}$\\{NC}\\n"`,
+        '  code=1',
+        '}'
+      ]),
       '',
       'yarn clean',
       '',
