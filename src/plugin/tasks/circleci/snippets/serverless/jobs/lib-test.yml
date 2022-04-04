@@ -3,5 +3,6 @@ docker:
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:
+    - run: yarn build-clean
     - run: yarn lt
     - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);
