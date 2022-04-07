@@ -4,7 +4,7 @@ tmp_file=$(mktemp);
 
 find "$(dirname "${BASH_SOURCE[0]}")/handler" -type f -iname "*.spec.json" -printf '%P\0' | while read -d $'\0' i
 do
-  printf 'yarn tsv -g "^Testing Lambda Functions: lambda-test Test %s$" --folder lib 2> /dev/null | grep "✔ Test" || printf "$\{RED}    ✗ Test %q$\{NC}\\n"\n' "$(echo "$i" | sed 's/[.[\*^$]/\\&/g')" "$i";
+  printf 'yarn tsv -g "^Testing Lambda Functions: lambda-test Test %s$" --timeout 30000 --folder lib 2> /dev/null | grep "✔ Test" || printf "$\{RED}    ✗ Test %q$\{NC}\\\\n"\n' "$(echo "$i" | sed 's/[.[\*^$]/\\&/g')" "$i";
 done > "$tmp_file"
 
 thread_count=$(grep -c ^processor /proc/cpuinfo)
