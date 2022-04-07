@@ -1,5 +1,5 @@
 {
-  "description": "Test for generating lib-test.sh script.",
+  "description": "Script for doing integration test against lib folder.",
   "details": [],
   "formats": ["other"],
   "requires": [],
