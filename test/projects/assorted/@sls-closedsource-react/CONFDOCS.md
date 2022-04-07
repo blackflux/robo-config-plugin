@@ -12,7 +12,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cfg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cfg">`serverless/test-sls-cfg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test-gen">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test-gen">`serverless/test-lib-test-gen`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test">`serverless/test-lib-test`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-compile">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-compile">`serverless/serverless-compile`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver-js">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver-js">`serverless/serverless-base-resolver-js`</a>
@@ -108,7 +108,7 @@ Manage various configuration files for react serverless project.
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">lib-test-gen.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-testsh">lib-test.sh</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
         </ul>
       </td>
@@ -396,7 +396,7 @@ Manage serverless configuration for deployment to AWS.
 <code>└─&nbsp;test</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspecjs">0-sls-cf-stack.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test5-sls-cfgspecjs">5-sls-cfg.spec.js</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">lib-test-gen.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-testsh">lib-test.sh</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
         </ul>
       </td>
@@ -508,11 +508,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test-gen">serverless/test-lib-test-gen</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test-gen">`index`</a>)
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test">serverless/test-lib-test</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">test/lib-test-gen.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testlib-testsh">test/lib-test.sh</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Test for doing integration test against lib folder.
+- Script for doing integration test against lib folder.
 
 <table>
   <tbody>
@@ -525,7 +525,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecj
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">lib-test-gen.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-testsh">lib-test.sh</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -2092,11 +2092,11 @@ Execute all configured js-gardener tasks.
 
 *Test for visualizing serverless cf stack definitions.*
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testlib-test-genspecjs">test/lib-test-gen.spec.js</a>  
+### <a name="blackfluxrobo-config-plugin-target-ref-testlib-testsh">test/lib-test.sh</a>  
 
 :small_blue_diamond: `other`
 
-*Test for generating lib-test.sh script.*
+*Script for doing integration test against lib folder.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a>  
 
