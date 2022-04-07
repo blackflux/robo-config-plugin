@@ -7,7 +7,12 @@ do
   printf 'yarn tsv -g "^Testing Lambda Functions: lambda-test Test %s$" --timeout 30000 --folder lib 2> /dev/null | grep "✔ Test" || printf "$\{RED}    ✗ Test %q$\{NC}\\\\n"\n' "$(echo "$i" | sed 's/[.[\*^$]/\\&/g')" "$i";
 done > "$tmp_file"
 
-thread_count=$(grep -c ^processor /proc/cpuinfo)
+if [[ -z "$\{CIRCLECI}" ]]; then
+  thread_count=$(grep -c ^processor /proc/cpuinfo)
+else
+  thread_count=2
+fi
+
 output="$(cat "$tmp_file" | while read i; do printf "%q\n" "$i"; done | xargs --max-procs=$thread_count -I CMD bash -c CMD | tee /dev/tty)"
 
 code=0
