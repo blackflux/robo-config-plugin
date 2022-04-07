@@ -1,0 +1,15 @@
+{
+  "target": "test/lib-test.sh",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/test/lib-test.sh"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Script for doing integration test against lib folder."
+  ]
+}
