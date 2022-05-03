@@ -46,8 +46,8 @@
     {
       "name": "run-yarn-tests-os",
       "variables": {
-        "jobName": "test-node-v17",
-        "dockerImage": "circleci/node:17",
+        "jobName": "test-node-v18",
+        "dockerImage": "circleci/node:18",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
@@ -65,7 +65,7 @@
             "gally-create-pr",
             "test-node-v16",
             "test-node-v14",
-            "test-node-v17"
+            "test-node-v18"
           ],
           "filters": {
             "branches": {
@@ -85,7 +85,7 @@
             "gally-create-pr",
             "test-node-v16",
             "test-node-v14",
-            "test-node-v17"
+            "test-node-v18"
           ],
           "filters": {
             "branches": {
