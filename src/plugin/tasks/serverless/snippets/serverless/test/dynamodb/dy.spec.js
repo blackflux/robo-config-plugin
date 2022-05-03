@@ -21,7 +21,7 @@ describe('Testing dynamodb/dy.js', () => {
       "import aws from '../core/aws.js';",
       ...files.map((f) => `import * as ${pathToCamelCase(f.slice(0, -3))} from './tables/$\{f}';`),
       '',
-      'const cache = new LRU({ maxAge: 24 * 60 * 60 * 1000 });',
+      'const cache = new LRU({ maxAge: 24 * 60 * 60 * 1000, max: 100 });',
       'const memoize = (name, logic) => cache.memoizeSync(name, () => aws.dy.Model(logic));',
       '',
       'const lookup = Object.fromEntries([',
