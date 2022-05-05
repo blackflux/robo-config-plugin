@@ -47,7 +47,7 @@
       "name": "run-yarn-tests",
       "variables": {
         "jobName": "test-node-v18",
-        "dockerImage": "circleci/node:18",
+        "dockerImage": "cimg/node:18.0",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
