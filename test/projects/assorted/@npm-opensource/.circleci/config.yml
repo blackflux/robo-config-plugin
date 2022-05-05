@@ -159,7 +159,7 @@ jobs:
           1);
   test-node-v18:
     docker:
-      - image: circleci/node:18
+      - image: cimg/node:18.0
     steps:
       - checkout
       - run:
