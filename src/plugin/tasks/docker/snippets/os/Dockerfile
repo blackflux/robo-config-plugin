@@ -1,4 +1,4 @@
-FROM amazon/aws-sam-cli-build-image-nodejs14.x
+FROM amazon/aws-sam-cli-build-image-nodejs16.x
 
 WORKDIR /user
 

@@ -3,22 +3,22 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v14.x:
+      - test-node-v16.x:
           requires:
             - gally
-      - test-node-v14.x-lib:
+      - test-node-v16.x-lib:
           requires:
             - gally
-      - test-node-v16:
+      - test-node-v18:
           requires:
             - gally
       - deploy-local:
           context: projectName-local
           requires:
             - gally
-            - test-node-v14.x
-            - test-node-v14.x-lib
-            - test-node-v16
+            - test-node-v16.x
+            - test-node-v16.x-lib
+            - test-node-v18
           filters:
             branches:
               only:
@@ -27,9 +27,9 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v14.x
-            - test-node-v14.x-lib
-            - test-node-v16
+            - test-node-v16.x
+            - test-node-v16.x-lib
+            - test-node-v18
             - deploy-local
           filters:
             branches:
@@ -39,9 +39,9 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v14.x
-            - test-node-v14.x-lib
-            - test-node-v16
+            - test-node-v16.x
+            - test-node-v16.x-lib
+            - test-node-v18
           filters:
             branches:
               only:
@@ -50,9 +50,9 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v14.x
-            - test-node-v14.x-lib
-            - test-node-v16
+            - test-node-v16.x
+            - test-node-v16.x-lib
+            - test-node-v18
           filters:
             branches:
               only:
@@ -61,14 +61,14 @@ version: 2
 jobs:
   gally:
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:16
     steps:
       - checkout
       - run: sudo yarn global add gally
       - run: gally promote $CIRCLE_BRANCH
   deploy-local:
     docker:
-      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+      - image: amazon/aws-sam-cli-build-image-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -100,7 +100,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.7.5
+      - run: yarn global add serverless@3.17.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env local
       - run:
@@ -108,7 +108,7 @@ jobs:
           no_output_timeout: 10m
   deploy-dev:
     docker:
-      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+      - image: amazon/aws-sam-cli-build-image-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -140,7 +140,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.7.5
+      - run: yarn global add serverless@3.17.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env dev
       - run:
@@ -148,7 +148,7 @@ jobs:
           no_output_timeout: 10m
   deploy-stage:
     docker:
-      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+      - image: amazon/aws-sam-cli-build-image-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -180,7 +180,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.7.5
+      - run: yarn global add serverless@3.17.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env stage
       - run:
@@ -188,7 +188,7 @@ jobs:
           no_output_timeout: 10m
   deploy-prod:
     docker:
-      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+      - image: amazon/aws-sam-cli-build-image-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -220,15 +220,15 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.7.5
+      - run: yarn global add serverless@3.17.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env prod
       - run:
           command: sls deploy --config serverless-prod-api.config.yml --force
           no_output_timeout: 10m
-  test-node-v14.x:
+  test-node-v16.x:
     docker:
-      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+      - image: amazon/aws-sam-cli-build-image-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -264,47 +264,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v16:
+  test-node-v16.x-lib:
     docker:
-      - image: circleci/node:16
-    steps:
-      - run: yarn -v || npm install --global yarn
-      - run: >-
-          echo 'export
-          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
-          >> $BASH_ENV
-      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
-      - checkout
-      - run:
-          command: |
-            # sync submodules as checkout doesn't do this automatically
-            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
-              git submodule sync && git submodule update --init
-            fi
-      - run:
-          command: |
-            if [[ -n "${NPM_TOKEN}" ]]; then
-              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-            fi
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install Dependencies
-          command: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - run: yarn test
-      - run: >-
-          (git add . && git diff-index --quiet HEAD --) || (git status && exit
-          1);
-  test-node-v14.x-lib:
-    docker:
-      - image: amazon/aws-sam-cli-build-image-nodejs14.x
+      - image: amazon/aws-sam-cli-build-image-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -338,6 +300,44 @@ jobs:
             - ~/.cache/yarn
       - run: yarn build-clean
       - run: yarn lt
+      - run: >-
+          (git add . && git diff-index --quiet HEAD --) || (git status && exit
+          1);
+  test-node-v18:
+    docker:
+      - image: cimg/node:18.0
+    steps:
+      - run: yarn -v || npm install --global yarn
+      - run: >-
+          echo 'export
+          PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH'
+          >> $BASH_ENV
+      - run: echo 'export LAMBDA_TASK_ROOT=$PWD' >> $BASH_ENV
+      - checkout
+      - run:
+          command: |
+            # sync submodules as checkout doesn't do this automatically
+            if [[ $(git config --file .gitmodules --get-regexp path) ]]; then
+              git submodule sync && git submodule update --init
+            fi
+      - run:
+          command: |
+            if [[ -n "${NPM_TOKEN}" ]]; then
+              echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            fi
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run: yarn test
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);

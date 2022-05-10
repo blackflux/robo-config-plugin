@@ -3,13 +3,13 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v14.x:
+      - test-node-v16.x:
           requires:
             - gally
-      - test-node-v14.x-lib:
+      - test-node-v16.x-lib:
           requires:
             - gally
-      - test-node-v16:
+      - test-node-v18:
           requires:
             - gally
       - deploy-local:
@@ -36,12 +36,12 @@ version: 2
 jobs:
   gally:
     ${file(^/jobs/gally.yml)}
-  test-node-v14.x:
-    ${file(^/jobs/test.yml), image=amazon/aws-sam-cli-build-image-nodejs14.x}
-  test-node-v14.x-lib:
-    ${file(^/jobs/lib-test.yml), image=amazon/aws-sam-cli-build-image-nodejs14.x}
-  test-node-v16:
-    ${file(^/jobs/test.yml), image=circleci/node:16}
+  test-node-v16.x:
+    ${file(^/jobs/test.yml), image=amazon/aws-sam-cli-build-image-nodejs16.x}
+  test-node-v16.x-lib:
+    ${file(^/jobs/lib-test.yml), image=amazon/aws-sam-cli-build-image-nodejs16.x}
+  test-node-v18:
+    ${file(^/jobs/test.yml), image=cimg/node:18.0}
   deploy-local:
     ${file(^/jobs/deploy.yml), env=local}
   deploy-dev:

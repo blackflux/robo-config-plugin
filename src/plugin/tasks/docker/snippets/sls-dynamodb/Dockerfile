@@ -1,4 +1,4 @@
-FROM amazon/aws-sam-cli-build-image-nodejs14.x
+FROM amazon/aws-sam-cli-build-image-nodejs16.x
 
 WORKDIR /user
 
@@ -8,7 +8,7 @@ ENV HOME /user
 RUN touch ~/.bashrc && \
   yarn -v || npm install --global yarn && \
   source ~/.bashrc && \
-  yarn global add serverless@3.7.5
+  yarn global add serverless@3.17.0
 
 RUN touch ~/.bashrc && \
   echo "alias u='yarn run u'" >> ~/.bashrc && \
