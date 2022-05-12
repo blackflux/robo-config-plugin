@@ -44,7 +44,8 @@
     "tsv": "yarn run test-simple --verbose",
     "sls-compile": "node serverless/compile.js",
     "lib-test": ". ./test/lib-test.sh",
-    "lt": "yarn run lib-test"
+    "lt": "yarn run lib-test",
+    "ncc-analyze": "yarn clean && ncc build -m -s -e aws-sdk src/hangler.js -o lib && npx source-map-explorer lib/index.js --only-mapped --html source.html && yarn clean"
   },
   "bugs": {
     "url": "https://github.com/repoKey/issues"
