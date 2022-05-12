@@ -44,7 +44,8 @@
     "start-offline": "yarn sls-compile --region=awsRegion --env=offline && yarn run build-clean && sls offline start --config serverless-offline.config.yml --stack=api-offline",
     "sls-compile": "node serverless/compile.js",
     "lib-test": ". ./test/lib-test.sh",
-    "lt": "yarn run lib-test"
+    "lt": "yarn run lib-test",
+    "ncc-analyze": "yarn clean && ncc build -m -s -e aws-sdk src/hangler.js -o lib && npx source-map-explorer lib/index.js --only-mapped --html source.html && yarn clean"
   },
   "files": [],
   "homepage": "https://github.com/repoKey#readme",
