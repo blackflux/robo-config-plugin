@@ -1,5 +1,5 @@
 docker:
-  - image: 'amazon/aws-sam-cli-build-image-nodejs16.x'
+  - image: 'public.ecr.aws/lambda/nodejs:16'
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:

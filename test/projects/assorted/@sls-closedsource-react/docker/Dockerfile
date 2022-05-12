@@ -1,4 +1,4 @@
-FROM amazon/aws-sam-cli-build-image-nodejs16.x
+FROM public.ecr.aws/lambda/nodejs:16
 
 WORKDIR /user
 
