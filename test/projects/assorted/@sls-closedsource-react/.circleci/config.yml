@@ -68,7 +68,7 @@ jobs:
       - run: gally promote $CIRCLE_BRANCH
   deploy-local:
     docker:
-      - image: public.ecr.aws/lambda/nodejs:16
+      - image: public.ecr.aws/sam/build-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -108,7 +108,7 @@ jobs:
           no_output_timeout: 10m
   deploy-dev:
     docker:
-      - image: public.ecr.aws/lambda/nodejs:16
+      - image: public.ecr.aws/sam/build-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -148,7 +148,7 @@ jobs:
           no_output_timeout: 10m
   deploy-stage:
     docker:
-      - image: public.ecr.aws/lambda/nodejs:16
+      - image: public.ecr.aws/sam/build-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -188,7 +188,7 @@ jobs:
           no_output_timeout: 10m
   deploy-prod:
     docker:
-      - image: public.ecr.aws/lambda/nodejs:16
+      - image: public.ecr.aws/sam/build-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -228,7 +228,7 @@ jobs:
           no_output_timeout: 10m
   test-node-v16.x:
     docker:
-      - image: public.ecr.aws/lambda/nodejs:16
+      - image: public.ecr.aws/sam/build-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -266,7 +266,7 @@ jobs:
           1);
   test-node-v16.x-lib:
     docker:
-      - image: public.ecr.aws/lambda/nodejs:16
+      - image: public.ecr.aws/sam/build-nodejs16.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-

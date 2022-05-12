@@ -37,9 +37,9 @@ jobs:
   gally:
     ${file(^/jobs/gally.yml)}
   test-node-v16.x:
-    ${file(^/jobs/test.yml), image=public.ecr.aws/lambda/nodejs:16}
+    ${file(^/jobs/test.yml), image=public.ecr.aws/sam/build-nodejs16.x}
   test-node-v16.x-lib:
-    ${file(^/jobs/lib-test.yml), image=public.ecr.aws/lambda/nodejs:16}
+    ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs16.x}
   test-node-v18:
     ${file(^/jobs/test.yml), image=cimg/node:18.0}
   deploy-local:

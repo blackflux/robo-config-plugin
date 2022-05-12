@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/nodejs:16
+FROM public.ecr.aws/sam/build-nodejs16.x
 
 WORKDIR /user
 
