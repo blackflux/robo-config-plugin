@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "cp -rf ./src ./lib",
+    "build": "ncc build -m -o lib && mv lib/index.js lib/index.min.js && cp -rf src/* lib",
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
@@ -43,7 +43,8 @@
     "tsv": "yarn run test-simple --verbose",
     "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "semantic-release": "yarn run build-clean && npx semantic-release",
-    "gardener": "node gardener.js"
+    "gardener": "node gardener.js",
+    "ncc-analyze": "yarn clean && ncc build -m -s -o lib && npx source-map-explorer lib/index.js --only-mapped --html source.html && yarn clean"
   },
   "homepage": "https://github.com/repoKey#readme",
   "repository": {
@@ -57,7 +58,7 @@
   "engines": {
     "node": ">= nodeVersion"
   },
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "name": "packageName",
   "type": "module"
 }
