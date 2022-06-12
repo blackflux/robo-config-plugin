@@ -33,7 +33,7 @@
   "keywords": [],
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "ncc build -m -o lib && mv lib/index.js lib/index.min.js && cp -rf src/* lib",
+    "build": "ncc build -m -o lib && mv lib/index.js lib/index.min.js && cp -rf src/* lib && rm lib/package.json",
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
