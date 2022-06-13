@@ -134,6 +134,7 @@ Manage various configuration files for react serverless project.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
@@ -408,6 +409,7 @@ Manage serverless configuration for deployment to AWS.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
@@ -658,6 +660,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
@@ -1956,6 +1959,10 @@ Automates the package release workflow including:
 A namespace is used to groups projects.
 Projects with the same namespace will use the same deployment bucket.
 Typically set to something like 'com.sls.ORGNAME'
+
+### <a name="blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a>  : `string`
+
+*Endpoint Type for serverless provider.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
 

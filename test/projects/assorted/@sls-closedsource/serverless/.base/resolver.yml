@@ -1,7 +1,7 @@
 service: projectName-${opt:stack}
 provider:
   name: aws
-  endpointType: REGIONAL
+  endpointType: slsEndpointType
   runtime: nodejs16.x
   architecture: arm64
   memorySize: 256

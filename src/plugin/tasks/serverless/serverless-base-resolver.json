@@ -8,6 +8,7 @@
       "variables": {
         "nccEnabled": "${nccEnabled}",
         "projectName": "${projectName}",
+        "slsEndpointType": "${slsEndpointType}",
         "namespace": "${namespace}"
       }
     }
