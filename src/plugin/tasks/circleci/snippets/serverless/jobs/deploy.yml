@@ -3,7 +3,7 @@ docker:
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:
-      - run: yarn global add serverless@3.17.0
+      - run: yarn global add serverless@3.19.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region ${awsRegion} --env ${opt:env}
       - run:
