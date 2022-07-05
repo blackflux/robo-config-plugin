@@ -26,3 +26,7 @@ functions:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
           batchSize: queueProcessorBatchSize
+      - sqs:
+          arn: ${cf:${opt:service}-data-${self:provider.stage}.QueueQueueArn}
+          batchSize: queueProcessorBatchSize
+          functionResponseType: ReportBatchItemFailures
