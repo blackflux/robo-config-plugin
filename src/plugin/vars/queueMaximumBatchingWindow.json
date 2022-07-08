@@ -1,0 +1,7 @@
+{
+  "description": "Batch window size in seconds of Queue Processor.",
+  "details": [
+    "Maximum number of seconds delay before queue messages are sent to processor"
+  ],
+  "type": "integer"
+}
