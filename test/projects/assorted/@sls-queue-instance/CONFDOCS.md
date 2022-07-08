@@ -52,8 +52,8 @@ Manages SQS instance cloud formation files.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
@@ -110,8 +110,8 @@ Manage serverless configuration for an sqs queue.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
@@ -156,6 +156,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testenv-varsyml">test
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
         </ul>
       </td>
@@ -392,15 +393,15 @@ The project name is in most cases identical to the repository name.
 
 List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queue">queue</a>  : `string`
-
-*Name of Queue.*
-
 ### <a name="blackfluxrobo-config-plugin-var-ref-fifoqueue">fifoQueue</a>  : `boolean`
 
 *Creates FIFO Queue.*
 
 If set to true then a FIFO queue is created. Otherwise a standard queue will be created.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-queue">queue</a>  : `string`
+
+*Name of Queue.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a>  : `integer`
 
