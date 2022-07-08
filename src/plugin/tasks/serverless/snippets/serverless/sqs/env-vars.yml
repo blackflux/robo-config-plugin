@@ -1,1 +1,0 @@
-${queue|UPPER|SNAKE}_QUEUE_URL: https://sqs.${awsRegion}.amazonaws.com/0123456789/${projectName}-data-local-${queue|CAMEL}Queue
