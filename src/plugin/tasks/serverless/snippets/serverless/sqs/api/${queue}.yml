@@ -27,5 +27,5 @@ functions:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.${queue|TITLE|STRIP}QueueArn}
           batchSize: ${queueProcessorBatchSize}
-          maximumBatchingWindow: ${queueMaximumBatchingWindow}
+          maximumBatchingWindow: ${queueProcessorMaximumBatchingWindow}
           functionResponseType: ReportBatchItemFailures
