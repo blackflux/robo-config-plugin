@@ -10,7 +10,7 @@
         "queueProcessorTimeout": "${queueProcessorTimeout}",
         "queueProcessorMemorySize": "${queueProcessorMemorySize}",
         "queueProcessorReservedConcurrency": "${queueProcessorReservedConcurrency}",
-        "queueMaximumBatchingWindow": "${queueMaximumBatchingWindow}",
+        "queueProcessorMaximumBatchingWindow": "${queueProcessorMaximumBatchingWindow}",
         "queueProcessorBatchSize": "${queueProcessorBatchSize}"
       }
     }
