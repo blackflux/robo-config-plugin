@@ -57,7 +57,7 @@ Manages SQS instance cloud formation files.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuemaximumbatchingwindow">queueMaximumBatchingWindow</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormaximumbatchingwindow">queueProcessorMaximumBatchingWindow</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a></li>
@@ -115,7 +115,7 @@ Manage serverless configuration for an sqs queue.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuedelayseconds">queueDelaySeconds</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queuevisibilitytimeout">queueVisibilityTimeout</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuemaximumbatchingwindow">queueMaximumBatchingWindow</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormaximumbatchingwindow">queueProcessorMaximumBatchingWindow</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a></li>
@@ -312,7 +312,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapisqsqueue
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queue">queue</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorbatchsize">queueProcessorBatchSize</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-queuemaximumbatchingwindow">queueMaximumBatchingWindow</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormaximumbatchingwindow">queueProcessorMaximumBatchingWindow</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessorreservedconcurrency">queueProcessorReservedConcurrency</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessormemorysize">queueProcessorMemorySize</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-queueprocessortimeout">queueProcessorTimeout</a></li>
@@ -422,7 +422,7 @@ The length of time during which a message will be unavailable after a message is
 
 Maximum number of payloads processed in parallel in code logic by aws lambda processor
 
-### <a name="blackfluxrobo-config-plugin-var-ref-queuemaximumbatchingwindow">queueMaximumBatchingWindow</a>  : `integer`
+### <a name="blackfluxrobo-config-plugin-var-ref-queueprocessormaximumbatchingwindow">queueProcessorMaximumBatchingWindow</a>  : `integer`
 
 *Batch window size in seconds of Queue Processor.*
 
