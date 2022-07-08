@@ -1,0 +1,1 @@
+${queue|UPPER|SNAKE}_QUEUE_URL: https://sqs.${awsRegion}.amazonaws.com/0123456789/${projectName}-data-local-{{#fifoQueue}}Fifo{{/fifoQueue}}${queue|CAMEL}Queue{{#fifoQueue}}.fifo{{/fifoQueue}}
