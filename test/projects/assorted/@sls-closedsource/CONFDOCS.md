@@ -54,7 +54,6 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8default_default-shallow">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8default_default-shallow">`c8/default_default-shallow`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-c8default_default-deep">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-c8default_default-deep">`c8/default_default-deep`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesserverless">`badges/#serverless`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">`badges/js-gardener`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescircleci-private">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescircleci-private">`badges/circleci-private`</a>
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortedsls-closedsource">assorted/@sls-closedsource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsource">`index`</a>)
@@ -1817,7 +1816,6 @@ Add badged for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
         </ul>
       </td>
@@ -1825,34 +1823,6 @@ Add badged for serverless project.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">badges/js-gardener</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
-
-- Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
         </ul>
       </td>
     </tr>

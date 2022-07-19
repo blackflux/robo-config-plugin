@@ -2,7 +2,7 @@
   "tasks": [
     "struct/#npm-default",
     "badges/#npm-opensource",
-    "circleci/#npm-default-coveralls",
+    "circleci/#npm-default",
     "dependabot/#npm-default",
     "gally/#npm-default",
     "editor/#default",

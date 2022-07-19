@@ -1,6 +1,5 @@
 {
   "tasks": [
-    "js-gardener",
     "circleci-private"
   ],
   "description": "Add badged for serverless project."
