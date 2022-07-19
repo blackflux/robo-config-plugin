@@ -1,12 +1,7 @@
 {
   "tasks": [
-    "js-gardener",
-    "semantic-release",
     "npm-downloads",
     "npm-status",
-    "david-dm",
-    "dependabot",
-    "coveralls",
     "circleci"
   ],
   "description": "Add badged for npm open source package on github."

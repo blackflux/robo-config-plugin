@@ -13,7 +13,7 @@
       }
     },
     {
-      "name": "run-yarn-tests",
+      "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v16",
         "dockerImage": "circleci/node:16",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "name": "run-yarn-tests",
+      "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v14",
         "dockerImage": "circleci/node:14",
@@ -37,14 +37,7 @@
       }
     },
     {
-      "name": "inject-coveralls-step",
-      "variables": {
-        "jobName": "test-node-v14",
-        "ciEnvBranchName": "CIRCLE_BRANCH"
-      }
-    },
-    {
-      "name": "run-yarn-tests",
+      "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v18",
         "dockerImage": "cimg/node:18.0",
@@ -102,9 +95,8 @@
     "gally",
     "github",
     "circleci",
-    "coveralls",
-    "dependabot",
-    "semantic-release"
+    "opensearch",
+    "dependabot"
   ],
   "purpose": [
     "Restrictive two-branch circleci config."

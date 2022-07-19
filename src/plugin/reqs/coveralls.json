@@ -1,8 +1,0 @@
-{
-  "description": "Showcase and analyze coverage reports.",
-  "details": [
-    "Enables displaying of a status badge indicated code coverage percent of the project.",
-    "Furthermore allows anyone to easily drill down into missing coverage or coverage changes."
-  ],
-  "website": "https://coveralls.io/"
-}
