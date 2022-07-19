@@ -1203,6 +1203,7 @@ Manage circleci configuration for npm package on github with opensearch.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-opensearch">opensearch</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
       </td>
     </tr>
@@ -1238,6 +1239,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-circleciconfigyml">.c
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-opensearch">opensearch</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
       </td>
     </tr>

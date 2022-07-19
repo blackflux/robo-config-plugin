@@ -96,7 +96,8 @@
     "github",
     "circleci",
     "opensearch",
-    "dependabot"
+    "dependabot",
+    "semantic-release"
   ],
   "purpose": [
     "Restrictive two-branch circleci config."
