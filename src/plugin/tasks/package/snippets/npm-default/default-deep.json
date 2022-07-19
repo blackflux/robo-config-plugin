@@ -1,7 +1,5 @@
 {
-  "devDependencies": {
-    "coveralls": "3.0.0"
-  },
+  "devDependencies": {},
   "files": [
     "lib"
   ]

@@ -11,7 +11,6 @@
   "devDependencies": {
     "@blackflux/eslint-plugin-rules": "1.0.0",
     "@blackflux/robo-config-plugin": "1.2.1",
-    "coveralls": "3.0.0",
     "chai": "4.2.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -38,7 +37,6 @@
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
-    "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "semantic-release": "yarn run build-clean && npx semantic-release",
     "gardener": "node gardener.js",
     "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
