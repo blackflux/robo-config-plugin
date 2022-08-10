@@ -25,5 +25,5 @@ docker run \
 
 if [ -n "${LINK}" ]; then
   docker stop dynamodb-local -t 0
-  docker rm -f dynamodb-local
+  docker rm -f -v dynamodb-local
 fi
