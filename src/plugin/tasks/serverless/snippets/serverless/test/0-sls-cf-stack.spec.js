@@ -14,7 +14,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   before(() => {
     const loadStack = (stack) => resolver({
       stack,
-      region: 'us-west-2',
+      region: '${awsRegion}',
       env: 'local'
     });
     apiStack = loadStack('api');
