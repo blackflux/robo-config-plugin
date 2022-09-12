@@ -3,7 +3,12 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/test/0-sls-cf-stack.spec.js"
+    {
+      "name": "serverless/test/0-sls-cf-stack.spec.js",
+      "variables": {
+        "awsRegion": "${awsRegion}"
+      }
+    }
   ],
   "requires": [
     "serverless",

@@ -150,13 +150,13 @@ Manage various configuration files for serverless project with the option of run
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awssecretaccesskey">awsSecretAccessKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsaccesskeyid">awsAccessKeyId</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
@@ -437,6 +437,7 @@ Manage serverless configuration for deployment to AWS.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
@@ -608,6 +609,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -621,6 +623,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -2135,6 +2142,12 @@ Automates the package release workflow including:
 
 ## Variables
 
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-namespace">namespace</a>  : `string`
 
 *Namespace for this project.*
@@ -2175,12 +2188,6 @@ Should only be filled in with dummy credentials for tests.
 *Aws access key id.*
 
 Should only be filled in with dummy credentials for tests.
-
-### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
-
-*Aws data center region code gets deployed to.*
-
-List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a>  : `string`
 

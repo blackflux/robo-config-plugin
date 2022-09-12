@@ -138,6 +138,7 @@ Manage various configuration files for serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
@@ -147,7 +148,6 @@ Manage various configuration files for serverless project.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a></li>
         </ul>
       </td>
@@ -417,6 +417,7 @@ Manage serverless configuration for deployment to AWS.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
@@ -528,6 +529,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -541,6 +543,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-test0-sls-cf-stackspe
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -1989,6 +1996,12 @@ Automates the package release workflow including:
 
 ## Variables
 
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-namespace">namespace</a>  : `string`
 
 *Namespace for this project.*
@@ -2041,12 +2054,6 @@ The code owner is the gatekeeper of the project, ultimately responsible for all 
 ### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>  : `string`
 
 *The github name of the bot used for automatic merging.*
-
-### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
-
-*Aws data center region code gets deployed to.*
-
-List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a>  : `string`
 
