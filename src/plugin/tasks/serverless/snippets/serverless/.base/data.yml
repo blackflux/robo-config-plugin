@@ -222,6 +222,7 @@ resources:
                 - 'logs:FilterLogEvents'
                 - 'logs:PutRetentionPolicy'
                 - 'logs:DeleteRetentionPolicy'
+                - 'logs:TagResource'
               Resource:
                 - 'Fn::Join':
                     - ':'
