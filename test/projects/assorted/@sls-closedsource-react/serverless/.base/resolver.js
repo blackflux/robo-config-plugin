@@ -11,6 +11,7 @@ export default (kwargs) => {
   const logic = {
     'provider.environment.*': ({ parent, property, value }) => {
       if (value === null) {
+        // eslint-disable-next-line no-param-reassign
         delete parent[property];
       }
     },
