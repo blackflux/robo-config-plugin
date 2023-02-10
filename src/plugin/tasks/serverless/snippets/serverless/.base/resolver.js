@@ -9,6 +9,11 @@ export default (kwargs) => {
   const configFile = join(fs.dirname(import.meta.url), 'resolver.yml');
   const r = yaml.load(configFile, kwargs);
   const logic = {
+    'provider.environment.*': ({ parent, property, value }) => {
+      if (value === null) {
+        delete parent[property];
+      }
+    },
     'provider.iam.role.statements[*].Action': ({ value }) => {
       value.sort();
     },
