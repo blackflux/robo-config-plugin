@@ -305,7 +305,7 @@ jobs:
           1);
   test-node-v20:
     docker:
-      - image: cimg/node:20.0
+      - image: cimg/node:20.4
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-

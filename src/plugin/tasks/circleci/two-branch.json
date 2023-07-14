@@ -40,7 +40,7 @@
       "name": "run-yarn-tests",
       "variables": {
         "jobName": "test-node-v20",
-        "dockerImage": "cimg/node:20.0",
+        "dockerImage": "cimg/node:20.4",
         "jobOptions": {
           "requires": [
             "gally-create-pr"

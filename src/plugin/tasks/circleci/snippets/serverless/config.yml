@@ -41,7 +41,7 @@ jobs:
   test-node-v18.x-lib:
     ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs18.x}
   test-node-v20:
-    ${file(^/jobs/test.yml), image=cimg/node:20.0}
+    ${file(^/jobs/test.yml), image=cimg/node:20.4}
   deploy-local:
     ${file(^/jobs/deploy.yml), env=local}
   deploy-dev:
