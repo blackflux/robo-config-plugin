@@ -1,6 +1,5 @@
 import { logger } from 'lambda-monitor-logger';
 import AwsSdkWrap from 'aws-sdk-wrap';
-import AWS from './aws.cjs';
 
 export default AwsSdkWrap({
   logger,

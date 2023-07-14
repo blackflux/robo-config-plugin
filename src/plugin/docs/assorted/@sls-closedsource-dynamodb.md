@@ -16,7 +16,6 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test">`serverless/test-lib-test`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-dynamodb-dy">`serverless/test-dynamodb-dy`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-dynamodb-dy">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-dynamodb-dy">`serverless/src-dynamodb-dy`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws-cjs">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws-cjs">`serverless/src-core-aws-cjs`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws">`serverless/src-core-aws`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-compile">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-compile">`serverless/serverless-compile`</a>
@@ -108,7 +107,6 @@ Manage various configuration files for serverless project with the option of run
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
 <code>├─&nbsp;src</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;core</code><br/>
-<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">aws.cjs</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawsjs">aws.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">dy.js</a></code><br/>
@@ -410,7 +408,6 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
 <code>├─&nbsp;src</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;core</code><br/>
-<code>│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">aws.cjs</a></code><br/>
 <code>│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawsjs">aws.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">dy.js</a></code><br/>
@@ -711,36 +708,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">src/
 <code>└─&nbsp;src</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcdynamodbdyjs">dy.js</a></code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlesssrc-core-aws-cjs">serverless/src-core-aws-cjs</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlesssrc-core-aws-cjs">`index`</a>)
-
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">src/core/aws.cjs</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
-
-- Create aws sdk require file.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;src</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;core</code><br/>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srccoreawscjs">aws.cjs</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -2346,16 +2313,6 @@ Execute all configured js-gardener tasks.
 :small_blue_diamond: `other`
 
 *Wrapper to access defined DynamoDB models.*
-
-### <a name="blackfluxrobo-config-plugin-target-ref-srccoreawscjs">src/core/aws.cjs</a>  
-
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-aws-sdk-wrap">aws-sdk-wrap</a>, <a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a>
-
-:small_blue_diamond: `other`
-
-*Configuration file for aws-sdk require.*
-
-AWS SDK initialization file.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-srccoreawsjs">src/core/aws.js</a>  
 
