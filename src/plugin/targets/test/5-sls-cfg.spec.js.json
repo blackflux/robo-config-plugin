@@ -1,7 +1,0 @@
-{
-  "description": "Tests to ensure sls configuration consistency.",
-  "details": [],
-  "formats": ["other"],
-  "requires": ["serverless"],
-  "website": null
-}
