@@ -61,7 +61,7 @@ version: 2
 jobs:
   gally:
     docker:
-      - image: circleci/node:18
+      - image: cimg/node:18.16
     steps:
       - checkout
       - run: sudo yarn global add gally
