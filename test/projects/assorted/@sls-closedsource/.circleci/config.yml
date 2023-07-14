@@ -3,22 +3,22 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v16.x:
+      - test-node-v18.x:
           requires:
             - gally
-      - test-node-v16.x-lib:
+      - test-node-v18.x-lib:
           requires:
             - gally
-      - test-node-v18:
+      - test-node-v20:
           requires:
             - gally
       - deploy-local:
           context: projectName-local
           requires:
             - gally
-            - test-node-v16.x
-            - test-node-v16.x-lib
-            - test-node-v18
+            - test-node-v18.x
+            - test-node-v18.x-lib
+            - test-node-v20
           filters:
             branches:
               only:
@@ -27,9 +27,9 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v16.x
-            - test-node-v16.x-lib
-            - test-node-v18
+            - test-node-v18.x
+            - test-node-v18.x-lib
+            - test-node-v20
             - deploy-local
           filters:
             branches:
@@ -39,9 +39,9 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v16.x
-            - test-node-v16.x-lib
-            - test-node-v18
+            - test-node-v18.x
+            - test-node-v18.x-lib
+            - test-node-v20
           filters:
             branches:
               only:
@@ -50,9 +50,9 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v16.x
-            - test-node-v16.x-lib
-            - test-node-v18
+            - test-node-v18.x
+            - test-node-v18.x-lib
+            - test-node-v20
           filters:
             branches:
               only:
@@ -61,14 +61,14 @@ version: 2
 jobs:
   gally:
     docker:
-      - image: circleci/node:16
+      - image: circleci/node:18
     steps:
       - checkout
       - run: sudo yarn global add gally
       - run: gally promote $CIRCLE_BRANCH
   deploy-local:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs16.x
+      - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -108,7 +108,7 @@ jobs:
           no_output_timeout: 10m
   deploy-dev:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs16.x
+      - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -148,7 +148,7 @@ jobs:
           no_output_timeout: 10m
   deploy-stage:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs16.x
+      - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -188,7 +188,7 @@ jobs:
           no_output_timeout: 10m
   deploy-prod:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs16.x
+      - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -226,9 +226,9 @@ jobs:
       - run:
           command: sls deploy --config serverless-prod-api.config.yml --force
           no_output_timeout: 10m
-  test-node-v16.x:
+  test-node-v18.x:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs16.x
+      - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -264,9 +264,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v16.x-lib:
+  test-node-v18.x-lib:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs16.x
+      - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -303,9 +303,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v18:
+  test-node-v20:
     docker:
-      - image: cimg/node:18.0
+      - image: cimg/node:20.4
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
