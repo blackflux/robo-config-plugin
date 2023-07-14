@@ -3,7 +3,6 @@
     "test-sls-cf-stack",
     "test-sls-tags",
     "test-sls-cf-stack-routes",
-    "test-sls-cfg",
     "serverless-base-resolver",
     "serverless-base-resolver-js",
     "serverless-base-api",
