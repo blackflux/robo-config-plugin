@@ -1,7 +1,0 @@
-{
-  "description": "Configuration file for aws-sdk require.",
-  "details": ["AWS SDK initialization file."],
-  "formats": ["other"],
-  "requires": ["aws-sdk-wrap", "aws"],
-  "website": null
-}

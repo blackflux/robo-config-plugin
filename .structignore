@@ -8,12 +8,9 @@ test/projects/assorted/@sls-api/test/hangler-gen.spec.js
 test/projects/assorted/@sls-queue/test/queue/queue.spec.js
 test/projects/assorted/@sls-closedsource/test/0-sls-cf-stack.spec.js
 test/projects/assorted/@sls-closedsource-react/test/0-sls-cf-stack.spec.js
-test/projects/assorted/@sls-closedsource/test/5-sls-cfg.spec.js
-test/projects/assorted/@sls-closedsource-react/test/5-sls-cfg.spec.js
 test/projects/assorted/@sls-closedsource/test/7-sls-tags.spec.js
 test/projects/assorted/@sls-closedsource-react/test/7-sls-tags.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/0-sls-cf-stack.spec.js
-test/projects/assorted/@sls-closedsource-dynamodb/test/5-sls-cfg.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/7-sls-tags.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/8-sls-dynamodb-cfg.spec.js
 test/projects/assorted/@sls-closedsource-dynamodb/test/9-sls-dynamodb-local.spec.js
