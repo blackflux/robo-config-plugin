@@ -1,10 +1,11 @@
-const path = require('path');
+import fs from 'smart-fs';
+import path from 'path';
 
-module.exports = ({
+export default ({
   name: '@blackflux/robo-config-plugin',
-  taskDir: path.join(__dirname, 'plugin', 'tasks'),
-  reqDir: path.join(__dirname, 'plugin', 'reqs'),
-  varDir: path.join(__dirname, 'plugin', 'vars'),
-  targetDir: path.join(__dirname, 'plugin', 'targets'),
-  docDir: path.join(__dirname, 'plugin', 'docs')
+  taskDir: path.join(fs.dirname(import.meta.url), 'plugin', 'tasks'),
+  reqDir: path.join(fs.dirname(import.meta.url), 'plugin', 'reqs'),
+  varDir: path.join(fs.dirname(import.meta.url), 'plugin', 'vars'),
+  targetDir: path.join(fs.dirname(import.meta.url), 'plugin', 'targets'),
+  docDir: path.join(fs.dirname(import.meta.url), 'plugin', 'docs')
 });

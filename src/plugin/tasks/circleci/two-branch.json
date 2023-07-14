@@ -8,8 +8,20 @@
       "name": "gally-create-staging-pr",
       "variables": {
         "jobName": "gally-create-pr",
-        "dockerImage": "circleci/node:14",
+        "dockerImage": "circleci/node:16",
         "ciEnvBranchName": "$CIRCLE_BRANCH"
+      }
+    },
+    {
+      "name": "run-yarn-tests",
+      "variables": {
+        "jobName": "test-node-v18",
+        "dockerImage": "circleci/node:18",
+        "jobOptions": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
       }
     },
     {
@@ -27,20 +39,8 @@
     {
       "name": "run-yarn-tests",
       "variables": {
-        "jobName": "test-node-v14",
-        "dockerImage": "circleci/node:14",
-        "jobOptions": {
-          "requires": [
-            "gally-create-pr"
-          ]
-        }
-      }
-    },
-    {
-      "name": "run-yarn-tests",
-      "variables": {
-        "jobName": "test-node-v18",
-        "dockerImage": "cimg/node:18.0",
+        "jobName": "test-node-v20",
+        "dockerImage": "cimg/node:20.4",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
@@ -52,13 +52,13 @@
       "name": "dependabot-auto-approve",
       "variables": {
         "jobName": "gally-auto-approve",
-        "dockerImage": "circleci/node:14",
+        "dockerImage": "circleci/node:16",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
+            "test-node-v18",
             "test-node-v16",
-            "test-node-v14",
-            "test-node-v18"
+            "test-node-v20"
           ],
           "filters": {
             "branches": {
@@ -72,13 +72,13 @@
       "name": "semantic-release",
       "variables": {
         "jobName": "release",
-        "dockerImage": "circleci/node:14",
+        "dockerImage": "circleci/node:16",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
+            "test-node-v18",
             "test-node-v16",
-            "test-node-v14",
-            "test-node-v18"
+            "test-node-v20"
           ],
           "filters": {
             "branches": {
