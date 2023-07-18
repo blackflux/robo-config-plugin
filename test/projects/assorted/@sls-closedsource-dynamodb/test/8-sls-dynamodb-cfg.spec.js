@@ -3,12 +3,13 @@ import { expect } from 'chai';
 import fs from 'smart-fs';
 import path from 'path';
 import deepmerge from 'deepmerge';
+import { setSeed } from './hot.js';
 
 describe('Testing dynamodb serverless configuration', { envVarsFile: './env-vars.yml' }, () => {
   let dy;
 
   beforeEach(async () => {
-    process.env.TEST_SEED = Math.random();
+    setSeed();
     dy = (await import('../src/dynamodb/dy.js')).default;
   });
 
