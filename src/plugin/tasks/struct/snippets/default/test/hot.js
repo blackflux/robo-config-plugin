@@ -90,3 +90,14 @@ export const resolve = async (specifier, context, defaultResolve) => {
     url: `${child.href}?id=${process.env.TEST_SEED}`
   };
 };
+
+export const setSeed = async (seed) => {
+  if (seed === null) {
+    delete process.env.TEST_SEED;
+    // eslint-disable-next-line import/no-unresolved
+    await import('node:test?testSeed=<delete>');
+  } else {
+    process.env.TEST_SEED = seed === undefined ? Math.random() : seed;
+    await import(`node:test?testSeed=${process.env.TEST_SEED}`);
+  }
+};
