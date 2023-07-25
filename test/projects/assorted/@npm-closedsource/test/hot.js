@@ -30,8 +30,8 @@ function createListener() {
 }
 
 export function globalPreload({ port: p }) {
-  if (process.version.startsWith('v18')) {
-    /* Skip listener, since shared process in node 18 */
+  if (process.versions.node.split('.')[0] < 20) {
+    /* Skip listener, since process shared before node 20 */
     envVars = process.env;
     return '(() => {})()';
   }
