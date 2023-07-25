@@ -3,7 +3,6 @@ import objectScan from 'object-scan';
 import { describe } from 'node-tdd';
 import fs from 'smart-fs';
 import { expect } from 'chai';
-import { setSeed } from './hot.js';
 
 const normalize = (table) => objectScan([
   '*',
@@ -33,7 +32,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env-vars.yml' }, () => {
   let tables;
 
   beforeEach(async () => {
-    setSeed();
+    process.env.TEST_SEED = Math.random();
     const resolver = (await import('../serverless/.base/resolver.js')).default;
 
     dataStack = resolver({
