@@ -1,7 +1,7 @@
+import path from 'path';
 import { describe } from 'node-tdd';
 import objectScan from 'object-scan';
 import get from 'lodash.get';
-import path from 'path';
 import fs from 'smart-fs';
 import { expect } from 'chai';
 import resolver from '../serverless/.base/resolver.js';

@@ -1,7 +1,7 @@
+import path from 'path';
 import { describe } from 'node-tdd';
 import { expect } from 'chai';
 import fs from 'smart-fs';
-import path from 'path';
 import deepmerge from 'deepmerge';
 
 describe('Testing dynamodb serverless configuration', { envVarsFile: './env-vars.yml' }, () => {
