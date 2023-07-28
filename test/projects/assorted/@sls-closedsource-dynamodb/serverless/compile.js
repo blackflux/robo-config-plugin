@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import minimist from 'minimist';
-import assert from 'assert';
 import { join } from 'path';
+import assert from 'assert';
+import minimist from 'minimist';
 import fs from 'smart-fs';
 import resolver from './.base/resolver.js';
 
