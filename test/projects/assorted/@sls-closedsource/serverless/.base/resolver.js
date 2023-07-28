@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import fs from 'smart-fs';
 import { join } from 'path';
+import fs from 'smart-fs';
 import yaml from 'yaml-boost';
 import objectScan from 'object-scan';
 import objectHash from 'object-hash-strict';
