@@ -29,7 +29,7 @@
   },
   "scripts": {
     "clean": "rm -rf lib build .webpack",
-    "build": "ncc build src/hangler.js -o lib -e nccExclude && mv lib/index.js lib/hangler.js && rsync -r node_modules/nccExclude lib/node_modules",
+    "build": "ncc build src/hangler.js -o lib -e nccExclude && mv lib/index.js lib/hangler.js",
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "yarn run build-clean && c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
