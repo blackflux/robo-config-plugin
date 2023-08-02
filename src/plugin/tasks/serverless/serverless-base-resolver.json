@@ -7,6 +7,7 @@
       "name": "serverless/.base/resolver.yml.mustache",
       "variables": {
         "nccEnabled": "${nccEnabled}",
+        "nccExclude": "${nccExclude}",
         "projectName": "${projectName}",
         "slsEndpointType": "${slsEndpointType}",
         "namespace": "${namespace}"

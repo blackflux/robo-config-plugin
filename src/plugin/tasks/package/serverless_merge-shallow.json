@@ -6,7 +6,8 @@
     {
       "name": "serverless/merge-shallow.json.mustache",
       "variables": {
-        "nccEnabled": "${nccEnabled}"
+        "nccEnabled": "${nccEnabled}",
+        "nccExclude": "${nccExclude}"
       }
     }
   ],
