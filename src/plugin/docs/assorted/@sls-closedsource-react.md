@@ -134,6 +134,7 @@ Manage various configuration files for react serverless project.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -408,6 +409,7 @@ Manage serverless configuration for deployment to AWS.
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
@@ -635,6 +637,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
@@ -853,6 +856,7 @@ Manage package.json for react serverless project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
@@ -891,6 +895,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
@@ -1919,6 +1924,12 @@ Typically set to something like 'com.sls.ORGNAME'
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a>  : `array`
+
+**Default**: ``
+
+*Exclude packages from ncc compilation.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a>  : `boolean`
 
