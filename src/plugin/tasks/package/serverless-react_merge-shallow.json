@@ -7,7 +7,8 @@
       "name": "serverless-react/merge-shallow.json.mustache",
       "variables": {
         "awsRegion": "${awsRegion}",
-        "nccEnabled": "${nccEnabled}"
+        "nccEnabled": "${nccEnabled}",
+        "nccExclude": "${nccExclude}"
       }
     }
   ],

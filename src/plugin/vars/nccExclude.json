@@ -1,0 +1,6 @@
+{
+  "description": "Exclude packages from ncc compilation.",
+  "details": [],
+  "type": "array",
+  "default": []
+}

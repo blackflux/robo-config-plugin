@@ -101,6 +101,7 @@ Manage various configuration files for closed source npm package on github.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -483,6 +484,7 @@ Manage package.json for npm package on github.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -520,6 +522,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-packagejson">package.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
@@ -1416,6 +1419,12 @@ All major programming languages are supported or work is done towards supporting
 
 The name of the project as published to npm.
 Note that for scoped packages the name can differ significantly from the repo name.
+
+### <a name="blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a>  : `array`
+
+**Default**: ``
+
+*Exclude packages from ncc compilation.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a>  : `boolean`
 
