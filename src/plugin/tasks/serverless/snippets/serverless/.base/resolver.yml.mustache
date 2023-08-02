@@ -21,7 +21,7 @@ package:
   patterns:
     - '!**'
     - 'lib/**'{{#nccExclude}}
-    - 'node_modules/{{nccExclude}}/**'{{/nccExclude}}
+    - 'node_modules/{{.}}/**'{{/nccExclude}}
 {{/nccEnabled}}
 {{^nccEnabled}}
 package:
