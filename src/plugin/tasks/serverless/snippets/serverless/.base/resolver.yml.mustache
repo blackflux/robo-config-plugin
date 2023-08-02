@@ -20,7 +20,8 @@ provider:
 package:
   patterns:
     - '!**'
-    - 'lib/**'
+    - 'lib/**'{{#nccExclude}}
+    - 'node_modules/{{nccExclude}}'{{/nccExclude}}
 {{/nccEnabled}}
 {{^nccEnabled}}
 package:

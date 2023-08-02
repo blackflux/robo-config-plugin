@@ -2,7 +2,7 @@
   "scripts": {
     "clean": "rm -rf lib build .webpack",
 {{#nccEnabled}}
-    "build": "ncc build src/hangler.js -o lib{{#nccExclude}} -e {{nccExclude}}{{/nccExclude}} && mv lib/index.js lib/hangler.js{{#nccExclude}} && rsync -r node_modules/{{nccExclude}} lib/node_modules{{/nccExclude}}",
+    "build": "ncc build src/hangler.js -o lib{{#nccExclude}} -e {{nccExclude}}{{/nccExclude}} && mv lib/index.js lib/hangler.js",
     "ncc-analyze": "yarn clean && ncc build -m -s src/hangler.js -o lib{{#nccExclude}} -e {{nccExclude}}{{/nccExclude}} && npx source-map-explorer lib/index.js --only-mapped --html source.html && yarn clean",
 {{/nccEnabled}}
 {{^nccEnabled}}
