@@ -18,6 +18,6 @@ package:
   patterns:
     - '!**'
     - lib/**
-    - node_modules/nccExclude
+    - node_modules/nccExclude/**
 <<<:
   - ${file(^/${opt:stack}.yml), service=projectName}
