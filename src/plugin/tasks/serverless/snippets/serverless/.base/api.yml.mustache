@@ -30,5 +30,21 @@ resources:
     dataStackHash:
       Value: ${fileFn(^/data-stack-hash.cjs)}
 
+{{#nccEnabled}}
+package:
+  patterns:
+    - '!**'
+    - 'lib/**'{{#nccExclude}}
+    - 'node_modules/{{.}}/**'{{/nccExclude}}
+{{/nccEnabled}}
+{{^nccEnabled}}
+package:
+  patterns:
+    - '!test/**'
+    - '!coverage/**'
+    - '!config/**'
+    - '!src/**'
+{{/nccEnabled}}
+
 <<<:
   - ${file(^/../api.yml)}

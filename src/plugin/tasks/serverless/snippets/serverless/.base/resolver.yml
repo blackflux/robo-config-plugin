@@ -16,21 +16,5 @@ provider:
     ENVIRONMENT: '${self:provider.stage}'
   versionFunctions: false
 
-{{#nccEnabled}}
-package:
-  patterns:
-    - '!**'
-    - 'lib/**'{{#nccExclude}}
-    - 'node_modules/{{.}}/**'{{/nccExclude}}
-{{/nccEnabled}}
-{{^nccEnabled}}
-package:
-  patterns:
-    - '!test/**'
-    - '!coverage/**'
-    - '!config/**'
-    - '!src/**'
-{{/nccEnabled}}
-
 <<<:
   - ${file(^/${opt:stack}.yml), service=${projectName}}

@@ -639,8 +639,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseresolve
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>
@@ -751,6 +749,7 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml"
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -765,6 +764,12 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml"
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
     </tr>

@@ -350,5 +350,9 @@ resources:
     dataStackHash:
       Value: ${fileFn(^/data-stack-hash.cjs)}
 
+package:
+  patterns:
+    - '!**'
+
 <<<:
   - ${file(^/../data.yml)}
