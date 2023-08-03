@@ -3,7 +3,13 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/.base/api.yml"
+    {
+      "name": "serverless/.base/api.yml.mustache",
+      "variables": {
+        "nccEnabled": "${nccEnabled}",
+        "nccExclude": "${nccExclude}"
+      }
+    }
   ],
   "requires": [
     "serverless",
