@@ -1,0 +1,7 @@
+{
+  "description": "Serverless deploy package.json compiler.",
+  "details": ["Compiles deploy package.json file."],
+  "formats": ["other"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}
