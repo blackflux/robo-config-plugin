@@ -7,7 +7,8 @@ import * as lockfile from '@yarnpkg/lockfile';
 const root = path.join(fs.dirname(import.meta.url), '..');
 
 const depNames = `
-`.split('\n').filter((e) => !!(e))
+nccExclude
+`.split('\n').filter((e) => !!(e));
 
 // ====================
 // rewrite lib/package.json
@@ -15,8 +16,8 @@ const depNames = `
 const packageUri = path.join(root, 'package.json');
 const packageContent = fs.smartRead(packageUri);
 const dependencies = Object.fromEntries(Object
-.entries(packageContent.dependencies)
-.filter(([k, v]) => depNames.includes(k)));
+  .entries(packageContent.dependencies)
+  .filter(([k]) => depNames.includes(k)));
 fs.smartWrite(path.join(root, 'lib', 'package.json'), {
   type: 'module',
   dependencies,
