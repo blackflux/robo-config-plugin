@@ -12,6 +12,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack-routes">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack-routes">`serverless/test-sls-cf-stack-routes`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-sls-cf-stack">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-sls-cf-stack">`serverless/test-sls-cf-stack`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlesstest-lib-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlesstest-lib-test">`serverless/test-lib-test`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-pkg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-pkg">`serverless/serverless-pkg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-compile">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-compile">`serverless/serverless-compile`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-base-resolver-js">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-base-resolver-js">`serverless/serverless-base-resolver-js`</a>
@@ -100,6 +101,7 @@ Manage various configuration files for react serverless project.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">compile.js</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesspkgjs">pkg.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
 <code>└─&nbsp;test</code><br/>
@@ -133,10 +135,10 @@ Manage various configuration files for react serverless project.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nodeversion">nodeVersion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -390,6 +392,7 @@ Manage serverless configuration for deployment to AWS.
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesscompilejs">compile.js</a></code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesspkgjs">pkg.js</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapirandom-deploy-hashcjs">random-deploy-hash.cjs</a></code><br/>
 <code>└─&nbsp;test</code><br/>
@@ -408,10 +411,10 @@ Manage serverless configuration for deployment to AWS.
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-namespace">namespace</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-slsendpointtype">slsEndpointType</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
@@ -509,6 +512,42 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testlib-testsh">test/
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-pkg">serverless/serverless-pkg</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-pkg">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlesspkgjs">serverless/pkg.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create file that created package.json related files in lib folder.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;serverless</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlesspkgjs">pkg.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
         </ul>
       </td>
     </tr>
@@ -768,7 +807,6 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessbaseapiyml"
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a></li>
         </ul>
       </td>
@@ -1914,6 +1952,12 @@ Automates the package release workflow including:
 
 List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
+### <a name="blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a>  : `array`
+
+**Default**: ``
+
+*Exclude packages from ncc compilation.*
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-namespace">namespace</a>  : `string`
 
 *Namespace for this project.*
@@ -1931,12 +1975,6 @@ Typically set to something like 'com.sls.ORGNAME'
 *Name of the project.*
 
 The project name is in most cases identical to the repository name.
-
-### <a name="blackfluxrobo-config-plugin-var-ref-nccexclude">nccExclude</a>  : `array`
-
-**Default**: ``
-
-*Exclude packages from ncc compilation.*
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-nccenabled">nccEnabled</a>  : `boolean`
 
@@ -2056,6 +2094,16 @@ Execute all configured js-gardener tasks.
 :small_blue_diamond: `other`
 
 *Script for doing integration test against lib folder.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-serverlesspkgjs">serverless/pkg.js</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `other`
+
+*Serverless deploy package.json compiler.*
+
+Compiles deploy package.json file.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a>  
 

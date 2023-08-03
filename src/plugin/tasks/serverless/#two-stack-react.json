@@ -11,6 +11,7 @@
     "serverless-api-random-deploy-hash",
     "serverless-data",
     "serverless-compile",
+    "serverless-pkg",
     "serverless-base-api-offline",
     "test-lib-test"
   ],
