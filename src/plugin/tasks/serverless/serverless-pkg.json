@@ -1,0 +1,20 @@
+{
+  "target": "serverless/pkg.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/pkg.js.mustache",
+      "variables": {
+        "nccExclude": "${nccExclude}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Create file that created package.json related files in lib folder."
+  ]
+}

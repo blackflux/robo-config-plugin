@@ -34,8 +34,7 @@ resources:
 package:
   patterns:
     - '!**'
-    - 'lib/**'{{#nccExclude}}
-    - 'node_modules/{{.}}/**'{{/nccExclude}}
+    - 'lib/**'
 {{/nccEnabled}}
 {{^nccEnabled}}
 package:

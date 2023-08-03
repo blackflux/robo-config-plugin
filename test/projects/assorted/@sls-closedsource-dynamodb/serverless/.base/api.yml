@@ -34,7 +34,6 @@ package:
   patterns:
     - '!**'
     - 'lib/**'
-    - 'node_modules/nccExclude/**'
 
 <<<:
   - ${file(^/../api.yml)}

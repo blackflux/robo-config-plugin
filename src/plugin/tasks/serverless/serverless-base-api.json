@@ -6,8 +6,7 @@
     {
       "name": "serverless/.base/api.yml.mustache",
       "variables": {
-        "nccEnabled": "${nccEnabled}",
-        "nccExclude": "${nccExclude}"
+        "nccEnabled": "${nccEnabled}"
       }
     }
   ],

@@ -12,6 +12,7 @@
     "serverless-api-random-deploy-hash",
     "serverless-data",
     "serverless-compile",
+    "serverless-pkg",
     "src-core-aws",
     "test-lib-test"
   ],
