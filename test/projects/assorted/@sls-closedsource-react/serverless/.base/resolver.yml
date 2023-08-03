@@ -14,10 +14,5 @@ provider:
   environment:
     ENVIRONMENT: ${self:provider.stage}
   versionFunctions: false
-package:
-  patterns:
-    - '!**'
-    - lib/**
-    - node_modules/nccExclude/**
 <<<:
   - ${file(^/${opt:stack}.yml), service=projectName}

@@ -4,10 +4,8 @@
   "strategy": "overwrite",
   "snippets": [
     {
-      "name": "serverless/.base/resolver.yml.mustache",
+      "name": "serverless/.base/resolver.yml",
       "variables": {
-        "nccEnabled": "${nccEnabled}",
-        "nccExclude": "${nccExclude}",
         "projectName": "${projectName}",
         "slsEndpointType": "${slsEndpointType}",
         "namespace": "${namespace}"
