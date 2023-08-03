@@ -2,7 +2,6 @@
 import assert from 'assert';
 import path from 'path';
 import fs from 'smart-fs';
-import objectScan from 'object-scan';
 import * as lockfile from '@yarnpkg/lockfile';
 
 const root = path.join(fs.dirname(import.meta.url), '..');
@@ -18,11 +17,9 @@ const depNames = `
 // ====================
 const packageUri = path.join(root, 'package.json');
 const packageContent = fs.smartRead(packageUri);
-const dependencies = objectScan(['dependencies.*'], {
-  rtn: ['property', 'value'],
-  filterFn: ({ property }) => depNames.includes(property),
-  afterFn: ({ result }) => Object.fromEntries(result)
-})(packageContent);
+const dependencies = Object.fromEntries(Object
+.entries(packageContent.dependencies)
+.filter(([k, v]) => depNames.includes(k)));
 fs.smartWrite(path.join(root, 'lib', 'package.json'), {
   type: 'module',
   dependencies,
