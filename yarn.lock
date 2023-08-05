@@ -228,12 +228,12 @@
   resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-3.0.0.tgz#f07e6d1b3c7fef59c65c9f5d738d49a0d6cb2e31"
   integrity sha512-gbYlG97hTvyuHrSNpcTQMdQ0RwwQsHcmQQrK5nO00ncinKuOSHk/G9zx3JW3fqXnAyShlvvjFzjSLSsTduvOwA==
 
-"@blackflux/robo-config-plugin@9.1.8":
-  version "9.1.8"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-9.1.8.tgz#c9ce81920170d599485cee7ff067ede88192e969"
-  integrity sha512-PxkDnnaLeStqNgyBFWj3MosB09PISPnmOA56fUBUMAPM3LmjXrzfv+oLCpryibyb/zEE4yzWD3g2c3W7+DMecQ==
+"@blackflux/robo-config-plugin@9.1.9":
+  version "9.1.9"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-9.1.9.tgz#944d727bc3561797b2e84b0d3b964a5b49b63205"
+  integrity sha512-5vTRpQBt6Gybdk+8o2443y7wCLizrbBVgso9MuiD6qlBCCyKOBWAZlfCTsLfZacpmzxdVgXgds86WMgsml956g==
   dependencies:
-    smart-fs "3.0.2"
+    smart-fs "4.0.0"
 
 "@devexpress/error-stack-parser@^2.0.6":
   version "2.0.6"
