@@ -38,10 +38,10 @@ describe('Testing sls resource tags', () => {
   let apiStack;
   let dataStack;
 
-  before(() => {
+  before(async () => {
     const loadStack = (stack) => resolver({ stack });
-    apiStack = loadStack('api');
-    dataStack = loadStack('data');
+    apiStack = await loadStack('api');
+    dataStack = await loadStack('data');
   });
 
   it('Testing api stack tags', () => {

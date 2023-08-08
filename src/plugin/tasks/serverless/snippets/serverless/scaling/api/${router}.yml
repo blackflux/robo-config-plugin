@@ -48,7 +48,7 @@ resources:
           Fn::GetAtt:
             - Scaling${router|TITLE|STRIP}HookPreLambdaFunction
             - Arn
-        custom: ${file(^/../random-deploy-hash.cjs)}
+        custom: ${file(^/../random-deploy-hash.js)}
 
 functions:
   ${router|CAMEL}:

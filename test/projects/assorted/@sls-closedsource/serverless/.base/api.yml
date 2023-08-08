@@ -28,7 +28,7 @@ resources:
           - '-'
           - 'Fn::ImportValue': Data.Stack.Hash.Mismatch
     dataStackHash:
-      Value: ${fileFn(^/data-stack-hash.cjs)}
+      Value: ${fileFn(^/data-stack-hash.js)}
 
 package:
   patterns:

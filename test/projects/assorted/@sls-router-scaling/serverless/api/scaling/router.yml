@@ -47,7 +47,7 @@ resources:
           Fn::GetAtt:
             - ScalingRouterHookPreLambdaFunction
             - Arn
-        custom: ${file(^/../random-deploy-hash.cjs)}
+        custom: ${file(^/../random-deploy-hash.js)}
 functions:
   scalingRouterFn:
     handler: lib/hangler.scalingRouterFn
