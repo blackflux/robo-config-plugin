@@ -9,7 +9,7 @@ resources:
           'Fn::GetAtt':
             - Triggers${trigger|TITLE|STRIP}FnLambdaFunction
             - Arn
-        custom: ${file(^/../random-deploy-hash.cjs)}
+        custom: ${file(^/../random-deploy-hash.js)}
 
 functions:
   triggers${trigger|TITLE|STRIP}Fn:
