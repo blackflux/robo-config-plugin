@@ -3,7 +3,7 @@
     "clean": "rm -rf lib",
 {{#nccEnabled}}
     "build": "cp -rf ./src ./lib && ncc build -m -o lib{{#nccExclude}} -e {{.}}{{/nccExclude}} && mv lib/index.js lib/index.min.js && cp src/index.js lib/index.js && rm lib/package.json",
-    "ncc-analyze": "yarn clean && cp -rf ./src ./lib{{#nccExclude}} -e {{.}}{{/nccExclude}} && ncc build -m -s -o lib && npx source-map-explorer lib/index.js --only-mapped --html source.html && yarn clean",
+    "ncc-analyze": "yarn clean && cp -rf ./src ./lib && ncc build -m -s -o lib{{#nccExclude}} -e {{.}}{{/nccExclude}} --stats-out stats.json && npx webpack-bundle-analyzer stats.json --mode static && rm stats.json && yarn clean",
 {{/nccEnabled}}
 {{^nccEnabled}}
     "build": "cp -rf ./src ./lib",

@@ -3,7 +3,7 @@
     "clean": "rm -rf lib",
 {{#nccEnabled}}
     "build": "ncc build src/hangler.js -o lib{{#nccExclude}} -e {{.}}{{/nccExclude}} && mv lib/index.js lib/hangler.js && node serverless/pkg.js && yarn install --cwd lib",
-    "ncc-analyze": "yarn clean && ncc build -m -s src/hangler.js -o lib{{#nccExclude}} -e {{.}}{{/nccExclude}} && npx source-map-explorer lib/index.js --only-mapped --html source.html && yarn clean",
+    "ncc-analyze": "yarn clean && ncc build src/hangler.js -o lib{{#nccExclude}} -e {{.}}{{/nccExclude}} --stats-out stats.json && npx webpack-bundle-analyzer stats.json --mode static && rm stats.json && yarn clean",
 {{/nccEnabled}}
 {{^nccEnabled}}
     "build": "cp -rf ./src ./lib",
