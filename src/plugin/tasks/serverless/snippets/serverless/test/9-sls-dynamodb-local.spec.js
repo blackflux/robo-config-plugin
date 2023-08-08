@@ -35,7 +35,7 @@ describe('Testing dynamodb-local', { envVarsFile: 'env-vars.yml' }, () => {
     process.env.TEST_SEED = Math.random();
     const resolver = (await import('../serverless/.base/resolver.js')).default;
 
-    dataStack = resolver({
+    dataStack = await resolver({
       stack: 'data',
       region: process.env.AWS_REGION,
       env: 'local'
