@@ -348,7 +348,7 @@ resources:
           - CfnAssumeRole
           - Arn
     dataStackHash:
-      Value: ${fileFn(^/data-stack-hash.cjs)}
+      Value: ${fileFn(^/data-stack-hash.js)}
 
 package:
   patterns:

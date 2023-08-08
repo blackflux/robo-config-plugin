@@ -1,9 +1,9 @@
 {
-  "target": "serverless/api/random-deploy-hash.cjs",
+  "target": "serverless/api/random-deploy-hash.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "serverless/api/random-deploy-hash.cjs"
+    "serverless/api/random-deploy-hash.js"
   ],
   "requires": [
     "javascript",
