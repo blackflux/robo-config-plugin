@@ -2,6 +2,6 @@
   "description": "Test to enforce dependency consistency.",
   "details": [],
   "formats": ["other"],
-  "requires": ["serverless"],
+  "requires": [],
   "website": null
 }

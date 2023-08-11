@@ -2354,8 +2354,6 @@ Execute all configured js-gardener tasks.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-test4-depsspecjs">test/4-deps.spec.js</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>
-
 :small_blue_diamond: `other`
 
 *Test to enforce dependency consistency.*
