@@ -2,6 +2,7 @@
   "tasks": [
     "test-sls-cf-stack",
     "test-sls-tags",
+    "test-deps",
     "test-sls-cf-stack-routes",
     "serverless-base-resolver",
     "serverless-base-resolver-js",
