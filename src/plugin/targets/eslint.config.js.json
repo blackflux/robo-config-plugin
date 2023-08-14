@@ -1,0 +1,7 @@
+{
+  "description": "Configuration file for eslint.",
+  "details": [],
+  "formats": ["nostruct"],
+  "requires": ["eslint"],
+  "website": "https://eslint.org/docs/latest/use/configure/configuration-files-new"
+}
