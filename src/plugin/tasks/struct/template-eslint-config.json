@@ -1,0 +1,14 @@
+{
+  "target": "eslint.config.js",
+  "strategy": "overwrite",
+  "snippets": [
+    "default/eslint.config.js"
+  ],
+  "requires": [
+    "javascript",
+    "eslint"
+  ],
+  "purpose": [
+    "Create configuration file for eslint enforcing opinionated, best practices."
+  ]
+}

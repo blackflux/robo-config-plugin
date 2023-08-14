@@ -10,6 +10,7 @@
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index-test">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index-test">`struct/template-index-test`</a>
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-index">`struct/template-index`</a>
       - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
+      - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslint-config">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslint-config">`struct/template-eslint-config`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasenpm-default">`semantic-release/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-packagenpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-packagenpm-default">`package/#npm-default`</a>
@@ -70,6 +71,7 @@ Manage various configuration files for an opensearch open source npm package on 
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
@@ -144,6 +146,7 @@ Manage basic project structure for npm package on github enforcing docker.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
@@ -217,6 +220,7 @@ Manage basic project structure for npm package on github.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</a></code><br/>
@@ -406,6 +410,35 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslint
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+###### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-eslint-config">struct/template-eslint-config</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslint-config">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create configuration file for eslint enforcing opinionated, best practices.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -1769,6 +1802,14 @@ Main file for the project. Exposes functionality for libraries.
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a>
 
 :small_blue_diamond: `json`
+
+*Configuration file for eslint.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a> ([`link`](https://eslint.org/docs/latest/use/configure/configuration-files-new)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a>
+
+:small_blue_diamond: `nostruct`
 
 *Configuration file for eslint.*
 

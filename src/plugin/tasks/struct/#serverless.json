@@ -4,6 +4,7 @@
     "github-feature-request",
     "template-mocharc",
     "template-eslintrc",
+    "template-eslint-config",
     "test-hot",
     "force-gardener-dockerized"
   ],
