@@ -5,6 +5,7 @@
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtest-hot">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtest-hot">`struct/test-hot`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">`struct/template-mocharc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslint-config">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslint-config">`struct/template-eslint-config`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-feature-request">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-feature-request">`struct/github-feature-request`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structgithub-bug-report">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structgithub-bug-report">`struct/github-bug-report`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener-dockerized">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener-dockerized">`struct/force-gardener-dockerized`</a>
@@ -81,6 +82,7 @@ Manage various configuration files for serverless project.
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-ideaprojectnameiml">${projectName}.iml</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-c8rcjson">.c8rc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-editorconfig">.editorconfig</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gallyjson">.gally.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
@@ -176,6 +178,7 @@ Manage basic project structure for serverless project.
 <code>│&nbsp;&nbsp;└─&nbsp;ISSUE_TEMPLATE</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatebug_reportmd">bug_report.md</a></code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-githubissue_templatefeature_requestmd">feature_request.md</a></code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
@@ -271,6 +274,35 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslint
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintrcjson">.eslintrc.json</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtemplate-eslint-config">struct/template-eslint-config</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslint-config">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create configuration file for eslint enforcing opinionated, best practices.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -2107,6 +2139,14 @@ CircleCi read only api token used to access build status.
 :small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a>
 
 :small_blue_diamond: `json`
+
+*Configuration file for eslint.*
+
+### <a name="blackfluxrobo-config-plugin-target-ref-eslintconfigjs">eslint.config.js</a> ([`link`](https://eslint.org/docs/latest/use/configure/configuration-files-new)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-eslint">eslint</a>
+
+:small_blue_diamond: `nostruct`
 
 *Configuration file for eslint.*
 
