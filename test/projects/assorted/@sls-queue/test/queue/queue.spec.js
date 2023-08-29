@@ -5,7 +5,7 @@ import fs from 'smart-fs';
 
 describe('Testing queue', { envVarsFile: '../env-vars.yml' }, () => {
   it('Testing digraph generation', async () => {
-    setSeed();
+    process.env.TEST_SEED = Math.random();
     const { default: processor } = await import('../../src/queue/queue.js');
     const digraphFile = path.join(fs.dirname(import.meta.url), '..', '..', 'src', 'queue', 'digraph.dot');
     const digraph = processor.digraph();
