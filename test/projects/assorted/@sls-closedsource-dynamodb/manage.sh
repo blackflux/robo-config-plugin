@@ -1,6 +1,18 @@
 #!/bin/sh
 
-if [ "${1}" = 'dynamodb' ];
+unset dynamodb
+command=bash
+
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -d|--dynamodb) dynamodb="yes" ;;
+        -c|--command) command="$2"; shift ;;
+        *) echo "Unknown parameter passed: $1"; shift ;;
+    esac
+    shift
+done
+
+if [ "$dynamodb" = 'yes' ];
 then
   docker run \
     --name dynamodb-local \
@@ -12,6 +24,7 @@ else
 fi
 
 docker build \
+  --build-arg COMMAND="$command" \
   -t lambda-environment-node \
   --network="host" \
   docker/. &&
@@ -23,7 +36,7 @@ docker run \
   -v ~/.npmrc:/user/.npmrc \
   -it lambda-environment-node
 
-if [ -n "${LINK}" ]; then
+if [ "$dynamodb" = 'yes' ]; then
   docker stop dynamodb-local -t 0
   docker rm -f -v dynamodb-local
 fi

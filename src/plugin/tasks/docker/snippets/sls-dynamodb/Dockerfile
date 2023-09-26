@@ -24,8 +24,11 @@ RUN chmod -R 757 /user
 # set correct execution env
 ENV LAMBDA_TASK_ROOT /user/project
 
+ARG COMMAND=bash
+ENV COMMAND=$\{COMMAND}
+
 ENTRYPOINT (cd project && \
  if [[ "$\{DYNAMODB_LOCAL_ENABLE}" = true ]]; \
  then sh ./docker/dynamodb.sh &> /dev/null; \
  fi && \
- bash)
+ $COMMAND)
