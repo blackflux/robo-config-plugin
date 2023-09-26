@@ -36,7 +36,11 @@ docker run \
   -v ~/.npmrc:/user/.npmrc \
   -it lambda-environment-node
 
+status=$?
+
 if [ "$dynamodb" = 'yes' ]; then
   docker stop dynamodb-local -t 0
   docker rm -f -v dynamodb-local
 fi
+
+return $status

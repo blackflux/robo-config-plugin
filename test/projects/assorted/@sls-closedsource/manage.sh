@@ -22,3 +22,7 @@ docker run \
   -v ~/.aws:/user/.aws \
   -v ~/.npmrc:/user/.npmrc \
   -it lambda-environment-node
+
+status=$?
+
+return $status
