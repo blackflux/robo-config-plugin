@@ -1,5 +1,4 @@
 workflows:
-  version: 2
   node-multi-build:
     jobs:
       - gally
@@ -32,7 +31,7 @@ workflows:
             - ${file(^/workflow/filter.yml), branch=master}
 
 
-version: 2
+version: 2.1
 jobs:
   gally:
     ${file(^/jobs/gally.yml)}
