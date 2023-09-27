@@ -2,10 +2,10 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v18.x:
+      - test-node-v18x:
           requires:
             - gally
-      - test-node-v18.x-lib:
+      - test-node-v18x-lib:
           requires:
             - gally
       - test-node-v20:
@@ -15,8 +15,8 @@ workflows:
           context: projectName-local
           requires:
             - gally
-            - test-node-v18.x
-            - test-node-v18.x-lib
+            - test-node-v18x
+            - test-node-v18x-lib
             - test-node-v20
           filters:
             branches:
@@ -26,8 +26,8 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v18.x
-            - test-node-v18.x-lib
+            - test-node-v18x
+            - test-node-v18x-lib
             - test-node-v20
             - deploy-local
           filters:
@@ -38,8 +38,8 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v18.x
-            - test-node-v18.x-lib
+            - test-node-v18x
+            - test-node-v18x-lib
             - test-node-v20
           filters:
             branches:
@@ -49,8 +49,8 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v18.x
-            - test-node-v18.x-lib
+            - test-node-v18x
+            - test-node-v18x-lib
             - test-node-v20
           filters:
             branches:
@@ -225,7 +225,7 @@ jobs:
       - run:
           command: sls deploy --config serverless-prod-api.config.yml --force
           no_output_timeout: 10m
-  test-node-v18.x:
+  test-node-v18x:
     docker:
       - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
@@ -263,7 +263,7 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v18.x-lib:
+  test-node-v18x-lib:
     docker:
       - image: public.ecr.aws/sam/build-nodejs18.x
     steps:
