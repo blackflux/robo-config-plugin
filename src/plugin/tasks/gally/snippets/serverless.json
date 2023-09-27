@@ -47,8 +47,8 @@
         "contexts": [
           "ci/circleci: deploy-local",
           "ci/circleci: deploy-dev",
-          "ci/circleci: test-node-v18.x",
-          "ci/circleci: test-node-v18.x-lib",
+          "ci/circleci: test-node-v18x",
+          "ci/circleci: test-node-v18x-lib",
           "ci/circleci: test-node-v20"
         ]
       }
@@ -58,8 +58,8 @@
       "required_status_checks": {
         "contexts": [
           "ci/circleci: deploy-stage",
-          "ci/circleci: test-node-v18.x",
-          "ci/circleci: test-node-v18.x-lib",
+          "ci/circleci: test-node-v18x",
+          "ci/circleci: test-node-v18x-lib",
           "ci/circleci: test-node-v20"
         ]
       }
@@ -68,8 +68,8 @@
       "required_status_checks": {
         "strict": false,
         "contexts": [
-          "ci/circleci: test-node-v18.x",
-          "ci/circleci: test-node-v18.x-lib",
+          "ci/circleci: test-node-v18x",
+          "ci/circleci: test-node-v18x-lib",
           "ci/circleci: test-node-v20"
         ]
       },

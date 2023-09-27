@@ -2,10 +2,10 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v18.x:
+      - test-node-v18x:
           requires:
             - gally
-      - test-node-v18.x-lib:
+      - test-node-v18x-lib:
           requires:
             - gally
       - test-node-v20:
@@ -35,9 +35,9 @@ version: 2.1
 jobs:
   gally:
     ${file(^/jobs/gally.yml)}
-  test-node-v18.x:
+  test-node-v18x:
     ${file(^/jobs/test.yml), image=public.ecr.aws/sam/build-nodejs18.x}
-  test-node-v18.x-lib:
+  test-node-v18x-lib:
     ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs18.x}
   test-node-v20:
     ${file(^/jobs/test.yml), image=cimg/node:20.4}
