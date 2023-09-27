@@ -1,7 +1,7 @@
 requires:
   - gally
-  - test-node-v18.x
-  - test-node-v18.x-lib
+  - test-node-v18x
+  - test-node-v18x-lib
   - test-node-v20
 filters:
   branches:
