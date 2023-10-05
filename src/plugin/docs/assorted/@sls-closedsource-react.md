@@ -2043,6 +2043,8 @@ The code owner is the gatekeeper of the project, ultimately responsible for all 
 
 ### <a name="blackfluxrobo-config-plugin-var-ref-circlecireadtoken">circleCiReadToken</a>  : `string`
 
+**Default**: `null`
+
 *CircleCi Read Api Token.*
 
 CircleCi read only api token used to access build status.

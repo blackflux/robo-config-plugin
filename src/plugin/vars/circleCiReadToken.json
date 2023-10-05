@@ -3,5 +3,6 @@
   "details": [
     "CircleCi read only api token used to access build status."
   ],
-  "type": "string"
+  "type": "string",
+  "default": null
 }
