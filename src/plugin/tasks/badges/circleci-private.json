@@ -3,7 +3,7 @@
   "strategy": "merge-below-title",
   "snippets": [
     {
-      "name": "circleci-private",
+      "name": "circleci-private.md.mustache",
       "variables": {
         "repoKey": "${repoKey}",
         "circleCiReadToken": "${circleCiReadToken}"
