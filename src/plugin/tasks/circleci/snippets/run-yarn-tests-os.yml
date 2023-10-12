@@ -9,7 +9,7 @@ jobs:
       - image: '${dockerImage}'
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.7.0
+      - image: opensearchproject/opensearch:2.9.0
         environment:
           - discovery.type=single-node
           - plugins.security.disabled=true

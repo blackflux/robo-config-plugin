@@ -92,7 +92,7 @@ jobs:
       - image: cimg/node:16.20
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.7.0
+      - image: opensearchproject/opensearch:2.9.0
         environment:
           - discovery.type=single-node
           - plugins.security.disabled=true
@@ -136,7 +136,7 @@ jobs:
       - image: cimg/node:18.16
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.7.0
+      - image: opensearchproject/opensearch:2.9.0
         environment:
           - discovery.type=single-node
           - plugins.security.disabled=true
@@ -180,7 +180,7 @@ jobs:
       - image: cimg/node:20.4
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.7.0
+      - image: opensearchproject/opensearch:2.9.0
         environment:
           - discovery.type=single-node
           - plugins.security.disabled=true
