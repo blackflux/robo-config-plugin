@@ -1,3 +1,3 @@
-const { Api } = require('lambda-serverless-api');
+import { Api } from 'lambda-serverless-api';
 
-module.exports = Api();
+export default Api();

@@ -1,5 +1,5 @@
-const { wrap } = require('lambda-async');
+import { wrap } from 'lambda-cfn-hook';
 
-module.exports.fn = wrap(async (event, context) => {
+export const fn = wrap(async (event, context) => {
   /* ... code here ... */
 });

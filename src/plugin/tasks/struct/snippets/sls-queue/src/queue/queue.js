@@ -1,8 +1,11 @@
-const path = require('path');
-const { logger } = require('lambda-monitor-logger');
-const { sqs } = require('aws-sdk-wrap')({ logger });
+import path from 'path';
+import { logger } from 'lambda-monitor-logger';
+import AWS from 'aws-sdk-wrap';
 
-module.exports = sqs.QueueProcessor({
+const aws = AWS(({ logger }));
+const { sqs } = aws;
+
+export default sqs.QueueProcessor({
   queues: {},
   stepsDir: path.join(__dirname, 'steps'),
   ingestSteps: []
