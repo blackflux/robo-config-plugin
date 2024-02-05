@@ -23,7 +23,7 @@ docker build \
 docker run \
   --link dynamodb-local \
   -u`id -u`:`id -g` \
-  -v $(pwd):/user/project \
+  -v //$(pwd):/user/project \
   -v ~/.aws:/user/.aws \
   -v ~/.npmrc:/user/.npmrc \
   -it lambda-environment-node

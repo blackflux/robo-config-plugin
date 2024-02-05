@@ -11,7 +11,7 @@
     "build-clean": "yarn run clean && yarn run build",
     "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
-    "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
+    "docker": "docker run --net host -u`id -u`:`id -g` -v //$(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
     "u": "yarn upgrade --latest --force",
     "i": "yarn install --frozen-lockfile",
     "it": "yarn run i && yarn run t",

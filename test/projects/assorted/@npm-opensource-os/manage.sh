@@ -24,7 +24,7 @@ docker build \
 docker run \
   --link os1:opensearch \
   -u`id -u`:`id -g` \
-  -v $(pwd):/user/project \
+  -v //$(pwd):/user/project \
   -v ~/.aws:/user/.aws \
   -v ~/.npmrc:/user/.npmrc \
   -it lambda-environment-node

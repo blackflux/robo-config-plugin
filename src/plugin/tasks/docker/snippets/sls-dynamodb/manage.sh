@@ -31,7 +31,7 @@ docker build \
 docker run \
   $OPT \
   -u`id -u`:`id -g` \
-  -v $(pwd):/user/project \
+  -v //$(pwd):/user/project \
   -v ~/.aws:/user/.aws \
   -v ~/.npmrc:/user/.npmrc \
   -it lambda-environment-node
