@@ -2,6 +2,7 @@
 
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortedsls-closedsource-dynamodb">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortedsls-closedsource-dynamodb">`assorted/@sls-closedsource-dynamodb`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structserverless">`struct/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtest-reg">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtest-reg">`struct/test-reg`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtest-hot">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtest-hot">`struct/test-hot`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-mocharc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-mocharc">`struct/template-mocharc`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtemplate-eslintrc">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtemplate-eslintrc">`struct/template-eslintrc`</a>
@@ -124,6 +125,7 @@ Manage various configuration files for serverless project with the option of run
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-test9-sls-dynamodb-localspecjs">9-sls-dynamodb-local.spec.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testlib-testsh">lib-test.sh</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testregjs">reg.js</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testsls-cf-stack-routesyml">sls-cf-stack-routes.yml</a></code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;dynamodb</code><br/>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testdynamodbdyspecjs">dy.spec.js</a></code><br/>
@@ -195,7 +197,8 @@ Manage basic project structure for serverless project.
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a></code><br/>
 <code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">hot.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testregjs">reg.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -211,11 +214,40 @@ Manage basic project structure for serverless project.
   </tbody>
 </table>
 
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtest-reg">struct/test-reg</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtest-reg">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testregjs">test/reg.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Create register file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;test</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testregjs">reg.js</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtest-hot">struct/test-hot</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtest-hot">`index`</a>)
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testhotjs">test/hot.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Create custom loader file.
+- Create loader file.
 
 <table>
   <tbody>
@@ -2282,11 +2314,17 @@ CircleCi read only api token used to access build status.
 
 ## Targets
 
+### <a name="blackfluxrobo-config-plugin-target-ref-testregjs">test/reg.js</a>  
+
+:small_blue_diamond: `other`
+
+*Registration hook to load custom loader.*
+
 ### <a name="blackfluxrobo-config-plugin-target-ref-testhotjs">test/hot.js</a>  
 
 :small_blue_diamond: `other`
 
-*Custom loader to allow hot reloading of files for testing.*
+*Loader to allow hot reloading of files for testing.*
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-mocharcyml">.mocharc.yml</a> ([`link`](https://mochajs.org/#mochaopts)) 
 

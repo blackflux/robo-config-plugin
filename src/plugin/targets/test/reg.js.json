@@ -1,5 +1,5 @@
 {
-  "description": "Loader to allow hot reloading of files for testing.",
+  "description": "Registration hook to load custom loader.",
   "details": [],
   "formats": ["other"],
   "requires": [],

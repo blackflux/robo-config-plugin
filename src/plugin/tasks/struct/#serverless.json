@@ -6,6 +6,7 @@
     "template-eslintrc",
     "template-eslint-config",
     "test-hot",
+    "test-reg",
     "force-gardener-dockerized"
   ],
   "description": "Manage basic project structure for serverless project."
