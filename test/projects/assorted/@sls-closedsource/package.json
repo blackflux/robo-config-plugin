@@ -32,7 +32,7 @@
     "clean": "rm -rf lib",
     "build": "ncc build src/hangler.js -o lib -e nccExclude && mv lib/index.js lib/hangler.js && node serverless/pkg.js && yarn install --cwd lib",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
+    "test-simple": "c8 mocha --import=./test/reg.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "gardener": "node gardener.js",
     "docker": "docker run --net host -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",

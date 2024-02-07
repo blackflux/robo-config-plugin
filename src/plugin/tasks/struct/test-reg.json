@@ -1,14 +1,14 @@
 {
-  "target": "test/hot.js",
+  "target": "test/reg.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "default/test/hot.js"
+    "default/test/reg.js"
   ],
   "requires": [
     "javascript"
   ],
   "purpose": [
-    "Create loader file."
+    "Create register file."
   ]
 }
