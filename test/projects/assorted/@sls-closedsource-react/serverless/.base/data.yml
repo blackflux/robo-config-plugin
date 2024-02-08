@@ -72,7 +72,6 @@ resources:
               Action:
                 - 'apigateway:GET'
                 - 'apigateway:PATCH'
-                - 'apigateway:PUT'
               Resource:
                 - 'Fn::Join':
                     - ':'
