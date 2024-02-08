@@ -202,6 +202,12 @@ resources:
                       - Ref: 'AWS::Region'
                       - ''
                       - /apis/*
+                - 'Fn::Join':
+                    - ':'
+                    - - 'arn:aws:apigateway'
+                      - Ref: 'AWS::Region'
+                      - ''
+                      - /tags/*
             - Effect: Allow
               Action:
                 - 'logs:DescribeLogGroups'
