@@ -24,3 +24,4 @@ Documentation can be found [here](src/plugin/docs).
 ## Plugin Content
 
 Manages various things like `NPM Package Abstraction`, `Serverless Project Abstration`, etc
+
