@@ -10,7 +10,7 @@ done > "$tmp_file"
 if [[ -z "$\{CIRCLECI}" ]]; then
   thread_count=$(grep -c ^processor /proc/cpuinfo)
 else
-  thread_count=2
+  thread_count=1
 fi
 
 output="$(cat "$tmp_file" | while read i; do printf "%q\n" "$i"; done | xargs --max-procs=$thread_count -I CMD bash -c CMD | tee /dev/tty)"
