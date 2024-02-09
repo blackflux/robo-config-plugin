@@ -1,7 +1,7 @@
 GROUP=${1:-0}
 MOD=${2:-1}
 
-echo "Running Group ${GROUP+1} / $MOD"
+echo "Running Group $(($GROUP+1)) / $MOD"
 
 yarn build-clean
 
