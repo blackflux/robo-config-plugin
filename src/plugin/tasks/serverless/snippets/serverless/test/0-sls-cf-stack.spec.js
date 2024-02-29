@@ -11,6 +11,7 @@ describe('Testing serverless cf stack definitions', { cryptoSeed: 'seed' }, () =
   let dataStack;
   let runner;
   let definedRoutes;
+
   before(async () => {
     const loadStack = (stack) => resolver({
       stack,
