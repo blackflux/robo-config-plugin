@@ -8,7 +8,7 @@
       "name": "gally-create-staging-pr",
       "variables": {
         "jobName": "gally-create-pr",
-        "dockerImage": "cimg/node:16.20",
+        "dockerImage": "cimg/node:20.11",
         "ciEnvBranchName": "$CIRCLE_BRANCH"
       }
     },
@@ -16,7 +16,7 @@
       "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v18",
-        "dockerImage": "cimg/node:18.16",
+        "dockerImage": "cimg/node:18.19",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
@@ -27,8 +27,8 @@
     {
       "name": "run-yarn-tests-os",
       "variables": {
-        "jobName": "test-node-v16",
-        "dockerImage": "cimg/node:16.20",
+        "jobName": "test-node-v21",
+        "dockerImage": "cimg/node:21.6",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
@@ -40,7 +40,7 @@
       "name": "run-yarn-tests-os",
       "variables": {
         "jobName": "test-node-v20",
-        "dockerImage": "cimg/node:20.4",
+        "dockerImage": "cimg/node:20.11",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
@@ -52,12 +52,12 @@
       "name": "dependabot-auto-approve",
       "variables": {
         "jobName": "gally-auto-approve",
-        "dockerImage": "cimg/node:16.20",
+        "dockerImage": "cimg/node:20.11",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
             "test-node-v18",
-            "test-node-v16",
+            "test-node-v21",
             "test-node-v20"
           ],
           "filters": {
@@ -72,12 +72,12 @@
       "name": "semantic-release",
       "variables": {
         "jobName": "release",
-        "dockerImage": "cimg/node:16.20",
+        "dockerImage": "cimg/node:20.11",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
             "test-node-v18",
-            "test-node-v16",
+            "test-node-v21",
             "test-node-v20"
           ],
           "filters": {
