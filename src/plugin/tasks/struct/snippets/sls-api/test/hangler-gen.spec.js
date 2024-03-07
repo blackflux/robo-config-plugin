@@ -28,9 +28,9 @@ describe('Testing hangler-gen.spec.js', () => {
           `Api methods should start with a upper-case letter, other with lower-case: $\{f} $\{method}`
         ).to.equal(capitalized);
       });
-      imports.add(`import * as ${toRouteName(f)} from './handler/$\{f}.js';`);
+      imports.add(`import * as ${toRouteName(f)}_ from './handler/$\{f}.js';`);
       methods.forEach((m) => {
-        exports.add(`export const ${toRouteName(`$\{f}/$\{m}`)} = ${toRouteName(f)}.$\{m};`);
+        exports.add(`export const ${toRouteName(`$\{f}/$\{m}`)} = ${toRouteName(f)}_.$\{m};`);
       });
     });
     const result = fs.smartWrite(hanglerFile, [
