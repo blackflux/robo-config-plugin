@@ -8,7 +8,7 @@
     "clean": "rm -rf lib",
     "build": "cp -rf ./src ./lib",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
+    "test-simple": "c8 mocha --import=./test/reg.js \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "semantic-release": "yarn run build-clean && npx semantic-release",
     "gardener": "node gardener.js",
@@ -36,21 +36,21 @@
   },
   "homepage": "https://github.com/blackflux/robo-config-plugin#readme",
   "devDependencies": {
-    "@babel/core": "7.22.9",
-    "@babel/eslint-parser": "7.22.9",
-    "@babel/register": "7.22.5",
-    "@blackflux/eslint-plugin-rules": "3.0.0",
-    "@blackflux/robo-config-plugin": "9.1.9",
-    "c8": "8.0.1",
-    "chai": "4.3.7",
-    "eslint": "8.46.0",
+    "@babel/core": "7.24.0",
+    "@babel/eslint-parser": "7.23.10",
+    "@babel/register": "7.23.7",
+    "@blackflux/eslint-plugin-rules": "3.0.1",
+    "@blackflux/robo-config-plugin": "9.3.4",
+    "c8": "9.1.0",
+    "chai": "5.1.0",
+    "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.28.0",
+    "eslint-plugin-import": "2.29.1",
     "eslint-plugin-json": "3.1.0",
-    "eslint-plugin-markdown": "3.0.1",
-    "eslint-plugin-mocha": "10.1.0",
-    "js-gardener": "5.0.1",
-    "robo-config": "6.0.0"
+    "eslint-plugin-markdown": "4.0.1",
+    "eslint-plugin-mocha": "10.4.1",
+    "js-gardener": "5.0.4",
+    "robo-config": "6.0.1"
   },
   "licenses": [
     {
@@ -65,6 +65,6 @@
     "lib"
   ],
   "dependencies": {
-    "smart-fs": "4.0.0"
+    "smart-fs": "4.0.1"
   }
 }
