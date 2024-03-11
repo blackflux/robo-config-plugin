@@ -1,10 +1,12 @@
 {
   "exclude": [
     "gardener.js",
+    "eslint.config.js",
     "node_modules/*",
     "coverage/*",
     "lib/*",
     "test/hot.js",
+    "test/reg.js",
     "src/plugin/tasks/**",
     "test/projects/**"
   ],
