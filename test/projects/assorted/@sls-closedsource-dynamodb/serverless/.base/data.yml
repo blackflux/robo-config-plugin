@@ -244,6 +244,7 @@ resources:
             - Effect: Allow
               Action:
                 - 'iam:GetRole'
+                - 'iam:TagRole'
                 - 'iam:PassRole'
                 - 'iam:CreateRole'
                 - 'iam:DeleteRole'
