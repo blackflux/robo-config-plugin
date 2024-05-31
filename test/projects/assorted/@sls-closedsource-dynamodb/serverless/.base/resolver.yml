@@ -16,3 +16,5 @@ provider:
   versionFunctions: false
 <<<:
   - ${file(^/${opt:stack}.yml), service=projectName}
+plugins:
+  - serverless-stack-termination-protection

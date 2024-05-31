@@ -16,5 +16,8 @@ provider:
     ENVIRONMENT: '${self:provider.stage}'
   versionFunctions: false
 
+plugins:
+  - serverless-stack-termination-protection
+
 <<<:
   - ${file(^/${opt:stack}.yml), service=${projectName}}
