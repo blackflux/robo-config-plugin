@@ -92,10 +92,10 @@ jobs:
       - image: cimg/node:18.19
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.9.0
+      - image: opensearchproject/opensearch:2.13.0
         environment:
           - discovery.type=single-node
-          - plugins.security.disabled=true
+          - DISABLE_SECURITY_PLUGIN=true
     steps:
       - run:
           command: >
@@ -136,10 +136,10 @@ jobs:
       - image: cimg/node:20.11
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.9.0
+      - image: opensearchproject/opensearch:2.13.0
         environment:
           - discovery.type=single-node
-          - plugins.security.disabled=true
+          - DISABLE_SECURITY_PLUGIN=true
     steps:
       - run:
           command: >
@@ -180,10 +180,10 @@ jobs:
       - image: cimg/node:21.6
         environment:
           opensearchEndpoint: localhost:9200
-      - image: opensearchproject/opensearch:2.9.0
+      - image: opensearchproject/opensearch:2.13.0
         environment:
           - discovery.type=single-node
-          - plugins.security.disabled=true
+          - DISABLE_SECURITY_PLUGIN=true
     steps:
       - run:
           command: >
