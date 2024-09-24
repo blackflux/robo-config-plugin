@@ -310,6 +310,18 @@ resources:
                             - '*'
             - Effect: Allow
               Action:
+                - 'lambda:TagResource'
+                - 'lambda:UntagResource'
+              Resource:
+                - 'Fn::Join':
+                    - ':'
+                    - - 'arn:aws:lambda'
+                      - Ref: 'AWS::Region'
+                      - Ref: 'AWS::AccountId'
+                      - event-source-mapping
+                      - '*'
+            - Effect: Allow
+              Action:
                 - 'events:PutRule'
                 - 'events:DeleteRule'
                 - 'events:DescribeRule'
