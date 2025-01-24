@@ -2,13 +2,13 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v18x:
+      - test-node-v20x:
           requires:
             - gally
-      - test-node-v18x-lib:
+      - test-node-v20x-lib:
           requires:
             - gally
-      - test-node-v20:
+      - test-node-v22:
           requires:
             - gally
       - deploy-local:
@@ -35,12 +35,12 @@ version: 2.1
 jobs:
   gally:
     ${file(^/jobs/gally.yml)}
-  test-node-v18x:
-    ${file(^/jobs/test.yml), image=public.ecr.aws/sam/build-nodejs18.x}
-  test-node-v18x-lib:
-    ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs18.x}
-  test-node-v20:
-    ${file(^/jobs/test.yml), image=cimg/node:20.11}
+  test-node-v20x:
+    ${file(^/jobs/test.yml), image=public.ecr.aws/sam/build-nodejs20.x}
+  test-node-v20x-lib:
+    ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs20.x}
+  test-node-v22:
+    ${file(^/jobs/test.yml), image=cimg/node:22.13}
   deploy-local:
     ${file(^/jobs/deploy.yml), env=local}
   deploy-dev:

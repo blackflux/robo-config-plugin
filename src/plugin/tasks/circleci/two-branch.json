@@ -15,32 +15,32 @@
     {
       "name": "run-yarn-tests",
       "variables": {
-        "jobName": "test-node-v18",
-        "dockerImage": "cimg/node:18.19",
-        "jobOptions": {
-          "requires": [
-            "gally-create-pr"
-          ]
-        }
-      }
-    },
-    {
-      "name": "run-yarn-tests",
-      "variables": {
-        "jobName": "test-node-v21",
-        "dockerImage": "cimg/node:21.6",
-        "jobOptions": {
-          "requires": [
-            "gally-create-pr"
-          ]
-        }
-      }
-    },
-    {
-      "name": "run-yarn-tests",
-      "variables": {
         "jobName": "test-node-v20",
-        "dockerImage": "cimg/node:20.11",
+        "dockerImage": "cimg/node:20.18",
+        "jobOptions": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
+      }
+    },
+    {
+      "name": "run-yarn-tests",
+      "variables": {
+        "jobName": "test-node-v23",
+        "dockerImage": "cimg/node:23.6",
+        "jobOptions": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
+      }
+    },
+    {
+      "name": "run-yarn-tests",
+      "variables": {
+        "jobName": "test-node-v22",
+        "dockerImage": "cimg/node:22.13",
         "jobOptions": {
           "requires": [
             "gally-create-pr"
@@ -56,9 +56,9 @@
         "jobOptions": {
           "requires": [
             "gally-create-pr",
-            "test-node-v18",
-            "test-node-v21",
-            "test-node-v20"
+            "test-node-v20",
+            "test-node-v23",
+            "test-node-v22"
           ],
           "filters": {
             "branches": {
@@ -72,13 +72,13 @@
       "name": "semantic-release",
       "variables": {
         "jobName": "release",
-        "dockerImage": "cimg/node:20.11",
+        "dockerImage": "cimg/node:22.13",
         "jobOptions": {
           "requires": [
             "gally-create-pr",
-            "test-node-v18",
-            "test-node-v21",
-            "test-node-v20"
+            "test-node-v20",
+            "test-node-v23",
+            "test-node-v22"
           ],
           "filters": {
             "branches": {

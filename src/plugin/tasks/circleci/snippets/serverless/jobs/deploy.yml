@@ -1,5 +1,5 @@
 docker:
-  - image: 'public.ecr.aws/sam/build-nodejs20.x'
+  - image: 'public.ecr.aws/sam/build-nodejs22.x'
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:
