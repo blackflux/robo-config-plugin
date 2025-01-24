@@ -2,22 +2,22 @@ workflows:
   node-multi-build:
     jobs:
       - gally
-      - test-node-v18x:
+      - test-node-v20x:
           requires:
             - gally
-      - test-node-v18x-lib:
+      - test-node-v20x-lib:
           requires:
             - gally
-      - test-node-v20:
+      - test-node-v22:
           requires:
             - gally
       - deploy-local:
           context: projectName-local
           requires:
             - gally
-            - test-node-v18x
-            - test-node-v18x-lib
-            - test-node-v20
+            - test-node-v20x
+            - test-node-v20x-lib
+            - test-node-v22
           filters:
             branches:
               only:
@@ -26,9 +26,9 @@ workflows:
           context: projectName-dev
           requires:
             - gally
-            - test-node-v18x
-            - test-node-v18x-lib
-            - test-node-v20
+            - test-node-v20x
+            - test-node-v20x-lib
+            - test-node-v22
             - deploy-local
           filters:
             branches:
@@ -38,9 +38,9 @@ workflows:
           context: projectName-stage
           requires:
             - gally
-            - test-node-v18x
-            - test-node-v18x-lib
-            - test-node-v20
+            - test-node-v20x
+            - test-node-v20x-lib
+            - test-node-v22
           filters:
             branches:
               only:
@@ -49,9 +49,9 @@ workflows:
           context: projectName-prod
           requires:
             - gally
-            - test-node-v18x
-            - test-node-v18x-lib
-            - test-node-v20
+            - test-node-v20x
+            - test-node-v20x-lib
+            - test-node-v22
           filters:
             branches:
               only:
@@ -67,7 +67,7 @@ jobs:
       - run: gally promote $CIRCLE_BRANCH
   deploy-local:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs20.x
+      - image: public.ecr.aws/sam/build-nodejs22.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -107,7 +107,7 @@ jobs:
           no_output_timeout: 10m
   deploy-dev:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs20.x
+      - image: public.ecr.aws/sam/build-nodejs22.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -147,7 +147,7 @@ jobs:
           no_output_timeout: 10m
   deploy-stage:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs20.x
+      - image: public.ecr.aws/sam/build-nodejs22.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -187,7 +187,7 @@ jobs:
           no_output_timeout: 10m
   deploy-prod:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs20.x
+      - image: public.ecr.aws/sam/build-nodejs22.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -225,9 +225,9 @@ jobs:
       - run:
           command: sls deploy --config serverless-prod-api.config.yml --force
           no_output_timeout: 10m
-  test-node-v18x:
+  test-node-v20x:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs18.x
+      - image: public.ecr.aws/sam/build-nodejs20.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -263,9 +263,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v18x-lib:
+  test-node-v20x-lib:
     docker:
-      - image: public.ecr.aws/sam/build-nodejs18.x
+      - image: public.ecr.aws/sam/build-nodejs20.x
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
@@ -302,9 +302,9 @@ jobs:
       - run: >-
           (git add . && git diff-index --quiet HEAD --) || (git status && exit
           1);
-  test-node-v20:
+  test-node-v22:
     docker:
-      - image: cimg/node:20.11
+      - image: cimg/node:22.13
     steps:
       - run: yarn -v || npm install --global yarn
       - run: >-
