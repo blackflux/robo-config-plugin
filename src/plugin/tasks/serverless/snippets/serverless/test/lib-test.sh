@@ -22,7 +22,7 @@ else
   thread_count=1
 fi
 
-output="$(cat "$tmp_file" | while read i; do printf "%q\n" "$i"; done | xargs --max-procs=$thread_count -I CMD bash -c CMD | tee /dev/tty)"
+output="$(xargs -d'\n' --arg-file="$tmp_file" --max-procs=$thread_count -I CMD bash -c CMD | tee /dev/tty)"
 
 code=0
 
