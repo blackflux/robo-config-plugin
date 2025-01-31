@@ -99,7 +99,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.33.0
+      - run: yarn global add serverless@3.40.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env local
       - run:
@@ -139,7 +139,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.33.0
+      - run: yarn global add serverless@3.40.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env dev
       - run:
@@ -179,7 +179,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.33.0
+      - run: yarn global add serverless@3.40.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env stage
       - run:
@@ -219,7 +219,7 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn global add serverless@3.33.0
+      - run: yarn global add serverless@3.40.0
       - run: yarn run build-clean
       - run: yarn run sls-compile --stack api --region awsRegion --env prod
       - run:
