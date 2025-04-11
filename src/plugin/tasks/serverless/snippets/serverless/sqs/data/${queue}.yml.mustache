@@ -6,6 +6,8 @@ resources:
         DelaySeconds: ${queueDelaySeconds}
 {{#fifoQueue}}
         FifoQueue: true
+        DeduplicationScope: 'messageGroup'
+        FifoThroughputLimit: 'perMessageGroupId'
 {{/fifoQueue}}
         MaximumMessageSize: 262144
         MessageRetentionPeriod: 345600
@@ -29,6 +31,8 @@ resources:
       Properties:
 {{#fifoQueue}}
         FifoQueue: true
+        DeduplicationScope: 'messageGroup'
+        FifoThroughputLimit: 'perMessageGroupId'
 {{/fifoQueue}}
         MessageRetentionPeriod: 1209600
         Tags:

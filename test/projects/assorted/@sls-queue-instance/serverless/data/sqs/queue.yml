@@ -5,6 +5,8 @@ resources:
       Properties:
         DelaySeconds: queueDelaySeconds
         FifoQueue: true
+        DeduplicationScope: 'messageGroup'
+        FifoThroughputLimit: 'perMessageGroupId'
         MaximumMessageSize: 262144
         MessageRetentionPeriod: 345600
         ReceiveMessageWaitTimeSeconds: 0
@@ -26,6 +28,8 @@ resources:
       Type: AWS::SQS::Queue
       Properties:
         FifoQueue: true
+        DeduplicationScope: 'messageGroup'
+        FifoThroughputLimit: 'perMessageGroupId'
         MessageRetentionPeriod: 1209600
         Tags:
           - Key: service
