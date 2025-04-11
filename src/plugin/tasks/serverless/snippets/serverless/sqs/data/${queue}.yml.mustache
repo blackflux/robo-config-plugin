@@ -9,6 +9,7 @@ resources:
         DeduplicationScope: 'messageGroup'
         FifoThroughputLimit: 'perMessageGroupId'
 {{/fifoQueue}}
+        SqsManagedSseEnabled: false
         MaximumMessageSize: 262144
         MessageRetentionPeriod: 345600
         ReceiveMessageWaitTimeSeconds: 0
@@ -34,6 +35,7 @@ resources:
         DeduplicationScope: 'messageGroup'
         FifoThroughputLimit: 'perMessageGroupId'
 {{/fifoQueue}}
+        SqsManagedSseEnabled: false
         MessageRetentionPeriod: 1209600
         Tags:
           - Key: service
