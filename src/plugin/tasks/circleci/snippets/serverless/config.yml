@@ -36,9 +36,9 @@ jobs:
   gally:
     ${file(^/jobs/gally.yml)}
   test-node-v20x:
-    ${file(^/jobs/test.yml), image=public.ecr.aws/sam/build-nodejs20.x}
+    ${file(^/jobs/test.yml), image=public.ecr.aws/sam/build-nodejs22.x}
   test-node-v20x-lib:
-    ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs20.x}
+    ${file(^/jobs/lib-test.yml), image=public.ecr.aws/sam/build-nodejs22.x}
   test-node-v22:
     ${file(^/jobs/test.yml), image=cimg/node:22.13}
   deploy-local:

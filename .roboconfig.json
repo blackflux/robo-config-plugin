@@ -8,7 +8,7 @@
       "packageName": "@blackflux/robo-config-plugin",
       "projectName": "robo-config-plugin",
       "owner": "simlu",
-      "nodeVersion": "20",
+      "nodeVersion": "22",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux",
       "nccEnabled": false
