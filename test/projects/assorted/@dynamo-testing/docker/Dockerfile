@@ -1,4 +1,4 @@
-FROM public.ecr.aws/sam/build-nodejs20.x
+FROM public.ecr.aws/sam/build-nodejs22.x
 
 WORKDIR /user
 
