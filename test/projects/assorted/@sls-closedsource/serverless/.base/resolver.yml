@@ -2,7 +2,7 @@ service: projectName-${opt:stack}
 provider:
   name: aws
   endpointType: slsEndpointType
-  runtime: nodejs20.x
+  runtime: nodejs22.x
   architecture: arm64
   memorySize: 256
   timeout: 8
