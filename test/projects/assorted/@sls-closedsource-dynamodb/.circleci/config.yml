@@ -105,6 +105,7 @@ jobs:
       - run:
           command: sls deploy --config serverless-local-api.config.yml --force
           no_output_timeout: 10m
+    resource_class: arm.medium
   deploy-dev:
     docker:
       - image: public.ecr.aws/sam/build-nodejs24.x
@@ -145,6 +146,7 @@ jobs:
       - run:
           command: sls deploy --config serverless-dev-api.config.yml --force
           no_output_timeout: 10m
+    resource_class: arm.medium
   deploy-stage:
     docker:
       - image: public.ecr.aws/sam/build-nodejs24.x
@@ -185,6 +187,7 @@ jobs:
       - run:
           command: sls deploy --config serverless-stage-api.config.yml --force
           no_output_timeout: 10m
+    resource_class: arm.medium
   deploy-prod:
     docker:
       - image: public.ecr.aws/sam/build-nodejs24.x
@@ -225,6 +228,7 @@ jobs:
       - run:
           command: sls deploy --config serverless-prod-api.config.yml --force
           no_output_timeout: 10m
+    resource_class: arm.medium
   test-node-v20x:
     docker:
       - image: public.ecr.aws/sam/build-nodejs22.x
