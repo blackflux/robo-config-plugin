@@ -1,5 +1,6 @@
 docker:
   - image: 'public.ecr.aws/sam/build-nodejs24.x'
+resource_class: arm.medium
 <<<:
   - ${file(^/steps/base.yml)}
   - steps:
